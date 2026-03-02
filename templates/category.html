@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}{{ category.name }} Comparisons — VersusThat{% endblock %}
+{% block description %}Compare the best {{ category.name|lower }} side by side. Specs, pros, cons, and expert verdicts to help you pick the right {{ category.name|lower|replace('s','') }}.{% endblock %}
+{% block canonical_path %}/categories/{{ category.slug }}/{% endblock %}
+{% block og_title %}{{ category.name }} Comparisons — VersusThat{% endblock %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "{{ category.name }} Comparisons",
+    "url": "https://versusthat.com/categories/{{ category.slug }}/",
+    "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://versusthat.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Categories", "item": "https://versusthat.com/categories/"},
+            {"@type": "ListItem", "position": 3, "name": "{{ category.name }}"}
+        ]
+    }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<nav class="breadcrumb">
+    <div class="container">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="/categories/">Categories</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>{{ category.name }}</span>
+    </div>
+</nav>
+
+<section class="category-hero">
+    <div class="container">
+        <span class="category-hero-icon">{{ category.icon }}</span>
+        <h1>{{ category.name }} Comparisons</h1>
+        <p>{{ comparisons|length }} comparison{{ 's' if comparisons|length != 1 }} to help you pick the right {{ category.name|lower|replace('s','') }}.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        {% if comparisons %}
+        <div class="comparison-grid">
+            {% for comp in comparisons %}
+            <a href="/{{ comp.slug }}/" class="comparison-card">
+                <div class="card-vs-header">
+                    <span class="card-item card-item-a">{{ comp.item_a.name }}</span>
+                    <span class="card-vs-badge">VS</span>
+                    <span class="card-item card-item-b">{{ comp.item_b.name }}</span>
+                </div>
+                <div class="card-body">
+                    <p class="card-verdict">{{ comp.verdict_text }}</p>
+                    <div class="card-meta">
+                        <span class="card-category">{{ category.name }}</span>
+                        <span class="card-date">{{ comp.date_updated }}</span>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <p>No comparisons in this category yet. Check back soon!</p>
+            <a href="/" class="btn">Browse All Comparisons</a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

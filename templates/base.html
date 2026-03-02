@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block meta %}
+    <title>{% block title %}VersusThat — This versus that, we help you decide{% endblock %}</title>
+    <meta name="description" content="{% block description %}Honest, detailed product comparisons to help you make smarter buying decisions. Compare specs, prices, pros and cons side by side.{% endblock %}">
+    {% endblock %}
+    <link rel="canonical" href="https://versusthat.com{% block canonical_path %}/{% endblock %}">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="VersusThat">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    <meta property="og:title" content="{% block og_title %}VersusThat — This versus that, we help you decide{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Honest, detailed product comparisons to help you make smarter buying decisions.{% endblock %}">
+    <meta property="og:url" content="https://versusthat.com{% block og_url %}/{% endblock %}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ self.og_title() }}">
+    <meta name="twitter:description" content="{{ self.og_description() }}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    {% block head_extra %}{% endblock %}
+
+    {% block schema %}{% endblock %}
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="logo">
+                <span class="logo-versus">versus</span><span class="logo-that">that</span>
+            </a>
+            <nav class="main-nav">
+                <a href="/categories/">Categories</a>
+                <a href="/about/">About</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="mobile-nav">
+        <a href="/">Home</a>
+        <a href="/categories/">Categories</a>
+        <a href="/about/">About</a>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <span class="logo-versus">versus</span><span class="logo-that">that</span>
+                    </a>
+                    <p>This versus that &mdash; we help you decide.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Compare</h4>
+                    <ul>
+                        {% for cat in categories[:6] %}
+                        <li><a href="/categories/{{ cat.slug }}/">{{ cat.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>More Categories</h4>
+                    <ul>
+                        {% for cat in categories[6:12] %}
+                        <li><a href="/categories/{{ cat.slug }}/">{{ cat.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Site</h4>
+                    <ul>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                        <li><a href="/terms/">Terms of Use</a></li>
+                        <li><a href="/categories/">All Categories</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {{ current_year }} VersusThat. All rights reserved.</p>
+                <p class="footer-disclaimer">We may earn a commission from affiliate links. This does not influence our comparisons.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

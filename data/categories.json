@@ -1,0 +1,22 @@
+[
+  {"slug": "blenders", "name": "Blenders", "icon": "🫐"},
+  {"slug": "smartphones", "name": "Smartphones", "icon": "📱"},
+  {"slug": "laptops", "name": "Laptops", "icon": "💻"},
+  {"slug": "headphones", "name": "Headphones", "icon": "🎧"},
+  {"slug": "tvs", "name": "TVs", "icon": "📺"},
+  {"slug": "vacuums", "name": "Vacuums", "icon": "🧹"},
+  {"slug": "mattresses", "name": "Mattresses", "icon": "🛏️"},
+  {"slug": "grills", "name": "Grills & Smokers", "icon": "🔥"},
+  {"slug": "coffee-makers", "name": "Coffee Makers", "icon": "☕"},
+  {"slug": "air-fryers", "name": "Air Fryers", "icon": "🍟"},
+  {"slug": "streaming", "name": "Streaming Services", "icon": "🎬"},
+  {"slug": "fitness-trackers", "name": "Fitness Trackers", "icon": "⌚"},
+  {"slug": "power-tools", "name": "Power Tools", "icon": "🔧"},
+  {"slug": "lawn-mowers", "name": "Lawn Mowers", "icon": "🌿"},
+  {"slug": "cameras", "name": "Cameras", "icon": "📷"},
+  {"slug": "tablets", "name": "Tablets", "icon": "📲"},
+  {"slug": "gaming-consoles", "name": "Gaming Consoles", "icon": "🎮"},
+  {"slug": "routers", "name": "Routers & Mesh WiFi", "icon": "📡"},
+  {"slug": "car-seats", "name": "Car Seats", "icon": "🚗"},
+  {"slug": "strollers", "name": "Strollers", "icon": "👶"}
+]

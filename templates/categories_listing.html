@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}All Categories — VersusThat{% endblock %}
+{% block description %}Browse all product comparison categories on VersusThat. From blenders to smartphones, find honest side-by-side comparisons.{% endblock %}
+{% block canonical_path %}/categories/{% endblock %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "All Categories",
+    "url": "https://versusthat.com/categories/",
+    "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://versusthat.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Categories"}
+        ]
+    }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<nav class="breadcrumb">
+    <div class="container">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Categories</span>
+    </div>
+</nav>
+
+<section class="section">
+    <div class="container">
+        <h1 class="page-title">All Categories</h1>
+        <p class="page-subtitle">Browse {{ categories|length }} product categories with {{ total_comparisons }} comparisons and counting.</p>
+        <div class="category-grid category-grid-large">
+            {% for cat in categories %}
+            {% set count = category_counts.get(cat.slug, 0) %}
+            <a href="/categories/{{ cat.slug }}/" class="category-card{% if count == 0 %} category-card-empty{% endif %}">
+                <span class="category-icon">{{ cat.icon }}</span>
+                <span class="category-name">{{ cat.name }}</span>
+                {% if count > 0 %}
+                <span class="category-count">{{ count }} comparison{{ 's' if count != 1 }}</span>
+                {% else %}
+                <span class="category-count">Coming soon</span>
+                {% endif %}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

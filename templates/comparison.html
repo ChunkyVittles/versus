@@ -1,0 +1,300 @@
+{% extends "base.html" %}
+
+{% block title %}{{ comp.meta_title }}{% endblock %}
+{% block description %}{{ comp.meta_description }}{% endblock %}
+{% block canonical_path %}/{{ comp.slug }}/{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block og_title %}{{ comp.meta_title }}{% endblock %}
+{% block og_description %}{{ comp.meta_description }}{% endblock %}
+{% block og_url %}/{{ comp.slug }}/{% endblock %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{{ comp.meta_title }}",
+    "description": "{{ comp.meta_description }}",
+    "url": "https://versusthat.com/{{ comp.slug }}/",
+    "datePublished": "{{ comp.date_published }}",
+    "dateModified": "{{ comp.date_updated }}",
+    "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://versusthat.com/"},
+            {"@type": "ListItem", "position": 2, "name": "{{ category_name }}", "item": "https://versusthat.com/categories/{{ comp.category }}/"},
+            {"@type": "ListItem", "position": 3, "name": "{{ comp.item_a.name }} vs {{ comp.item_b.name }}"}
+        ]
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "{{ comp.item_a.name }}",
+    "brand": {"@type": "Brand", "name": "{{ comp.item_a.brand }}"},
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "{{ comp.item_a.rating }}",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "1"
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "{{ comp.item_b.name }}",
+    "brand": {"@type": "Brand", "name": "{{ comp.item_b.brand }}"},
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "{{ comp.item_b.rating }}",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "1"
+    }
+}
+</script>
+{% if comp.faq %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {% for item in comp.faq %}
+        {
+            "@type": "Question",
+            "name": "{{ item.q }}",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{{ item.a }}"
+            }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+}
+</script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <div class="container">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="/categories/{{ comp.category }}/">{{ category_name }}</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>{{ comp.item_a.name }} vs {{ comp.item_b.name }}</span>
+    </div>
+</nav>
+
+<!-- Hero Split -->
+<section class="vs-hero">
+    <div class="vs-hero-split">
+        <div class="vs-hero-side vs-hero-a">
+            <div class="vs-hero-content">
+                <span class="vs-hero-label">Option A</span>
+                <h2 class="vs-hero-name">{{ comp.item_a.name }}</h2>
+                <div class="vs-hero-rating">
+                    <div class="stars" data-rating="{{ comp.item_a.rating }}">
+                        {% for i in range(5) %}
+                        <svg class="star{% if comp.item_a.rating >= i + 1 %} star-full{% elif comp.item_a.rating >= i + 0.5 %} star-half{% endif %}" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        {% endfor %}
+                        <span>{{ comp.item_a.rating }}</span>
+                    </div>
+                    <div class="vs-hero-price">{{ comp.item_a.price_range }}</div>
+                    <p class="vs-hero-best-for">{{ comp.item_a.best_for }}</p>
+                    {% if comp.item_a.affiliate_url %}
+                    <a href="{{ comp.item_a.affiliate_url }}" class="btn btn-a" rel="nofollow sponsored" target="_blank">Check Price</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="vs-badge-wrapper">
+            <div class="vs-badge">VS</div>
+        </div>
+        <div class="vs-hero-side vs-hero-b">
+            <div class="vs-hero-content">
+                <span class="vs-hero-label">Option B</span>
+                <h2 class="vs-hero-name">{{ comp.item_b.name }}</h2>
+                <div class="vs-hero-rating">
+                    <div class="stars" data-rating="{{ comp.item_b.rating }}">
+                        {% for i in range(5) %}
+                        <svg class="star{% if comp.item_b.rating >= i + 1 %} star-full{% elif comp.item_b.rating >= i + 0.5 %} star-half{% endif %}" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        {% endfor %}
+                        <span>{{ comp.item_b.rating }}</span>
+                    </div>
+                    <div class="vs-hero-price">{{ comp.item_b.price_range }}</div>
+                    <p class="vs-hero-best-for">{{ comp.item_b.best_for }}</p>
+                    {% if comp.item_b.affiliate_url %}
+                    <a href="{{ comp.item_b.affiliate_url }}" class="btn btn-b" rel="nofollow sponsored" target="_blank">Check Price</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="vs-hero-title container">{{ comp.item_a.name }} vs {{ comp.item_b.name }}</h1>
+</section>
+
+<!-- Quick Verdict -->
+<section class="verdict-banner {% if comp.verdict == 'a' %}verdict-a{% elif comp.verdict == 'b' %}verdict-b{% else %}verdict-tie{% endif %}">
+    <div class="container">
+        <div class="verdict-content">
+            <span class="verdict-label">Our Verdict</span>
+            <h2 class="verdict-text">{{ comp.verdict_text }}</h2>
+            <p class="verdict-summary">{{ comp.comparison_summary }}</p>
+        </div>
+    </div>
+</section>
+
+<!-- Key Differences Table -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Key Differences</h2>
+        <div class="diff-table-wrapper">
+            <table class="diff-table">
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th class="col-a">{{ comp.item_a.name }}</th>
+                        <th class="col-b">{{ comp.item_b.name }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for diff in comp.key_differences %}
+                    <tr>
+                        <td class="diff-aspect">{{ diff.aspect }}</td>
+                        <td class="diff-val {% if diff.winner == 'a' %}diff-winner{% endif %}">
+                            {{ diff.item_a }}
+                            {% if diff.winner == 'a' %}<svg class="winner-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>{% endif %}
+                        </td>
+                        <td class="diff-val {% if diff.winner == 'b' %}diff-winner{% endif %}">
+                            {{ diff.item_b }}
+                            {% if diff.winner == 'b' %}<svg class="winner-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>{% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Pros & Cons -->
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="section-title">Pros &amp; Cons</h2>
+        <div class="proscons-grid">
+            <div class="proscons-card proscons-a">
+                <h3 class="proscons-title">{{ comp.item_a.name }}</h3>
+                <div class="pros-list">
+                    <h4>Pros</h4>
+                    <ul>
+                        {% for pro in comp.item_a.pros %}
+                        <li><svg class="icon-pro" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>{{ pro }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="cons-list">
+                    <h4>Cons</h4>
+                    <ul>
+                        {% for con in comp.item_a.cons %}
+                        <li><svg class="icon-con" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>{{ con }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="proscons-card proscons-b">
+                <h3 class="proscons-title">{{ comp.item_b.name }}</h3>
+                <div class="pros-list">
+                    <h4>Pros</h4>
+                    <ul>
+                        {% for pro in comp.item_b.pros %}
+                        <li><svg class="icon-pro" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>{{ pro }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="cons-list">
+                    <h4>Cons</h4>
+                    <ul>
+                        {% for con in comp.item_b.cons %}
+                        <li><svg class="icon-con" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>{{ con }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Detailed Analysis -->
+<section class="section">
+    <div class="container">
+        <div class="analysis-content">
+            <h2 class="section-title">Detailed Analysis</h2>
+            <div class="seo-content">
+                {{ comp.seo_content | replace('\n\n', '</p><p>') | safe }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+{% if comp.faq %}
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+            {% for item in comp.faq %}
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>{{ item.q }}</span>
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>{{ item.a }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Related Comparisons -->
+{% if related %}
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Related Comparisons</h2>
+        <div class="comparison-grid">
+            {% for rel in related %}
+            <a href="/{{ rel.slug }}/" class="comparison-card">
+                <div class="card-vs-header">
+                    <span class="card-item card-item-a">{{ rel.item_a.name }}</span>
+                    <span class="card-vs-badge">VS</span>
+                    <span class="card-item card-item-b">{{ rel.item_b.name }}</span>
+                </div>
+                <div class="card-body">
+                    <p class="card-verdict">{{ rel.verdict_text }}</p>
+                    <span class="card-category">{{ rel.category_name }}</span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Search data for autocomplete -->
+<script>
+window.VS_SEARCH_DATA = [
+    {% for c in all_comparisons %}
+    {"slug": "{{ c.slug }}", "a": "{{ c.item_a.name }}", "b": "{{ c.item_b.name }}", "cat": "{{ c.category }}"}{% if not loop.last %},{% endif %}
+    {% endfor %}
+];
+</script>
+{% endblock %}

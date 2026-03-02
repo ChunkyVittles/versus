@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block title %}VersusThat — Honest Product Comparisons to Help You Decide{% endblock %}
+{% block description %}Compare products side by side with honest, detailed breakdowns. Specs, pros, cons, and verdicts for {{ total_comparisons }}+ comparisons across {{ categories|length }} categories.{% endblock %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "VersusThat",
+    "url": "https://versusthat.com",
+    "description": "Honest product comparisons to help you decide",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://versusthat.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+    }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="home-hero">
+    <div class="container">
+        <h1 class="home-hero-title">
+            <span class="hero-this">This</span>
+            <span class="hero-vs">vs</span>
+            <span class="hero-that">That</span>
+        </h1>
+        <p class="home-hero-subtitle">We help you decide</p>
+        <div class="search-wrapper">
+            <div class="search-box">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <input type="text" id="search-input" placeholder="Search comparisons... e.g. &quot;Ninja vs Vitamix&quot;" autocomplete="off">
+                <div id="search-results" class="search-results"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Bar -->
+<section class="stats-bar">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat">
+                <span class="stat-number">{{ total_comparisons }}</span>
+                <span class="stat-label">Comparisons</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">{{ active_categories|length }}</span>
+                <span class="stat-label">Categories</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">{{ total_comparisons * 7 }}</span>
+                <span class="stat-label">Specs Compared</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Comparisons -->
+{% if comparisons %}
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Latest Comparisons</h2>
+        <div class="comparison-grid">
+            {% for comp in comparisons[:12] %}
+            <a href="/{{ comp.slug }}/" class="comparison-card">
+                <div class="card-vs-header">
+                    <span class="card-item card-item-a">{{ comp.item_a.name }}</span>
+                    <span class="card-vs-badge">VS</span>
+                    <span class="card-item card-item-b">{{ comp.item_b.name }}</span>
+                </div>
+                <div class="card-body">
+                    <p class="card-verdict">{{ comp.verdict_text }}</p>
+                    <span class="card-category">{{ comp.category_name }}</span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Categories -->
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="section-title">Browse by Category</h2>
+        <div class="category-grid">
+            {% for cat in categories %}
+            {% set count = category_counts.get(cat.slug, 0) %}
+            <a href="/categories/{{ cat.slug }}/" class="category-card{% if count == 0 %} category-card-empty{% endif %}">
+                <span class="category-icon">{{ cat.icon }}</span>
+                <span class="category-name">{{ cat.name }}</span>
+                {% if count > 0 %}
+                <span class="category-count">{{ count }} comparison{{ 's' if count != 1 }}</span>
+                {% else %}
+                <span class="category-count">Coming soon</span>
+                {% endif %}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <div class="how-grid">
+            <div class="how-step">
+                <div class="how-number">1</div>
+                <h3>We Research</h3>
+                <p>Deep dives into specs, reviews, and real-world performance for every product we compare.</p>
+            </div>
+            <div class="how-step">
+                <div class="how-number">2</div>
+                <h3>We Compare</h3>
+                <p>Side-by-side breakdowns of what matters: price, quality, features, and value for money.</p>
+            </div>
+            <div class="how-step">
+                <div class="how-number">3</div>
+                <h3>You Decide</h3>
+                <p>Clear verdicts and honest analysis so you can pick the right product with confidence.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Search data for autocomplete -->
+<script>
+window.VS_SEARCH_DATA = [
+    {% for comp in comparisons %}
+    {
+        "slug": "{{ comp.slug }}",
+        "a": "{{ comp.item_a.name }}",
+        "b": "{{ comp.item_b.name }}",
+        "cat": "{{ comp.category }}"
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+];
+</script>
+{% endblock %}
