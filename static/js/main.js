@@ -63,29 +63,8 @@
             }).slice(0, 8);
 
             if (matches.length === 0) {
-                // No existing match — offer to generate if query looks like "X vs Y"
-                var vsMatch = query.match(/(.+?)\s+vs\.?\s+(.+)/i);
-                if (vsMatch) {
-                    var termA = vsMatch[1].trim();
-                    var termB = vsMatch[2].trim();
-                    // Capitalize first letters for display
-                    var displayA = termA.replace(/\b\w/g, function(c) { return c.toUpperCase(); });
-                    var displayB = termB.replace(/\b\w/g, function(c) { return c.toUpperCase(); });
-
-                    searchResults.innerHTML = '<div class="search-result-generate" id="generate-btn">'
-                        + '<span class="generate-icon">&#10024;</span>'
-                        + '<span>Generate: <strong>' + displayA + ' vs ' + displayB + '</strong></span>'
-                        + '<span class="generate-label">AI-powered</span>'
-                        + '</div>';
-                    searchResults.classList.add('active');
-
-                    document.getElementById('generate-btn').addEventListener('click', function() {
-                        generateComparison(query);
-                    });
-                } else {
-                    searchResults.classList.remove('active');
-                    searchResults.innerHTML = '';
-                }
+                searchResults.classList.remove('active');
+                searchResults.innerHTML = '';
                 return;
             }
 
@@ -108,7 +87,36 @@
 
         // Keyboard navigation
         searchInput.addEventListener('keydown', function(e) {
-            var items = searchResults.querySelectorAll('.search-result-item, .search-result-generate');
+            if (e.key === 'Escape') {
+                searchResults.classList.remove('active');
+                return;
+            }
+
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                var items = searchResults.querySelectorAll('.search-result-item');
+
+                // If an item is highlighted, navigate to it
+                if (activeIndex >= 0 && items[activeIndex]) {
+                    items[activeIndex].click();
+                    return;
+                }
+
+                // If there are dropdown results, navigate to the first one
+                if (items.length > 0) {
+                    items[0].click();
+                    return;
+                }
+
+                // No results — if query looks like "X vs Y", generate it
+                var query = searchInput.value.trim();
+                if (query.match(/(.+?)\s+vs\.?\s+(.+)/i)) {
+                    generateComparison(query);
+                }
+                return;
+            }
+
+            var items = searchResults.querySelectorAll('.search-result-item');
             if (!items.length) return;
 
             if (e.key === 'ArrowDown') {
@@ -119,15 +127,6 @@
                 e.preventDefault();
                 activeIndex = Math.max(activeIndex - 1, 0);
                 updateActive(items);
-            } else if (e.key === 'Enter') {
-                e.preventDefault();
-                if (activeIndex >= 0 && items[activeIndex]) {
-                    items[activeIndex].click();
-                } else if (items.length === 1 && items[0].classList.contains('search-result-generate')) {
-                    items[0].click();
-                }
-            } else if (e.key === 'Escape') {
-                searchResults.classList.remove('active');
             }
         });
 

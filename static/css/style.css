@@ -144,12 +144,6 @@ h1, h2, h3, h4 {
     letter-spacing: -0.02em;
 }
 
-.logo-versus::before {
-    content: 'vs';
-    color: var(--a-500);
-    font-weight: 700;
-    margin-right: -0.05em;
-}
 
 .logo-versus {
     /* "versus" but with "vs" highlighted — we just show "versus" with the vs portion colored */
