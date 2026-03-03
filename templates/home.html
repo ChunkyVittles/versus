@@ -24,15 +24,16 @@
 <!-- Hero -->
 <section class="home-hero">
     <div class="container">
+        <span class="hero-badge">&#9889; AI-Powered Instant Comparisons</span>
         <h1 class="home-hero-title">
-            <span class="hero-this">This</span>
-            <span class="hero-vs">vs</span>
-            <span class="hero-that">That</span>
+            <span class="hero-this">THIS</span>
+            <span class="hero-vs-giant">VERSUS</span>
+            <span class="hero-that">THAT</span>
         </h1>
-        <p class="home-hero-subtitle">We help you decide</p>
+        <p class="home-hero-subtitle">Type two things. Get a verdict. It's that simple.</p>
         <div class="versus-input-card">
             <div class="versus-input-side versus-input-side-a">
-                <label class="versus-input-label" for="input-a">This</label>
+                <label class="versus-input-label" for="input-a">THIS</label>
                 <div class="versus-input-wrap">
                     <input type="text" id="input-a" class="versus-input" placeholder="e.g. Ninja" autocomplete="off">
                     <div class="versus-suggest" id="suggest-a"></div>
@@ -40,55 +41,42 @@
             </div>
             <div class="versus-input-badge">VS</div>
             <div class="versus-input-side versus-input-side-b">
-                <label class="versus-input-label" for="input-b">That</label>
+                <label class="versus-input-label" for="input-b">THAT</label>
                 <div class="versus-input-wrap">
                     <input type="text" id="input-b" class="versus-input" placeholder="e.g. Vitamix" autocomplete="off">
                     <div class="versus-suggest" id="suggest-b"></div>
                 </div>
             </div>
-            <button class="compare-btn" id="compare-btn" disabled>Compare</button>
+            <button class="compare-btn" id="compare-btn" disabled>FIGHT &#8594;</button>
             <div class="compare-error" id="compare-error"></div>
-            <p class="versus-input-hint">Type any two products to compare them — we'll generate it if it doesn't exist yet.</p>
+            <p class="versus-input-hint">Type any two products to compare them &mdash; we'll <strong style="color: var(--arena-yellow)">generate new comparisons on the fly</strong>.</p>
         </div>
     </div>
 </section>
 
-<!-- Stats Bar -->
-<section class="stats-bar">
-    <div class="container">
-        <div class="stats-grid">
-            <div class="stat">
-                <span class="stat-number">{{ total_comparisons }}</span>
-                <span class="stat-label">Comparisons</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number">{{ active_categories|length }}</span>
-                <span class="stat-label">Categories</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number">{{ total_comparisons * 7 }}</span>
-                <span class="stat-label">Specs Compared</span>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- Trending Strip -->
+<div class="popular-strip">
+    <span class="popular-label">TRENDING:</span>
+    {% for comp in comparisons[:8] %}
+    <a href="/{{ comp.slug }}/" class="popular-item">
+        {{ comp.item_a.name }} <span class="pi-vs">vs</span> {{ comp.item_b.name }}
+    </a>
+    {% endfor %}
+</div>
 
-<!-- Latest Comparisons -->
+<!-- Latest Battles -->
 {% if comparisons %}
 <section class="section">
     <div class="container">
-        <h2 class="section-title">Latest Comparisons</h2>
+        <h2 class="section-title arena-title">LATEST BATTLES</h2>
+        <p class="section-subtitle">Fresh comparisons, real data, honest verdicts.</p>
         <div class="comparison-grid">
             {% for comp in comparisons[:12] %}
             <a href="/{{ comp.slug }}/" class="comparison-card">
-                <div class="card-vs-header">
-                    <span class="card-item card-item-a">{{ comp.item_a.name }}</span>
-                    <span class="card-vs-badge">VS</span>
-                    <span class="card-item card-item-b">{{ comp.item_b.name }}</span>
-                </div>
                 <div class="card-body">
-                    <p class="card-verdict">{{ comp.verdict_text }}</p>
                     <span class="card-category">{{ comp.category_name }}</span>
+                    <h3 class="card-matchup">{{ comp.item_a.name }} <span class="cm-vs">VS</span> {{ comp.item_b.name }}</h3>
+                    <p class="card-verdict">{{ comp.verdict_text }}</p>
                 </div>
             </a>
             {% endfor %}
@@ -100,44 +88,18 @@
 <!-- Categories -->
 <section class="section section-alt">
     <div class="container">
-        <h2 class="section-title">Browse by Category</h2>
-        <div class="category-grid">
+        <h2 class="section-title arena-title">CATEGORIES</h2>
+        <div class="category-chips">
             {% for cat in categories %}
             {% set count = category_counts.get(cat.slug, 0) %}
-            <a href="/categories/{{ cat.slug }}/" class="category-card{% if count == 0 %} category-card-empty{% endif %}">
-                <span class="category-icon">{{ cat.icon }}</span>
-                <span class="category-name">{{ cat.name }}</span>
+            <a href="/categories/{{ cat.slug }}/" class="category-chip{% if count == 0 %} category-chip-empty{% endif %}">
+                <span class="category-chip-icon">{{ cat.icon }}</span>
+                <span class="category-chip-name">{{ cat.name }}</span>
                 {% if count > 0 %}
-                <span class="category-count">{{ count }} comparison{{ 's' if count != 1 }}</span>
-                {% else %}
-                <span class="category-count">Coming soon</span>
+                <span class="category-chip-count">{{ count }}</span>
                 {% endif %}
             </a>
             {% endfor %}
-        </div>
-    </div>
-</section>
-
-<!-- How It Works -->
-<section class="section">
-    <div class="container">
-        <h2 class="section-title">How It Works</h2>
-        <div class="how-grid">
-            <div class="how-step">
-                <div class="how-number">1</div>
-                <h3>We Research</h3>
-                <p>Deep dives into specs, reviews, and real-world performance for every product we compare.</p>
-            </div>
-            <div class="how-step">
-                <div class="how-number">2</div>
-                <h3>We Compare</h3>
-                <p>Side-by-side breakdowns of what matters: price, quality, features, and value for money.</p>
-            </div>
-            <div class="how-step">
-                <div class="how-number">3</div>
-                <h3>You Decide</h3>
-                <p>Clear verdicts and honest analysis so you can pick the right product with confidence.</p>
-            </div>
         </div>
     </div>
 </section>
