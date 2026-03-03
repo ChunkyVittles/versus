@@ -1,0 +1,131 @@
+{
+  "slug": "doordash-vs-grubhub",
+  "item_a": {
+    "name": "DoorDash",
+    "brand": "DoorDash",
+    "image_alt": "DoorDash food delivery app interface showing restaurant listings and delivery options",
+    "pros": [
+      "Largest restaurant selection with 450,000+ merchant partners",
+      "DashPass subscription offers $0 delivery fees on orders over $12",
+      "Fast average delivery times of 35-40 minutes",
+      "Superior driver availability in suburban and rural areas"
+    ],
+    "cons": [
+      "Higher service fees ranging from 11-15% per order",
+      "Delivery fees can reach $5-$8 without subscription",
+      "Customer support response times can be slow during peak hours"
+    ],
+    "price_range": "$1.99-$8.99",
+    "best_for": "Users seeking the widest restaurant selection and fastest delivery times, especially outside major metropolitan areas.",
+    "rating": 4.3,
+    "affiliate_url": ""
+  },
+  "item_b": {
+    "name": "Grubhub",
+    "brand": "Grubhub",
+    "image_alt": "Grubhub food delivery app interface displaying menu options and order tracking features",
+    "pros": [
+      "Grubhub+ membership includes free delivery and lower service fees",
+      "Better loyalty rewards program with frequent promotional offers",
+      "More transparent pricing with itemized fee breakdown",
+      "Strong presence in urban markets with exclusive restaurant partnerships"
+    ],
+    "cons": [
+      "Smaller merchant network with approximately 300,000 partners",
+      "Slower average delivery times of 45-50 minutes",
+      "Limited availability in rural and smaller suburban areas"
+    ],
+    "price_range": "$0.99-$6.99",
+    "best_for": "Budget-conscious urban users who prioritize transparent pricing and loyalty rewards over selection variety.",
+    "rating": 4.1,
+    "affiliate_url": ""
+  },
+  "category": "services",
+  "comparison_summary": "DoorDash dominates in restaurant selection and delivery speed with 450,000+ merchants and 35-40 minute average deliveries, while Grubhub offers more transparent pricing and better loyalty rewards. For most users prioritizing selection and speed, DoorDash edges ahead, though urban dwellers focused on value may prefer Grubhub's pricing structure.",
+  "verdict": "a",
+  "verdict_text": "DoorDash wins overall with its superior restaurant selection and faster delivery times, making it the better choice for most users despite slightly higher fees.",
+  "key_differences": [
+    {
+      "aspect": "Restaurant Network Size",
+      "item_a": "450,000+ merchant partners",
+      "item_b": "300,000+ merchant partners",
+      "winner": "a"
+    },
+    {
+      "aspect": "Average Delivery Time",
+      "item_a": "35-40 minutes",
+      "item_b": "45-50 minutes",
+      "winner": "a"
+    },
+    {
+      "aspect": "Delivery Fee Range (without subscription)",
+      "item_a": "$1.99-$8.99",
+      "item_b": "$0.99-$6.99",
+      "winner": "b"
+    },
+    {
+      "aspect": "Service Fee Percentage",
+      "item_a": "11-15% of order subtotal",
+      "item_b": "9-12% of order subtotal",
+      "winner": "b"
+    },
+    {
+      "aspect": "Subscription Cost",
+      "item_a": "DashPass: $9.99/month",
+      "item_b": "Grubhub+: $9.99/month",
+      "winner": "tie"
+    },
+    {
+      "aspect": "Geographic Coverage",
+      "item_a": "4,000+ cities across all 50 states",
+      "item_b": "3,200+ cities, concentrated in urban areas",
+      "winner": "a"
+    },
+    {
+      "aspect": "Minimum Order for Free Delivery (with subscription)",
+      "item_a": "$12",
+      "item_b": "$12",
+      "winner": "tie"
+    },
+    {
+      "aspect": "Loyalty Rewards Structure",
+      "item_a": "Limited rewards, occasional promotions",
+      "item_b": "Grubhub Rewards with points on every order, frequent bonus offers",
+      "winner": "b"
+    }
+  ],
+  "seo_content": "When comparing DoorDash vs Grubhub, two of America's leading food delivery platforms, the decision ultimately comes down to your priorities: selection and speed versus pricing transparency and rewards. Both services have carved out significant market share since their respective launches, but they cater to slightly different user preferences and geographic markets.\n\nDoorDash has established itself as the market leader with an impressive network of over 450,000 merchant partners spanning 4,000+ cities across all 50 states. This massive selection means you're more likely to find your favorite restaurants available on DoorDash, particularly if you live in suburban or rural areas where competing services haven't fully penetrated. The platform's average delivery time of 35-40 minutes consistently outpaces competitors, thanks to its larger driver network and sophisticated routing algorithms. DashPass subscribers paying $9.99 monthly enjoy $0 delivery fees on eligible orders over $12, which can quickly pay for itself for frequent users.\n\nIn the Grubhub vs DoorDash debate, Grubhub distinguishes itself through more transparent pricing structures and superior loyalty rewards. While its merchant network is smaller at approximately 300,000 partners, Grubhub has cultivated exclusive partnerships with popular urban restaurants and chains. The platform's service fees typically range from 9-12%, compared to DoorDash's 11-15%, making individual orders slightly more affordable. Grubhub+ membership, also $9.99 monthly, provides similar benefits to DashPass but pairs better with the platform's Grubhub Rewards program, which awards points on every order and frequently offers bonus promotions.\n\nDelivery speed represents a significant differentiator: DoorDash averages 35-40 minutes while Grubhub typically takes 45-50 minutes. For time-sensitive orders or busy professionals, this 10-minute difference can be substantial. However, Grubhub's itemized fee breakdown gives users clearer insight into exactly what they're paying for, addressing a common complaint about hidden costs in food delivery services.\n\nGeographic availability matters considerably in this comparison. DoorDash's broader coverage makes it the default choice for users outside major metropolitan areas, while Grubhub's urban concentration means it may offer better restaurant variety in cities like New York, Chicago, and San Francisco. Both platforms charge similar delivery fees without subscriptions, ranging from $1.99-$8.99 for DoorDash and $0.99-$6.99 for Grubhub, though actual costs vary based on distance, demand, and restaurant partnerships.\n\nFor most users, DoorDash's combination of selection breadth, delivery speed, and geographic reach makes it the more versatile choice, especially for families or those living outside dense urban cores. However, budget-conscious city dwellers who order frequently may find Grubhub's transparent pricing and robust rewards program deliver better long-term value.",
+  "faq": [
+    {
+      "q": "Is DoorDash or Grubhub cheaper overall?",
+      "a": "Grubhub typically has lower service fees (9-12% vs 11-15%) and slightly lower delivery fees, making individual orders cheaper. However, with subscription plans priced identically at $9.99/month, the total cost depends on your order frequency and whether you take advantage of Grubhub's superior rewards program."
+    },
+    {
+      "q": "Which service has faster delivery: DoorDash or Grubhub?",
+      "a": "DoorDash delivers faster on average, with typical delivery times of 35-40 minutes compared to Grubhub's 45-50 minutes. This speed advantage comes from DoorDash's larger driver network and more efficient routing technology, though actual times vary by location and restaurant."
+    },
+    {
+      "q": "Does DoorDash or Grubhub have more restaurants available?",
+      "a": "DoorDash has significantly more restaurant options with 450,000+ merchant partners compared to Grubhub's 300,000+ partners. DoorDash also covers more geographic areas, making it the better choice for suburban and rural users, while Grubhub focuses on urban markets with curated selections."
+    },
+    {
+      "q": "Are DashPass and Grubhub+ worth the subscription cost?",
+      "a": "Both subscriptions cost $9.99/month and eliminate delivery fees on eligible orders over $12. If you order delivery 2-3 times per month, either subscription pays for itself. Grubhub+ offers better value when combined with Grubhub Rewards points, while DashPass provides access to a larger restaurant selection."
+    },
+    {
+      "q": "Which delivery service treats restaurant partners and drivers better?",
+      "a": "Both platforms charge restaurants commission rates of 15-30%, though specific terms vary by partnership level. Driver compensation is similar on both platforms, averaging $15-25 per hour including tips. DoorDash's larger order volume typically means more consistent earning opportunities for drivers, while Grubhub offers hourly guarantees in some markets."
+    }
+  ],
+  "related_comparisons": [
+    "doordash-vs-uber-eats",
+    "grubhub-vs-uber-eats",
+    "doordash-vs-postmates",
+    "grubhub-vs-seamless",
+    "instacart-vs-uber-eats"
+  ],
+  "meta_title": "DoorDash vs Grubhub (2026): Which Delivery Service is Better?",
+  "meta_description": "Detailed comparison of DoorDash vs Grubhub. We break down restaurant selection, delivery speed, pricing, and geographic coverage to help you pick the right food delivery service.",
+  "date_published": "2026-03-03",
+  "date_updated": "2026-03-03"
+}

@@ -322,6 +322,21 @@ function renderComparisonPage(comp) {
         </div>
     </footer>
     <script src="/js/main.js?v=3"></script>
+    <script>
+    (function(){
+      const S='versusthat',C='https://bullbotics.com/api/analytics/collect';
+      let Q=[],T=Date.now(),D={25:0,50:0,75:0,100:0},V={},sid=Math.random().toString(36).slice(2);
+      function ts(){return Date.now()}
+      function e(t,d){Q.push({type:t,data:d||{},timestamp:ts()})}
+      function send(){if(!Q.length)return;const b=JSON.stringify({site_id:S,events:Q,session_id:sid});Q=[];if(navigator.sendBeacon){navigator.sendBeacon(C,new Blob([b],{type:'application/json'}))}else{fetch(C,{method:'POST',body:b,headers:{'Content-Type':'application/json'},keepalive:true}).catch(function(){})}}
+      function pl(){const u=new URL(location.href),p=u.searchParams,r=document.referrer;e('page_load',{referrer:r,utm_source:p.get('utm_source'),utm_medium:p.get('utm_medium'),utm_campaign:p.get('utm_campaign'),device:window.innerWidth<768?'mobile':window.innerWidth<1024?'tablet':'desktop',screen:window.innerWidth+'x'+window.innerHeight,path:location.pathname})}
+      function sd(){const h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight)-window.innerHeight;if(h<=0)return;const p=Math.min(100,Math.round((window.scrollY/h)*100));[25,50,75,100].forEach(function(t){if(p>=t&&!D[t]){D[t]=1;e('scroll_depth',{threshold:t,time_to_reach:ts()-T})}})}
+      function sv(){const obs=new IntersectionObserver(function(entries){entries.forEach(function(en){const id=en.target.id;if(!id)return;if(en.isIntersecting){if(!V[id])V[id]={start:ts(),total:0};else V[id].start=ts()}else if(V[id]&&V[id].start){V[id].total+=(ts()-V[id].start);V[id].start=0;e('section_visible',{section:id,duration:V[id].total})}})},{threshold:0.5});document.querySelectorAll('section[id]').forEach(function(s){obs.observe(s)})}
+      function cl(){document.addEventListener('click',function(ev){const a=ev.target.closest('a[href]');if(!a)return;const h=a.href,r=a.getAttribute('rel')||'';if(r.indexOf('sponsored')>=0){e('affiliate_click',{url:h,text:(a.textContent||'').slice(0,50),product:a.getAttribute('aria-label')||''})}else if(h.indexOf('http')===0&&h.indexOf(location.hostname)<0){e('outbound_click',{url:h,text:(a.textContent||'').slice(0,50)})}})}
+      function init(){pl();window.addEventListener('scroll',sd,{passive:true});sv();cl();setInterval(function(){e('time_on_page',{elapsed:ts()-T})},30000);setInterval(send,5000);window.addEventListener('beforeunload',function(){Object.keys(V).forEach(function(id){if(V[id].start){V[id].total+=(ts()-V[id].start);e('section_visible',{section:id,duration:V[id].total,final:true})}});send()});setTimeout(send,1000)}
+      if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}
+    })();
+    </script>
 </body>
 </html>`;
 }

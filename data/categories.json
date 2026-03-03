@@ -18,5 +18,11 @@
   {"slug": "gaming-consoles", "name": "Gaming Consoles", "icon": "🎮"},
   {"slug": "routers", "name": "Routers & Mesh WiFi", "icon": "📡"},
   {"slug": "car-seats", "name": "Car Seats", "icon": "🚗"},
-  {"slug": "strollers", "name": "Strollers", "icon": "👶"}
+  {"slug": "strollers", "name": "Strollers", "icon": "👶"},
+  {"slug": "financial", "name": "Financial & Investing", "icon": "💰"},
+  {"slug": "education", "name": "Education", "icon": "🎓"},
+  {"slug": "cars", "name": "Cars & Driving", "icon": "🚗"},
+  {"slug": "services", "name": "Services & Delivery", "icon": "📦"},
+  {"slug": "pet-food", "name": "Pet Food", "icon": "🐾"},
+  {"slug": "fitness-equipment", "name": "Fitness Equipment", "icon": "🏋️"}
 ]

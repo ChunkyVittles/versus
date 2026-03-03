@@ -1,0 +1,132 @@
+{
+  "slug": "doordash-vs-shipt",
+  "item_a": {
+    "name": "DoorDash",
+    "brand": "DoorDash, Inc.",
+    "image_alt": "DoorDash food and grocery delivery app interface on smartphone",
+    "pros": [
+      "Largest restaurant selection with over 450,000 merchant partners",
+      "DashPass membership offers unlimited free deliveries for $9.99/month",
+      "Available in over 7,000 cities across North America",
+      "Fast delivery times averaging 30-45 minutes for restaurant orders"
+    ],
+    "cons": [
+      "Service fees can be high (10-15% of order total)",
+      "Grocery selection is more limited compared to specialized services",
+      "Inconsistent shopper quality for grocery orders"
+    ],
+    "price_range": "$0-$9.99/month",
+    "best_for": "People who primarily order restaurant food but occasionally need grocery delivery convenience.",
+    "rating": 4.3,
+    "affiliate_url": ""
+  },
+  "item_b": {
+    "name": "Shipt",
+    "brand": "Shipt (Target Corporation)",
+    "image_alt": "Shipt grocery delivery service app showing shopping list and delivery options",
+    "pros": [
+      "Specialized grocery shoppers with more training and experience",
+      "Strong partnerships with Target, Costco, CVS, and major grocery chains",
+      "Same-day delivery available in as little as 1 hour",
+      "Personal shopper communication with real-time substitution approvals"
+    ],
+    "cons": [
+      "More expensive membership at $99/year or $10.99/month",
+      "Limited restaurant delivery options compared to competitors",
+      "Smaller geographic coverage with availability in around 5,000 cities"
+    ],
+    "price_range": "$10.99/month",
+    "best_for": "Households focused on regular grocery shopping who value quality service and real-time shopper communication.",
+    "rating": 4.5,
+    "affiliate_url": ""
+  },
+  "category": "services",
+  "comparison_summary": "DoorDash excels as a restaurant delivery platform with the largest merchant network and competitive pricing, while Shipt specializes in grocery delivery with superior shopper quality and store partnerships. DoorDash is better for food-focused users who occasionally need groceries, while Shipt serves households prioritizing consistent, high-quality grocery delivery with personal shopper interaction.",
+  "verdict": "tie",
+  "verdict_text": "DoorDash wins for restaurant delivery variety and affordability, while Shipt is superior for dedicated grocery shoppers who value quality service.",
+  "key_differences": [
+    {
+      "aspect": "Primary Focus",
+      "item_a": "Restaurant delivery with grocery as secondary service",
+      "item_b": "Grocery delivery specialist with limited restaurant options",
+      "winner": "tie"
+    },
+    {
+      "aspect": "Membership Cost",
+      "item_a": "$9.99/month or $96/year for DashPass",
+      "item_b": "$10.99/month or $99/year for Shipt membership",
+      "winner": "a"
+    },
+    {
+      "aspect": "Merchant Partners",
+      "item_a": "450,000+ restaurants and retailers nationwide",
+      "item_b": "Target, Costco, CVS, Publix, HEB, and 100+ grocery chains",
+      "winner": "a"
+    },
+    {
+      "aspect": "Geographic Coverage",
+      "item_a": "7,000+ cities across US, Canada, Australia",
+      "item_b": "5,000+ cities primarily across the United States",
+      "winner": "a"
+    },
+    {
+      "aspect": "Shopper Communication",
+      "item_a": "Limited communication, mostly automated notifications",
+      "item_b": "Direct messaging with personal shopper for real-time substitutions",
+      "winner": "b"
+    },
+    {
+      "aspect": "Delivery Speed",
+      "item_a": "30-45 minutes average for restaurants, 60+ for groceries",
+      "item_b": "1-2 hours for same-day grocery delivery windows",
+      "winner": "a"
+    },
+    {
+      "aspect": "Service Fees",
+      "item_a": "10-15% of order subtotal plus delivery fees ($1.99-$5.99)",
+      "item_b": "Free delivery on orders $35+ with membership, $7-$10 without",
+      "winner": "b"
+    },
+    {
+      "aspect": "Shopper Quality for Groceries",
+      "item_a": "General delivery drivers with basic training",
+      "item_b": "Specialized grocery shoppers with produce selection expertise",
+      "winner": "b"
+    }
+  ],
+  "seo_content": "When comparing DoorDash vs Shipt, the fundamental distinction lies in their core expertise and service philosophy. DoorDash built its empire on restaurant delivery, connecting hungry customers with over 450,000 dining establishments across North America. While the platform has expanded into grocery delivery through partnerships with convenience stores and supermarkets, its strength remains in quick restaurant meals. Shipt vs DoorDash presents a different value proposition: Shipt, owned by Target since 2017, focuses exclusively on grocery and household essentials delivery with trained personal shoppers who communicate directly with customers about product availability and substitutions.\n\nThe pricing structure reveals important trade-offs. DoorDash's DashPass subscription costs $9.99 monthly ($96 annually), offering unlimited free deliveries on eligible orders over $12, though service fees of 10-15% still apply. Shipt charges slightly more at $10.99 monthly or $99 yearly but includes free delivery on orders exceeding $35 with no additional service fees, making it more economical for regular grocery shoppers. The per-order economics favor Shipt for larger grocery hauls while DoorDash provides better value for frequent small restaurant orders.\n\nGeographic availability gives DoorDash a clear advantage, operating in over 7,000 cities compared to Shipt's approximately 5,000 locations. However, Shipt's strategic partnerships with major retailers like Target, Costco, CVS, Publix, and HEB provide access to quality grocery inventory that DoorDash's fragmented grocery network struggles to match. The shopper experience differs dramatically: Shipt employs dedicated grocery shoppers trained in produce selection and product knowledge who maintain text conversations throughout the shopping process. DoorDash uses general delivery contractors who receive less specialized training for grocery fulfillment.\n\nFor delivery speed, DoorDash typically completes restaurant orders in 30-45 minutes, making it ideal for immediate meal needs. Shipt operates on scheduled delivery windows, usually 1-2 hours from order placement, which requires more planning but ensures shoppers have adequate time for quality selection. The question of DoorDash vs Shipt ultimately depends on your primary use case: choose DoorDash if restaurant variety and quick delivery matter most, or select Shipt if you're replacing weekly grocery store trips and value shopper expertise. Households that do both might benefit from maintaining subscriptions to both services, using each for its strength.",
+  "faq": [
+    {
+      "q": "Can I use DoorDash for full grocery shopping trips?",
+      "a": "Yes, DoorDash offers grocery delivery from convenience stores, supermarkets, and warehouse clubs, but the service is optimized for quick restaurant delivery. Shoppers may have less grocery expertise compared to Shipt's specialized grocery shoppers, and the selection varies significantly by location."
+    },
+    {
+      "q": "Does Shipt deliver restaurant food like DoorDash?",
+      "a": "Shipt primarily focuses on grocery and retail delivery, though some markets offer limited restaurant options. For extensive restaurant delivery, DoorDash provides far more merchant partners and faster delivery times specifically optimized for prepared food."
+    },
+    {
+      "q": "Which service has better customer support for incorrect items?",
+      "a": "Shipt generally receives higher ratings for customer support due to direct shopper communication during shopping, allowing real-time issue resolution. DoorDash handles most issues through their app after delivery, which can be less personalized but offers quick credit for problems."
+    },
+    {
+      "q": "Are the membership fees worth it for occasional users?",
+      "a": "For occasional users (1-2 orders monthly), neither membership may be cost-effective. DoorDash without DashPass charges $1.99-$5.99 delivery fees plus service charges, while Shipt charges $7-$10 per delivery without membership. Calculate your typical monthly usage to determine break-even points."
+    },
+    {
+      "q": "Which service pays shoppers better?",
+      "a": "Shipt typically offers more consistent earnings for shoppers with a base pay model plus tips, while DoorDash uses a variable pay structure based on distance, desirability, and time. Both rely heavily on customer tips, though Shipt shoppers often report more stable income due to the grocery focus and larger order values."
+    }
+  ],
+  "related_comparisons": [
+    "doordash-vs-grubhub",
+    "doordash-vs-ubereats",
+    "instacart-vs-shipt",
+    "shipt-vs-ubereats",
+    "grubhub-vs-shipt",
+    "amazon-fresh-vs-shipt"
+  ],
+  "meta_title": "DoorDash vs Shipt (2026): Which Delivery Service Should You Choose?",
+  "meta_description": "Detailed comparison of DoorDash vs Shipt delivery services. We break down pricing, coverage, shopper quality, and delivery speeds to help you pick the right service for your needs.",
+  "date_published": "2026-03-03",
+  "date_updated": "2026-03-03"
+}

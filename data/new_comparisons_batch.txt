@@ -1,0 +1,66 @@
+# Top 50 new comparisons by revenue potential (volume x CPC)
+# Format: keyword|category
+# Sorted by revenue score descending
+# Generated from DataForSEO keyword data 2026-03-03
+
+# === FINANCIAL (21 comparisons) ===
+roth ira vs traditional ira|financial
+charles schwab vs fidelity|financial
+fidelity vs vanguard|financial
+capital one vs chase|financial
+roth 401k vs traditional 401k|financial
+traditional ira vs roth ira|financial
+robinhood vs webull|financial
+schwab vs vanguard vs fidelity|financial
+amex vs chase|financial
+bank of america vs chase|financial
+chase vs wells fargo|financial
+blackrock vs vanguard|financial
+fidelity vs interactive brokers|financial
+fidelity vs sofi|financial
+fidelity vs tiaa|financial
+robinhood vs schwab|financial
+rollover ira vs roth ira|financial
+etrade vs schwab|financial
+acorns vs robinhood|financial
+roth ira vs sep ira|financial
+403b vs roth ira|financial
+
+# === MATTRESSES (7 comparisons) ===
+california king vs king|mattresses
+king vs super king|mattresses
+hybrid vs memory foam mattress|mattresses
+sleep number vs tempurpedic|mattresses
+twin vs twin xl|mattresses
+dreamcloud vs nectar|mattresses
+full vs twin mattress|mattresses
+
+# === EDUCATION (9 comparisons) ===
+mba vs masters degree|education
+masters vs mba|education
+executive mba vs mba|education
+act vs sat|education
+mba vs ms in finance|education
+mba vs mpa|education
+online vs in person learning|education
+mba vs ms in accounting|education
+mba vs master of management|education
+
+# === SERVICES (8 comparisons) ===
+doordash vs uber eats|services
+costco vs sam's club|services
+target vs walmart|services
+doordash vs instacart|services
+doordash vs grubhub|services
+lyft vs uber|services
+home depot vs lowes|services
+doordash vs shipt|services
+
+# === CARS (4 comparisons) ===
+awd vs 4wd|cars
+suv vs sedan|cars
+lease vs buy a car|cars
+hybrid vs plug in hybrid|cars
+
+# === FITNESS EQUIPMENT (1 comparison) ===
+nordictrack vs peloton|fitness-equipment
