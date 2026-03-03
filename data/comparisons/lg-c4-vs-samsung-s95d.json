@@ -1,0 +1,132 @@
+{
+  "slug": "lg-c4-vs-samsung-s95d",
+  "item_a": {
+    "name": "LG C4 OLED TV",
+    "brand": "LG",
+    "image_alt": "LG C4 OLED TV displaying vibrant colors on screen with thin bezels and gallery stand",
+    "pros": [
+      "Excellent color accuracy and Dolby Vision support",
+      "Four HDMI 2.1 ports for extensive gaming connectivity",
+      "WebOS interface is intuitive and feature-rich",
+      "Superior wide viewing angles with no color shift"
+    ],
+    "cons": [
+      "Lower peak brightness compared to QD-OLED panels",
+      "Risk of burn-in with static content over time",
+      "Glossy screen can be reflective in bright rooms"
+    ],
+    "price_range": "$1,399-$3,299",
+    "best_for": "Home theater enthusiasts seeking accurate colors, Dolby Vision support, and multiple HDMI 2.1 ports for gaming setups.",
+    "rating": 4.6,
+    "affiliate_url": ""
+  },
+  "item_b": {
+    "name": "Samsung S95D QD-OLED TV",
+    "brand": "Samsung",
+    "image_alt": "Samsung S95D QD-OLED TV showing bright HDR content with One Connect box and slim profile",
+    "pros": [
+      "Exceptional peak brightness up to 1,500 nits for HDR",
+      "Quantum Dot OLED delivers incredibly vivid colors",
+      "Matte screen coating reduces glare significantly",
+      "One Connect box simplifies cable management"
+    ],
+    "cons": [
+      "Only one HDMI 2.1 port at full 144Hz capability",
+      "No Dolby Vision support, only HDR10+",
+      "Tizen OS has fewer streaming apps than competitors"
+    ],
+    "price_range": "$2,099-$4,299",
+    "best_for": "Viewers prioritizing brightness and color vibrancy in well-lit rooms who don't need multiple high-bandwidth gaming ports.",
+    "rating": 4.7,
+    "affiliate_url": ""
+  },
+  "category": "tvs",
+  "comparison_summary": "The Samsung S95D QD-OLED offers superior brightness (up to 1,500 nits) and more vivid colors with its Quantum Dot technology, plus a matte screen that handles reflections better. The LG C4 counters with better value, four full HDMI 2.1 ports ideal for multi-console gamers, Dolby Vision support, and more accurate color reproduction for cinema enthusiasts.",
+  "verdict": "tie",
+  "verdict_text": "The Samsung S95D wins for bright room viewing and visual pop, while the LG C4 is better for gaming setups and home theater purists, making this a tie depending on priorities.",
+  "key_differences": [
+    {
+      "aspect": "Peak Brightness",
+      "item_a": "800-900 nits (WOLED panel)",
+      "item_b": "1,400-1,500 nits (QD-OLED panel)",
+      "winner": "b"
+    },
+    {
+      "aspect": "HDMI 2.1 Ports",
+      "item_a": "Four ports at 48Gbps with 4K 120Hz",
+      "item_b": "Four ports but only one at full 144Hz",
+      "winner": "a"
+    },
+    {
+      "aspect": "HDR Format Support",
+      "item_a": "Dolby Vision, HDR10, HLG",
+      "item_b": "HDR10+, HDR10, HLG (no Dolby Vision)",
+      "winner": "a"
+    },
+    {
+      "aspect": "Screen Coating",
+      "item_a": "Glossy finish with standard reflections",
+      "item_b": "Matte coating reduces glare by 50%",
+      "winner": "b"
+    },
+    {
+      "aspect": "Color Volume",
+      "item_a": "Accurate but less saturated (WOLED)",
+      "item_b": "More vibrant and saturated (Quantum Dot)",
+      "winner": "b"
+    },
+    {
+      "aspect": "Price (65-inch)",
+      "item_a": "$2,199 MSRP",
+      "item_b": "$3,299 MSRP",
+      "winner": "a"
+    },
+    {
+      "aspect": "Processor",
+      "item_a": "α9 AI Processor Gen 7",
+      "item_b": "NQ4 AI Gen 3 Processor",
+      "winner": "tie"
+    },
+    {
+      "aspect": "Gaming Response Time",
+      "item_a": "0.1ms with VRR and ALLM",
+      "item_b": "0.1ms with VRR and ALLM",
+      "winner": "tie"
+    }
+  ],
+  "seo_content": "When comparing the LG C4 vs Samsung S95D, you're looking at two premium OLED televisions that represent different philosophical approaches to picture quality. The Samsung S95D vs LG C4 debate essentially comes down to whether you prioritize raw brightness and color vibrancy or value, gaming versatility, and home theater accuracy.\n\nThe Samsung S95D utilizes second-generation QD-OLED (Quantum Dot OLED) technology, which combines the perfect blacks of OLED with quantum dot color enhancement. This results in exceptional peak brightness reaching 1,400-1,500 nits—nearly double what the LG C4 can achieve with its traditional WOLED (White OLED) panel. In practical terms, HDR highlights like explosions, sunlight, or fireworks appear significantly more impactful on the S95D. Samsung's matte screen coating is another differentiator, reducing reflections by approximately 50% compared to the glossy C4, making it superior for rooms with windows or ambient lighting.\n\nThe LG C4, however, presents compelling advantages for specific users. Its four HDMI 2.1 ports all support full 48Gbps bandwidth with 4K at 120Hz, making it ideal for gamers with multiple next-gen consoles or PC setups. The S95D technically has four HDMI 2.1 ports, but only one supports the full 144Hz refresh rate. For cinephiles, the C4's Dolby Vision support is crucial—this HDR format offers scene-by-scene optimization that many streaming services and 4K Blu-rays utilize. Samsung's decision to support only HDR10+ means you'll miss out on optimized viewing for significant content libraries.\n\nColor accuracy tells an interesting story. While the S95D produces more saturated, \"wow factor\" colors thanks to quantum dots, the C4 delivers more accurate color reproduction that aligns with content creator intent. Professional reviewers consistently note the C4's superior Delta E measurements, meaning colors appear as filmmakers intended. The S95D's colors pop more but may oversaturate skin tones and certain scenes.\n\nPrice represents another significant factor. The LG C4 typically costs $800-1,000 less than the comparably sized S95D, offering exceptional value for the performance delivered. Both TVs feature near-instantaneous 0.1ms response times, VRR (Variable Refresh Rate), and ALLM (Auto Low Latency Mode) for gaming. The WebOS platform on LG provides a more extensive app ecosystem compared to Samsung's Tizen, though both cover major streaming services adequately.\n\nFor bright living rooms where daytime viewing is common, the Samsung S95D's superior brightness and anti-glare coating make it the better choice despite the premium price. Gamers with multiple consoles or home theater enthusiasts who value Dolby Vision and accuracy should lean toward the LG C4. Both are exceptional televisions that eliminate many compromises of previous generations.",
+  "faq": [
+    {
+      "q": "Which TV is better for gaming, the LG C4 or Samsung S95D?",
+      "a": "The LG C4 is better for multi-console gaming setups because it offers four full-bandwidth HDMI 2.1 ports supporting 4K at 120Hz, while the Samsung S95D has only one port capable of 144Hz. Both feature identical 0.1ms response times and support VRR and ALLM, so single-console gamers will be satisfied with either."
+    },
+    {
+      "q": "Does the Samsung S95D's extra brightness justify the higher price?",
+      "a": "If you watch TV primarily in bright rooms or value HDR impact, yes—the S95D's 1,500 nits peak brightness and matte screen coating significantly improve daytime viewing. However, in controlled lighting environments like dedicated home theaters, the LG C4's 800-900 nits is sufficient, making the price premium harder to justify."
+    },
+    {
+      "q": "Is burn-in risk different between the LG C4 and Samsung S95D?",
+      "a": "Both OLED technologies carry some burn-in risk with prolonged static content display, though manufacturers have implemented protective measures. The Samsung QD-OLED panel may show slight color fringing around bright objects on gray backgrounds due to its subpixel layout, while the LG WOLED has a more traditional RGB structure. Neither should experience burn-in with normal varied content viewing."
+    },
+    {
+      "q": "Why doesn't the Samsung S95D support Dolby Vision?",
+      "a": "Samsung uses the competing HDR10+ format instead of Dolby Vision, likely due to licensing costs and competitive positioning. While HDR10+ offers dynamic metadata like Dolby Vision, it has less content support. Major streaming services like Netflix, Apple TV+, and Disney+ offer extensive Dolby Vision libraries, which the S95D cannot fully utilize."
+    },
+    {
+      "q": "Which TV has better viewing angles?",
+      "a": "Both OLED panels offer excellent viewing angles compared to LCD/QLED TVs. The LG C4's WOLED panel maintains color accuracy slightly better at extreme angles, while the Samsung S95D's QD-OLED can show minor color shifting past 60 degrees. In practical living room scenarios, both provide vastly superior off-axis viewing compared to non-OLED alternatives."
+    }
+  ],
+  "related_comparisons": [
+    "lg-c4-vs-lg-g4",
+    "lg-c4-vs-sony-a95l",
+    "samsung-s90d-vs-samsung-s95d",
+    "lg-c3-vs-lg-c4",
+    "samsung-s95c-vs-samsung-s95d",
+    "sony-a80l-vs-lg-c4"
+  ],
+  "meta_title": "LG C4 vs Samsung S95D (2026): Which OLED TV Should You Buy?",
+  "meta_description": "Detailed comparison of LG C4 vs Samsung S95D OLED TVs. We break down brightness, gaming ports, HDR support, and price to help you pick the right premium television.",
+  "date_published": "2026-03-02",
+  "date_updated": "2026-03-02"
+}

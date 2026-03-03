@@ -1,0 +1,132 @@
+{
+  "slug": "ego-vs-greenworks",
+  "item_a": {
+    "name": "EGO Power+ LM2142SP 21-Inch Self-Propelled Lawn Mower",
+    "brand": "EGO",
+    "image_alt": "EGO Power+ 21-inch cordless self-propelled lawn mower with battery and charger on grass",
+    "pros": [
+      "Peak Power technology delivers gas-like performance with up to 7.5 ft-lbs of torque",
+      "Includes two 5.0Ah batteries for extended runtime up to 60 minutes",
+      "Weather-resistant construction (IPX4) allows mowing in light rain",
+      "LED headlights enable early morning or evening mowing"
+    ],
+    "cons": [
+      "Higher price point compared to competitors",
+      "Heavier unit at 79 lbs makes transport more difficult",
+      "Proprietary battery system limits cross-brand compatibility"
+    ],
+    "price_range": "$599-$699",
+    "best_for": "Homeowners with medium to large lawns who want maximum power and runtime without compromising on features.",
+    "rating": 4.6,
+    "affiliate_url": ""
+  },
+  "item_b": {
+    "name": "Greenworks 40V 21-Inch Brushless Self-Propelled Lawn Mower",
+    "brand": "Greenworks",
+    "image_alt": "Greenworks 40V cordless brushless lawn mower with single battery on residential lawn",
+    "pros": [
+      "More affordable entry point with competitive performance",
+      "Lighter weight at 63 lbs for easier maneuverability",
+      "Brushless motor provides efficient power delivery and longer motor life",
+      "40V battery system compatible across 75+ Greenworks tools"
+    ],
+    "cons": [
+      "Single battery configuration provides shorter runtime of 45 minutes",
+      "Less torque output compared to EGO at 5.0 ft-lbs",
+      "No LED headlights for low-light mowing"
+    ],
+    "price_range": "$399-$499",
+    "best_for": "Budget-conscious homeowners with small to medium lawns who want reliable cordless performance and cross-tool battery compatibility.",
+    "rating": 4.3,
+    "affiliate_url": ""
+  },
+  "category": "lawn-mowers",
+  "comparison_summary": "EGO Power+ delivers superior power with 7.5 ft-lbs of torque and dual batteries for extended runtime, while Greenworks offers excellent value with a lighter design and broad battery compatibility across their tool ecosystem. EGO excels for larger lawns and demanding conditions, while Greenworks provides the best balance of performance and affordability for typical residential use.",
+  "verdict": "a",
+  "verdict_text": "EGO Power+ edges out Greenworks with superior power output and runtime, making it worth the premium for homeowners with larger properties or thick grass.",
+  "key_differences": [
+    {
+      "aspect": "Motor Torque",
+      "item_a": "7.5 ft-lbs with Peak Power technology",
+      "item_b": "5.0 ft-lbs with brushless motor",
+      "winner": "a"
+    },
+    {
+      "aspect": "Battery Configuration",
+      "item_a": "Dual 5.0Ah batteries (10.0Ah total)",
+      "item_b": "Single 5.0Ah battery",
+      "winner": "a"
+    },
+    {
+      "aspect": "Runtime",
+      "item_a": "Up to 60 minutes on dual batteries",
+      "item_b": "Up to 45 minutes on single battery",
+      "winner": "a"
+    },
+    {
+      "aspect": "Weight",
+      "item_a": "79 lbs (with batteries)",
+      "item_b": "63 lbs (with battery)",
+      "winner": "b"
+    },
+    {
+      "aspect": "Price",
+      "item_a": "$599-$699",
+      "item_b": "$399-$499",
+      "winner": "b"
+    },
+    {
+      "aspect": "Weather Resistance",
+      "item_a": "IPX4 rated for light rain mowing",
+      "item_b": "Standard weather protection",
+      "winner": "a"
+    },
+    {
+      "aspect": "LED Headlights",
+      "item_a": "Integrated LED headlights included",
+      "item_b": "No lighting system",
+      "winner": "a"
+    },
+    {
+      "aspect": "Battery Ecosystem",
+      "item_a": "Compatible with 10+ EGO outdoor tools",
+      "item_b": "Compatible with 75+ Greenworks tools",
+      "winner": "b"
+    }
+  ],
+  "seo_content": "When comparing EGO vs Greenworks lawn mowers, you're evaluating two of the most respected names in battery-powered outdoor equipment. Both brands have earned loyal followings, but they approach cordless lawn care with different philosophies that cater to distinct buyer priorities.\n\nThe EGO Power+ LM2142SP represents the premium tier of battery-powered mowing. Its standout feature is the Peak Power technology, which combines power from dual battery ports to deliver an impressive 7.5 ft-lbs of torque—genuinely comparable to many gas mowers. This matters tremendously when tackling thick, overgrown grass or wet conditions. The dual 5.0Ah battery system provides up to 60 minutes of runtime, enough to cover lawns up to half an acre on a single charge. EGO also includes thoughtful features like IPX4 weather resistance and LED headlights, making it functional in conditions where other mowers would stay in the garage.\n\nGreenworks vs EGO presents a compelling value proposition. The Greenworks 40V model delivers solid performance at a significantly lower price point. While its 5.0 ft-lbs of torque can't match EGO's output, the brushless motor is efficient and perfectly adequate for regular residential mowing on typical grass conditions. At 63 lbs, it's notably lighter than the 79-lb EGO, which translates to easier pushing despite both being self-propelled. The real differentiator is Greenworks' massive 40V battery ecosystem spanning 75+ tools—if you're building a complete cordless tool collection, this compatibility is invaluable.\n\nFor lawn size considerations, EGO handles up to 0.5 acres comfortably on dual batteries, while Greenworks is best suited for lawns under 0.35 acres with its single battery configuration. Both offer 21-inch steel decks with similar cutting height adjustments and mulching capabilities. The EGO features a larger 2.5-bushel bag versus Greenworks' 2.0-bushel capacity—a minor but noticeable difference on larger properties.\n\nBuild quality favors EGO with more robust construction and better weather sealing, though Greenworks certainly isn't flimsy. The Greenworks warranty matches EGO at 4-5 years, indicating both manufacturers stand behind their products. Ultimately, choosing between EGO vs Greenworks lawn mowers comes down to whether you prioritize maximum power and runtime (EGO) or value and ecosystem compatibility (Greenworks).",
+  "faq": [
+    {
+      "q": "Which has better battery life, EGO or Greenworks?",
+      "a": "EGO provides longer runtime with up to 60 minutes on dual 5.0Ah batteries, compared to Greenworks' 45 minutes on a single 5.0Ah battery. However, Greenworks batteries are less expensive to replace and work across more tools in their ecosystem."
+    },
+    {
+      "q": "Can EGO and Greenworks mow wet grass?",
+      "a": "EGO's IPX4 weather rating makes it better suited for mowing in light rain or damp conditions. Greenworks can handle damp grass but lacks the same level of weather sealing, making EGO the safer choice for wet conditions."
+    },
+    {
+      "q": "Are EGO mowers worth the extra cost over Greenworks?",
+      "a": "If you have a larger lawn (over 0.35 acres), thick grass, or frequently mow in challenging conditions, EGO's extra power and runtime justify the $200-300 premium. For typical residential lawns under 0.3 acres with regular maintenance, Greenworks offers better value."
+    },
+    {
+      "q": "Which brand has better customer service and warranty?",
+      "a": "Both brands offer 4-5 year warranties on their mowers and batteries. EGO has a slight edge in customer service ratings, but Greenworks has more service centers due to their broader market presence, making warranty claims potentially more convenient."
+    },
+    {
+      "q": "Can I use my existing batteries with these mowers?",
+      "a": "Only if you already own tools from the same brand and voltage. EGO uses a 56V system compatible with their Power+ line, while Greenworks uses a 40V system. Neither brand's batteries are cross-compatible with each other or other manufacturers."
+    }
+  ],
+  "related_comparisons": [
+    "ego-vs-ryobi",
+    "greenworks-vs-ryobi",
+    "ego-vs-makita",
+    "greenworks-vs-worx",
+    "dewalt-vs-ego",
+    "greenworks-vs-snapper"
+  ],
+  "meta_title": "EGO vs Greenworks Lawn Mowers (2026): Which Should You Buy?",
+  "meta_description": "Detailed comparison of EGO vs Greenworks cordless lawn mowers. We break down power, runtime, price, and features to help you pick the right battery-powered mower.",
+  "date_published": "2026-03-02",
+  "date_updated": "2026-03-02"
+}
