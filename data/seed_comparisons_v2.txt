@@ -1,0 +1,172 @@
+# High-volume "vs" keywords researched from SEO data, review sites, and Google Trends
+# Excludes the 50 comparisons already generated
+
+# Blenders
+ninja foodi vs vitamix|blenders
+nutribullet vs oster|blenders
+
+# Smartphones
+iphone 16 plus vs samsung galaxy s25+|smartphones
+pixel 9 pro vs samsung galaxy s25|smartphones
+iphone vs android|smartphones
+samsung vs pixel|smartphones
+oneplus vs samsung|smartphones
+
+# Laptops
+macbook pro vs surface pro|laptops
+chromebook vs macbook|laptops
+dell xps vs lenovo thinkpad|laptops
+macbook air m4 vs macbook pro m4|laptops
+windows laptop vs macbook|laptops
+lenovo yoga vs surface pro|laptops
+
+# Headphones
+bose quietcomfort vs sony xm5|headphones
+bose 700 vs sony wh-1000xm5|headphones
+airpods pro vs bose quietcomfort earbuds|headphones
+sony wh-1000xm4 vs xm5|headphones
+
+# TVs
+oled vs qled|tvs
+samsung vs lg tv|tvs
+samsung qled vs lg oled|tvs
+tcl vs hisense tv|tvs
+roku tv vs fire tv|tvs
+lg c3 vs samsung s90c|tvs
+sony bravia vs lg oled|tvs
+vizio vs tcl tv|tvs
+mini led vs oled tv|tvs
+samsung frame tv vs lg gallery|tvs
+
+# Vacuums
+dyson v15 vs shark stratos|vacuums
+dyson v11 vs v15|vacuums
+shark navigator vs dyson ball|vacuums
+dyson vs bissell|vacuums
+bissell vs shark|vacuums
+
+# Mattresses
+purple vs tempurpedic|mattresses
+casper vs tuft and needle|mattresses
+nectar vs purple|mattresses
+helix vs purple|mattresses
+tuft and needle vs purple|mattresses
+avocado vs saatva|mattresses
+
+# Grills & Smokers
+traeger vs big green egg|grills
+camp chef vs traeger|grills
+recteq vs traeger|grills
+weber genesis vs napoleon|grills
+pit boss vs traeger|grills
+big green egg vs weber kettle|grills
+
+# Coffee Makers
+nespresso vertuo vs original|coffee-makers
+breville vs nespresso|coffee-makers
+ninja coffee maker vs keurig|coffee-makers
+drip coffee vs french press|coffee-makers
+keurig k-elite vs k-supreme|coffee-makers
+delonghi vs breville espresso|coffee-makers
+
+# Air Fryers
+cosori vs philips air fryer|air-fryers
+ninja foodi vs instant vortex|air-fryers
+instant vortex vs cosori|air-fryers
+philips air fryer vs ninja|air-fryers
+gourmia vs ninja air fryer|air-fryers
+
+# Streaming Services
+netflix vs amazon prime video|streaming
+max vs netflix|streaming
+peacock vs hulu|streaming
+apple tv plus vs netflix|streaming
+paramount plus vs peacock|streaming
+disney plus vs amazon prime video|streaming
+hulu vs peacock|streaming
+
+# Fitness Trackers
+garmin vs fitbit|fitness-trackers
+samsung galaxy watch vs apple watch|fitness-trackers
+garmin forerunner vs fenix|fitness-trackers
+apple watch ultra vs garmin fenix|fitness-trackers
+whoop vs garmin|fitness-trackers
+oura ring vs fitbit|fitness-trackers
+
+# Power Tools
+ryobi vs dewalt|power-tools
+milwaukee vs makita|power-tools
+ryobi vs milwaukee|power-tools
+dewalt vs bosch|power-tools
+makita vs bosch|power-tools
+ryobi vs craftsman|power-tools
+
+# Lawn Mowers
+husqvarna vs ego|lawn-mowers
+honda vs toro|lawn-mowers
+toro vs ego|lawn-mowers
+ego vs ryobi|lawn-mowers
+greenworks vs ryobi|lawn-mowers
+husqvarna vs cub cadet|lawn-mowers
+john deere vs husqvarna|lawn-mowers
+toro timemaster vs honda|lawn-mowers
+craftsman vs cub cadet|lawn-mowers
+
+# Cameras
+canon vs sony|cameras
+sony vs nikon|cameras
+fujifilm vs sony|cameras
+sony a7 iv vs canon r6 mark ii|cameras
+nikon z6 iii vs sony a7 iv|cameras
+gopro vs dji action camera|cameras
+fujifilm x-t5 vs sony a7 iv|cameras
+
+# Tablets
+ipad air vs ipad pro|tablets
+ipad pro vs samsung galaxy tab s10|tablets
+kindle vs ipad|tablets
+ipad air vs surface pro|tablets
+samsung galaxy tab s9 vs ipad air|tablets
+ipad mini vs kindle fire|tablets
+samsung galaxy tab s10 ultra vs ipad pro|tablets
+
+# Gaming Consoles
+ps5 vs xbox series x|gaming-consoles
+nintendo switch 2 vs ps5|gaming-consoles
+xbox series s vs ps5|gaming-consoles
+steam deck vs nintendo switch|gaming-consoles
+ps5 slim vs xbox series s|gaming-consoles
+switch 2 vs steam deck|gaming-consoles
+xbox series x vs ps5 pro|gaming-consoles
+nintendo switch oled vs switch 2|gaming-consoles
+
+# Routers & Mesh WiFi
+eero vs orbi|routers
+eero vs google nest wifi|routers
+google nest wifi vs orbi|routers
+tp-link deco vs eero|routers
+netgear orbi vs tp-link deco|routers
+eero max 7 vs orbi 960|routers
+asus aimesh vs eero|routers
+
+# Car Seats
+graco vs chicco|car-seats
+britax vs graco|car-seats
+nuna vs chicco|car-seats
+chicco keyfit vs graco snugride|car-seats
+britax vs chicco|car-seats
+graco 4ever vs britax boulevard|car-seats
+nuna pipa vs chicco keyfit|car-seats
+uppababy mesa vs chicco keyfit|car-seats
+nuna vs uppababy car seat|car-seats
+
+# Strollers
+uppababy vista vs bugaboo|strollers
+uppababy cruz vs vista|strollers
+bugaboo vs uppababy|strollers
+nuna mixx vs uppababy cruz|strollers
+babyzen yoyo vs gb pockit|strollers
+bob revolution vs thule urban glide|strollers
+chicco bravo vs graco fastaction|strollers
+baby jogger city mini vs uppababy cruz|strollers
+nuna triv vs uppababy cruz|strollers

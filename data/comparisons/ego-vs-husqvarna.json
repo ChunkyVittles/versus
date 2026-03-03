@@ -1,0 +1,133 @@
+{
+  "slug": "ego-vs-husqvarna",
+  "item_a": {
+    "name": "EGO Power+ LM2142SP Self-Propelled Lawn Mower",
+    "brand": "EGO",
+    "image_alt": "EGO Power+ battery-powered self-propelled lawn mower with 21-inch cutting deck",
+    "pros": [
+      "56V ARC Lithium battery delivers gas-like power with 45-60 minute runtime",
+      "Weather-resistant construction allows storage outdoors",
+      "Rapid charging system fully charges battery in 40 minutes",
+      "Quieter operation at 65 dB compared to gas mowers"
+    ],
+    "cons": [
+      "Battery and charger add $200-300 to initial cost if not included",
+      "Limited to battery runtime requiring spare for larger lawns",
+      "Heavier than comparable gas mowers at 70+ lbs with battery"
+    ],
+    "price_range": "$549-$699",
+    "best_for": "Homeowners with up to 0.5 acre who prioritize convenience, low maintenance, and quiet operation over gas-powered alternatives.",
+    "rating": 4.6,
+    "affiliate_url": ""
+  },
+  "item_b": {
+    "name": "Husqvarna LC221RH Self-Propelled Gas Lawn Mower",
+    "brand": "Husqvarna",
+    "image_alt": "Husqvarna gas-powered self-propelled lawn mower with Honda engine and 21-inch steel deck",
+    "pros": [
+      "Honda 160cc engine provides reliable power for any grass condition",
+      "Unlimited runtime with quick gas refills for large properties",
+      "All-wheel drive system handles slopes and uneven terrain effectively",
+      "Lower upfront cost compared to battery systems"
+    ],
+    "cons": [
+      "Requires regular maintenance including oil changes and spark plug replacements",
+      "Louder operation at 95 dB requires hearing protection",
+      "Produces emissions and requires fuel storage",
+      "More difficult cold starts in winter months"
+    ],
+    "price_range": "$429-$549",
+    "best_for": "Homeowners with larger lawns over 0.5 acre who need unlimited runtime and don't mind gas engine maintenance.",
+    "rating": 4.4,
+    "affiliate_url": ""
+  },
+  "category": "lawn-mowers",
+  "comparison_summary": "EGO Power+ represents the premium battery-powered option with zero emissions and minimal maintenance, while Husqvarna's gas-powered LC221RH delivers unlimited runtime at a lower entry price. The choice depends primarily on lawn size, tolerance for maintenance, and whether the convenience of battery power justifies the higher investment.",
+  "verdict": "tie",
+  "verdict_text": "EGO Power+ wins for small to medium lawns prioritizing convenience, while Husqvarna LC221RH is better for larger properties requiring extended runtime.",
+  "key_differences": [
+    {
+      "aspect": "Power Source",
+      "item_a": "56V ARC Lithium battery system",
+      "item_b": "Honda 160cc gas engine",
+      "winner": "tie"
+    },
+    {
+      "aspect": "Runtime",
+      "item_a": "45-60 minutes per charge (covers ~0.5 acre)",
+      "item_b": "Unlimited with gas refills",
+      "winner": "b"
+    },
+    {
+      "aspect": "Noise Level",
+      "item_a": "65 dB (quiet conversation level)",
+      "item_b": "95 dB (requires hearing protection)",
+      "winner": "a"
+    },
+    {
+      "aspect": "Maintenance Requirements",
+      "item_a": "Minimal - blade sharpening only",
+      "item_b": "Oil changes, air filter, spark plug, winterization",
+      "winner": "a"
+    },
+    {
+      "aspect": "Cutting Width",
+      "item_a": "21 inches with 6 height positions",
+      "item_b": "21 inches with 6 height positions",
+      "winner": "tie"
+    },
+    {
+      "aspect": "Weight",
+      "item_a": "72 lbs with battery installed",
+      "item_b": "84 lbs with full fuel tank",
+      "winner": "a"
+    },
+    {
+      "aspect": "Initial Cost",
+      "item_a": "$549-699 (battery/charger may be separate)",
+      "item_b": "$429-549 complete",
+      "winner": "b"
+    },
+    {
+      "aspect": "Environmental Impact",
+      "item_a": "Zero emissions, no gas/oil disposal",
+      "item_b": "Gas emissions, requires proper fuel disposal",
+      "winner": "a"
+    }
+  ],
+  "seo_content": "The debate between EGO vs Husqvarna lawn mowers represents a fundamental choice in outdoor power equipment: battery-electric convenience versus gas-powered reliability. Both brands have earned strong reputations, but they cater to distinctly different homeowner priorities and lawn care scenarios.\n\nEGO Power+ has revolutionized the battery mower market with its 56-volt ARC Lithium technology, delivering power that genuinely rivals gas engines. The LM2142SP offers 45-60 minutes of runtime on a single charge, enough for most suburban lawns up to half an acre. What makes EGO particularly appealing is the elimination of gas engine headaches—no oil changes, no carburetor issues, no pull-starting on cold mornings. The weather-resistant construction means you can store it outdoors without the winterization ritual gas mowers require. At 65 decibels, it's quiet enough to mow early morning without disturbing neighbors, and the rapid 40-minute charge time means you're never waiting long to finish larger jobs.\n\nHusqvarna vs EGO presents a contrast in philosophy. Husqvarna's LC221RH takes the traditional gas-powered approach with a proven Honda 160cc engine that delivers consistent power regardless of battery charge levels. For homeowners with larger properties exceeding half an acre, the unlimited runtime of a gas mower becomes essential—simply refill and continue mowing. The all-wheel-drive system excels on slopes and challenging terrain where battery mowers might struggle. The lower upfront cost of $429-549 compared to EGO's $549-699 (plus potential battery/charger costs) makes gas more accessible initially.\n\nThe five-year cost comparison reveals nuances. While Husqvarna starts cheaper, you'll spend approximately $50-75 annually on gas, oil, filters, and spark plugs. EGO's operational costs are essentially zero beyond electricity for charging (roughly $5-10 annually). Battery replacement after 4-6 years runs $200-300, while gas mowers may need carburetor service or engine repairs in that timeframe.\n\nFor environmental consciousness, EGO clearly wins with zero direct emissions. Gas mowers produce significant hydrocarbons, with one hour of operation equating to driving a car approximately 100 miles in emissions. Noise pollution is another consideration—Husqvarna's 95 dB requires hearing protection and restricts mowing hours in many municipalities, while EGO's quiet operation offers flexibility.\n\nThe verdict ultimately depends on your specific situation. Choose EGO if you have a small to medium lawn (under 0.5 acre), value convenience and low maintenance, prefer quiet operation, and can justify the higher initial investment for long-term savings. Select Husqvarna if you're mowing larger properties, need unlimited runtime, prefer the familiarity of gas power, or want the lowest entry price. Both represent quality choices within their respective categories.",
+  "faq": [
+    {
+      "q": "How long does the EGO lawn mower battery last compared to a tank of gas in a Husqvarna?",
+      "a": "The EGO 56V 7.5Ah battery provides 45-60 minutes of runtime, covering approximately 0.5 acre on a single charge. A Husqvarna gas mower with a full tank (typically 0.5 gallon) runs 90-120 minutes, covering 1-1.5 acres. For lawns over half an acre, gas provides more convenient extended runtime, while EGO works well for smaller properties or when using multiple batteries."
+    },
+    {
+      "q": "What are the long-term maintenance costs of EGO vs Husqvarna lawn mowers?",
+      "a": "Husqvarna gas mowers require annual maintenance including oil changes ($20-30), air filters ($10-15), spark plugs ($5-10), and fuel stabilizer ($10), totaling approximately $50-75 per year. EGO mowers need only blade sharpening ($10-20 annually) and eventual battery replacement ($200-300 after 4-6 years). Over five years, gas maintenance costs around $250-375 plus potential repairs, while EGO costs under $100 for routine maintenance."
+    },
+    {
+      "q": "Can EGO mowers handle thick or wet grass as well as Husqvarna gas mowers?",
+      "a": "EGO's 56V system delivers comparable power to small gas engines and handles normal thick grass effectively. However, in extremely dense, wet, or overgrown conditions, Husqvarna's Honda gas engine maintains more consistent power without battery drain concerns. For regular weekly mowing, EGO performs excellently, but for neglected lawns or commercial-grade demands, gas engines have an edge in sustained heavy-duty performance."
+    },
+    {
+      "q": "Is it worth paying more upfront for an EGO battery mower versus a cheaper Husqvarna gas model?",
+      "a": "The investment depends on your lawn size and priorities. For properties under 0.5 acre, EGO's higher upfront cost ($100-150 more) is recovered within 3-4 years through eliminated fuel and maintenance expenses, plus you gain convenience and quiet operation. For larger lawns requiring multiple batteries (adding $300-500), Husqvarna's gas option becomes more economical unless you highly value zero emissions and minimal maintenance."
+    },
+    {
+      "q": "How do EGO and Husqvarna compare for storage and winter preparation?",
+      "a": "EGO requires minimal winter preparation—simply charge the battery to 50-60% and store in a temperature-controlled space above freezing; the mower itself can stay outdoors due to weather-resistant construction. Husqvarna gas mowers need winterization including fuel stabilizer or complete fuel drainage, oil changes, and protected storage to prevent carburetor issues. EGO clearly wins for storage convenience and seasonal readiness."
+    }
+  ],
+  "related_comparisons": [
+    "ego-vs-greenworks",
+    "ego-vs-ryobi",
+    "husqvarna-vs-toro",
+    "craftsman-vs-husqvarna",
+    "honda-vs-husqvarna",
+    "ego-vs-milwaukee"
+  ],
+  "meta_title": "EGO vs Husqvarna Lawn Mowers (2026): Which Should You Buy?",
+  "meta_description": "Detailed comparison of EGO Power+ vs Husqvarna lawn mowers. We break down battery vs gas performance, runtime, maintenance costs, and value to help you pick the right mower.",
+  "date_published": "2026-03-02",
+  "date_updated": "2026-03-02"
+}

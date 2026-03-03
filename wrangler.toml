@@ -1,0 +1,6 @@
+name = "versusthat"
+pages_build_output_dir = "dist"
+
+[[kv_namespaces]]
+binding = "COMPARISONS_KV"
+id = "bb93c00bc2f44704968eea79a54109d3"
