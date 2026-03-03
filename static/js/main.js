@@ -39,138 +39,121 @@
         });
     });
 
-    // --- Search Autocomplete + Dynamic Generation ---
-    var searchInput = document.getElementById('search-input');
-    var searchResults = document.getElementById('search-results');
+    // --- Dual-Input Compare ---
+    var inputA = document.getElementById('input-a');
+    var inputB = document.getElementById('input-b');
+    var suggestA = document.getElementById('suggest-a');
+    var suggestB = document.getElementById('suggest-b');
+    var compareBtn = document.getElementById('compare-btn');
+    var compareError = document.getElementById('compare-error');
     var searchData = window.VS_SEARCH_DATA || [];
+    var items = window.VS_ITEMS || [];
 
-    if (searchInput && searchResults) {
-        var activeIndex = -1;
+    if (inputA && inputB && compareBtn) {
 
-        searchInput.addEventListener('input', function() {
-            var query = this.value.trim().toLowerCase();
-            activeIndex = -1;
+        function makeSlug(a, b) {
+            a = a.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+            b = b.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+            if (a > b) { var t = a; a = b; b = t; }
+            return a + '-vs-' + b;
+        }
 
-            if (query.length < 2) {
-                searchResults.classList.remove('active');
-                searchResults.innerHTML = '';
-                return;
-            }
+        function updateBtn() {
+            compareBtn.disabled = !(inputA.value.trim().length >= 2 && inputB.value.trim().length >= 2);
+        }
 
-            var matches = searchData.filter(function(item) {
-                var haystack = (item.a + ' vs ' + item.b + ' ' + item.cat).toLowerCase();
-                return haystack.indexOf(query) !== -1;
-            }).slice(0, 8);
-
-            if (matches.length === 0) {
-                searchResults.classList.remove('active');
-                searchResults.innerHTML = '';
-                return;
-            }
-
-            searchResults.innerHTML = matches.map(function(m, i) {
-                return '<div class="search-result-item" data-index="' + i + '" data-slug="' + m.slug + '">'
-                    + '<span>' + m.a + '</span>'
-                    + '<span class="search-result-vs">vs</span>'
-                    + '<span>' + m.b + '</span>'
-                    + '</div>';
+        function showSuggestions(input, dropdown) {
+            var q = input.value.trim().toLowerCase();
+            if (q.length < 1) { dropdown.classList.remove('active'); dropdown.innerHTML = ''; return; }
+            var matches = items.filter(function(name) {
+                return name.toLowerCase().indexOf(q) !== -1;
+            }).slice(0, 6);
+            if (!matches.length) { dropdown.classList.remove('active'); dropdown.innerHTML = ''; return; }
+            dropdown.innerHTML = matches.map(function(m) {
+                return '<div class="versus-suggest-item">' + m + '</div>';
             }).join('');
-
-            searchResults.classList.add('active');
-
-            searchResults.querySelectorAll('.search-result-item').forEach(function(el) {
-                el.addEventListener('click', function() {
-                    window.location.href = '/' + this.dataset.slug + '/';
+            dropdown.classList.add('active');
+            dropdown.querySelectorAll('.versus-suggest-item').forEach(function(el) {
+                el.addEventListener('mousedown', function(e) {
+                    e.preventDefault();
+                    input.value = this.textContent;
+                    dropdown.classList.remove('active');
+                    dropdown.innerHTML = '';
+                    updateBtn();
+                    // Focus the other input if empty
+                    var other = (input === inputA) ? inputB : inputA;
+                    if (!other.value.trim()) other.focus();
                 });
-            });
-        });
-
-        // Keyboard navigation
-        searchInput.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                searchResults.classList.remove('active');
-                return;
-            }
-
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                var items = searchResults.querySelectorAll('.search-result-item');
-
-                // If an item is highlighted, navigate to it
-                if (activeIndex >= 0 && items[activeIndex]) {
-                    items[activeIndex].click();
-                    return;
-                }
-
-                // If there are dropdown results, navigate to the first one
-                if (items.length > 0) {
-                    items[0].click();
-                    return;
-                }
-
-                // No results — if query looks like "X vs Y", generate it
-                var query = searchInput.value.trim();
-                if (query.match(/(.+?)\s+vs\.?\s+(.+)/i)) {
-                    generateComparison(query);
-                }
-                return;
-            }
-
-            var items = searchResults.querySelectorAll('.search-result-item');
-            if (!items.length) return;
-
-            if (e.key === 'ArrowDown') {
-                e.preventDefault();
-                activeIndex = Math.min(activeIndex + 1, items.length - 1);
-                updateActive(items);
-            } else if (e.key === 'ArrowUp') {
-                e.preventDefault();
-                activeIndex = Math.max(activeIndex - 1, 0);
-                updateActive(items);
-            }
-        });
-
-        function updateActive(items) {
-            items.forEach(function(el, i) {
-                el.classList.toggle('active', i === activeIndex);
             });
         }
 
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('.search-box')) {
-                searchResults.classList.remove('active');
-            }
-        });
-    }
+        inputA.addEventListener('input', function() { updateBtn(); showSuggestions(inputA, suggestA); });
+        inputB.addEventListener('input', function() { updateBtn(); showSuggestions(inputB, suggestB); });
+        inputA.addEventListener('focus', function() { showSuggestions(inputA, suggestA); });
+        inputB.addEventListener('focus', function() { showSuggestions(inputB, suggestB); });
+        inputA.addEventListener('blur', function() { suggestA.classList.remove('active'); });
+        inputB.addEventListener('blur', function() { suggestB.classList.remove('active'); });
 
-    // --- Dynamic Comparison Generation ---
-    function generateComparison(query) {
-        var sr = document.getElementById('search-results');
+        function doCompare() {
+            var a = inputA.value.trim();
+            var b = inputB.value.trim();
+            if (a.length < 2 || b.length < 2) return;
 
-        sr.innerHTML = '<div class="search-result-loading">'
-            + '<div class="loading-spinner"></div>'
-            + '<span>Generating comparison... this takes about 15 seconds</span>'
-            + '</div>';
+            compareError.textContent = '';
+            compareError.classList.remove('active');
 
-        fetch('/api/compare', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ query: query })
-        })
-        .then(function(response) { return response.json(); })
-        .then(function(data) {
-            if (data.error) {
-                sr.innerHTML = '<div class="search-result-error">'
-                    + '<span>&#9888;&#65039; ' + data.error + '</span>'
-                    + '</div>';
+            var slug = makeSlug(a, b);
+
+            // Check if comparison already exists
+            var existing = searchData.find(function(c) { return c.slug === slug; });
+            if (existing) {
+                window.location.href = '/' + slug + '/';
                 return;
             }
-            window.location.href = '/' + data.slug + '/';
-        })
-        .catch(function() {
-            sr.innerHTML = '<div class="search-result-error">'
-                + '<span>&#9888;&#65039; Something went wrong. Please try again.</span>'
-                + '</div>';
+
+            // Dynamic generation
+            compareBtn.disabled = true;
+            compareBtn.classList.add('loading');
+            compareBtn.textContent = 'Generating...';
+
+            fetch('/api/compare', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ query: a + ' vs ' + b })
+            })
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (data.error) {
+                    compareError.textContent = data.error;
+                    compareError.classList.add('active');
+                    compareBtn.disabled = false;
+                    compareBtn.classList.remove('loading');
+                    compareBtn.textContent = 'Compare';
+                    return;
+                }
+                window.location.href = '/' + data.slug + '/';
+            })
+            .catch(function() {
+                compareError.textContent = 'Something went wrong. Please try again.';
+                compareError.classList.add('active');
+                compareBtn.disabled = false;
+                compareBtn.classList.remove('loading');
+                compareBtn.textContent = 'Compare';
+            });
+        }
+
+        compareBtn.addEventListener('click', doCompare);
+
+        inputA.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') { e.preventDefault(); doCompare(); }
+        });
+        inputB.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') { e.preventDefault(); doCompare(); }
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.versus-input-side-a')) suggestA.classList.remove('active');
+            if (!e.target.closest('.versus-input-side-b')) suggestB.classList.remove('active');
         });
     }
 })();

@@ -30,12 +30,25 @@
             <span class="hero-that">That</span>
         </h1>
         <p class="home-hero-subtitle">We help you decide</p>
-        <div class="search-wrapper">
-            <div class="search-box">
-                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                <input type="text" id="search-input" placeholder="Search comparisons... e.g. &quot;Ninja vs Vitamix&quot;" autocomplete="off">
-                <div id="search-results" class="search-results"></div>
+        <div class="versus-input-card">
+            <div class="versus-input-side versus-input-side-a">
+                <label class="versus-input-label" for="input-a">This</label>
+                <div class="versus-input-wrap">
+                    <input type="text" id="input-a" class="versus-input" placeholder="e.g. Ninja" autocomplete="off">
+                    <div class="versus-suggest" id="suggest-a"></div>
+                </div>
             </div>
+            <div class="versus-input-badge">VS</div>
+            <div class="versus-input-side versus-input-side-b">
+                <label class="versus-input-label" for="input-b">That</label>
+                <div class="versus-input-wrap">
+                    <input type="text" id="input-b" class="versus-input" placeholder="e.g. Vitamix" autocomplete="off">
+                    <div class="versus-suggest" id="suggest-b"></div>
+                </div>
+            </div>
+            <button class="compare-btn" id="compare-btn" disabled>Compare</button>
+            <div class="compare-error" id="compare-error"></div>
+            <p class="versus-input-hint">Type any two products to compare them — we'll generate it if it doesn't exist yet.</p>
         </div>
     </div>
 </section>
@@ -141,5 +154,10 @@ window.VS_SEARCH_DATA = [
     }{% if not loop.last %},{% endif %}
     {% endfor %}
 ];
+window.VS_ITEMS = (function() {
+    var s = new Set();
+    (window.VS_SEARCH_DATA || []).forEach(function(c) { s.add(c.a); s.add(c.b); });
+    return Array.from(s).sort();
+})();
 </script>
 {% endblock %}

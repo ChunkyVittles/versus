@@ -15,7 +15,7 @@ export async function onRequestPost(context) {
     const body = await request.json();
     const query = body.query?.trim();
 
-    if (!query || !query.toLowerCase().includes(' vs ')) {
+    if (!query || !/\s+(?:vs\.?|versus)\s+/i.test(query)) {
         return Response.json(
             { error: 'Query must be in "X vs Y" format' },
             { status: 400, headers: corsHeaders }
@@ -107,7 +107,7 @@ export async function onRequestOptions() {
 }
 
 function makeSlug(query) {
-    const match = query.toLowerCase().match(/(.+?)\s+vs\.?\s+(.+)/);
+    const match = query.toLowerCase().match(/(.+?)\s+(?:vs\.?|versus|v\.?\s*s\.?)\s+(.+)/);
     if (!match) return null;
     let a = match[1].trim().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     let b = match[2].trim().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
