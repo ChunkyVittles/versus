@@ -151,7 +151,8 @@ Return ONLY valid JSON matching this exact structure (no markdown, no code fence
     "price_range": "$XX-$XX",
     "best_for": "One sentence describing who this product is best for",
     "rating": 4.2,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_keywords": ["search term 1 for buying this product", "search term 2"]
   },
   "item_b": {
     "name": "Full product name for the second item in the slug",
@@ -162,7 +163,8 @@ Return ONLY valid JSON matching this exact structure (no markdown, no code fence
     "price_range": "$XX-$XX",
     "best_for": "One sentence describing who this product is best for",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_keywords": ["search term 1 for buying this product", "search term 2"]
   },
   "category": "category-slug",
   "comparison_summary": "2-3 sentence summary of the comparison and recommendation.",
@@ -191,7 +193,8 @@ IMPORTANT GUIDELINES:
 - seo_content should be 300-500 words, substantial and unique
 - related_comparisons should use alphabetically-ordered slugs
 - Be objective and data-driven. Both products have merits.
-- meta_title should include the year (2026)`;
+- meta_title should include the year (2026)
+- shop_keywords: 2-3 Amazon search terms that would help someone BUY this product. For products: "Brand Model name", "Brand Model accessories". For people/non-products: related purchasable items like "Bob Hope DVD collection", "Fred Astaire movies Blu-ray". For services: related physical products. ALWAYS include at least 2 shop_keywords per item.`;
 
     const response = await fetch('https://api.anthropic.com/v1/messages', {
         method: 'POST',
@@ -204,6 +207,7 @@ IMPORTANT GUIDELINES:
             model: 'claude-sonnet-4-5-20250929',
             max_tokens: 4096,
             messages: [{ role: 'user', content: prompt }],
+            tools: [{ type: 'web_search_20250305', name: 'web_search' }],
         }),
     });
 
@@ -213,7 +217,11 @@ IMPORTANT GUIDELINES:
     }
 
     const result = await response.json();
-    let text = result.content?.[0]?.text?.trim();
+    let text = (result.content || [])
+        .filter(block => block.type === 'text')
+        .map(block => block.text)
+        .join('')
+        .trim();
     if (!text) return null;
 
     // Strip markdown fences if present

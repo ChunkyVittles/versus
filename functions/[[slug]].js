@@ -1,6 +1,8 @@
 // Catch-all for dynamic comparison pages served from KV
 // Only handles paths containing "-vs-" that don't have static pages
 
+const AFFILIATE_TAG = 'versusthat-20';
+
 export async function onRequest(context) {
     const { request, env, next } = context;
     const url = new URL(request.url);
@@ -32,6 +34,10 @@ export async function onRequest(context) {
     });
 }
 
+function amazonUrl(keyword) {
+    return `https://www.amazon.com/s?k=${encodeURIComponent(keyword)}&tag=${AFFILIATE_TAG}`;
+}
+
 function renderComparisonPage(comp) {
     const categoryName = comp.category?.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) || 'General';
 
@@ -44,7 +50,14 @@ function renderComparisonPage(comp) {
         return html + `<span>${rating}</span>`;
     };
 
-    const diffRows = (comp.key_differences || []).map(diff => {
+    // Scoreboard counts
+    const diffs = comp.key_differences || [];
+    const aWins = diffs.filter(d => d.winner === 'a').length;
+    const bWins = diffs.filter(d => d.winner === 'b').length;
+    const ties = diffs.filter(d => d.winner === 'tie').length;
+    const total = diffs.length;
+
+    const diffRows = diffs.map(diff => {
         const aWin = diff.winner === 'a';
         const bWin = diff.winner === 'b';
         const checkSvg = '<svg class="winner-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>';
@@ -92,6 +105,81 @@ function renderComparisonPage(comp) {
 
     const seoContentHtml = (comp.seo_content || '').split('\n\n').map(p => `<p>${esc(p)}</p>`).join('\n');
 
+    // Hero winner/loser classes
+    const heroAClass = comp.verdict === 'a' ? 'vs-hero-winner' : (comp.verdict === 'b' ? 'vs-hero-loser' : '');
+    const heroBClass = comp.verdict === 'b' ? 'vs-hero-winner' : (comp.verdict === 'a' ? 'vs-hero-loser' : '');
+
+    // Hero labels
+    const heroALabel = comp.verdict === 'a'
+        ? '<span class="winner-sash">&#x1F451; WINNER</span>'
+        : (comp.verdict === 'b' ? '<span class="vs-hero-label">Runner-Up</span>' : '<span class="vs-hero-label">Option A</span>');
+    const heroBLabel = comp.verdict === 'b'
+        ? '<span class="winner-sash">&#x1F451; WINNER</span>'
+        : (comp.verdict === 'a' ? '<span class="vs-hero-label">Runner-Up</span>' : '<span class="vs-hero-label">Option B</span>');
+
+    // VS badge
+    const vsBadge = comp.verdict === 'tie'
+        ? '<div class="vs-badge">VS</div>'
+        : '<div class="vs-badge vs-badge-decided">&#x1F3C6;</div>';
+
+    // Shop buttons in hero
+    const shopBtnA = comp.item_a?.shop_keywords?.length
+        ? `<a href="${amazonUrl(comp.item_a.shop_keywords[0])}" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on Amazon</a>`
+        : (comp.item_a?.affiliate_url ? `<a href="${esc(comp.item_a.affiliate_url)}" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Check Price</a>` : '');
+    const shopBtnB = comp.item_b?.shop_keywords?.length
+        ? `<a href="${amazonUrl(comp.item_b.shop_keywords[0])}" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on Amazon</a>`
+        : (comp.item_b?.affiliate_url ? `<a href="${esc(comp.item_b.affiliate_url)}" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Check Price</a>` : '');
+
+    // Scoreboard section
+    const scoreboardHtml = `<section class="scoreboard-section">
+        <div class="container">
+            <div class="scoreboard">
+                <div class="scoreboard-side scoreboard-a ${aWins > bWins ? 'scoreboard-leading' : ''}">
+                    <span class="scoreboard-name">${esc(comp.item_a?.name)}</span>
+                    <span class="scoreboard-score">${aWins}</span>
+                </div>
+                <div class="scoreboard-center">
+                    <span class="scoreboard-vs">WINS</span>
+                    ${ties > 0 ? `<span class="scoreboard-ties">${ties} tied</span>` : ''}
+                </div>
+                <div class="scoreboard-side scoreboard-b ${bWins > aWins ? 'scoreboard-leading' : ''}">
+                    <span class="scoreboard-score">${bWins}</span>
+                    <span class="scoreboard-name">${esc(comp.item_b?.name)}</span>
+                </div>
+            </div>
+            <div class="scoreboard-bar">
+                <div class="scoreboard-bar-a" style="width: ${total ? (aWins / total * 100) : 50}%"></div>
+                <div class="scoreboard-bar-b" style="width: ${total ? (bWins / total * 100) : 50}%"></div>
+            </div>
+        </div>
+    </section>`;
+
+    // Shop CTA section
+    const hasShopKeywords = comp.item_a?.shop_keywords?.length || comp.item_b?.shop_keywords?.length;
+    const shopCtaHtml = hasShopKeywords ? `<section class="section shop-cta">
+        <div class="container">
+            <h2 class="section-title">Ready to Buy?</h2>
+            <div class="shop-grid">
+                ${comp.item_a?.shop_keywords?.length ? `<div class="shop-card shop-card-a ${comp.verdict === 'a' ? 'shop-card-winner' : ''}">
+                    ${comp.verdict === 'a' ? '<span class="shop-winner-badge">&#x1F451; Our Pick</span>' : ''}
+                    <h3>${esc(comp.item_a.name)}</h3>
+                    <p class="shop-price">${esc(comp.item_a.price_range)}</p>
+                    <div class="shop-links">
+                        ${comp.item_a.shop_keywords.map(kw => `<a href="${amazonUrl(kw)}" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; ${esc(kw)}</a>`).join('\n')}
+                    </div>
+                </div>` : ''}
+                ${comp.item_b?.shop_keywords?.length ? `<div class="shop-card shop-card-b ${comp.verdict === 'b' ? 'shop-card-winner' : ''}">
+                    ${comp.verdict === 'b' ? '<span class="shop-winner-badge">&#x1F451; Our Pick</span>' : ''}
+                    <h3>${esc(comp.item_b.name)}</h3>
+                    <p class="shop-price">${esc(comp.item_b.price_range)}</p>
+                    <div class="shop-links">
+                        ${comp.item_b.shop_keywords.map(kw => `<a href="${amazonUrl(kw)}" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; ${esc(kw)}</a>`).join('\n')}
+                    </div>
+                </div>` : ''}
+            </div>
+        </div>
+    </section>` : '';
+
     return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,8 +196,8 @@ function renderComparisonPage(comp) {
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css?v=3">
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"WebPage","name":${JSON.stringify(comp.meta_title)},"url":"https://versusthat.com/${comp.slug}/","datePublished":"${comp.date_published}","dateModified":"${comp.date_updated}","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://versusthat.com/"},{"@type":"ListItem","position":2,"name":"${esc(categoryName)}","item":"https://versusthat.com/categories/${comp.category}/"},{"@type":"ListItem","position":3,"name":"${esc(comp.item_a?.name)} vs ${esc(comp.item_b?.name)}"}]}}
     </script>
@@ -124,7 +212,7 @@ function renderComparisonPage(comp) {
 <body>
     <header class="site-header">
         <div class="container">
-            <a href="/" class="logo"><span class="logo-versus">versus</span><span class="logo-that">that</span></a>
+            <a href="/" class="logo">VERSUS<span class="logo-vs-mark">VS</span>THAT</a>
             <nav class="main-nav">
                 <a href="/categories/">Categories</a>
                 <a href="/about/">About</a>
@@ -147,26 +235,28 @@ function renderComparisonPage(comp) {
         </nav>
         <section class="vs-hero">
             <div class="vs-hero-split">
-                <div class="vs-hero-side vs-hero-a">
+                <div class="vs-hero-side vs-hero-a ${heroAClass}">
                     <div class="vs-hero-content">
-                        <span class="vs-hero-label">Option A</span>
+                        ${heroALabel}
                         <h2 class="vs-hero-name">${esc(comp.item_a?.name)}</h2>
                         <div class="vs-hero-rating">
                             <div class="stars">${starsHtml(comp.item_a?.rating || 0)}</div>
                             <div class="vs-hero-price">${esc(comp.item_a?.price_range)}</div>
                             <p class="vs-hero-best-for">${esc(comp.item_a?.best_for)}</p>
+                            ${shopBtnA}
                         </div>
                     </div>
                 </div>
-                <div class="vs-badge-wrapper"><div class="vs-badge">VS</div></div>
-                <div class="vs-hero-side vs-hero-b">
+                <div class="vs-badge-wrapper">${vsBadge}</div>
+                <div class="vs-hero-side vs-hero-b ${heroBClass}">
                     <div class="vs-hero-content">
-                        <span class="vs-hero-label">Option B</span>
+                        ${heroBLabel}
                         <h2 class="vs-hero-name">${esc(comp.item_b?.name)}</h2>
                         <div class="vs-hero-rating">
                             <div class="stars">${starsHtml(comp.item_b?.rating || 0)}</div>
                             <div class="vs-hero-price">${esc(comp.item_b?.price_range)}</div>
                             <p class="vs-hero-best-for">${esc(comp.item_b?.best_for)}</p>
+                            ${shopBtnB}
                         </div>
                     </div>
                 </div>
@@ -182,6 +272,7 @@ function renderComparisonPage(comp) {
                 </div>
             </div>
         </section>
+        ${scoreboardHtml}
         <section class="section">
             <div class="container">
                 <h2 class="section-title">Key Differences</h2>
@@ -220,6 +311,7 @@ function renderComparisonPage(comp) {
                 <div class="faq-list">${faqHtml}</div>
             </div>
         </section>` : ''}
+        ${shopCtaHtml}
     </main>
     <footer class="site-footer">
         <div class="container">
@@ -229,7 +321,7 @@ function renderComparisonPage(comp) {
             </div>
         </div>
     </footer>
-    <script src="/js/main.js?v=2"></script>
+    <script src="/js/main.js?v=3"></script>
 </body>
 </html>`;
 }

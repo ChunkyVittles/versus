@@ -95,9 +95,9 @@
 <!-- Hero Split -->
 <section class="vs-hero">
     <div class="vs-hero-split">
-        <div class="vs-hero-side vs-hero-a">
+        <div class="vs-hero-side vs-hero-a {% if comp.verdict == 'a' %}vs-hero-winner{% elif comp.verdict == 'b' %}vs-hero-loser{% endif %}">
             <div class="vs-hero-content">
-                <span class="vs-hero-label">Option A</span>
+                {% if comp.verdict == 'a' %}<span class="winner-sash">&#x1F451; WINNER</span>{% elif comp.verdict == 'b' %}<span class="vs-hero-label">Runner-Up</span>{% else %}<span class="vs-hero-label">Option A</span>{% endif %}
                 <h2 class="vs-hero-name">{{ comp.item_a.name }}</h2>
                 <div class="vs-hero-rating">
                     <div class="stars" data-rating="{{ comp.item_a.rating }}">
@@ -108,18 +108,24 @@
                     </div>
                     <div class="vs-hero-price">{{ comp.item_a.price_range }}</div>
                     <p class="vs-hero-best-for">{{ comp.item_a.best_for }}</p>
-                    {% if comp.item_a.affiliate_url %}
-                    <a href="{{ comp.item_a.affiliate_url }}" class="btn btn-a" rel="nofollow sponsored" target="_blank">Check Price</a>
+                    {% if comp.item_a.shop_keywords %}
+                    <a href="https://www.amazon.com/s?k={{ comp.item_a.shop_keywords[0] | urlencode }}&tag={{ affiliate_tag }}" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on Amazon</a>
+                    {% elif comp.item_a.affiliate_url %}
+                    <a href="{{ comp.item_a.affiliate_url }}" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Check Price</a>
                     {% endif %}
                 </div>
             </div>
         </div>
         <div class="vs-badge-wrapper">
+            {% if comp.verdict == 'tie' %}
             <div class="vs-badge">VS</div>
+            {% else %}
+            <div class="vs-badge vs-badge-decided">&#x1F3C6;</div>
+            {% endif %}
         </div>
-        <div class="vs-hero-side vs-hero-b">
+        <div class="vs-hero-side vs-hero-b {% if comp.verdict == 'b' %}vs-hero-winner{% elif comp.verdict == 'a' %}vs-hero-loser{% endif %}">
             <div class="vs-hero-content">
-                <span class="vs-hero-label">Option B</span>
+                {% if comp.verdict == 'b' %}<span class="winner-sash">&#x1F451; WINNER</span>{% elif comp.verdict == 'a' %}<span class="vs-hero-label">Runner-Up</span>{% else %}<span class="vs-hero-label">Option B</span>{% endif %}
                 <h2 class="vs-hero-name">{{ comp.item_b.name }}</h2>
                 <div class="vs-hero-rating">
                     <div class="stars" data-rating="{{ comp.item_b.rating }}">
@@ -130,8 +136,10 @@
                     </div>
                     <div class="vs-hero-price">{{ comp.item_b.price_range }}</div>
                     <p class="vs-hero-best-for">{{ comp.item_b.best_for }}</p>
-                    {% if comp.item_b.affiliate_url %}
-                    <a href="{{ comp.item_b.affiliate_url }}" class="btn btn-b" rel="nofollow sponsored" target="_blank">Check Price</a>
+                    {% if comp.item_b.shop_keywords %}
+                    <a href="https://www.amazon.com/s?k={{ comp.item_b.shop_keywords[0] | urlencode }}&tag={{ affiliate_tag }}" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on Amazon</a>
+                    {% elif comp.item_b.affiliate_url %}
+                    <a href="{{ comp.item_b.affiliate_url }}" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Check Price</a>
                     {% endif %}
                 </div>
             </div>
@@ -147,6 +155,34 @@
             <span class="verdict-label">Our Verdict</span>
             <h2 class="verdict-text">{{ comp.verdict_text }}</h2>
             <p class="verdict-summary">{{ comp.comparison_summary }}</p>
+        </div>
+    </div>
+</section>
+
+<!-- Scoreboard -->
+<section class="scoreboard-section">
+    <div class="container">
+        {% set a_wins = comp.key_differences | selectattr('winner', 'equalto', 'a') | list | length %}
+        {% set b_wins = comp.key_differences | selectattr('winner', 'equalto', 'b') | list | length %}
+        {% set ties = comp.key_differences | selectattr('winner', 'equalto', 'tie') | list | length %}
+        {% set total = comp.key_differences | length %}
+        <div class="scoreboard">
+            <div class="scoreboard-side scoreboard-a {% if a_wins > b_wins %}scoreboard-leading{% endif %}">
+                <span class="scoreboard-name">{{ comp.item_a.name }}</span>
+                <span class="scoreboard-score">{{ a_wins }}</span>
+            </div>
+            <div class="scoreboard-center">
+                <span class="scoreboard-vs">WINS</span>
+                {% if ties > 0 %}<span class="scoreboard-ties">{{ ties }} tied</span>{% endif %}
+            </div>
+            <div class="scoreboard-side scoreboard-b {% if b_wins > a_wins %}scoreboard-leading{% endif %}">
+                <span class="scoreboard-score">{{ b_wins }}</span>
+                <span class="scoreboard-name">{{ comp.item_b.name }}</span>
+            </div>
+        </div>
+        <div class="scoreboard-bar">
+            <div class="scoreboard-bar-a" style="width: {{ (a_wins / total * 100) if total else 50 }}%"></div>
+            <div class="scoreboard-bar-b" style="width: {{ (b_wins / total * 100) if total else 50 }}%"></div>
         </div>
     </div>
 </section>
@@ -260,6 +296,41 @@
                 </div>
             </div>
             {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Shop CTA -->
+{% if comp.item_a.shop_keywords or comp.item_b.shop_keywords %}
+<section class="section shop-cta">
+    <div class="container">
+        <h2 class="section-title">Ready to Buy?</h2>
+        <div class="shop-grid">
+            {% if comp.item_a.shop_keywords %}
+            <div class="shop-card shop-card-a {% if comp.verdict == 'a' %}shop-card-winner{% endif %}">
+                {% if comp.verdict == 'a' %}<span class="shop-winner-badge">&#x1F451; Our Pick</span>{% endif %}
+                <h3>{{ comp.item_a.name }}</h3>
+                <p class="shop-price">{{ comp.item_a.price_range }}</p>
+                <div class="shop-links">
+                    {% for kw in comp.item_a.shop_keywords %}
+                    <a href="https://www.amazon.com/s?k={{ kw | urlencode }}&tag={{ affiliate_tag }}" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; {{ kw }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            {% if comp.item_b.shop_keywords %}
+            <div class="shop-card shop-card-b {% if comp.verdict == 'b' %}shop-card-winner{% endif %}">
+                {% if comp.verdict == 'b' %}<span class="shop-winner-badge">&#x1F451; Our Pick</span>{% endif %}
+                <h3>{{ comp.item_b.name }}</h3>
+                <p class="shop-price">{{ comp.item_b.price_range }}</p>
+                <div class="shop-links">
+                    {% for kw in comp.item_b.shop_keywords %}
+                    <a href="https://www.amazon.com/s?k={{ kw | urlencode }}&tag={{ affiliate_tag }}" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; {{ kw }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
         </div>
     </div>
 </section>

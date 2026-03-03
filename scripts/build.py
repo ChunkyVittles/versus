@@ -21,6 +21,7 @@ TEMPLATES_DIR = ROOT / "templates"
 STATIC_DIR = ROOT / "static"
 DIST_DIR = ROOT / "dist"
 DOMAIN = "https://versusthat.com"
+AFFILIATE_TAG = "versusthat-20"
 
 
 def load_categories():
@@ -105,6 +106,7 @@ def build_site():
         "categories": categories,
         "current_year": current_year,
         "domain": DOMAIN,
+        "affiliate_tag": AFFILIATE_TAG,
     }
 
     # --- Homepage ---
