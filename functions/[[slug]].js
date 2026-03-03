@@ -1,8 +1,6 @@
 // Catch-all for dynamic comparison pages served from KV
 // Only handles paths containing "-vs-" that don't have static pages
 
-const AFFILIATE_TAG = 'versusthat-20';
-
 export async function onRequest(context) {
     const { request, env, next } = context;
     const url = new URL(request.url);
@@ -35,7 +33,7 @@ export async function onRequest(context) {
 }
 
 function amazonUrl(keyword) {
-    return `https://www.amazon.com/s?k=${encodeURIComponent(keyword)}&tag=${AFFILIATE_TAG}`;
+    return `https://www.amazon.com/s?k=${encodeURIComponent(keyword)}`;
 }
 
 function renderComparisonPage(comp) {

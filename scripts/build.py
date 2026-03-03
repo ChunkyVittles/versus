@@ -21,7 +21,7 @@ TEMPLATES_DIR = ROOT / "templates"
 STATIC_DIR = ROOT / "static"
 DIST_DIR = ROOT / "dist"
 DOMAIN = "https://versusthat.com"
-AFFILIATE_TAG = "versusthat-20"
+AFFILIATE_TAG = ""
 
 
 def load_categories():
