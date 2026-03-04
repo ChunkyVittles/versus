@@ -33,7 +33,7 @@ Rules:
 - If these are websites/services, mention when they launched, who founded them, interesting stats
 - If these are concepts or generic things, find the most interesting angles
 - No filler phrases like "Did you know" or "Interestingly" — just state the fact directly
-- Return ONLY a JSON array of 6 strings, nothing else
+- Return ONLY a JSON array of 12 strings, nothing else
 
 Example: ["The Vitamix company was founded in 1921.", "Ninja's parent company SharkNinja started as a vacuum company.", ...]`;
 
@@ -46,7 +46,7 @@ Example: ["The Vitamix company was founded in 1921.", "Ninja's parent company Sh
             },
             body: JSON.stringify({
                 model: 'claude-haiku-4-5-20251001',
-                max_tokens: 512,
+                max_tokens: 1024,
                 messages: [{ role: 'user', content: prompt }],
             }),
         });
@@ -72,7 +72,7 @@ Example: ["The Vitamix company was founded in 1921.", "Ninja's parent company Sh
         }
 
         return Response.json(
-            { facts: facts.slice(0, 6) },
+            { facts: facts.slice(0, 12) },
             { headers: corsHeaders }
         );
     } catch (e) {

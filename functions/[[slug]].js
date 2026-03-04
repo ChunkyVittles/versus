@@ -588,7 +588,7 @@ function renderGeneratingPage(slug, itemA, itemB) {
             if (!data.facts || !data.facts.length) return;
             factsData = data.facts;
             showFact();
-            factsInterval = setInterval(showFact, 4000);
+            factsInterval = setInterval(showFact, 7000);
         })
         .catch(function() { /* silent fail — facts are optional */ });
 
@@ -599,7 +599,8 @@ function renderGeneratingPage(slug, itemA, itemB) {
                 factsEl.innerHTML = '<span class="gen-facts-label">Did you know?</span>' +
                     '<p class="gen-facts-text">' + factsData[currentFact] + '</p>';
                 factsEl.style.opacity = '1';
-                currentFact = (currentFact + 1) % factsData.length;
+                currentFact++;
+                if (currentFact >= factsData.length && factsInterval) clearInterval(factsInterval);
             }, 300);
         }
 
