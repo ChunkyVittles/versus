@@ -192,10 +192,19 @@ function renderComparisonPage(comp) {
     <meta property="og:description" content="${esc(comp.meta_description || '')}">
     <meta property="og:url" content="https://versusthat.com/${comp.slug}/">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css?v=3">
+    <link rel="preload" href="/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+    @font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/bebas-neue-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    @font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/bebas-neue-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    @font-face{font-family:'Figtree';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/figtree-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    @font-face{font-family:'Figtree';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/figtree-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    @font-face{font-family:'Figtree';font-style:normal;font-weight:500 800;font-display:swap;src:url(/fonts/figtree-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    @font-face{font-family:'Figtree';font-style:normal;font-weight:500 800;font-display:swap;src:url(/fonts/figtree-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:'Figtree',sans-serif;color:#1e293b;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}h1,h2,h3,h4{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;line-height:1.1}a{color:inherit;text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.site-header{position:sticky;top:0;z-index:100;background:#111;border-bottom:none}.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}.logo{font-family:'Bebas Neue',Impact,sans-serif;font-size:1.6rem;font-weight:400;letter-spacing:.04em;color:#fff;display:inline-flex;align-items:center}.logo-vs-mark{display:inline-block;background:#ffd60a;color:#111;padding:2px 8px;border-radius:4px;font-family:'Figtree',sans-serif;font-weight:800;font-size:.5em;vertical-align:middle;margin:0 2px;letter-spacing:0}.main-nav{display:flex;gap:2rem;align-items:center}.main-nav a{font-weight:600;color:rgba(255,255,255,.7);font-size:.95rem}.mobile-menu-btn{display:none;flex-direction:column;gap:5px;padding:4px;cursor:pointer;border:none;background:none}.mobile-menu-btn span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}.mobile-nav{display:none;background:#111;border-bottom:1px solid rgba(255,255,255,.1);padding:1rem 1.5rem}
+    </style>
+    <link rel="preload" href="/css/style.css?v=4" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/style.css?v=4"></noscript>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"WebPage","name":${JSON.stringify(comp.meta_title)},"url":"https://versusthat.com/${comp.slug}/","datePublished":"${comp.date_published}","dateModified":"${comp.date_updated}","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://versusthat.com/"},{"@type":"ListItem","position":2,"name":"${esc(categoryName)}","item":"https://versusthat.com/categories/${comp.category}/"},{"@type":"ListItem","position":3,"name":"${esc(comp.item_a?.name)} vs ${esc(comp.item_b?.name)}"}]}}
     </script>
@@ -319,7 +328,7 @@ function renderComparisonPage(comp) {
             </div>
         </div>
     </footer>
-    <script src="/js/main.js?v=3"></script>
+    <script src="/js/main.js?v=4" defer></script>
     <script>
     (function(){
       const S='versusthat',C='https://bullbotics.com/api/analytics/collect';

@@ -7,6 +7,7 @@ Output goes to /dist for Cloudflare Pages deployment.
 
 import json
 import os
+import re
 import shutil
 from datetime import datetime
 from pathlib import Path
@@ -64,6 +65,15 @@ def get_category_name(categories, slug):
     return slug.replace("-", " ").title()
 
 
+def minify_css(css):
+    """Simple CSS minifier — removes comments, extra whitespace."""
+    css = re.sub(r'/\*.*?\*/', '', css, flags=re.DOTALL)  # remove comments
+    css = re.sub(r'\s+', ' ', css)  # collapse whitespace
+    css = re.sub(r'\s*([{}:;,>~+])\s*', r'\1', css)  # remove space around symbols
+    css = re.sub(r';}', '}', css)  # remove trailing semicolons
+    return css.strip()
+
+
 def build_site():
     print("Building VersusThat...")
 
@@ -76,6 +86,15 @@ def build_site():
     if STATIC_DIR.exists():
         shutil.copytree(STATIC_DIR / "css", DIST_DIR / "css")
         shutil.copytree(STATIC_DIR / "js", DIST_DIR / "js")
+        if (STATIC_DIR / "fonts").exists():
+            shutil.copytree(STATIC_DIR / "fonts", DIST_DIR / "fonts")
+
+    # Minify CSS
+    css_path = DIST_DIR / "css" / "style.css"
+    if css_path.exists():
+        css_text = css_path.read_text()
+        css_text = minify_css(css_text)
+        css_path.write_text(css_text)
 
     # Load data
     categories = load_categories()
@@ -237,6 +256,9 @@ def build_site():
   Cache-Control: public, max-age=31536000, immutable
 
 /js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
   Cache-Control: public, max-age=31536000, immutable
 """
     write_page(DIST_DIR / "_headers", headers)
