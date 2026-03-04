@@ -116,12 +116,43 @@ function makeSlug(query) {
 }
 
 function isBlocked(query) {
-    const lower = query.toLowerCase();
-    const blocked = [
-        'kill', 'murder', 'suicide', 'porn', 'xxx', 'racist', 'hitler',
-        'nazi', 'terrorism', 'bomb', 'drug', 'cocaine', 'heroin',
+    const lower = query.toLowerCase().replace(/[^a-z0-9\s]/g, '');
+
+    const blockedSubstring = [
+        'porn', 'xxx', 'hentai', 'nsfw', 'nazi', 'cocaine', 'heroin',
+        'fentanyl', 'meth ', 'hitler',
     ];
-    return blocked.some(word => lower.includes(word));
+
+    for (const word of blockedSubstring) {
+        if (lower.includes(word)) return true;
+    }
+
+    const blockedExact = [
+        'porn', 'xxx', 'hentai', 'onlyfans', 'chaturbate', 'pornhub',
+        'xvideos', 'xhamster', 'brazzers', 'nsfw',
+        'dildo', 'vibrator', 'fleshlight', 'buttplug', 'cockring',
+        'escort', 'hooker', 'prostitute',
+        'cocaine', 'heroin', 'meth', 'fentanyl', 'crack pipe', 'bong',
+        'weed', 'marijuana', 'cannabis', 'lsd', 'mdma', 'ecstasy',
+        'hitler', 'nazi', 'kkk', 'white supremacy',
+        'ar15', 'ar 15', 'ak47', 'ak 47', 'assault rifle', 'machine gun',
+        'handgun', 'shotgun', 'rifle', 'pistol', 'ammo', 'ammunition',
+        'bomb', 'explosive', 'grenade',
+        'suicide', 'self harm', 'kill myself',
+        'murder', 'terrorism', 'terrorist',
+        'slave', 'slavery',
+    ];
+
+    const words = lower.split(/\s+/);
+    for (const blocked of blockedExact) {
+        if (blocked.includes(' ')) {
+            if (lower.includes(blocked)) return true;
+        } else {
+            if (words.includes(blocked)) return true;
+        }
+    }
+
+    return false;
 }
 
 async function generateComparison(query, slug, apiKey) {
@@ -203,6 +234,7 @@ IMPORTANT GUIDELINES:
   2. "Should I buy [A] or [B]?" — answer should give a clear recommendation based on use case.
   3. "What is the difference between [A] and [B]?" — answer should summarize the 3-4 biggest differences.
 - seo_content must naturally include both orderings: "[A] vs [B]" AND "[B] vs [A]", plus "[A] or [B]", plus "compared to". Don't force them — weave them into the analysis naturally.
+- If the comparison involves adult/sexual products, recreational drugs, weapons/firearms, or illegal activities, return ONLY this JSON: {"blocked": true}
 
 WRITING STYLE — CRITICAL:
 - BANNED WORDS — never use any of these: ultimately, comprehensive, robust, seamless, intuitive, significant, substantial, crucial, essential, notably, remarkably, conversely, furthermore, moreover, game-changer, stands out, remains one of, dive into, let's explore, delve, navigate the, elevate, testament to, it's worth noting, whether you're looking, in today's, in the world of, at the end of the day, boils down to, when it comes to, the bottom line
@@ -247,6 +279,7 @@ WRITING STYLE — CRITICAL:
 
     try {
         const data = JSON.parse(text);
+        if (data.blocked) return null;
         data.slug = slug;
 
         return data;
