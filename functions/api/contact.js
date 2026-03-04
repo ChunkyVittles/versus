@@ -68,7 +68,6 @@ export async function onRequestPost(context) {
         name,
         email,
         message,
-        ip,
         timestamp,
         read: false,
     });

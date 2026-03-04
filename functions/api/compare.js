@@ -7,7 +7,7 @@ export async function onRequestPost(context) {
 
     // CORS headers
     const corsHeaders = {
-        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Origin': 'https://versusthat.com',
         'Access-Control-Allow-Methods': 'POST, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type',
     };
@@ -44,6 +44,13 @@ export async function onRequestPost(context) {
     const rateKey = `rate:${ip}`;
     const rateCount = parseInt(await env.COMPARISONS_KV.get(rateKey) || '0');
     await env.COMPARISONS_KV.put(rateKey, String(rateCount + 1), { expirationTtl: 3600 });
+
+    if (rateCount >= 20) {
+        return Response.json(
+            { error: 'Rate limit reached. Please try again later.' },
+            { status: 429, headers: corsHeaders }
+        );
+    }
 
     const today = new Date().toISOString().split('T')[0];
     const dailyKey = `daily:${today}`;
@@ -116,7 +123,7 @@ export async function onRequestPost(context) {
 export async function onRequestOptions() {
     return new Response(null, {
         headers: {
-            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Origin': 'https://versusthat.com',
             'Access-Control-Allow-Methods': 'POST, OPTIONS',
             'Access-Control-Allow-Headers': 'Content-Type',
         },
@@ -297,7 +304,7 @@ WRITING STYLE — CRITICAL:
         },
         body: JSON.stringify({
             model: 'claude-sonnet-4-6',
-            max_tokens: 4096,
+            max_tokens: 16384,
             messages: [{ role: 'user', content: prompt }],
             tools: [{ type: 'web_search_20250305', name: 'web_search' }],
         }),
@@ -314,7 +321,10 @@ WRITING STYLE — CRITICAL:
         .map(block => block.text)
         .join('')
         .trim();
-    if (!text) return null;
+    if (!text) {
+        console.error('No text in Claude response. Block types:', (result.content || []).map(b => b.type));
+        return null;
+    }
 
     // Strip markdown fences if present — handle text before/after fences too
     const fenceMatch = text.match(/```(?:json)?\s*\n?([\s\S]*?)\n?\s*```/);
@@ -329,7 +339,7 @@ WRITING STYLE — CRITICAL:
 
         return data;
     } catch (e) {
-        console.error('Failed to parse Claude response:', e);
+        console.error('JSON parse failed:', e.message, 'Raw:', text.substring(0, 500));
         return null;
     }
 }

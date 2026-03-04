@@ -19,10 +19,11 @@ export async function onRequest(context) {
         return next();
     }
 
-    // Load partner affiliates from KV
+    // Load partner affiliates from KV (per-request, not shared global)
+    let partnerAffiliates = DEFAULT_PARTNER_AFFILIATES;
     try {
         const affiliatesData = await env.COMPARISONS_KV.get('affiliates', 'json');
-        if (affiliatesData) PARTNER_AFFILIATES = affiliatesData;
+        if (affiliatesData) partnerAffiliates = affiliatesData;
     } catch (e) { /* use empty default */ }
 
     if (!data) {
@@ -44,7 +45,7 @@ export async function onRequest(context) {
         return next();
     }
 
-    const html = renderComparisonPage(data);
+    const html = renderComparisonPage(data, partnerAffiliates);
     return new Response(html, {
         headers: {
             'Content-Type': 'text/html; charset=utf-8',
@@ -71,8 +72,8 @@ const EBAY_SKIP_CATEGORIES = [
     'writing-software', 'devops', 'web-security', 'video-messaging',
 ];
 
-// Loaded from KV at request time
-let PARTNER_AFFILIATES = {};
+// Loaded from KV per-request inside onRequest, passed to getItemLink
+const DEFAULT_PARTNER_AFFILIATES = {};
 
 const WEBSITE_TLD_RE = /\.(com|org|net|io|co|app|dev)$/i;
 
@@ -82,10 +83,11 @@ function isWebsite(name) {
     return WEBSITE_TLD_RE.test(last);
 }
 
-function getItemLink(item) {
+function getItemLink(item, affiliates) {
     const name = item?.name || '';
     const affiliateUrl = item?.affiliate_url || '';
     const shopOnEbay = item?.shop_on_ebay || false;
+    const partners = affiliates || DEFAULT_PARTNER_AFFILIATES;
 
     // If affiliate_url is provided, check for partner override first
     if (affiliateUrl) {
@@ -93,7 +95,7 @@ function getItemLink(item) {
         try {
             domain = new URL(affiliateUrl).hostname.replace('www.', '');
         } catch (e) { /* */ }
-        const partner = PARTNER_AFFILIATES[domain];
+        const partner = partners[domain];
         if (partner) {
             return { url: partner.url, text: `Visit ${partner.name}`, rel: 'nofollow sponsored', logo: partner.logo || null, isPartner: true };
         }
@@ -104,7 +106,7 @@ function getItemLink(item) {
     // Check for partner websites (like gocollect.com)
     if (isWebsite(name)) {
         const domain = name.trim().split(/\s+/).pop().toLowerCase();
-        const partner = PARTNER_AFFILIATES[domain];
+        const partner = partners[domain];
         if (partner) {
             return { url: partner.url, text: `Visit ${partner.name}`, rel: 'nofollow sponsored', logo: partner.logo, isPartner: true };
         }
@@ -124,7 +126,7 @@ function ebayUrl(keyword) {
     return `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(keyword)}&mkcid=1&mkrid=711-53200-19255-0&campid=${EBAY_CAMPAIGN_ID}&toolid=10001`;
 }
 
-function renderComparisonPage(comp) {
+function renderComparisonPage(comp, affiliates) {
     const categoryName = comp.category?.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) || 'General';
 
     const starsHtml = (rating) => {
@@ -209,8 +211,8 @@ function renderComparisonPage(comp) {
         : '<div class="vs-badge vs-badge-decided">&#x1F3C6;</div>';
 
     // Shop/visit buttons in hero
-    const linkA = getItemLink(comp.item_a);
-    const linkB = getItemLink(comp.item_b);
+    const linkA = getItemLink(comp.item_a, affiliates);
+    const linkB = getItemLink(comp.item_b, affiliates);
     const isWebsiteComparison = isWebsite(comp.item_a?.name) || isWebsite(comp.item_b?.name);
     const hasAffiliateLinks = comp.item_a?.affiliate_url || comp.item_b?.affiliate_url;
     const hasEbayItems = comp.item_a?.shop_on_ebay || comp.item_b?.shop_on_ebay;

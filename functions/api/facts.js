@@ -6,7 +6,7 @@ export async function onRequestPost(context) {
     const { request, env } = context;
 
     const corsHeaders = {
-        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Origin': 'https://versusthat.com',
         'Access-Control-Allow-Methods': 'POST, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type',
     };
@@ -52,6 +52,7 @@ Example: ["The Vitamix company was founded in 1921.", "Ninja's parent company Sh
         });
 
         if (!response.ok) {
+            console.error('Facts API error:', response.status, await response.text());
             return Response.json({ facts: [] }, { headers: corsHeaders });
         }
 
@@ -83,7 +84,7 @@ Example: ["The Vitamix company was founded in 1921.", "Ninja's parent company Sh
 export async function onRequestOptions() {
     return new Response(null, {
         headers: {
-            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Origin': 'https://versusthat.com',
             'Access-Control-Allow-Methods': 'POST, OPTIONS',
             'Access-Control-Allow-Headers': 'Content-Type',
         },

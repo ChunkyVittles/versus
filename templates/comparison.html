@@ -276,7 +276,7 @@
         <div class="analysis-content">
             <h2 class="section-title">{{ comp.item_a.name }} vs {{ comp.item_b.name }}: Full Comparison</h2>
             <div class="seo-content">
-                {{ comp.seo_content | replace('\n\n', '</p><p>') | safe }}
+                {{ comp.seo_content | e | replace('\n\n', '</p><p>') | safe }}
             </div>
         </div>
     </div>
