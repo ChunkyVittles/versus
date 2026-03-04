@@ -278,6 +278,14 @@ def build_site():
         page_dir.mkdir(parents=True, exist_ok=True)
         write_page(page_dir / "index.html", html)
 
+    # --- Search page ---
+    print("  Building search page...")
+    tpl = env.get_template("search.html")
+    html = tpl.render(**common)
+    page_dir = DIST_DIR / "search"
+    page_dir.mkdir(parents=True, exist_ok=True)
+    write_page(page_dir / "index.html", html)
+
     # --- Contact page ---
     print("  Building contact page...")
     tpl = env.get_template("contact.html")

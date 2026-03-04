@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Search — VersusThat{% endblock %}
+{% block description %}Search comparisons on VersusThat.{% endblock %}
+{% block canonical_path %}/search/{% endblock %}
+
+{% block content %}
+<section class="section" style="min-height: 60vh;">
+    <div class="container">
+        <h1 class="section-title" id="search-heading">Search Results</h1>
+        <div class="comparison-grid" id="search-results-grid"></div>
+        <p id="search-empty" style="display:none; text-align:center; color:#94a3b8; padding:3rem 0; font-size:1.1rem;"></p>
+    </div>
+</section>
+
+<script>
+(function() {
+    var params = new URLSearchParams(window.location.search);
+    var q = (params.get('q') || '').trim().toLowerCase();
+    var heading = document.getElementById('search-heading');
+    var grid = document.getElementById('search-results-grid');
+    var empty = document.getElementById('search-empty');
+
+    if (!q) {
+        heading.textContent = 'Search';
+        empty.textContent = 'Enter a search term to find comparisons.';
+        empty.style.display = 'block';
+        return;
+    }
+
+    heading.textContent = 'Results for \u201c' + q + '\u201d';
+
+    fetch('/search-index.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            var matches = data.filter(function(c) {
+                return c.a.toLowerCase().indexOf(q) !== -1 || c.b.toLowerCase().indexOf(q) !== -1;
+            });
+
+            if (!matches.length) {
+                empty.textContent = 'No comparisons found for \u201c' + q + '\u201d';
+                empty.style.display = 'block';
+                return;
+            }
+
+            grid.innerHTML = matches.map(function(m) {
+                var cat = m.c ? m.c.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); }) : 'General';
+                return '<a href="/' + m.s + '/" class="comparison-card">' +
+                    '<div class="card-vs-header">' +
+                        '<span class="card-item card-item-a">' + m.a + '</span>' +
+                        '<span class="card-vs-badge">VS</span>' +
+                        '<span class="card-item card-item-b">' + m.b + '</span>' +
+                    '</div>' +
+                    '<div class="card-body">' +
+                        '<span class="card-category">' + cat + '</span>' +
+                    '</div>' +
+                '</a>';
+            }).join('');
+        })
+        .catch(function() {
+            empty.textContent = 'Something went wrong loading search results.';
+            empty.style.display = 'block';
+        });
+})();
+</script>
+{% endblock %}

@@ -284,9 +284,16 @@
                 e.preventDefault();
                 sActiveIdx = Math.max(sActiveIdx - 1, -1);
                 updateSearchActive(items);
-            } else if (e.key === 'Enter' && sActiveIdx >= 0 && items[sActiveIdx]) {
+            } else if (e.key === 'Enter') {
                 e.preventDefault();
-                items[sActiveIdx].click();
+                if (sActiveIdx >= 0 && items[sActiveIdx]) {
+                    items[sActiveIdx].click();
+                } else {
+                    var sq = sSearchInput.value.trim();
+                    if (sq.length >= 2) {
+                        window.location.href = '/search/?q=' + encodeURIComponent(sq);
+                    }
+                }
             }
         });
     }
