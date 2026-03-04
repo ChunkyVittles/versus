@@ -77,6 +77,14 @@
     </div>
 </nav>
 
+{% if show_shop %}
+<div class="affiliate-disclosure-bar">
+    <div class="container">
+        <p>This page contains affiliate links. If you buy through these links, we may earn a commission at no extra cost to you. <a href="/about/#affiliate-disclosure">Learn more</a></p>
+    </div>
+</div>
+{% endif %}
+
 <!-- Hero Split -->
 <section class="vs-hero">
     <div class="vs-hero-split">
@@ -314,6 +322,7 @@
                 </div>
             </div>
         </div>
+        <p class="shop-disclosure">As an affiliate, we earn from qualifying purchases made through links on this page. Prices shown are approximate.</p>
     </div>
 </section>
 {% endif %}

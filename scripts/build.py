@@ -350,8 +350,10 @@ def generate_about_content():
 <h2>How We Compare</h2>
 <p>Every comparison starts with the details that matter: real specifications, current street prices, and the practical differences that affect your daily use. We look at what each option does well, where it falls short, and who it's actually best for. Then we make a call.</p>
 
-<h2>Affiliate Disclosure</h2>
-<p>VersusThat earns a commission when you click our affiliate links and make a purchase. This keeps the site free. Our affiliate relationships do not influence which product wins a comparison.</p>
+<h2 id="affiliate-disclosure">Affiliate Disclosure</h2>
+<p>VersusThat participates in affiliate advertising programs designed to provide a means for sites to earn advertising fees by linking to retailers. When you click product links on this site and make a purchase, we may earn a commission at no additional cost to you.</p>
+<p>Our affiliate partners currently include the eBay Partner Network. This list may change as we add new partners.</p>
+<p>These relationships help keep the site free. Affiliate commissions do not influence which product wins a comparison — the data and analysis determine the verdict.</p>
 
 <h2>Contact</h2>
 <p>Have a comparison you'd like to see? Found something wrong? <a href="/contact/">Send us a message.</a></p>
@@ -381,7 +383,8 @@ def generate_privacy_content():
 <p>We may use third-party services for analytics and hosting. These services have their own privacy policies. We use Cloudflare for hosting and may use privacy-focused analytics tools.</p>
 
 <h2>Affiliate Links</h2>
-<p>Our site contains affiliate links to product retailers. When you click these links, the retailer may set cookies on your device to track the referral. This is governed by the retailer's privacy policy, not ours.</p>
+<p>Our site contains affiliate links to product retailers. When you click these links, the retailer may set cookies on your device to track the referral. This tracking is governed by each retailer's own privacy policy.</p>
+<p>Our current affiliate partners include the eBay Partner Network. See our <a href="/about/#affiliate-disclosure">affiliate disclosure</a> for more details.</p>
 
 <h2>Your Rights</h2>
 <p>You can disable cookies in your browser settings. Since we don't collect personal information, there is generally no personal data to request, modify, or delete.</p>

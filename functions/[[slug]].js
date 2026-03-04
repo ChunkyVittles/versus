@@ -193,6 +193,7 @@ function renderComparisonPage(comp) {
                     </div>
                 </div>
             </div>
+            <p class="shop-disclosure">As an affiliate, we earn from qualifying purchases made through links on this page. Prices shown are approximate.</p>
         </div>
     </section>` : '';
 
@@ -221,6 +222,7 @@ function renderComparisonPage(comp) {
     @font-face{font-family:'Figtree';font-style:normal;font-weight:500 800;font-display:swap;src:url(/fonts/figtree-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:'Figtree',sans-serif;color:#1e293b;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}h1,h2,h3,h4{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;line-height:1.1}a{color:inherit;text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.site-header{position:sticky;top:0;z-index:100;background:#111;border-bottom:none}.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}.logo{font-family:'Bebas Neue',Impact,sans-serif;font-size:1.6rem;font-weight:400;letter-spacing:.04em;color:#fff;display:inline-flex;align-items:center}.logo-vs-mark{display:inline-block;background:#ffd60a;color:#111;padding:2px 8px;border-radius:4px;font-family:'Figtree',sans-serif;font-weight:800;font-size:.5em;vertical-align:middle;margin:0 2px;letter-spacing:0}.main-nav{display:flex;gap:2rem;align-items:center}.main-nav a{font-weight:600;color:rgba(255,255,255,.7);font-size:.95rem}.mobile-menu-btn{display:none;flex-direction:column;gap:5px;padding:4px;cursor:pointer;border:none;background:none}.mobile-menu-btn span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}.mobile-nav{display:none;background:#111;border-bottom:1px solid rgba(255,255,255,.1);padding:1rem 1.5rem}.header-actions{display:flex;align-items:center;gap:.5rem}.site-search-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:none;color:rgba(255,255,255,.7);cursor:pointer;border-radius:50%}.site-search-panel{position:fixed;top:64px;left:0;right:0;z-index:99;background:#111;padding:1rem 0;box-shadow:0 8px 32px rgba(0,0,0,.3);transform:translateY(-100%);opacity:0;visibility:hidden;transition:transform .25s,opacity .25s,visibility .25s}.site-search-panel.active{transform:translateY(0);opacity:1;visibility:visible}
     .comparison-intro-section{background:#f8fafc;padding:2rem 0}.comparison-intro{font-size:1.15rem;line-height:1.75;color:#475569;max-width:800px;margin:0 auto;text-align:center}
+    .affiliate-disclosure-bar{background:#fefce8;border-bottom:1px solid #fde68a;padding:.5rem 0;font-size:.82rem;line-height:1.5;color:#92400e}.affiliate-disclosure-bar p{margin:0;text-align:center}.affiliate-disclosure-bar a{color:#92400e;text-decoration:underline;font-weight:600}.shop-disclosure{text-align:center;font-size:.82rem;color:#94a3b8;margin-top:1.5rem;padding-top:1rem;border-top:1px solid #e2e8f0}
     </style>
     <link rel="preload" href="/css/style.css?v=5" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/css/style.css?v=4"></noscript>
@@ -272,6 +274,11 @@ function renderComparisonPage(comp) {
                 <span>${esc(comp.item_a?.name)} vs ${esc(comp.item_b?.name)}</span>
             </div>
         </nav>
+        ${showShop ? `<div class="affiliate-disclosure-bar">
+            <div class="container">
+                <p>This page contains affiliate links. If you buy through these links, we may earn a commission at no extra cost to you. <a href="/about/#affiliate-disclosure">Learn more</a></p>
+            </div>
+        </div>` : ''}
         <section class="vs-hero">
             <div class="vs-hero-split">
                 <div class="vs-hero-side vs-hero-a ${heroAClass}">
@@ -361,7 +368,7 @@ function renderComparisonPage(comp) {
         <div class="container">
             <div class="footer-bottom">
                 <p>&copy; ${new Date().getFullYear()} VersusThat. All rights reserved. <a href="/contact/" style="color:rgba(255,255,255,0.5);font-size:0.85rem;">Contact</a></p>
-                <p class="footer-disclaimer">We may earn a commission from affiliate links. This does not influence our comparisons.</p>
+                <p class="footer-disclaimer">This site contains affiliate links. If you make a purchase through these links, we may earn a commission. This does not influence our ratings or recommendations.</p>
             </div>
         </div>
     </footer>
@@ -486,7 +493,7 @@ function renderGeneratingPage(slug, itemA, itemB) {
         <div class="container">
             <div class="footer-bottom">
                 <p>&copy; ${new Date().getFullYear()} VersusThat. All rights reserved. <a href="/contact/" style="color:rgba(255,255,255,0.5);font-size:0.85rem;">Contact</a></p>
-                <p class="footer-disclaimer">We may earn a commission from affiliate links. This does not influence our comparisons.</p>
+                <p class="footer-disclaimer">This site contains affiliate links. If you make a purchase through these links, we may earn a commission. This does not influence our ratings or recommendations.</p>
             </div>
         </div>
     </footer>
