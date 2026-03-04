@@ -39,28 +39,15 @@ export async function onRequestPost(context) {
         );
     }
 
-    // Rate limiting per IP
+    // Soft rate tracking (no user-facing errors — just log for monitoring)
     const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
     const rateKey = `rate:${ip}`;
     const rateCount = parseInt(await env.COMPARISONS_KV.get(rateKey) || '0');
-    if (rateCount >= 10) {
-        return Response.json(
-            { error: 'Rate limit exceeded. Try again later.' },
-            { status: 429, headers: corsHeaders }
-        );
-    }
     await env.COMPARISONS_KV.put(rateKey, String(rateCount + 1), { expirationTtl: 3600 });
 
-    // Global daily limit
     const today = new Date().toISOString().split('T')[0];
     const dailyKey = `daily:${today}`;
     const dailyCount = parseInt(await env.COMPARISONS_KV.get(dailyKey) || '0');
-    if (dailyCount >= 100) {
-        return Response.json(
-            { error: 'Daily generation limit reached. Try again tomorrow.' },
-            { status: 429, headers: corsHeaders }
-        );
-    }
     await env.COMPARISONS_KV.put(dailyKey, String(dailyCount + 1), { expirationTtl: 86400 });
 
     // Basic content filter

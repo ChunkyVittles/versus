@@ -279,8 +279,6 @@ function renderComparisonPage(comp) {
         <div class="container">
             <a href="/" class="logo">VERSUS<span class="logo-vs-mark">THAT</span></a>
             <nav class="main-nav">
-                <a href="/categories/">Categories</a>
-                <a href="/about/">About</a>
             </nav>
             <div class="header-actions">
                 <button class="site-search-btn" id="site-search-btn" aria-label="Search">
@@ -474,8 +472,6 @@ function renderGeneratingPage(slug, itemA, itemB) {
         <div class="container">
             <a href="/" class="logo">VERSUS<span class="logo-vs-mark">THAT</span></a>
             <nav class="main-nav">
-                <a href="/categories/">Categories</a>
-                <a href="/about/">About</a>
             </nav>
             <div class="header-actions">
                 <button class="site-search-btn" id="site-search-btn" aria-label="Search">
