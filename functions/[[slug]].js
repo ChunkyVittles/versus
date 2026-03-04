@@ -222,7 +222,7 @@ function renderComparisonPage(comp) {
 <body>
     <header class="site-header">
         <div class="container">
-            <a href="/" class="logo">VERSUS<span class="logo-vs-mark">VS</span>THAT</a>
+            <a href="/" class="logo">VERSUS<span class="logo-vs-mark">THAT</span></a>
             <nav class="main-nav">
                 <a href="/categories/">Categories</a>
                 <a href="/about/">About</a>
