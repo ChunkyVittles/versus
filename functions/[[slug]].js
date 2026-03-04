@@ -264,8 +264,8 @@ function renderComparisonPage(comp) {
     .comparison-intro-section{background:#f8fafc;padding:2rem 0}.comparison-intro{font-size:1.15rem;line-height:1.75;color:#475569;max-width:800px;margin:0 auto;text-align:center}
     .affiliate-disclosure-bar{background:#fefce8;border-bottom:1px solid #fde68a;padding:.5rem 0;font-size:.82rem;line-height:1.5;color:#92400e}.affiliate-disclosure-bar p{margin:0;text-align:center}.affiliate-disclosure-bar a{color:#92400e;text-decoration:underline;font-weight:600}.shop-disclosure{text-align:center;font-size:.82rem;color:#94a3b8;margin-top:1.5rem;padding-top:1rem;border-top:1px solid #e2e8f0}.btn-partner{display:inline-flex;align-items:center;gap:.5rem}.partner-logo{height:20px;width:auto;vertical-align:middle}
     </style>
-    <link rel="preload" href="/css/style.css?v=5" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/style.css?v=4"></noscript>
+    <link rel="preload" href="/css/style.css?v=6" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/style.css?v=6"></noscript>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"WebPage","name":${JSON.stringify(comp.meta_title)},"url":"https://versusthat.com/${comp.slug}/","datePublished":"${comp.date_published}","dateModified":"${comp.date_updated}","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://versusthat.com/"},{"@type":"ListItem","position":2,"name":"${esc(categoryName)}","item":"https://versusthat.com/categories/${comp.category}/"},{"@type":"ListItem","position":3,"name":"${esc(comp.item_a?.name)} vs ${esc(comp.item_b?.name)}"}]}}
     </script>
@@ -466,8 +466,8 @@ function renderGeneratingPage(slug, itemA, itemB) {
     .gen-facts-label{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.4);margin-bottom:.5rem}
     .gen-facts-text{font-size:1.1rem;color:rgba(255,255,255,0.85);line-height:1.6;max-width:500px;margin:0 auto}
     </style>
-    <link rel="preload" href="/css/style.css?v=5" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/style.css?v=5"></noscript>
+    <link rel="preload" href="/css/style.css?v=6" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/style.css?v=6"></noscript>
 </head>
 <body>
     <header class="site-header">
