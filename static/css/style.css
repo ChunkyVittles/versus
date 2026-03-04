@@ -486,83 +486,41 @@ h1, h2, h3, h4 {
 
 .compare-btn {
     grid-column: 1 / -1;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+    padding: 0.75rem 2.5rem;
+    border-radius: 6px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 2px;
-    background: #e2e8f0;
-    color: #1e293b;
-    border: 3px solid #cbd5e1;
+    background: #fff;
+    color: #111;
+    border: none;
     cursor: pointer;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-    box-shadow: 0 4px 16px rgba(226, 232, 240, 0.3);
-    position: relative;
-    margin: 0.5rem auto 0;
-}
-
-.compare-btn-label {
-    font-family: 'Bebas Neue', Impact, sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    margin-top: -2px;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    margin: 0.75rem auto 0;
 }
 
 .compare-btn:disabled {
-    background: #4a4a4a;
-    border-color: #3a3a3a;
-    box-shadow: none;
-    color: #777;
+    background: #555;
+    color: #888;
     cursor: not-allowed;
-    animation: none;
-}
-
-.compare-btn:not(:disabled) {
-    animation: bell-pulse 2s ease-in-out infinite;
 }
 
 .compare-btn:not(:disabled):hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 24px rgba(226, 232, 240, 0.5);
-    animation: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.25);
 }
 
 .compare-btn:not(:disabled):active {
-    transform: scale(0.95);
-}
-
-.compare-btn:not(:disabled):hover svg {
-    animation: bell-ring 0.5s ease;
-}
-
-@keyframes bell-pulse {
-    0%, 100% { box-shadow: 0 4px 16px rgba(226, 232, 240, 0.3); }
-    50% { box-shadow: 0 4px 28px rgba(255, 255, 255, 0.5); }
-}
-
-@keyframes bell-ring {
-    0% { transform: rotate(0); }
-    15% { transform: rotate(12deg); }
-    30% { transform: rotate(-12deg); }
-    45% { transform: rotate(8deg); }
-    60% { transform: rotate(-5deg); }
-    75% { transform: rotate(2deg); }
-    100% { transform: rotate(0); }
+    transform: translateY(0);
 }
 
 .compare-btn.loading {
     opacity: 0.7;
     cursor: wait;
-    animation: pulse-btn 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse-btn {
-    0%, 100% { opacity: 0.7; }
-    50% { opacity: 0.5; }
 }
 
 .compare-error {
