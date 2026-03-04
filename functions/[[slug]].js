@@ -32,8 +32,11 @@ export async function onRequest(context) {
     });
 }
 
-function amazonUrl(keyword) {
-    return `https://www.amazon.com/s?k=${encodeURIComponent(keyword)}`;
+const EBAY_CAMPAIGN_ID = '5339144040';
+const EBAY_SKIP_CATEGORIES = ['financial', 'education', 'services', 'streaming', 'cars'];
+
+function ebayUrl(keyword) {
+    return `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(keyword)}&mkcid=1&mkrid=711-53200-19255-0&campid=${EBAY_CAMPAIGN_ID}&toolid=10001`;
 }
 
 function renderComparisonPage(comp) {
@@ -120,13 +123,14 @@ function renderComparisonPage(comp) {
         ? '<div class="vs-badge">VS</div>'
         : '<div class="vs-badge vs-badge-decided">&#x1F3C6;</div>';
 
-    // Shop buttons in hero
-    const shopBtnA = comp.item_a?.shop_keywords?.length
-        ? `<a href="${amazonUrl(comp.item_a.shop_keywords[0])}" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on Amazon</a>`
-        : (comp.item_a?.affiliate_url ? `<a href="${esc(comp.item_a.affiliate_url)}" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Check Price</a>` : '');
-    const shopBtnB = comp.item_b?.shop_keywords?.length
-        ? `<a href="${amazonUrl(comp.item_b.shop_keywords[0])}" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on Amazon</a>`
-        : (comp.item_b?.affiliate_url ? `<a href="${esc(comp.item_b.affiliate_url)}" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Check Price</a>` : '');
+    // Shop buttons in hero (skip non-physical categories)
+    const showShop = !EBAY_SKIP_CATEGORIES.includes(comp.category);
+    const shopBtnA = showShop
+        ? `<a href="${ebayUrl(comp.item_a?.name)}" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on eBay</a>`
+        : '';
+    const shopBtnB = showShop
+        ? `<a href="${ebayUrl(comp.item_b?.name)}" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on eBay</a>`
+        : '';
 
     // Scoreboard section
     const scoreboardHtml = `<section class="scoreboard-section">
@@ -153,27 +157,26 @@ function renderComparisonPage(comp) {
     </section>`;
 
     // Shop CTA section
-    const hasShopKeywords = comp.item_a?.shop_keywords?.length || comp.item_b?.shop_keywords?.length;
-    const shopCtaHtml = hasShopKeywords ? `<section class="section shop-cta">
+    const shopCtaHtml = showShop ? `<section class="section shop-cta">
         <div class="container">
             <h2 class="section-title">Ready to Buy?</h2>
             <div class="shop-grid">
-                ${comp.item_a?.shop_keywords?.length ? `<div class="shop-card shop-card-a ${comp.verdict === 'a' ? 'shop-card-winner' : ''}">
+                <div class="shop-card shop-card-a ${comp.verdict === 'a' ? 'shop-card-winner' : ''}">
                     ${comp.verdict === 'a' ? '<span class="shop-winner-badge">&#x1F451; Our Pick</span>' : ''}
-                    <h3>${esc(comp.item_a.name)}</h3>
-                    <p class="shop-price">${esc(comp.item_a.price_range)}</p>
+                    <h3>${esc(comp.item_a?.name)}</h3>
+                    <p class="shop-price">${esc(comp.item_a?.price_range)}</p>
                     <div class="shop-links">
-                        ${comp.item_a.shop_keywords.map(kw => `<a href="${amazonUrl(kw)}" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; ${esc(kw)}</a>`).join('\n')}
+                        <a href="${ebayUrl(comp.item_a?.name)}" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on eBay</a>
                     </div>
-                </div>` : ''}
-                ${comp.item_b?.shop_keywords?.length ? `<div class="shop-card shop-card-b ${comp.verdict === 'b' ? 'shop-card-winner' : ''}">
+                </div>
+                <div class="shop-card shop-card-b ${comp.verdict === 'b' ? 'shop-card-winner' : ''}">
                     ${comp.verdict === 'b' ? '<span class="shop-winner-badge">&#x1F451; Our Pick</span>' : ''}
-                    <h3>${esc(comp.item_b.name)}</h3>
-                    <p class="shop-price">${esc(comp.item_b.price_range)}</p>
+                    <h3>${esc(comp.item_b?.name)}</h3>
+                    <p class="shop-price">${esc(comp.item_b?.price_range)}</p>
                     <div class="shop-links">
-                        ${comp.item_b.shop_keywords.map(kw => `<a href="${amazonUrl(kw)}" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; ${esc(kw)}</a>`).join('\n')}
+                        <a href="${ebayUrl(comp.item_b?.name)}" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on eBay</a>
                     </div>
-                </div>` : ''}
+                </div>
             </div>
         </div>
     </section>` : '';

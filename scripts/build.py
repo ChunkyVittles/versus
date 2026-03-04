@@ -22,7 +22,8 @@ TEMPLATES_DIR = ROOT / "templates"
 STATIC_DIR = ROOT / "static"
 DIST_DIR = ROOT / "dist"
 DOMAIN = "https://versusthat.com"
-AFFILIATE_TAG = ""
+EBAY_CAMPAIGN_ID = "5339144040"
+EBAY_SKIP_CATEGORIES = ["financial", "education", "services", "streaming", "cars"]
 
 
 def load_categories():
@@ -125,7 +126,8 @@ def build_site():
         "categories": categories,
         "current_year": current_year,
         "domain": DOMAIN,
-        "affiliate_tag": AFFILIATE_TAG,
+        "ebay_campaign_id": EBAY_CAMPAIGN_ID,
+        "ebay_skip_categories": EBAY_SKIP_CATEGORIES,
     }
 
     # --- Homepage ---

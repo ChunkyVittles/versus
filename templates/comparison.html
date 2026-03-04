@@ -81,6 +81,7 @@
 {% endblock %}
 
 {% block content %}
+{% set show_shop = comp.category not in ebay_skip_categories %}
 <!-- Breadcrumb -->
 <nav class="breadcrumb">
     <div class="container">
@@ -108,10 +109,8 @@
                     </div>
                     <div class="vs-hero-price">{{ comp.item_a.price_range }}</div>
                     <p class="vs-hero-best-for">{{ comp.item_a.best_for }}</p>
-                    {% if comp.item_a.shop_keywords %}
-                    <a href="https://www.amazon.com/s?k={{ comp.item_a.shop_keywords[0] | urlencode }}" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on Amazon</a>
-                    {% elif comp.item_a.affiliate_url %}
-                    <a href="{{ comp.item_a.affiliate_url }}" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Check Price</a>
+                    {% if show_shop %}
+                    <a href="https://www.ebay.com/sch/i.html?_nkw={{ comp.item_a.name | urlencode }}&mkcid=1&mkrid=711-53200-19255-0&campid={{ ebay_campaign_id }}&toolid=10001" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on eBay</a>
                     {% endif %}
                 </div>
             </div>
@@ -136,10 +135,8 @@
                     </div>
                     <div class="vs-hero-price">{{ comp.item_b.price_range }}</div>
                     <p class="vs-hero-best-for">{{ comp.item_b.best_for }}</p>
-                    {% if comp.item_b.shop_keywords %}
-                    <a href="https://www.amazon.com/s?k={{ comp.item_b.shop_keywords[0] | urlencode }}" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on Amazon</a>
-                    {% elif comp.item_b.affiliate_url %}
-                    <a href="{{ comp.item_b.affiliate_url }}" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Check Price</a>
+                    {% if show_shop %}
+                    <a href="https://www.ebay.com/sch/i.html?_nkw={{ comp.item_b.name | urlencode }}&mkcid=1&mkrid=711-53200-19255-0&campid={{ ebay_campaign_id }}&toolid=10001" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on eBay</a>
                     {% endif %}
                 </div>
             </div>
@@ -302,35 +299,27 @@
 {% endif %}
 
 <!-- Shop CTA -->
-{% if comp.item_a.shop_keywords or comp.item_b.shop_keywords %}
+{% if show_shop %}
 <section class="section shop-cta">
     <div class="container">
         <h2 class="section-title">Ready to Buy?</h2>
         <div class="shop-grid">
-            {% if comp.item_a.shop_keywords %}
             <div class="shop-card shop-card-a {% if comp.verdict == 'a' %}shop-card-winner{% endif %}">
                 {% if comp.verdict == 'a' %}<span class="shop-winner-badge">&#x1F451; Our Pick</span>{% endif %}
                 <h3>{{ comp.item_a.name }}</h3>
                 <p class="shop-price">{{ comp.item_a.price_range }}</p>
                 <div class="shop-links">
-                    {% for kw in comp.item_a.shop_keywords %}
-                    <a href="https://www.amazon.com/s?k={{ kw | urlencode }}" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; {{ kw }}</a>
-                    {% endfor %}
+                    <a href="https://www.ebay.com/sch/i.html?_nkw={{ comp.item_a.name | urlencode }}&mkcid=1&mkrid=711-53200-19255-0&campid={{ ebay_campaign_id }}&toolid=10001" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on eBay</a>
                 </div>
             </div>
-            {% endif %}
-            {% if comp.item_b.shop_keywords %}
             <div class="shop-card shop-card-b {% if comp.verdict == 'b' %}shop-card-winner{% endif %}">
                 {% if comp.verdict == 'b' %}<span class="shop-winner-badge">&#x1F451; Our Pick</span>{% endif %}
                 <h3>{{ comp.item_b.name }}</h3>
                 <p class="shop-price">{{ comp.item_b.price_range }}</p>
                 <div class="shop-links">
-                    {% for kw in comp.item_b.shop_keywords %}
-                    <a href="https://www.amazon.com/s?k={{ kw | urlencode }}" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; {{ kw }}</a>
-                    {% endfor %}
+                    <a href="https://www.ebay.com/sch/i.html?_nkw={{ comp.item_b.name | urlencode }}&mkcid=1&mkrid=711-53200-19255-0&campid={{ ebay_campaign_id }}&toolid=10001" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on eBay</a>
                 </div>
             </div>
-            {% endif %}
         </div>
     </div>
 </section>
