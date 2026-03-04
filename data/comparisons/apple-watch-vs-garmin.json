@@ -18,7 +18,8 @@
     "price_range": "$399-$799",
     "best_for": "iPhone users who want a versatile smartwatch with strong health tracking and seamless ecosystem integration.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Garmin Forerunner 965",
@@ -38,7 +39,8 @@
     "price_range": "$599-$649",
     "best_for": "Serious athletes and outdoor enthusiasts who prioritize advanced training metrics and exceptional battery life.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "fitness-trackers",
   "comparison_summary": "Apple Watch excels as a lifestyle smartwatch with health tracking for everyday users, while Garmin dominates in sports-specific features and battery endurance for serious athletes. Your choice depends on whether you prioritize ecosystem integration and daily wearability or advanced training analytics and multi-day battery life.",

@@ -18,7 +18,8 @@
     "price_range": "$199-$249",
     "best_for": "Apple users seeking seamless ecosystem integration with excellent spatial audio and a compact form factor.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Bose QuietComfort Ultra Earbuds",
@@ -38,7 +39,8 @@
     "price_range": "$249-$299",
     "best_for": "Audiophiles and frequent travelers prioritizing best-in-class noise cancellation and premium sound quality across all devices.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "headphones",
   "comparison_summary": "The AirPods Pro are the obvious pick for Apple users who want everything to just work together. The Bose QuietComfort Ultra deliver superior noise cancellation and sound quality but sacrifice the conveniences that make AirPods so appealing within Apple's ecosystem.",

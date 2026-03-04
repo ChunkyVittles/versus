@@ -18,7 +18,8 @@
     "price_range": "$695-$1,495",
     "best_for": "Budget-conscious buyers seeking a quality all-foam mattress with good pressure relief and a risk-free trial.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Tempur-Pedic TEMPUR-Adapt",
@@ -38,7 +39,8 @@
     "price_range": "$2,199-$3,398",
     "best_for": "Sleepers with chronic pain or pressure point issues willing to invest in premium, long-lasting memory foam technology.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "mattresses",
   "comparison_summary": "Tempur-Pedic TEMPUR-Adapt costs 2-3x more than Casper Original but delivers genuinely superior pressure relief, durability, and body contouring. Casper performs well across most categories and offers better value for budget-conscious buyers, while Tempur-Pedic earns its premium price if you need therapeutic benefits and longevity.",

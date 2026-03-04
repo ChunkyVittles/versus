@@ -18,7 +18,8 @@
     "price_range": "$149-$599",
     "best_for": "Professional contractors and serious DIYers who need maximum durability and power for daily heavy-duty use.",
     "rating": 4.8,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Ryobi ONE+ 18V Cordless Power Tool System",
@@ -38,7 +39,8 @@
     "price_range": "$59-$299",
     "best_for": "Homeowners and casual DIY enthusiasts seeking reliable tools for weekend projects and home maintenance at budget-friendly prices.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "power-tools",
   "comparison_summary": "Milwaukee M18 tools cost 2-3x more than Ryobi ONE+ but deliver the power and durability contractors depend on for daily jobsite work. For homeowners, Ryobi provides 90% of the performance at half the price, which makes it the smarter investment for occasional weekend projects.",

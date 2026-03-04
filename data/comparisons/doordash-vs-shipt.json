@@ -18,7 +18,8 @@
     "price_range": "$0-$9.99/month",
     "best_for": "People who primarily order restaurant food but occasionally need grocery delivery convenience.",
     "rating": 4.3,
-    "affiliate_url": "https://www.doordash.com"
+    "affiliate_url": "https://www.doordash.com",
+    "shop_on_ebay": false
   },
   "item_b": {
     "name": "Shipt",
@@ -38,12 +39,13 @@
     "price_range": "$10.99/month",
     "best_for": "Households focused on regular grocery shopping who value quality service and real-time shopper communication.",
     "rating": 4.5,
-    "affiliate_url": "https://www.shipt.com"
+    "affiliate_url": "https://www.shipt.com",
+    "shop_on_ebay": false
   },
   "category": "services",
   "comparison_summary": "DoorDash excels as a restaurant delivery platform with the largest merchant network and competitive pricing for frequent small orders. Shipt specializes in grocery delivery with trained personal shoppers and better store partnerships. Your choice depends on whether you're primarily ordering prepared food or replacing actual grocery store trips.",
   "verdict": "tie",
-  "verdict_text": "DoorDash dominates restaurant delivery while Shipt owns the grocery shopping experience\u2014pick based on whether you're ordering dinner or stocking your fridge.",
+  "verdict_text": "DoorDash dominates restaurant delivery while Shipt owns the grocery shopping experience—pick based on whether you're ordering dinner or stocking your fridge.",
   "key_differences": [
     {
       "aspect": "Primary Focus",
@@ -118,7 +120,7 @@
     },
     {
       "q": "Is DoorDash better than Shipt?",
-      "a": "DoorDash is better if you're ordering restaurant food\u2014it has superior merchant selection and pricing for frequent small orders. However, Shipt is better for grocery shopping, so \"better\" really depends on your primary need."
+      "a": "DoorDash is better if you're ordering restaurant food—it has superior merchant selection and pricing for frequent small orders. However, Shipt is better for grocery shopping, so \"better\" really depends on your primary need."
     },
     {
       "q": "Should I buy DoorDash or Shipt?",

@@ -18,7 +18,8 @@
     "price_range": "$197-$597",
     "best_for": "Cooks who prioritize breakfast foods, hibachi-style cooking, and high-heat searing over smoky BBQ flavors",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Traeger Pro Series Wood Pellet Grill",
@@ -38,7 +39,8 @@
     "price_range": "$399-$1,999",
     "best_for": "BBQ enthusiasts who want authentic smoky flavor and versatile cooking methods for meats, vegetables, and even baked goods",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "grills",
   "comparison_summary": "Blackstone griddles and Traeger pellet grills aren't really competitors - they're different cooking methods entirely. Blackstone gives you high-heat flat-top cooking with fast startup and simple cleanup, while Traeger delivers wood-fired flavor with precise temperature control for smoking and slow cooking. Pick the one that matches how you actually cook outdoors.",

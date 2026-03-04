@@ -69,23 +69,35 @@ function isWebsite(name) {
 function getItemLink(item) {
     const name = item?.name || '';
     const affiliateUrl = item?.affiliate_url || '';
-    // If the comparison data includes an explicit affiliate_url, use it
+    const shopOnEbay = item?.shop_on_ebay || false;
+
+    // If affiliate_url is provided and non-empty, use it directly
     if (affiliateUrl) {
-        const display = name.trim().split(/\s+/)[0] || 'Site';
+        let display = name;
+        try {
+            const domain = new URL(affiliateUrl).hostname.replace('www.', '');
+            display = domain.replace(/\.[^.]+$/, '').replace(/\b\w/g, c => c.toUpperCase());
+        } catch (e) { /* use name */ }
         return { url: affiliateUrl, text: `Visit ${display}`, rel: 'nofollow sponsored', logo: null, isPartner: false };
     }
-    if (!isWebsite(name)) {
+
+    // Check for partner websites (like gocollect.com)
+    if (isWebsite(name)) {
+        const domain = name.trim().split(/\s+/).pop().toLowerCase();
+        const partner = PARTNER_AFFILIATES[domain];
+        if (partner) {
+            return { url: partner.url, text: `Visit ${partner.name}`, rel: 'nofollow sponsored', logo: partner.logo, isPartner: true };
+        }
+        const displayName = domain.replace(/\.[^.]+$/, '').replace(/\b\w/g, c => c.toUpperCase());
+        return { url: `https://${domain}`, text: `Visit ${displayName}`, rel: 'nofollow', logo: null, isPartner: false };
+    }
+
+    // Physical product — link to eBay (shop_on_ebay flag or fallback for non-website items)
+    if (shopOnEbay || !isWebsite(name)) {
         return { url: ebayUrl(name), text: '&#x1F6D2; Shop on eBay', rel: 'nofollow sponsored', logo: null, isPartner: false };
     }
-    // Extract domain from item name
-    const domain = name.trim().split(/\s+/).pop().toLowerCase();
-    const partner = PARTNER_AFFILIATES[domain];
-    if (partner) {
-        return { url: partner.url, text: `Visit ${partner.name}`, rel: 'nofollow sponsored', logo: partner.logo, isPartner: true };
-    }
-    // Non-partner website — link directly
-    const displayName = domain.replace(/\.[^.]+$/, '').replace(/\b\w/g, c => c.toUpperCase());
-    return { url: `https://${domain}`, text: `Visit ${displayName}`, rel: 'nofollow', logo: null, isPartner: false };
+
+    return { url: '#', text: name, rel: 'nofollow', logo: null, isPartner: false };
 }
 
 function ebayUrl(keyword) {
@@ -181,7 +193,8 @@ function renderComparisonPage(comp) {
     const linkB = getItemLink(comp.item_b);
     const isWebsiteComparison = isWebsite(comp.item_a?.name) || isWebsite(comp.item_b?.name);
     const hasAffiliateLinks = comp.item_a?.affiliate_url || comp.item_b?.affiliate_url;
-    const showShop = hasAffiliateLinks || isWebsiteComparison || !EBAY_SKIP_CATEGORIES.includes(comp.category);
+    const hasEbayItems = comp.item_a?.shop_on_ebay || comp.item_b?.shop_on_ebay;
+    const showShop = hasAffiliateLinks || hasEbayItems || isWebsiteComparison || !EBAY_SKIP_CATEGORIES.includes(comp.category);
     const renderBtn = (link, side) => {
         const logoHtml = link.logo ? `<img src="${link.logo}" alt="${esc(link.text)}" class="partner-logo"> ` : '';
         const partnerClass = link.isPartner ? ' btn-partner' : '';

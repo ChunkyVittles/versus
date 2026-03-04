@@ -18,7 +18,8 @@
     "price_range": "$60,000-$120,000",
     "best_for": "Professionals seeking broad business leadership roles, career changers, or those targeting consulting, finance, or executive management positions.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "item_b": {
     "name": "Master of Science in Accounting (MSA)",
@@ -38,7 +39,8 @@
     "price_range": "$30,000-$60,000",
     "best_for": "Accounting undergraduates or professionals committed to CPA certification and specialized accounting careers in audit, tax, or financial reporting.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "category": "education",
   "comparison_summary": "The MBA costs twice as much and takes twice as long but opens doors across business functions and industries. The MS in Accounting is the faster, cheaper path specifically designed for CPA-track professionals who want deep accounting expertise. Your career goals make this decision for you.",

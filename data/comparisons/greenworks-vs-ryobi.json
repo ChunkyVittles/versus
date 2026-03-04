@@ -18,7 +18,8 @@
     "price_range": "$250-$450",
     "best_for": "Homeowners with small to medium yards who prioritize lightweight design and battery compatibility across multiple tools.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Ryobi 40V Brushless Lawn Mower",
@@ -38,7 +39,8 @@
     "price_range": "$350-$550",
     "best_for": "DIY enthusiasts with medium to large yards who want compatibility with a vast tool ecosystem and self-propelled convenience.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "lawn-mowers",
   "comparison_summary": "This matchup really depends on your lawn size and how deep you want to go with cordless tools. Greenworks is lighter with dual battery ports and a 5-year warranty, while Ryobi brings a larger cutting deck, brushless motor tech, and compatibility with over 300 tools in the ONE+ system.",

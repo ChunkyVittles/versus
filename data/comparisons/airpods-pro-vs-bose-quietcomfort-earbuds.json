@@ -18,7 +18,8 @@
     "price_range": "$199-$249",
     "best_for": "Apple users seeking seamless ecosystem integration and premium spatial audio features.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Bose QuietComfort Earbuds II",
@@ -38,7 +39,8 @@
     "price_range": "$249-$299",
     "best_for": "Audiophiles and frequent travelers prioritizing best-in-class noise cancellation and sound quality.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "headphones",
   "comparison_summary": "AirPods Pro are Apple's ecosystem darling—lighter, more compact, and brilliantly integrated with iPhone and Mac. Bose QuietComfort Earbuds II are the audio purist's choice with superior noise cancellation and richer sound, working equally well across all platforms. Your decision really depends on whether you're married to Apple's devices or value pure audio performance.",

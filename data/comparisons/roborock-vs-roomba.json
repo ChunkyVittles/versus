@@ -18,7 +18,8 @@
     "price_range": "$899-$1599",
     "best_for": "Tech-savvy households wanting powerful vacuum and mop combination with advanced automation at better value than premium competitors.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "iRobot Roomba j7+",
@@ -39,7 +40,8 @@
     "price_range": "$599-$799",
     "best_for": "Pet owners prioritizing obstacle avoidance and brand reliability over raw cleaning power, especially those with carpeted homes.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "vacuums",
   "comparison_summary": "Roborock and Roomba take completely different approaches to robot vacuums. Roborock prioritizes raw cleaning power, mopping capability, and feature-packed models at competitive prices. Roomba focuses on obstacle intelligence, user-friendly operation, and brand reliability. Your choice depends on whether you need maximum performance or bulletproof pet-accident avoidance.",

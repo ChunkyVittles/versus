@@ -18,7 +18,8 @@
     "price_range": "$99-$159",
     "best_for": "Casual fitness enthusiasts and health-conscious users who prioritize ease of use, sleep tracking, and smartphone integration.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Garmin Forerunner 265",
@@ -38,7 +39,8 @@
     "price_range": "$229-$449",
     "best_for": "Serious runners, triathletes, and multi-sport athletes who need detailed performance analytics and long battery life.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "fitness-trackers",
   "comparison_summary": "Fitbit makes health tracking approachable with user-friendly features and affordable pricing that appeals to casual users. Garmin targets serious athletes with advanced metrics, superior GPS, and longer battery life that justify the premium price. Pick based on whether you want wellness motivation or training optimization.",

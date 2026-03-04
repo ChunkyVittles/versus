@@ -18,7 +18,8 @@
     "price_range": "$99-$599",
     "best_for": "Professional contractors and serious DIYers who prioritize power and brand availability in North America",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Makita 18V LXT Lithium-Ion Cordless Power Tool System",
@@ -38,7 +39,8 @@
     "price_range": "$89-$549",
     "best_for": "Users seeking the broadest tool selection, lighter weight systems, and competitive pricing without sacrificing professional-grade performance",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "power-tools",
   "comparison_summary": "DEWALT vs Makita is the power tool debate that never ends. DEWALT brings serious muscle with brushless motors and North American dominance, while Makita counters with 325+ tools in its platform, lighter batteries, and better prices. Both deliver professional reliability, so your choice depends on your specific priorities.",

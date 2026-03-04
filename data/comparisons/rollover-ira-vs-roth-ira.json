@@ -20,7 +20,8 @@
     "price_range": "$0-$50",
     "best_for": "Individuals rolling over employer-sponsored retirement accounts who want tax-deferred growth and immediate tax benefits.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "item_b": {
     "name": "Roth IRA",
@@ -42,7 +43,8 @@
     "price_range": "$0-$50",
     "best_for": "Younger investors expecting higher future tax rates who want tax-free retirement income and no required distributions.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "category": "financial",
   "comparison_summary": "A Rollover IRA is your consolidation tool—perfect for parking old 401(k) funds with tax-deferred growth and zero income restrictions. The Roth IRA plays a different game entirely, trading upfront taxes for completely tax-free withdrawals later. Most smart investors use both.",

@@ -18,7 +18,8 @@
     "price_range": "$1,799-$1,999",
     "best_for": "Fitness enthusiasts who want automatic incline/decline features and global virtual rides at a lower price point than Peloton.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Peloton Bike+",
@@ -38,7 +39,8 @@
     "price_range": "$2,195-$2,495",
     "best_for": "Serious cyclists and fitness devotees who prioritize live classes, community engagement, and premium instructor-led content.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "fitness-equipment",
   "comparison_summary": "NordicTrack brings innovative incline/decline technology and global routes at a lower price point. Peloton delivers unmatched content variety, live class frequency, and the strongest community in connected fitness. Pick NordicTrack for terrain simulation on a budget, or Peloton for the most complete studio cycling experience.",

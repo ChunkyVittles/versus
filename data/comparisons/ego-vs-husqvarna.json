@@ -18,7 +18,8 @@
     "price_range": "$549-$699",
     "best_for": "Homeowners with up to 0.5 acre who prioritize convenience, low maintenance, and quiet operation over gas-powered alternatives.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Husqvarna LC221RH Self-Propelled Gas Lawn Mower",
@@ -39,7 +40,8 @@
     "price_range": "$429-$549",
     "best_for": "Homeowners with larger lawns over 0.5 acre who need unlimited runtime and don't mind gas engine maintenance.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "lawn-mowers",
   "comparison_summary": "EGO Power+ offers premium battery convenience with zero emissions and almost no maintenance, while Husqvarna's gas-powered LC221RH provides unlimited runtime at a lower starting price. Your lawn size and tolerance for maintenance will make this decision for you.",

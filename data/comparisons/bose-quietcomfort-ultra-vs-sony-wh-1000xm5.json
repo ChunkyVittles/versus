@@ -18,7 +18,8 @@
     "price_range": "$379-$429",
     "best_for": "Audiophiles seeking premium spatial audio and maximum comfort for extended listening sessions",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Sony WH-1000XM5",
@@ -38,7 +39,8 @@
     "price_range": "$349-$399",
     "best_for": "Frequent travelers and commuters who prioritize battery life and advanced noise cancellation technology",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "headphones",
   "comparison_summary": "These are the two best noise-cancelling headphones available. The Bose delivers superior comfort and spatial audio, while the Sony counters with longer battery life, LDAC support, and better value. Both excel at ANC—you really can't go wrong with either.",

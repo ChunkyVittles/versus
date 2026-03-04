@@ -18,7 +18,8 @@
     "price_range": "$999-$1099",
     "best_for": "Photography enthusiasts and users who prioritize clean software, AI features, and long-term software support.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Samsung Galaxy S25",
@@ -38,7 +39,8 @@
     "price_range": "$1099-$1199",
     "best_for": "Power users who want the brightest display, fastest charging, versatile camera zoom, and Samsung ecosystem integration.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "smartphones",
   "comparison_summary": "The Pixel 9 Pro delivers superior computational photography and seven years of updates, while the Galaxy S25 counters with a blindingly bright 2600-nit display, faster 45W charging, and more versatile zoom lenses. This comparison really comes down to whether you value Google's AI-driven camera smarts or Samsung's hardware advantages.",

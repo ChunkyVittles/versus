@@ -18,7 +18,8 @@
     "price_range": "$649-$749",
     "best_for": "Tech enthusiasts and allergy sufferers who want the most advanced cleaning technology and are willing to pay premium prices for scientific validation of clean floors.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Shark Stratos Cordless",
@@ -38,7 +39,8 @@
     "price_range": "$399-$499",
     "best_for": "Value-conscious shoppers seeking premium cordless performance without breaking the bank, especially households with pets that need odor control.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "vacuums",
   "comparison_summary": "Dyson V15 Detect brings superior 230 AW suction and genuinely innovative laser detection technology, while Shark Stratos counters with smart practical features like odor control and lighter weight at a much friendlier price. Most people will be thrilled with the Shark, but power users and allergy sufferers get real benefits from Dyson's engineering.",

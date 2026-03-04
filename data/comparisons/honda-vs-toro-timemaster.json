@@ -18,7 +18,8 @@
     "price_range": "$749-$849",
     "best_for": "Homeowners with medium-sized lawns who prioritize reliability, superior mulching performance, and long-term engine durability.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Toro TimeMaster 30-Inch Self-Propelled Lawn Mower",
@@ -38,7 +39,8 @@
     "price_range": "$1,199-$1,399",
     "best_for": "Homeowners with large lawns (half-acre or more) who want to significantly reduce mowing time and don't mind the extra weight.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "lawn-mowers",
   "comparison_summary": "The Honda HRX217VKA is a 21-inch precision machine with legendary reliability and a 10-year engine warranty. The Toro TimeMaster is a 30-inch time-saving beast that cuts large lawns in half the time but costs $400-500 more and weighs 38 pounds more. Your property size makes this decision for you.",

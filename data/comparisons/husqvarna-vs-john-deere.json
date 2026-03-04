@@ -18,7 +18,8 @@
     "price_range": "$2,199-$4,299",
     "best_for": "Homeowners seeking superior maneuverability and comfort for residential lawns up to 3 acres with complex landscaping.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "John Deere Riding Lawn Tractor",
@@ -39,7 +40,8 @@
     "price_range": "$2,599-$4,999",
     "best_for": "Property owners prioritizing long-term durability, resale value, and easy access to service support for lawns 2-5+ acres.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "lawn-mowers",
   "comparison_summary": "John Deere and Husqvarna both make excellent riding mowers, but they serve different priorities. John Deere dominates in build quality, dealer support, and resale value, while Husqvarna wins on maneuverability, comfort features, and initial price. Most buyers benefit from John Deere's long-term advantages, though Husqvarna delivers better value for smaller properties with tight spaces.",

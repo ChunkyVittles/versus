@@ -18,7 +18,8 @@
     "price_range": "$1,799-$2,499",
     "best_for": "Home theater enthusiasts and gamers who prioritize perfect blacks, infinite contrast, and premium picture quality in dimmer viewing environments.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Sony Bravia XR A95L 65-Inch QD-OLED 4K Google TV",
@@ -38,7 +39,8 @@
     "price_range": "$2,999-$3,799",
     "best_for": "Videophiles and professionals who demand the absolute best picture quality and color accuracy, regardless of budget constraints.",
     "rating": 4.8,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "tvs",
   "comparison_summary": "LG and Sony both make outstanding OLED TVs, but they're aimed at different buyers. LG's C4 offers incredible gaming features and better value, while Sony's A95L delivers reference-grade picture quality that justifies its premium price for those who can afford it.",

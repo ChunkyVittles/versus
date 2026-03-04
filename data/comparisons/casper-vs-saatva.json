@@ -18,7 +18,8 @@
     "price_range": "$695-$1,395",
     "best_for": "Side sleepers and couples who prioritize motion isolation and pressure relief in a convenient all-foam package.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Saatva Classic Mattress",
@@ -38,7 +39,8 @@
     "price_range": "$1,395-$2,695",
     "best_for": "Back and stomach sleepers seeking a traditional innerspring feel with luxury hotel-style comfort and premium service.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "mattresses",
   "comparison_summary": "Casper and Saatva represent opposite design philosophies. Casper built its reputation on affordable foam comfort with great motion isolation, while Saatva delivers luxury innerspring construction with superior breathability and edge support at nearly double the price. Your sleep position and budget make this choice pretty straightforward.",

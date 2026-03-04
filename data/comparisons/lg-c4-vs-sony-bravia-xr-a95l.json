@@ -18,7 +18,8 @@
     "price_range": "$1,399-$3,299",
     "best_for": "Gamers and value-conscious buyers seeking flagship OLED performance without paying premium pricing.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Sony Bravia XR A95L QD-OLED TV",
@@ -38,7 +39,8 @@
     "price_range": "$2,799-$4,999",
     "best_for": "Videophiles and home theater enthusiasts who want the absolute best picture quality and are willing to pay premium prices.",
     "rating": 4.8,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "tvs",
   "comparison_summary": "The Sony A95L's QD-OLED technology delivers superior picture quality with better colors and brightness, but you'll pay dearly for it. The LG C4 offers outstanding OLED performance at a much more reasonable price, plus it crushes the Sony for gaming with better connectivity and lower input lag.",

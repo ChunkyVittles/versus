@@ -18,7 +18,8 @@
     "price_range": "$30,000-$70,000",
     "best_for": "Recent college graduates with limited work experience seeking foundational business knowledge to transition into management roles.",
     "rating": 4.1,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "item_b": {
     "name": "Master of Business Administration (MBA)",
@@ -38,7 +39,8 @@
     "price_range": "$60,000-$200,000",
     "best_for": "Working professionals with several years of experience seeking career advancement, industry transition, or executive leadership positions.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "category": "education",
   "comparison_summary": "Master of Management programs launch business careers for recent graduates with lower costs and faster timelines. MBAs transform existing careers for experienced professionals with dramatically higher ROI. Your years of work experience makes this decision for you.",

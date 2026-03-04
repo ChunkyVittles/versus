@@ -18,7 +18,8 @@
     "price_range": "$649-$2,499",
     "best_for": "Enthusiasts seeking premium picture quality with Mini-LED technology at competitive prices.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "TCL QM8 Mini-LED QLED TV",
@@ -38,7 +39,8 @@
     "price_range": "$599-$2,299",
     "best_for": "Budget-conscious buyers wanting flagship-level brightness and features without premium pricing.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "tvs",
   "comparison_summary": "TCL and Hisense both deliver Mini-LED performance that embarrasses their price tags. TCL edges ahead on brightness and value, while Hisense counters with better contrast and motion handling. Most people should grab the TCL, but dark room viewers and serious gamers have good reason to consider Hisense.",

@@ -18,7 +18,8 @@
     "price_range": "$799-$899",
     "best_for": "Barbecue enthusiasts who prioritize authentic smoke flavor and set-it-and-forget-it convenience for long smoking sessions.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Weber Genesis E-325s 3-Burner Gas Grill",
@@ -38,7 +39,8 @@
     "price_range": "$899-$1,099",
     "best_for": "Traditional grillers who want fast preheating, high-temperature searing, and reliable performance for weeknight dinners and weekend cookouts.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "grills",
   "comparison_summary": "The Traeger vs Weber debate is really about choosing between two completely different tools. Traeger's automated wood pellet system dominates smoking and slow cooking with authentic flavor, while Weber's gas platform delivers superior high-heat searing and quick everyday grilling. Your decision depends on whether you want smoky barbecue automation or versatile high-temperature performance.",

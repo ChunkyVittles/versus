@@ -18,7 +18,8 @@
     "price_range": "$449-$599",
     "best_for": "Budget-conscious buyers who want premium Dyson performance without paying for the latest technology innovations.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Dyson V15 Detect",
@@ -38,7 +39,8 @@
     "price_range": "$649-$749",
     "best_for": "Allergy sufferers and tech enthusiasts who want scientific proof of cleaning performance and the most advanced dust detection available.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "vacuums",
   "comparison_summary": "The V15 Detect brings laser dust detection and particle counting with 230 AW of suction, while the V11 delivers about 85% of that performance for 25-30% less money. The V11 is the value champion for most people, but the V15 makes perfect sense for allergy sufferers and anyone who loves having cleaning data at their fingertips.",

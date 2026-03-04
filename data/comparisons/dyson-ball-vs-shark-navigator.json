@@ -18,7 +18,8 @@
     "price_range": "$499-$599",
     "best_for": "Pet owners and allergy sufferers who want maximum suction power and don't mind the higher investment.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Shark Navigator Lift-Away Professional (NV356E)",
@@ -38,7 +39,8 @@
     "price_range": "$169-$229",
     "best_for": "Budget-conscious buyers who need a versatile, lightweight vacuum for multi-surface cleaning.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "vacuums",
   "comparison_summary": "The Dyson Ball Animal 2 delivers premium suction and filtration at $500+, while the Shark Navigator offers impressive performance and unique versatility at less than half the price. For most homes, the Shark's combination of the Lift-Away feature, lighter weight, and solid cleaning ability makes it the smarter buy.",

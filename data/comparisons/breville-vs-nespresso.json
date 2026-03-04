@@ -18,7 +18,8 @@
     "price_range": "$599-$749",
     "best_for": "Coffee enthusiasts who want complete control over their espresso and enjoy the craft of manual brewing.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Nespresso Vertuo Plus Coffee and Espresso Maker",
@@ -38,7 +39,8 @@
     "price_range": "$179-$249",
     "best_for": "Busy individuals who prioritize convenience and consistent coffee without the learning curve or maintenance.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "coffee-makers",
   "comparison_summary": "Breville espresso machines put you in control with manual brewing using any coffee beans, while Nespresso handles everything automatically with proprietary pods. The real question is whether you value craft and customization over speed and simplicity, because Breville offers better long-term economics despite costing more upfront.",

@@ -18,7 +18,8 @@
     "price_range": "$500-$3000",
     "best_for": "Couples with average-sized master bedrooms who want spacious sleeping without dominating the entire room",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Super King Size Mattress",
@@ -39,7 +40,8 @@
     "price_range": "$800-$4500",
     "best_for": "Couples with spacious master bedrooms who prioritize maximum comfort and personal sleeping space",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "mattresses",
   "comparison_summary": "King mattresses at 76x80 inches work beautifully for most couples in standard bedrooms and won't break the bank. Super king sizes (typically 72x84 or 80x98 inches) offer incredible space but demand larger rooms, higher upfront costs, and pricier bedding forever.",

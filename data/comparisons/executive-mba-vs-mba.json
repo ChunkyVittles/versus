@@ -18,7 +18,8 @@
     "price_range": "$100,000-$200,000",
     "best_for": "Mid-to-senior level professionals with 10+ years experience seeking leadership advancement while maintaining their current career trajectory.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "item_b": {
     "name": "Full-Time MBA",
@@ -38,7 +39,8 @@
     "price_range": "$60,000-$150,000",
     "best_for": "Professionals with 3-7 years experience seeking career transformation, industry switching, or comprehensive business education with recruiting support.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "category": "education",
   "comparison_summary": "The Executive MBA vs MBA split really comes down to where you are professionally. EMBAs work for established leaders who need strategic skills without career disruption, while full-time MBAs are built for people who need to change direction and have time for recruiting. If you're pivoting, go traditional; if you're advancing in place, go Executive.",

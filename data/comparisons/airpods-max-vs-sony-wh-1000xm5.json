@@ -18,7 +18,8 @@
     "price_range": "$479-$549",
     "best_for": "Apple ecosystem users who prioritize premium build quality and seamless device integration over portability.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Sony WH-1000XM5",
@@ -38,7 +39,8 @@
     "price_range": "$329-$399",
     "best_for": "Frequent travelers and multi-device users seeking the best noise cancellation and battery life at a reasonable price.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "headphones",
   "comparison_summary": "Apple's AirPods Max and Sony's WH-1000XM5 take opposite paths to premium audio. The AirPods Max costs $150-200 more and bets everything on luxury materials and Apple ecosystem features, while Sony delivers superior noise cancellation, 50% longer battery life, and way better comfort for most people.",

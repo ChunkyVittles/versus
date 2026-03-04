@@ -18,7 +18,8 @@
     "price_range": "$649-$749",
     "best_for": "Tech enthusiasts and allergy sufferers who want the most advanced cleaning technology with scientific proof of clean performance",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Shark Stratos Cordless",
@@ -38,7 +39,8 @@
     "price_range": "$449-$549",
     "best_for": "Pet owners and budget-conscious buyers seeking excellent value with smart features and odor control at a more accessible price",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "vacuums",
   "comparison_summary": "The Dyson V15 Detect brings nearly double the suction at 230 AW, laser dust detection, and a particle-counting LCD screen. The Shark Stratos counters with odor-eliminating technology, a dust bin twice as large, and a price tag that's $200-300 lower. The Dyson appeals to tech enthusiasts who want the absolute best, while the Shark makes more sense for most people.",

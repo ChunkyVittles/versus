@@ -18,7 +18,8 @@
     "price_range": "$599-$699",
     "best_for": "Homeowners with medium to large lawns who want maximum power and runtime without compromising on features.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Greenworks 40V 21-Inch Brushless Self-Propelled Lawn Mower",
@@ -38,7 +39,8 @@
     "price_range": "$399-$499",
     "best_for": "Budget-conscious homeowners with small to medium lawns who want reliable cordless performance and cross-tool battery compatibility.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "lawn-mowers",
   "comparison_summary": "EGO brings more muscle with 7.5 ft-lbs of torque and dual batteries that actually last through bigger jobs, while Greenworks counters with a lighter build and that massive 75+ tool ecosystem. Pick EGO if power matters most, Greenworks if you want solid performance without the premium price tag.",

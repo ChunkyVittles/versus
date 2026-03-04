@@ -18,7 +18,8 @@
     "price_range": "$89-$149",
     "best_for": "Budget-conscious pet owners seeking reliable upright suction power without premium pricing.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Dyson V15 Detect Cordless Vacuum",
@@ -38,7 +39,8 @@
     "price_range": "$649-$749",
     "best_for": "Tech-savvy homeowners who prioritize cutting-edge features, cordless convenience, and scientific cleaning validation.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "vacuums",
   "comparison_summary": "Bissell and Dyson couldn't be more different. Bissell delivers solid, budget-friendly cleaning with proven pet hair removal under $150, while Dyson charges premium prices for laser detection technology, cordless design, and data-driven performance monitoring. The right choice depends entirely on your budget and whether you care about having the latest vacuum tech.",

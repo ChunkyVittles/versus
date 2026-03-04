@@ -18,7 +18,8 @@
     "price_range": "$600-$1,400",
     "best_for": "Budget-conscious buyers seeking premium picture quality with mini-LED technology and bright HDR performance.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Vizio P-Series Quantum X",
@@ -38,7 +39,8 @@
     "price_range": "$550-$1,300",
     "best_for": "Value seekers who prioritize color accuracy and gaming performance with smartphone integration.",
     "rating": 4.2,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "tvs",
   "comparison_summary": "TCL and Vizio both deliver serious value in the budget TV space, but TCL pulls ahead with mini-LED backlighting and Google TV. Vizio counters with quantum dot color performance and lower prices, but TCL's better brightness, local dimming, and smart experience make it the stronger pick for most people.",

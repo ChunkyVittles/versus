@@ -18,7 +18,8 @@
     "price_range": "$599-$749",
     "best_for": "Coffee enthusiasts who want hands-on control over the espresso-making process and are willing to develop barista skills.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "DeLonghi Magnifica ESAM3300",
@@ -38,7 +39,8 @@
     "price_range": "$449-$649",
     "best_for": "Busy households wanting convenient, automatic espresso drinks without the learning curve of manual machines.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "coffee-makers",
   "comparison_summary": "This matchup represents two completely different approaches to home espresso. The Barista Express gives you complete control and superior construction for those willing to learn proper technique. The Magnifica handles everything automatically and brews while steaming simultaneously, perfect for anyone who prioritizes convenience and speed.",

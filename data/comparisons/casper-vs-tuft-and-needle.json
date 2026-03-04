@@ -18,7 +18,8 @@
     "price_range": "$695-$1,395",
     "best_for": "Side sleepers and combination sleepers seeking balanced comfort with enhanced pressure relief and zoned support.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Tuft & Needle Original Mattress",
@@ -38,7 +39,8 @@
     "price_range": "$595-$1,095",
     "best_for": "Back and stomach sleepers who prefer a firmer, more supportive mattress at an accessible price point.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "mattresses",
   "comparison_summary": "Casper and Tuft & Needle represent two different design philosophies: sophisticated zoned support versus simple, effective construction. Casper's three-layer system with targeted zones costs $300 more but delivers better pressure relief for side sleepers, while T&N's firmer, cooler two-layer design offers exceptional value for back and stomach sleepers.",

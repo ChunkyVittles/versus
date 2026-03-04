@@ -18,7 +18,8 @@
     "price_range": "N/A - Contribution Vehicle",
     "best_for": "Nonprofit and education sector employees seeking tax-deferred retirement savings with employer matching benefits",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "item_b": {
     "name": "Roth IRA (Individual Retirement Account)",
@@ -38,7 +39,8 @@
     "price_range": "N/A - Contribution Vehicle",
     "best_for": "Individual savers seeking tax-free retirement income with maximum investment flexibility and no required distributions",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "category": "financial",
   "comparison_summary": "These accounts serve different purposes and aren't really competitors. A 403(b) gives you higher contribution limits and employer matching if you work for an eligible organization, while a Roth IRA offers tax-free retirement income and investment flexibility for anyone under the income limits. The smart play is using both to diversify your tax situation in retirement.",

@@ -18,7 +18,8 @@
     "price_range": "$1599-$2899",
     "best_for": "Creative professionals and developers who prioritize performance, battery life, and macOS ecosystem integration.",
     "rating": 4.8,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Microsoft Surface Pro 9",
@@ -38,7 +39,8 @@
     "price_range": "$999-$2599",
     "best_for": "Students, business users, and digital artists who need a versatile touchscreen device that functions as both laptop and tablet.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "laptops",
   "comparison_summary": "The MacBook Pro 14-inch is built for sustained performance with exceptional battery life and premium build quality. The Surface Pro 9 prioritizes versatility with its 2-in-1 design, pen input, and touchscreen. Your workflow determines which matters more.",

@@ -18,7 +18,8 @@
     "price_range": "$90-$120",
     "best_for": "Families seeking an affordable air fryer with generous capacity and multiple preset functions for everyday cooking.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Philips Essential Airfryer XL",
@@ -38,7 +39,8 @@
     "price_range": "$140-$180",
     "best_for": "Home cooks who prioritize cooking quality and brand reliability over capacity, willing to invest more for consistent results.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "air-fryers",
   "comparison_summary": "COSORI Pro LE gives you a larger 5-quart capacity and full digital controls at a significantly lower price, making it the smart choice for families. Philips Essential Airfryer XL costs $50-60 more for its patented air circulation technology and quieter performance, but that 3.5-quart capacity and analog interface feel like compromises at that price point.",

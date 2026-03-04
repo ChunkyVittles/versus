@@ -18,7 +18,8 @@
     "price_range": "$699-$1299",
     "best_for": "Budget-conscious professionals and content creators who prioritize display quality and value over absolute premium build.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Dell XPS 13 Plus",
@@ -38,7 +39,8 @@
     "price_range": "$1099-$1899",
     "best_for": "Professionals and executives who demand the best build quality, battery life, and are willing to pay premium pricing.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "laptops",
   "comparison_summary": "The ASUS ZenBook delivers a stunning OLED display and practical ports at budget-friendly prices. The Dell XPS costs significantly more but justifies the premium with superior build quality, thermal management, and battery life that extends 3-4 hours longer. Choose based on whether you need immediate value or long-term durability.",

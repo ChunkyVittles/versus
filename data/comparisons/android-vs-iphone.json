@@ -19,7 +19,8 @@
     "price_range": "$200-$1800",
     "best_for": "Users who prioritize customization, hardware variety, and budget flexibility.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "iPhone",
@@ -41,7 +42,8 @@
     "price_range": "$429-$1599",
     "best_for": "Users seeking a premium, cohesive ecosystem with long-term software support and reliability.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "smartphones",
   "comparison_summary": "The Android vs iPhone debate centers on openness versus integration. Android delivers unmatched hardware variety from $200 budget phones to $1800 foldables with extensive customization options. iPhone offers a tightly controlled ecosystem with industry-leading 5-7 year software support and cross-device integration that Android can't match.",

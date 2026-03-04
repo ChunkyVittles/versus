@@ -18,7 +18,8 @@
     "price_range": "$899-$999",
     "best_for": "Users deeply invested in the Apple ecosystem who prioritize video quality, long-term software support, and seamless integration with other Apple devices.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Samsung Galaxy S25+",
@@ -38,7 +39,8 @@
     "price_range": "$999-$1,099",
     "best_for": "Android enthusiasts who want a premium display, versatile camera system, faster charging, and extensive customization options.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "smartphones",
   "comparison_summary": "After weeks with both phones, the choice is clear: the Galaxy S25+ wins on display tech and charging speed, while the iPhone 16 Plus delivers better battery life and longer software support. Neither phone is objectively better—it's about whether you prioritize Samsung's flashy features or Apple's efficient refinement.",

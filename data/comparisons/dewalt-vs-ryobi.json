@@ -18,7 +18,8 @@
     "price_range": "$99-$399",
     "best_for": "Professional contractors and serious DIYers who need maximum durability and performance for daily heavy-duty use",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "RYOBI ONE+ 18V Power Tool System",
@@ -38,7 +39,8 @@
     "price_range": "$49-$199",
     "best_for": "Homeowners and weekend warriors who need reliable tools for occasional projects without breaking the bank",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "power-tools",
   "comparison_summary": "DEWALT and RYOBI represent two completely different approaches to cordless power tools. DEWALT delivers superior power, durability, and build quality at premium prices for professionals. RYOBI offers an impressive tool ecosystem and solid performance at half the cost, making it perfect for residential use.",

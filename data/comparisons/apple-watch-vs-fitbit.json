@@ -18,7 +18,8 @@
     "price_range": "$399-$499",
     "best_for": "iPhone users who want a premium smartwatch with comprehensive health tracking and seamless ecosystem integration.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Fitbit Charge 6",
@@ -38,7 +39,8 @@
     "price_range": "$159-$179",
     "best_for": "Budget-conscious fitness enthusiasts who prioritize battery life and cross-platform compatibility over advanced smartwatch features.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "fitness-trackers",
   "comparison_summary": "Apple Watch gives you a full-featured smartwatch with advanced health sensors and endless apps, but demands an iPhone and daily charging. Fitbit delivers week-long battery life, works with any phone, and costs half as much while still nailing the fitness fundamentals.",

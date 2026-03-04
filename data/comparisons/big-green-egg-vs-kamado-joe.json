@@ -18,7 +18,8 @@
     "price_range": "$1049-$1299",
     "best_for": "Traditionalists who value brand heritage and want access to the largest community of kamado enthusiasts",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Kamado Joe Classic III",
@@ -38,7 +39,8 @@
     "price_range": "$1799-$1999",
     "best_for": "Buyers seeking the best out-of-the-box value with innovative features and included premium accessories",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "grills",
   "comparison_summary": "Big Green Egg built its reputation on heritage and has the largest enthusiast community, but you'll pay extra for accessories. Kamado Joe bundles premium features like the Air Lift hinge and Divide & Conquer system, giving you everything you need right out of the box. Both deliver identical cooking performance—your choice depends on whether you value tradition or modern innovation.",

@@ -18,7 +18,8 @@
     "price_range": "$89-$119",
     "best_for": "Budget-conscious individuals or couples seeking a reliable, compact air fryer with essential features.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Philips Essential Airfryer XL HD9270",
@@ -38,7 +39,8 @@
     "price_range": "$249-$299",
     "best_for": "Families and serious home cooks who want advanced features, larger capacity, and Philips' pioneering air frying technology.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "air-fryers",
   "comparison_summary": "Ninja offers straightforward air frying at half the price, while Philips brings larger capacity and proprietary technology for families willing to pay more. The AF101 excels in compact spaces with basic needs; the Essential Airfryer XL delivers advanced features and better fat removal.",

@@ -18,7 +18,8 @@
     "price_range": "$248-$298",
     "best_for": "Budget-conscious buyers who want flagship noise cancellation and prioritize portability with a foldable design.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Sony WH-1000XM5",
@@ -38,7 +39,8 @@
     "price_range": "$348-$398",
     "best_for": "Users who prioritize the absolute best noise cancellation and call quality, and don't need a foldable design for travel.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "headphones",
   "comparison_summary": "The XM5 edges ahead in noise cancellation and call quality, but loses the folding design and costs $100-150 more. For most people, the XM4 delivers 95% of the experience at a much better price. Only spring for the XM5 if you need cutting-edge ANC or take frequent calls.",

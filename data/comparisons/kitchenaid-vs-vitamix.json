@@ -18,7 +18,8 @@
     "price_range": "$200-$280",
     "best_for": "Home cooks who want a capable blender with excellent design at a more accessible price point.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Vitamix 5200 Professional-Grade Blender",
@@ -38,7 +39,8 @@
     "price_range": "$450-$550",
     "best_for": "Serious home chefs and health enthusiasts who want professional-grade performance and durability.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "blenders",
   "comparison_summary": "The Vitamix 5200 is built like a tank with its 2-peak HP motor and 7-year warranty, making it the obvious choice for serious cooks. The KitchenAid K400 costs half as much and looks better on your counter, which makes it the smarter pick for occasional blending.",

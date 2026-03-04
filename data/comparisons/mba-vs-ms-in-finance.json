@@ -18,7 +18,8 @@
     "price_range": "$60,000-$200,000",
     "best_for": "Professionals seeking leadership roles, career changers, or those wanting broad business knowledge with management aspirations.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "item_b": {
     "name": "Master of Science in Finance (MS Finance)",
@@ -38,7 +39,8 @@
     "price_range": "$30,000-$120,000",
     "best_for": "Finance professionals seeking technical depth, recent graduates targeting investment banking or quantitative roles, or international students wanting STEM benefits.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "category": "education",
   "comparison_summary": "MBAs cost more ($60,000-$200,000 versus $30,000-$120,000) and take longer (18-24 months versus 10-18 months), but they deliver broader business training and stronger networking for leadership roles. MS Finance programs provide deeper technical expertise at lower cost for people committed to finance careers, though they offer less career flexibility down the road.",

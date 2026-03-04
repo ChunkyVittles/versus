@@ -18,7 +18,8 @@
     "price_range": "$1,200-$3,500",
     "best_for": "Movie enthusiasts and gamers who prioritize perfect blacks, contrast, and viewing angles in controlled lighting environments.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "QLED TV (Quantum Dot LED)",
@@ -38,7 +39,8 @@
     "price_range": "$800-$2,800",
     "best_for": "Viewers who watch TV in bright rooms, sports fans, and those concerned about screen longevity with varied content.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "tvs",
   "comparison_summary": "OLED delivers perfect blacks through self-emissive pixels that can turn completely off, making it unbeatable for movies in dark rooms. QLED uses quantum dot technology to push brightness levels far beyond what OLED can achieve, winning in bright rooms while eliminating burn-in concerns at a lower price.",

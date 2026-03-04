@@ -18,7 +18,8 @@
     "price_range": "$1049-$1299",
     "best_for": "Serious outdoor cooking enthusiasts who want a lifetime investment for smoking, grilling, and versatile cooking methods",
     "rating": 4.8,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Weber Original Kettle Premium 22-Inch",
@@ -38,7 +39,8 @@
     "price_range": "$169-$219",
     "best_for": "Budget-conscious grillers who want reliable charcoal cooking for burgers, steaks, and occasional smoking",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "grills",
   "comparison_summary": "This comparison puts a premium kamado against America's most trusted charcoal grill. The Big Green Egg dominates for heat retention, fuel efficiency, and long smoking sessions, but the Weber Kettle delivers about 80% of the performance at roughly 15% of the cost—a math problem most backyard grillers can't ignore.",

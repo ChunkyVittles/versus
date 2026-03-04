@@ -18,7 +18,8 @@
     "price_range": "$695-$1,395",
     "best_for": "Combination sleepers who want a balanced foam mattress with excellent edge support and motion isolation.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Purple Original Mattress",
@@ -38,7 +39,8 @@
     "price_range": "$899-$1,699",
     "best_for": "Hot sleepers and those seeking maximum pressure relief with a uniquely responsive, cooling sleep surface.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "mattresses",
   "comparison_summary": "This comparison really comes down to construction philosophy. Casper perfected the all-foam mattress with excellent support and motion isolation at a lower price point, while Purple's GelFlex Grid delivers superior cooling and pressure relief through genuinely innovative engineering. Pick based on whether you value proven comfort or cutting-edge design.",

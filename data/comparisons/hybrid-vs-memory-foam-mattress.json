@@ -18,7 +18,8 @@
     "price_range": "$800-$3000",
     "best_for": "Combination sleepers, hot sleepers, couples, and those who prefer responsive support with edge-to-edge usability.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Memory Foam Mattress",
@@ -38,7 +39,8 @@
     "price_range": "$400-$2000",
     "best_for": "Side sleepers, those with chronic pain or pressure points, budget-conscious buyers, and people who sleep alone.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "mattresses",
   "comparison_summary": "Hybrids layer foam comfort on top of innerspring coils for bounce and temperature control, while memory foam uses pure foam construction that hugs your body and isolates movement. Choose based on whether you prioritize sleeping cool and edge support or pressure relief and motion isolation.",

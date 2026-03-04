@@ -18,7 +18,8 @@
     "price_range": "$599-$699",
     "best_for": "Homeowners with medium to large yards who prioritize performance, runtime, and premium features over budget considerations.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "RYOBI 40V HP Brushless 21-Inch Self-Propelled Mower",
@@ -38,7 +39,8 @@
     "price_range": "$399-$499",
     "best_for": "Budget-conscious homeowners with small to medium yards who want cordless convenience and tool ecosystem compatibility.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "lawn-mowers",
   "comparison_summary": "EGO's 56V system delivers genuinely stronger performance with longer runtime and premium steel construction—ideal for larger properties and demanding conditions. RYOBI's 40V platform offers better value, lighter weight, and compatibility with 175+ tools, making it the smarter pick for smaller yards and users building a complete cordless tool collection.",

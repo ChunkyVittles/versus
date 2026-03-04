@@ -18,7 +18,8 @@
     "price_range": "$150-$200",
     "best_for": "Budget-conscious home cooks who want powerful blending without the premium price tag",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Vitamix 5200 Professional-Grade Blender",
@@ -38,7 +39,8 @@
     "price_range": "$400-$550",
     "best_for": "Serious home chefs and health enthusiasts who want commercial-grade performance and longevity",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "blenders",
   "comparison_summary": "The Vitamix 5200 costs 2-3 times more than the Ninja Foodi Power Pitcher, but you get a 7-10 year warranty and superior blending consistency that can last 15-20 years. The Ninja delivers impressive performance with smart features at a fraction of the price, making it the better value for most home cooks who don't need professional-grade durability.",

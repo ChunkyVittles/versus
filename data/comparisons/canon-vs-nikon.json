@@ -18,7 +18,8 @@
     "price_range": "$479-$6,499",
     "best_for": "Content creators, wedding photographers, and hybrid shooters who prioritize video capabilities and autofocus performance.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Nikon Z Camera System",
@@ -38,7 +39,8 @@
     "price_range": "$599-$5,996",
     "best_for": "Landscape photographers, portrait shooters, and enthusiasts who prioritize image quality and handling over video features.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "cameras",
   "comparison_summary": "Canon and Nikon both excel, just in different areas. Canon leads with autofocus tech and video features that content creators need, while Nikon counters with superior dynamic range, image quality, and more affordable lenses that appeal to photographers focused on stills.",

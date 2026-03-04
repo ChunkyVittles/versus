@@ -18,7 +18,8 @@
     "price_range": "$1,099-$1,699",
     "best_for": "Students, professionals, and everyday users who prioritize portability and silent operation without demanding sustained performance.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "MacBook Pro M4 (14-inch, 2024)",
@@ -38,7 +39,8 @@
     "price_range": "$1,499-$3,199",
     "best_for": "Creative professionals, developers, and power users who need sustained performance for video editing, 3D rendering, and intensive multitasking.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "laptops",
   "comparison_summary": "Both laptops use Apple's M4 chip, but the Pro's active cooling and superior display make it the choice for demanding professional workflows. The Air wins on portability, silent operation, and price while handling everyday tasks beautifully.",

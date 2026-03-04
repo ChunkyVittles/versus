@@ -18,7 +18,8 @@
     "price_range": "$150-$800",
     "best_for": "Children, guest rooms, and small bedrooms where space is at a premium and users are under 6 feet tall.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Twin XL Mattress",
@@ -38,7 +39,8 @@
     "price_range": "$200-$950",
     "best_for": "Taller individuals, college students, teenagers, and anyone over 6 feet tall needing a single-sleeper mattress.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "mattresses",
   "comparison_summary": "Twin and Twin XL mattresses are identical in width (38 inches) but differ by 5 inches in length—75 inches for Twin, 80 for Twin XL. That extra length makes the Twin XL the obvious pick for anyone over 6 feet tall, teenagers still growing, or college students, while the standard Twin works fine for younger kids and saves a bit of money in tight spaces.",

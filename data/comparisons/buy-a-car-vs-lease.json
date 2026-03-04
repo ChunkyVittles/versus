@@ -18,7 +18,8 @@
     "price_range": "$400-$800/month",
     "best_for": "Drivers who want long-term ownership, drive more than 15,000 miles annually, or prefer keeping vehicles beyond 5 years.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Leasing a Car",
@@ -38,7 +39,8 @@
     "price_range": "$250-$500/month",
     "best_for": "Drivers who prefer new vehicles frequently, drive fewer miles, and want lower monthly payments without long-term commitment.",
     "rating": 4.1,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "cars",
   "comparison_summary": "Buying delivers long-term value and ownership freedom at higher monthly costs, while leasing offers lower payments and frequent vehicle upgrades with mileage restrictions. Your choice depends on how long you keep vehicles and how much you drive annually.",

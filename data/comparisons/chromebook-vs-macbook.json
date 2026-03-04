@@ -21,7 +21,8 @@
     "price_range": "$200-$700",
     "best_for": "Students, budget-conscious users, and anyone who primarily works in web browsers and uses cloud-based applications.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "MacBook",
@@ -44,7 +45,8 @@
     "price_range": "$999-$2,899",
     "best_for": "Creative professionals, developers, power users, and those invested in the Apple ecosystem who need premium performance and build quality.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "laptops",
   "comparison_summary": "Chromebooks and MacBooks serve fundamentally different users. Chromebooks excel as affordable, cloud-focused machines for everyday tasks, while MacBooks deliver premium performance and professional software support at 3-5x the cost. Your choice depends entirely on what you actually need to accomplish and how much you can spend.",

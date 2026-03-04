@@ -18,7 +18,8 @@
     "price_range": "$129-$159",
     "best_for": "Coffee drinkers who want enhanced flavor extraction in a compact design without premium features.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Keurig K-Elite",
@@ -39,7 +40,8 @@
     "price_range": "$159-$189",
     "best_for": "Versatile coffee enthusiasts who want iced coffee capabilities, temperature control, and programmable convenience.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "coffee-makers",
   "comparison_summary": "The K-Elite and K-Supreme represent two different brewing philosophies. The K-Elite loads up on convenience features like iced coffee settings, programmable brewing, and a bigger water tank. The K-Supreme strips things back, focusing on improved flavor through MultiStream Technology while keeping the price lower and the footprint smaller.",

@@ -19,7 +19,8 @@
     "price_range": "$20,000-$80,000",
     "best_for": "Professionals seeking deep expertise in a specific technical, scientific, or academic discipline without primary focus on business management.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "item_b": {
     "name": "MBA (Master of Business Administration)",
@@ -40,7 +41,8 @@
     "price_range": "$40,000-$150,000",
     "best_for": "Mid-career professionals aiming for leadership positions, career changes, or entrepreneurship with focus on business management skills.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "category": "education",
   "comparison_summary": "An MBA delivers broader business training, superior networking, and leadership development ideal for management careers. Specialized Master's degrees provide deeper technical expertise in specific fields at lower costs. Your decision should align with whether you're aiming for business leadership or technical advancement.",

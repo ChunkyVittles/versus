@@ -18,7 +18,8 @@
     "price_range": "$800-$3500",
     "best_for": "Taller individuals or couples with narrow bedrooms who prioritize length over width.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "King Mattress",
@@ -38,7 +39,8 @@
     "price_range": "$700-$3200",
     "best_for": "Couples who need maximum width for comfortable sleeping or families with children and pets.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "mattresses",
   "comparison_summary": "California King gives you 4 extra inches of length (84\" vs 80\"), while standard King provides 4 additional inches of width (76\" vs 72\"). Standard King is more popular with better bedding options and works great for couples, while California King excels for taller sleepers in narrower rooms.",

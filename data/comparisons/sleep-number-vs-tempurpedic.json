@@ -18,7 +18,8 @@
     "price_range": "$3,999-$5,499",
     "best_for": "Couples with different firmness preferences who want detailed sleep tracking and the ability to fine-tune their mattress over time.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Tempur-Pedic TEMPUR-Adapt Medium Hybrid",
@@ -38,7 +39,8 @@
     "price_range": "$2,199-$3,799",
     "best_for": "Individuals seeking exceptional pressure relief and body contouring who have already identified their preferred firmness level.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "mattresses",
   "comparison_summary": "Sleep Number gives you adjustable air chambers and sleep tracking tech, while Tempur-Pedic delivers memory foam pressure relief without complexity. Sleep Number adapts to changing needs over time, but Tempur-Pedic costs less upfront and requires zero maintenance.",

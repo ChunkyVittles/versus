@@ -18,7 +18,8 @@
     "price_range": "$30,000-$150,000",
     "best_for": "Professionals seeking leadership roles in private sector corporations, consulting, finance, or entrepreneurship with focus on profit maximization.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "item_b": {
     "name": "Master of Public Administration (MPA)",
@@ -38,7 +39,8 @@
     "price_range": "$20,000-$80,000",
     "best_for": "Professionals committed to public service, government administration, nonprofit leadership, or policy analysis with focus on social impact.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "category": "education",
   "comparison_summary": "MBAs deliver higher salaries, better private sector versatility, and faster ROI on your investment. MPAs cost 40-60% less, prepare you for government and nonprofit careers, and offer loan forgiveness options that make the debt manageable. Your values matter more than the credential.",

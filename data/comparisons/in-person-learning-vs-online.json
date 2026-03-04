@@ -18,7 +18,8 @@
     "price_range": "$10,000-$50,000",
     "best_for": "Students who thrive on social interaction, need hands-on training, and prefer structured environments with direct instructor access.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "item_b": {
     "name": "Online Learning",
@@ -38,7 +39,8 @@
     "price_range": "$500-$20,000",
     "best_for": "Self-motivated learners who need flexibility, working professionals balancing education with other commitments, and those seeking cost-effective education options.",
     "rating": 4.1,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "category": "education",
   "comparison_summary": "The choice between in-person and online learning isn't about which is objectively better. Traditional classrooms offer structure, direct interaction, and hands-on experiences, while online programs deliver flexibility and cost savings that make education accessible to people who couldn't otherwise participate.",

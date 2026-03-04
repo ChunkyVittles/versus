@@ -18,7 +18,8 @@
     "price_range": "$1,400-$2,800",
     "best_for": "Business professionals and IT departments who prioritize Windows compatibility, upgradeability, and enterprise security features.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "MacBook Pro 14-inch (M3)",
@@ -38,7 +39,8 @@
     "price_range": "$1,599-$3,999",
     "best_for": "Creative professionals, developers, and users invested in the Apple ecosystem who need powerful performance and exceptional display quality.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "laptops",
   "comparison_summary": "This matchup pits Apple's locked-down performance powerhouse against Lenovo's practical business workhorse. The MacBook Pro delivers superior battery life, a stunning display, and blistering M3 performance. The ThinkPad counters with the best keyboard in the industry, actual ports, and the freedom to upgrade components later.",

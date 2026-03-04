@@ -18,7 +18,8 @@
     "price_range": "$99-$599",
     "best_for": "Professional tradespeople and serious DIYers who value lightweight ergonomics, extensive tool selection, and long-term battery performance.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Milwaukee M18 FUEL Brushless Cordless Power Tool System",
@@ -38,7 +39,8 @@
     "price_range": "$129-$649",
     "best_for": "Professional contractors and heavy-duty users who prioritize maximum power, torque, and cutting-edge smart tool technology.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "power-tools",
   "comparison_summary": "Milwaukee M18 FUEL and Makita 18V LXT are both professional-grade platforms, but they solve different problems. Milwaukee brings superior torque numbers for demanding construction work, while Makita delivers better ergonomics, longer runtime efficiency, and the broadest tool selection with over 300 compatible tools in their lineup.",

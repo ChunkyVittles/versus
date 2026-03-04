@@ -18,7 +18,8 @@
     "price_range": "$799-$899",
     "best_for": "Power users who prioritize battery life, fast charging, and value without compromising on flagship performance.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Samsung Galaxy S25",
@@ -38,7 +39,8 @@
     "price_range": "$899-$999",
     "best_for": "Users seeking long-term software support, premium camera quality, and seamless integration within the Samsung ecosystem.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "smartphones",
   "comparison_summary": "The OnePlus 13 crushes the Galaxy S25 on battery life with its 6,000mAh cell and 100W charging, plus it costs $100 less at $799. Samsung counters with seven years of software updates, noticeably better cameras, and deeper ecosystem integration. Pick based on whether you value daily charging convenience or long-term software support.",

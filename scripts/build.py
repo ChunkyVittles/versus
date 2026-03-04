@@ -11,6 +11,7 @@ import re
 import shutil
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlparse
 
 from jinja2 import Environment, FileSystemLoader
 
@@ -43,11 +44,16 @@ def is_website(name):
     return bool(WEBSITE_TLD_RE.search(last))
 
 
-def get_item_link(name, affiliate_url=None):
+def get_item_link(name, affiliate_url=None, shop_on_ebay=False):
     """Return dict with url, text, rel, logo, is_partner for a comparison item."""
-    # If the comparison data includes an explicit affiliate_url, use it
+    # If affiliate_url is provided and non-empty, use it directly
     if affiliate_url:
-        display = name.strip().split()[0] if name else "Site"
+        try:
+            parsed = urlparse(affiliate_url)
+            domain = parsed.netloc.replace("www.", "")
+            display = domain.rsplit(".", 1)[0].title()
+        except Exception:
+            display = name
         return {
             "url": affiliate_url,
             "text": f"Visit {display}",
@@ -55,7 +61,31 @@ def get_item_link(name, affiliate_url=None):
             "logo": None,
             "is_partner": False,
         }
-    if not is_website(name):
+
+    # Check for partner websites (like gocollect.com)
+    if is_website(name):
+        domain = name.strip().split()[-1].lower()
+        partner = PARTNER_AFFILIATES.get(domain)
+        if partner:
+            return {
+                "url": partner["url"],
+                "text": f"Visit {partner['name']}",
+                "rel": "nofollow sponsored",
+                "logo": partner["logo"],
+                "is_partner": True,
+            }
+        display = domain.rsplit(".", 1)[0].title()
+        return {
+            "url": f"https://{domain}",
+            "text": f"Visit {display}",
+            "rel": "nofollow",
+            "logo": None,
+            "is_partner": False,
+        }
+
+    # Physical product — link to eBay
+    # shop_on_ebay flag from JSON, or fallback: non-website names default to eBay
+    if shop_on_ebay or not is_website(name):
         encoded = name.replace(" ", "+") if name else ""
         return {
             "url": f"https://www.ebay.com/sch/i.html?_nkw={encoded}&mkcid=1&mkrid=711-53200-19255-0&campid={EBAY_CAMPAIGN_ID}&toolid=10001",
@@ -64,20 +94,10 @@ def get_item_link(name, affiliate_url=None):
             "logo": None,
             "is_partner": False,
         }
-    domain = name.strip().split()[-1].lower()
-    partner = PARTNER_AFFILIATES.get(domain)
-    if partner:
-        return {
-            "url": partner["url"],
-            "text": f"Visit {partner['name']}",
-            "rel": "nofollow sponsored",
-            "logo": partner["logo"],
-            "is_partner": True,
-        }
-    display = domain.rsplit(".", 1)[0].title()
+
     return {
-        "url": f"https://{domain}",
-        "text": f"Visit {display}",
+        "url": "#",
+        "text": name or "",
         "rel": "nofollow",
         "logo": None,
         "is_partner": False,

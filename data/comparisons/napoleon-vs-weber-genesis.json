@@ -18,7 +18,8 @@
     "price_range": "$1,599-$1,999",
     "best_for": "Serious grillers who want restaurant-quality searing capabilities and premium features for frequent use.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Weber Genesis E-335",
@@ -38,7 +39,8 @@
     "price_range": "$1,299-$1,599",
     "best_for": "Home cooks seeking reliable performance, excellent warranty coverage, and strong brand support at a competitive price.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "grills",
   "comparison_summary": "The Napoleon Prestige 500 vs Weber Genesis E-335 matchup showcases two different philosophies: Napoleon brings infrared searing technology and premium features that appeal to enthusiasts, while Weber offers legendary reliability and a better warranty at a lower price. Both are excellent grills, but they're built for different priorities.",

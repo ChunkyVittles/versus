@@ -18,7 +18,8 @@
     "price_range": "$90-$120",
     "best_for": "Budget-conscious families who want a quiet, spacious air fryer with straightforward controls.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Ninja Air Fryer AF101",
@@ -38,7 +39,8 @@
     "price_range": "$80-$110",
     "best_for": "Home cooks who want versatile cooking functions including dehydrating and roasting at various temperatures.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "air-fryers",
   "comparison_summary": "Cosori Pro LE is quieter and fits more food with its square basket design, while Ninja AF101 gives you dehydrating capability and a wider temperature range. It really depends whether you need peace and quiet or maximum cooking functions.",

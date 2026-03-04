@@ -18,7 +18,8 @@
     "price_range": "$799-$899",
     "best_for": "Homeowners with medium to large lawns who want premium performance and multi-function versatility with exceptional build quality.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Toro Recycler 22 in. SmartStow",
@@ -38,7 +39,8 @@
     "price_range": "$499-$649",
     "best_for": "Homeowners with limited garage space who need reliable performance and the convenience of vertical storage at a competitive price point.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "lawn-mowers",
   "comparison_summary": "Honda HRX217VKA dominates on pure performance with its 200cc engine and twin-blade cutting system that produces ultra-fine clippings, backed by a five-year warranty. The Toro Recycler SmartStow trades a bit of power for clever vertical storage that actually solves real garage space problems, costs $250-$300 less, and still handles typical residential lawns beautifully.",

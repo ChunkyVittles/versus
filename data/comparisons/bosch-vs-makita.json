@@ -18,7 +18,8 @@
     "price_range": "$89-$599",
     "best_for": "Professional tradespeople and serious DIYers who prioritize ergonomics, build quality, and long-term reliability over upfront cost.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Makita Power Tools",
@@ -38,7 +39,8 @@
     "price_range": "$79-$549",
     "best_for": "Users building a comprehensive cordless tool ecosystem who need extensive tool variety and excellent battery performance at competitive prices.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "power-tools",
   "comparison_summary": "Bosch and Makita represent premium but different philosophies: Bosch delivers refined German engineering with superior ergonomics and electronic protection, while Makita counters with an unmatched 325+ tool ecosystem on their 18V platform and faster battery charging. Your choice depends on whether you prioritize comfort during extended use or need maximum tool variety within one battery system.",

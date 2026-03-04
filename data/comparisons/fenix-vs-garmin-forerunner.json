@@ -18,7 +18,8 @@
     "price_range": "$699-$999",
     "best_for": "Serious outdoor adventurers and multi-sport athletes who need rugged durability and comprehensive navigation features.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Garmin Forerunner 965",
@@ -38,7 +39,8 @@
     "price_range": "$599-$649",
     "best_for": "Dedicated runners and triathletes who prioritize training metrics, lightweight design, and vibrant display quality.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "fitness-trackers",
   "comparison_summary": "The Garmin Fenix 7 and Forerunner 965 split along clear lines: outdoor adventure versus dedicated running. The Fenix brings tougher construction, solar charging that extends battery life dramatically, and full mapping features, while the Forerunner counters with an AMOLED display that's far better to look at, lighter weight that matters on long runs, and running-specific training features at a lower starting price of $599.",

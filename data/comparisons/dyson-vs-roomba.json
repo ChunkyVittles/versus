@@ -19,7 +19,8 @@
     "price_range": "$649-$749",
     "best_for": "People who want the deepest clean and don't mind manual vacuuming",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "iRobot Roomba j7+",
@@ -40,7 +41,8 @@
     "price_range": "$599-$799",
     "best_for": "Busy households that want daily automated floor maintenance",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "vacuums",
   "comparison_summary": "These vacuums solve opposite problems. The Dyson V15 delivers a deeper, more thorough clean but requires your time and effort. The Roomba j7+ cleans automatically every day so you never think about vacuuming again.",

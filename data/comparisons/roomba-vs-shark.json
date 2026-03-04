@@ -18,7 +18,8 @@
     "price_range": "$599-$799",
     "best_for": "Tech-savvy households with pets who want hands-off cleaning and advanced smart home integration.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Shark AI Ultra Robot Vacuum",
@@ -38,7 +39,8 @@
     "price_range": "$399-$549",
     "best_for": "Budget-conscious buyers seeking powerful suction and self-emptying convenience without premium pricing.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "vacuums",
   "comparison_summary": "The Roomba j7+ leads in obstacle avoidance and app sophistication with its camera-based navigation system, while Shark's AI Ultra delivers stronger suction and self-emptying capability at a much lower price. Most households get better value from Shark, but complex homes with lots of obstacles benefit from Roomba's precision.",

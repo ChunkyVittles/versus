@@ -18,7 +18,8 @@
     "price_range": "$79-$99",
     "best_for": "Individuals and couples seeking an affordable, compact blender for daily smoothies and basic blending tasks.",
     "rating": 4.1,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Vitamix 5200",
@@ -38,7 +39,8 @@
     "price_range": "$449-$549",
     "best_for": "Serious home cooks and health enthusiasts who want professional-grade performance and versatility for daily use.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "blenders",
   "comparison_summary": "The NutriBullet vs Vitamix debate is really about whether you need professional power or just basic blending. NutriBullet handles personal smoothies at a fraction of the cost, while Vitamix brings professional capability and durability that lasts decades. Most people serious about blending will find Vitamix worth the steep price.",

@@ -18,7 +18,8 @@
     "price_range": "$1,300-$3,500",
     "best_for": "Home theater enthusiasts and gamers who prioritize perfect blacks, contrast, and immersive viewing in controlled lighting environments.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Samsung QN90C Neo QLED",
@@ -38,7 +39,8 @@
     "price_range": "$1,200-$3,200",
     "best_for": "Users with bright living rooms who watch varied content including news, sports, and HDR movies without concern for screen burn-in.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "tvs",
   "comparison_summary": "LG OLED uses self-emissive pixels that turn completely off for perfect blacks and infinite contrast, while Samsung QLED relies on quantum dot-enhanced LED backlighting that pushes brightness past 2,000 nits. Your viewing environment and usage patterns determine which technology makes sense for you.",

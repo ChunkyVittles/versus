@@ -18,7 +18,8 @@
     "price_range": "$379-$429",
     "best_for": "Users prioritizing maximum comfort and premium call quality for business and travel use",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Sony WH-1000XM5",
@@ -38,7 +39,8 @@
     "price_range": "$379-$399",
     "best_for": "Audiophiles and frequent travelers seeking the best noise cancellation and longest battery life",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "headphones",
   "comparison_summary": "Sony WH-1000XM5 edges ahead on technical merits: better noise cancellation, longer battery life, and superior sound quality. Bose QuietComfort Ultra dominates in comfort and call quality. Both cost about the same, so your choice depends on whether you prioritize performance or all-day wearability.",

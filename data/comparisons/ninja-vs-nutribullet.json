@@ -18,7 +18,8 @@
     "price_range": "$80-$120",
     "best_for": "Families and home cooks who need a versatile, high-capacity blender for smoothies, soups, and crushing ice.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "NutriBullet Pro 900 Series",
@@ -38,7 +39,8 @@
     "price_range": "$70-$100",
     "best_for": "Singles, students, and busy professionals who want quick, personal-sized smoothies and shakes with minimal cleanup.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "blenders",
   "comparison_summary": "Ninja gives you a big pitcher and serious ice-crushing power for households. NutriBullet gives you blend-and-go convenience in a compact package for one person at a time. Your household size basically makes this decision for you.",

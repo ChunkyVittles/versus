@@ -18,7 +18,8 @@
     "price_range": "$0",
     "best_for": "Active traders and options traders who prioritize advanced charting tools and a sophisticated mobile trading experience",
     "rating": 4.4,
-    "affiliate_url": "https://us.etrade.com"
+    "affiliate_url": "https://us.etrade.com",
+    "shop_on_ebay": false
   },
   "item_b": {
     "name": "Charles Schwab Brokerage Platform",
@@ -38,7 +39,8 @@
     "price_range": "$0",
     "best_for": "Long-term investors and those who value extensive research tools, banking integration, and access to physical branch locations",
     "rating": 4.6,
-    "affiliate_url": "https://www.schwab.com"
+    "affiliate_url": "https://www.schwab.com",
+    "shop_on_ebay": false
   },
   "category": "financial",
   "comparison_summary": "E*TRADE and Schwab both offer commission-free trading but serve different investors. E*TRADE excels with superior mobile functionality and options trading tools for active traders, while Schwab provides better research resources, lower margin rates, and over 300 branch locations for investors focused on long-term wealth building.",

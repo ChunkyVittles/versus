@@ -18,7 +18,8 @@
     "price_range": "$699-$1,499",
     "best_for": "Budget-conscious shoppers seeking classic memory foam comfort with exceptional trial period and warranty coverage.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Purple Original Mattress",
@@ -38,7 +39,8 @@
     "price_range": "$1,099-$1,999",
     "best_for": "Hot sleepers and those seeking innovative pressure relief technology with a responsive, bouncy feel rather than traditional memory foam.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "mattresses",
   "comparison_summary": "Nectar and Purple couldn't be more different. Nectar delivers classic memory foam comfort with an unbeatable 365-night trial and lifetime warranty at a budget-friendly price. Purple charges a premium for its proprietary GelFlex Grid that solves the heat retention problem memory foam can't escape.",

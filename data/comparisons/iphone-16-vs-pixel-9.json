@@ -18,7 +18,8 @@
     "price_range": "$799-$1,099",
     "best_for": "Users invested in the Apple ecosystem who prioritize video quality, long-term software support, and premium build quality.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Google Pixel 9",
@@ -38,7 +39,8 @@
     "price_range": "$699-$999",
     "best_for": "Photography enthusiasts and Android users who want cutting-edge AI features, clean software, and excellent computational photography at a competitive price.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "smartphones",
   "comparison_summary": "The iPhone 16 and Pixel 9 represent two fundamentally different approaches to flagship smartphones. Apple brings crushing performance and video capabilities, while Google counters with computational photography magic and AI features that actually feel useful. Your existing tech ecosystem will likely make this choice for you.",

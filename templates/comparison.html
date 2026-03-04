@@ -65,11 +65,12 @@
 {% endblock %}
 
 {% block content %}
-{% set link_a = get_item_link(comp.item_a.name, comp.item_a.get('affiliate_url', '')) %}
-{% set link_b = get_item_link(comp.item_b.name, comp.item_b.get('affiliate_url', '')) %}
+{% set link_a = get_item_link(comp.item_a.name, comp.item_a.get('affiliate_url', ''), comp.item_a.get('shop_on_ebay', false)) %}
+{% set link_b = get_item_link(comp.item_b.name, comp.item_b.get('affiliate_url', ''), comp.item_b.get('shop_on_ebay', false)) %}
 {% set is_website_comp = is_website(comp.item_a.name) or is_website(comp.item_b.name) %}
 {% set has_affiliate_links = comp.item_a.get('affiliate_url', '') or comp.item_b.get('affiliate_url', '') %}
-{% set show_shop = has_affiliate_links or is_website_comp or comp.category not in ebay_skip_categories %}
+{% set has_ebay_items = comp.item_a.get('shop_on_ebay', false) or comp.item_b.get('shop_on_ebay', false) %}
+{% set show_shop = has_affiliate_links or has_ebay_items or is_website_comp or comp.category not in ebay_skip_categories %}
 <!-- Breadcrumb -->
 <nav class="breadcrumb">
     <div class="container">

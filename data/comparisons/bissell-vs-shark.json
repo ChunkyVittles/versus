@@ -18,7 +18,8 @@
     "price_range": "$99-$149",
     "best_for": "Budget-conscious pet owners who need effective cleaning performance without premium features.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Shark Navigator Lift-Away Professional Vacuum",
@@ -38,7 +39,8 @@
     "price_range": "$179-$229",
     "best_for": "Households needing versatile cleaning options and superior allergen filtration with lift-away portability.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "vacuums",
   "comparison_summary": "Bissell focuses on budget-friendly vacuums with strong pet hair performance, while Shark charges more for lift-away versatility and superior allergen filtration. The price difference reflects real feature upgrades, making your choice depend on whether you need premium filtration and versatility or just solid cleaning at a lower cost.",

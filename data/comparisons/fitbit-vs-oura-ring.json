@@ -18,7 +18,8 @@
     "price_range": "$139-$159",
     "best_for": "Active individuals who prioritize workout tracking, GPS functionality, and visual data displays during exercise.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Oura Ring Generation 3",
@@ -38,7 +39,8 @@
     "price_range": "$299-$549",
     "best_for": "Health-conscious users who prioritize sleep optimization, recovery tracking, and discreet all-day wear over active workout features.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "fitness-trackers",
   "comparison_summary": "The Fitbit Charge 6 and Oura Ring approach health tracking from opposite angles. Fitbit gives you active workout monitoring with GPS and a screen for real-time stats. Oura prioritizes sleep quality, recovery metrics, and disappearing into your daily life without the bulk of a wrist tracker.",

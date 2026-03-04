@@ -18,7 +18,8 @@
     "price_range": "$150-$1,200",
     "best_for": "Amazon Prime subscribers and users invested in the Alexa ecosystem who want affordable smart TV options.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Roku TV",
@@ -38,7 +39,8 @@
     "price_range": "$170-$1,400",
     "best_for": "Cord-cutters who want a neutral streaming platform with maximum content discovery across all services.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "tvs",
   "comparison_summary": "Roku TV gives you an unbiased streaming experience with better universal search and the biggest app library, perfect for multi-service households. Fire TV costs less and has killer Alexa integration, but pushes Amazon content hard. Most people benefit more from Roku's neutrality, though Prime subscribers might prefer Fire TV's ecosystem perks.",

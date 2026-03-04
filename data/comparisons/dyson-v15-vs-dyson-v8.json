@@ -18,7 +18,8 @@
     "price_range": "$649-$749",
     "best_for": "Tech-savvy users who want scientific validation of cleaning performance and maximum suction power for deep cleaning.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Dyson V8",
@@ -38,7 +39,8 @@
     "price_range": "$349-$449",
     "best_for": "Budget-conscious buyers seeking reliable Dyson performance without premium features for everyday cleaning tasks.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "vacuums",
   "comparison_summary": "The V15 Detect brings laser detection, particle counting, and double the suction power at $650+, while the V8 delivers proven Dyson performance for $350-450. The V15 represents the cutting edge, but the V8's lighter weight and strong cleaning ability make it the smarter choice for most homes.",

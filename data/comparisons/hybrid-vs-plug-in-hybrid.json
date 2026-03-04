@@ -18,7 +18,8 @@
     "price_range": "$28,000-$42,000",
     "best_for": "Drivers who want improved fuel economy without charging requirements or infrastructure concerns.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Plug-In Hybrid Electric Vehicle (PHEV)",
@@ -38,7 +39,8 @@
     "price_range": "$35,000-$55,000",
     "best_for": "Drivers with regular access to charging who want electric driving for daily commutes with gas backup for longer trips.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "cars",
   "comparison_summary": "Standard hybrids deliver excellent fuel economy with zero charging requirements, while plug-in hybrids offer genuine electric driving for daily commutes but demand charging infrastructure. Your driving patterns and access to a charger determine which technology actually saves you money.",

@@ -18,7 +18,8 @@
     "price_range": "$799-$1,599",
     "best_for": "Back and stomach sleepers who want a luxury hybrid feel with excellent edge support and cooling.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Nectar Memory Foam Mattress",
@@ -38,7 +39,8 @@
     "price_range": "$599-$1,199",
     "best_for": "Side sleepers on a budget who prioritize pressure relief and want an extensive trial period.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "mattresses",
   "comparison_summary": "DreamCloud is a luxury hybrid with innerspring coils and premium materials at a higher price, while Nectar is an all-foam memory foam mattress that costs less. DreamCloud gives you better edge support, superior cooling, and more bounce for combination sleepers and couples, while Nectar excels at pressure relief and value for dedicated side sleepers who want that deep contouring feel.",

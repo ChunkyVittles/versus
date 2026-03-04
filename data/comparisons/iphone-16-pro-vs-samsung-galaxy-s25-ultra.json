@@ -18,7 +18,8 @@
     "price_range": "$999-$1,499",
     "best_for": "Apple ecosystem users who prioritize seamless integration, professional video capabilities, and long-term software support.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Samsung Galaxy S25 Ultra",
@@ -38,7 +39,8 @@
     "price_range": "$1,299-$1,619",
     "best_for": "Power users who want maximum screen real estate, S Pen functionality, and the highest camera zoom capabilities available.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "smartphones",
   "comparison_summary": "The iPhone 16 Pro vs Samsung Galaxy S25 Ultra comparison pits Apple's refined ecosystem experience against Samsung's feature-packed powerhouse. The iPhone 16 Pro excels in video production quality and ecosystem integration at a lower starting price, while the Galaxy S25 Ultra offers superior multitasking with more RAM, a built-in S Pen, and unmatched zoom capabilities.",

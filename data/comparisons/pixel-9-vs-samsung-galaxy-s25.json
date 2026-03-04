@@ -18,7 +18,8 @@
     "price_range": "$799-$899",
     "best_for": "Users who prioritize computational photography, AI features, and long-term software support over raw performance.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Samsung Galaxy S25",
@@ -38,7 +39,8 @@
     "price_range": "$899-$999",
     "best_for": "Power users who need top-tier performance, versatile cameras, and premium display technology for productivity and entertainment.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "smartphones",
   "comparison_summary": "The Pixel 9 and Galaxy S25 represent fundamentally different priorities. Samsung brings superior processing power with the Snapdragon 8 Elite and a brighter display, while Google counters with industry-leading computational photography and an unmatched 7-year update promise. Your decision hinges on whether AI innovation and longevity matter more to you than premium hardware specs.",

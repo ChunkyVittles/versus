@@ -18,7 +18,8 @@
     "price_range": "$149-$599",
     "best_for": "Espresso enthusiasts who prioritize authentic Italian-style coffee and want access to third-party capsule options.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Nespresso VertuoLine",
@@ -38,7 +39,8 @@
     "price_range": "$179-$499",
     "best_for": "Coffee drinkers who want versatility in cup sizes and prefer full-size coffee drinks over exclusively espresso shots.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "coffee-makers",
   "comparison_summary": "OriginalLine uses traditional 19-bar pressure for authentic espresso shots and works with third-party capsules at lower cost. VertuoLine spins capsules using centrifusion technology to brew five cup sizes including full coffee mugs, but locks you into pricier Nespresso-only pods with barcode technology.",

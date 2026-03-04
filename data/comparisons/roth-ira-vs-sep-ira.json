@@ -18,7 +18,8 @@
     "price_range": "$0-$50",
     "best_for": "Individual savers seeking tax-free retirement income with modest annual contributions who want flexibility in withdrawals.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "item_b": {
     "name": "SEP IRA",
@@ -38,7 +39,8 @@
     "price_range": "$0-$100",
     "best_for": "Self-employed individuals and small business owners with variable income seeking to maximize tax-deductible retirement contributions.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "category": "financial",
   "comparison_summary": "Your employment status basically makes this decision for you. Employees benefit most from the Roth IRA's tax-free withdrawals and $7,000 contribution limit, while self-employed individuals can shelter up to $69,000 in a SEP IRA and slash their current tax bill. If you have self-employment income and meet the Roth income limits, funding both accounts gives you the best of both worlds.",

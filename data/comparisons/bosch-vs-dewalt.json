@@ -18,7 +18,8 @@
     "price_range": "$89-$499",
     "best_for": "Professional tradespeople and serious DIYers who prioritize precision, ergonomics, and refined engineering over raw power.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "DeWalt Power Tools",
@@ -38,7 +39,8 @@
     "price_range": "$79-$449",
     "best_for": "Contractors and tradespeople who need maximum durability, power, and a comprehensive tool ecosystem for demanding jobsite work.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "power-tools",
   "comparison_summary": "DeWalt dominates for contractors who need maximum durability and power in tough jobsite conditions, while Bosch excels in precision applications where ergonomics and refined engineering make the difference. DeWalt's extensive 20V MAX ecosystem and wider availability give it the edge for general use, but your choice should align with whether you prioritize raw power or precision comfort.",

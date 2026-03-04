@@ -18,7 +18,8 @@
     "price_range": "$379-$549",
     "best_for": "Home cooks who want powerful blending with one-touch convenience and space-saving design.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Vitamix A3500 Ascent Series",
@@ -38,7 +39,8 @@
     "price_range": "$499-$649",
     "best_for": "Serious home chefs and health enthusiasts who want maximum control, durability, and the longest warranty coverage.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "blenders",
   "comparison_summary": "Blendtec and Vitamix both represent the gold standard in high-performance blending, just with different philosophies. Blendtec gives you powerful blending with pre-programmed convenience and a compact design at a lower price, while Vitamix delivers superior manual control, a legendary 10-year warranty, and blade technology that excels with leafy greens.",

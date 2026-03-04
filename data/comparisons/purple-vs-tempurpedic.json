@@ -18,7 +18,8 @@
     "price_range": "$899-$2,299",
     "best_for": "Hot sleepers and combination sleepers who want pressure relief without the sinking feeling of memory foam.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Tempur-Pedic TEMPUR-Adapt",
@@ -39,7 +40,8 @@
     "price_range": "$2,199-$3,999",
     "best_for": "Side sleepers and couples seeking maximum pressure relief and motion isolation who prioritize proven memory foam technology.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "mattresses",
   "comparison_summary": "Purple uses its GelFlex Grid for cooling and responsive support at a mid-range price, while Tempur-Pedic delivers traditional memory foam contouring at nearly double the cost. Purple excels in temperature regulation and value, while Tempur-Pedic specializes in motion isolation and deep pressure relief for side sleepers.",

@@ -18,7 +18,8 @@
     "price_range": "$349-$499",
     "best_for": "Users deeply invested in the Apple ecosystem who prioritize app quality and long-term software support.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Samsung Galaxy Tab S9",
@@ -38,7 +39,8 @@
     "price_range": "$799-$999",
     "best_for": "Power users and creatives who need advanced multitasking, stylus support, and flexibility with file management.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "tablets",
   "comparison_summary": "This really comes down to which ecosystem you're already invested in. The iPad dominates in app quality, long-term software support, and value for money, while Samsung's Galaxy Tab counters with better display technology, expandable storage, and an included stylus. Most people should buy the iPad, but Android users have good reasons to go with Samsung.",

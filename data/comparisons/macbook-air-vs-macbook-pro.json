@@ -18,7 +18,8 @@
     "price_range": "$1099-$1699",
     "best_for": "Students, travelers, and everyday users who prioritize portability and battery life over maximum performance.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "MacBook Pro (M3/M3 Pro/M3 Max, 2023-2024)",
@@ -38,7 +39,8 @@
     "price_range": "$1599-$6999",
     "best_for": "Creative professionals, developers, and power users who need maximum performance for video editing, 3D rendering, or intensive multitasking.",
     "rating": 4.8,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "laptops",
   "comparison_summary": "The MacBook Air delivers incredible value at 2.7 pounds with 18-hour battery life, perfect for everyday work. The MacBook Pro brings sustained performance, better displays, and more ports—necessary for professional creative workflows but overkill for general use.",

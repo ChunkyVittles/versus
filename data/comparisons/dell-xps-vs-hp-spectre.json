@@ -18,7 +18,8 @@
     "price_range": "$1099-$2299",
     "best_for": "Professionals and power users who prioritize performance, display quality, and a minimalist aesthetic for productivity tasks.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "HP Spectre x360 14",
@@ -38,7 +39,8 @@
     "price_range": "$1299-$2099",
     "best_for": "Creative professionals and business users who need a versatile 2-in-1 with pen support and prioritize display quality and flexibility.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "laptops",
   "comparison_summary": "The Dell XPS 13 Plus and HP Spectre x360 14 are both exceptional premium ultrabooks that approach the same goal from opposite directions. Dell bets everything on minimalist performance in a traditional laptop, while HP builds in 2-in-1 flexibility with tablet mode and stylus support. Your choice depends on whether you value raw laptop performance or convertible versatility.",

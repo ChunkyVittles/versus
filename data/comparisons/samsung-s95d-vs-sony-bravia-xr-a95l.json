@@ -18,7 +18,8 @@
     "price_range": "$2,599-$4,599",
     "best_for": "Gamers and bright-room viewers who prioritize peak brightness and anti-glare performance over Dolby Vision support",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Sony Bravia XR A95L QD-OLED TV",
@@ -38,7 +39,8 @@
     "price_range": "$2,799-$4,799",
     "best_for": "Cinema enthusiasts and Sony ecosystem users who value superior processing, Dolby Vision, and integrated audio quality",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "tvs",
   "comparison_summary": "These QD-OLED flagships take opposite approaches to the same display technology. Samsung prioritizes brightness, gaming specs, and glare control for versatile environments. Sony focuses on processing quality, Dolby Vision support, and acoustic innovation for dedicated home theater setups.",

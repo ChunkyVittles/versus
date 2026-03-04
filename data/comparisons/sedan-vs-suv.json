@@ -18,7 +18,8 @@
     "price_range": "$25,000-$45,000",
     "best_for": "Urban commuters and drivers prioritizing fuel economy, handling, and lower operating costs.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Mid-Size SUV",
@@ -38,7 +39,8 @@
     "price_range": "$32,000-$55,000",
     "best_for": "Families needing cargo space, drivers in harsh weather climates, and those wanting elevated seating position.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "cars",
   "comparison_summary": "The sedan versus SUV debate comes down to efficiency versus utility. Sedans deliver 15-20% better fuel economy and cost $5,000-$10,000 less upfront, while SUVs provide families with dramatically more cargo space, better ground clearance, and superior weather capability.",

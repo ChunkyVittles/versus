@@ -18,7 +18,8 @@
     "price_range": "$99-$599",
     "best_for": "DIY enthusiasts and contractors seeking reliable performance with an extensive tool selection and excellent battery ecosystem.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Milwaukee M18 FUEL Cordless Power Tool System",
@@ -38,7 +39,8 @@
     "price_range": "$129-$699",
     "best_for": "Professional tradespeople and serious contractors who demand maximum power, durability, and advanced features for daily heavy-duty use.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "power-tools",
   "comparison_summary": "DEWALT and Milwaukee sit at the top of the cordless power tool world, each with different strengths. DEWALT brings more tools to choose from, better value pricing, and superior battery flexibility through FLEXVOLT technology. Milwaukee delivers more powerful brushless motors, better ergonomics, and advanced smart features that justify paying extra if you're using these tools every single day.",

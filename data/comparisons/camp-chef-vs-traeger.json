@@ -18,7 +18,8 @@
     "price_range": "$400-$800",
     "best_for": "Budget-conscious grillers who want reliable pellet grill performance without premium features or brand prestige.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Traeger Pro Series 575 Pellet Grill",
@@ -38,7 +39,8 @@
     "price_range": "$800-$1,200",
     "best_for": "Tech-savvy grillers who value app connectivity, brand reputation, and are willing to pay premium prices for convenience features.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "grills",
   "comparison_summary": "Camp Chef and Traeger target different buyers. Camp Chef loads up on practical innovations like ash cleanout systems and direct-flame searing at budget-friendly prices, while Traeger charges a premium for WiFIRE technology, brand recognition, and a more refined user experience. Most home grillers get better value from Camp Chef, saving 40-50% while achieving nearly identical cooking results.",

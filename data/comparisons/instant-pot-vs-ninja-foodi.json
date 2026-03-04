@@ -18,7 +18,8 @@
     "price_range": "$120-$180",
     "best_for": "Home cooks who prioritize pressure cooking and want air frying as a secondary feature at a lower price point",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Ninja Foodi 9-in-1 Deluxe XL",
@@ -39,7 +40,8 @@
     "price_range": "$180-$250",
     "best_for": "Cooks who want professional-level air frying and crisping capabilities combined with pressure cooking in one premium appliance",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "air-fryers",
   "comparison_summary": "The Ninja Foodi delivers superior air frying with its integrated TenderCrisp lid and higher wattage, making it worth the premium if crisping is your thing. The Instant Pot Duo Crisp counters with better value and equally solid pressure cooking, plus that separate lid design actually lets you use both functions independently.",

@@ -18,7 +18,8 @@
     "price_range": "$1,399-$2,799",
     "best_for": "Eco-conscious buyers seeking an organic, firm, and durable mattress with exceptional support.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Saatva Classic Mattress",
@@ -38,7 +39,8 @@
     "price_range": "$1,095-$2,395",
     "best_for": "Shoppers wanting luxury innerspring comfort with customizable firmness at a more accessible price.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "mattresses",
   "comparison_summary": "Avocado and Saatva represent two distinct philosophies in premium mattresses. Avocado commits fully to organic, eco-friendly materials with exceptional durability, while Saatva delivers traditional innerspring luxury with customizable firmness at a lower entry price. Both provide excellent support, just with different priorities in mind.",

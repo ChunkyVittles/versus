@@ -18,7 +18,8 @@
     "price_range": "$0-$0",
     "best_for": "Workers expecting higher tax rates in retirement or seeking tax-free income and no RMDs in their later years",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "item_b": {
     "name": "Traditional 401(k)",
@@ -38,7 +39,8 @@
     "price_range": "$0-$0",
     "best_for": "Workers in high tax brackets now who expect lower tax rates in retirement or need immediate tax relief",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "category": "financial",
   "comparison_summary": "The Traditional 401(k) gives you an immediate tax break and works best for high earners, while the Roth 401(k) delivers tax-free retirement income with no forced withdrawals. Most people benefit from using both accounts to hedge against future tax uncertainty.",

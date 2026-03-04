@@ -18,7 +18,8 @@
     "price_range": "$649-$1,374",
     "best_for": "Couples and side sleepers who want customizable firmness options with strong motion isolation.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Purple Original Mattress",
@@ -38,7 +39,8 @@
     "price_range": "$699-$1,399",
     "best_for": "Hot sleepers and combination sleepers who want pressure relief without the sinking feeling of memory foam.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "mattresses",
   "comparison_summary": "Helix offers customizable hybrid mattresses with traditional memory foam comfort, while Purple's GelFlex Grid delivers unique pressure relief and exceptional cooling. Helix wins for couples prioritizing motion isolation and edge support, while Purple dominates for hot sleepers who dislike memory foam's conforming feel.",

@@ -18,7 +18,8 @@
     "price_range": "$49-$199",
     "best_for": "DIY enthusiasts and homeowners who want reliable, American heritage tools with strong warranty backing.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Ryobi ONE+ 18V Cordless Power Tool System",
@@ -38,7 +39,8 @@
     "price_range": "$39-$179",
     "best_for": "Budget-conscious DIYers and homeowners who value versatility and want access to the largest cordless tool ecosystem.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "power-tools",
   "comparison_summary": "This matchup pits American heritage quality against modern value engineering. Craftsman delivers superior build quality with metal internals and strong warranty support, while Ryobi counters with an unmatched 280+ tool ecosystem and lower entry costs. For typical DIY users, Ryobi's affordability and versatility win out over Craftsman's durability edge.",

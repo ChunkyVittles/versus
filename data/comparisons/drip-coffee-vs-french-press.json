@@ -18,7 +18,8 @@
     "price_range": "$25-$300",
     "best_for": "Coffee drinkers who want consistent, hands-off brewing with minimal effort and prefer multiple cups throughout the day.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "French Press Coffee Maker",
@@ -38,7 +39,8 @@
     "price_range": "$15-$150",
     "best_for": "Coffee enthusiasts who value rich, full-bodied flavor and prefer a hands-on brewing ritual without electricity dependence.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "coffee-makers",
   "comparison_summary": "Drip coffee makers automate everything and produce clean, consistent coffee that's perfect for busy routines. French presses give you richer, oil-heavy coffee with zero electricity needed but demand more attention and effort. It really depends on whether you value convenience or depth of flavor more.",

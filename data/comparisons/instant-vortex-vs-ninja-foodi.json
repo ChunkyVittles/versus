@@ -18,7 +18,8 @@
     "price_range": "$99-$139",
     "best_for": "Budget-conscious buyers who want a straightforward air fryer with rotisserie capabilities and easy monitoring.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Ninja Foodi 8-Quart 2-Basket Air Fryer",
@@ -38,7 +39,8 @@
     "price_range": "$169-$229",
     "best_for": "Families and multi-taskers who need to cook different foods simultaneously with precision control.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "air-fryers",
   "comparison_summary": "The Instant Vortex gives you excellent value with its viewing window and rotisserie in a compact package. The Ninja Foodi costs more but earns it with dual-zone cooking that lets you prepare complete meals simultaneously. Your household size basically makes this decision for you.",

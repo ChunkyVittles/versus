@@ -18,7 +18,8 @@
     "price_range": "$399-$499",
     "best_for": "iPhone users seeking the most comprehensive health tracking and seamless ecosystem integration.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Samsung Galaxy Watch 6",
@@ -38,7 +39,8 @@
     "price_range": "$299-$399",
     "best_for": "Android users or those seeking longer battery life and cross-platform compatibility at a lower price.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "fitness-trackers",
   "comparison_summary": "The Apple Watch Series 9 and Samsung Galaxy Watch 6 are both excellent fitness trackers that excel within their own ecosystems. Your phone choice matters more than the watches themselves—Apple Watch dominates for iOS users with superior health sensors and apps, while Galaxy Watch 6 wins for Android users with longer battery life and a lower price.",

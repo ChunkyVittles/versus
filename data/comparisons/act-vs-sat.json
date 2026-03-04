@@ -18,7 +18,8 @@
     "price_range": "$68-$93",
     "best_for": "Students who are strong in science and math, prefer straightforward questions, and can work quickly under time pressure.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "item_b": {
     "name": "SAT (Scholastic Assessment Test)",
@@ -38,7 +39,8 @@
     "price_range": "$60-$88",
     "best_for": "Students with strong vocabulary and reading comprehension skills who benefit from more time per question and evidence-based reasoning.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "category": "education",
   "comparison_summary": "The ACT and SAT both get you into college, but they test different skills. The ACT includes Science and demands faster pacing across 215 questions, while the SAT gives you more time per question and focuses heavily on evidence-based reading. Try both with practice tests to see which format clicks for you.",

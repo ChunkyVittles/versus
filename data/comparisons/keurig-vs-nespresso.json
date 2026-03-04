@@ -18,7 +18,8 @@
     "price_range": "$140-$200",
     "best_for": "Coffee drinkers who prefer larger, drip-style cups and want maximum variety at a lower cost per serving",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Nespresso VertuoPlus",
@@ -39,7 +40,8 @@
     "price_range": "$160-$220",
     "best_for": "Espresso enthusiasts and those who prioritize café-quality coffee with authentic crema and intense flavor",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "coffee-makers",
   "comparison_summary": "Keurig dominates on convenience and variety with 400+ K-Cup options at lower cost, perfect for households that prefer traditional drip coffee. Nespresso wins on espresso quality with authentic café-style drinks and a premium experience, though you'll pay roughly double per cup.",

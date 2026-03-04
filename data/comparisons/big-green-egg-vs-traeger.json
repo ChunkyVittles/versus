@@ -18,7 +18,8 @@
     "price_range": "$1,099-$1,299",
     "best_for": "Traditional grill enthusiasts who want maximum versatility and are willing to master manual temperature control for authentic charcoal flavor.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Traeger Pro 575",
@@ -38,7 +39,8 @@
     "price_range": "$799-$999",
     "best_for": "Busy cooks who prioritize convenience and consistent results with minimal hands-on temperature management.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "grills",
   "comparison_summary": "This matchup pits ceramic tradition against digital convenience. The Big Green Egg offers incredible heat retention, extreme temperature range, and authentic charcoal flavor, while Traeger brings WiFi control and set-it-forget-it simplicity. Pick based on whether you want to master the craft or just get dinner done.",

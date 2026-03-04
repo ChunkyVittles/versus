@@ -18,7 +18,8 @@
     "price_range": "$449-$499",
     "best_for": "Athletes who want comprehensive GPS tracking, on-screen workout guidance, and prefer one-time purchases over subscriptions.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "WHOOP 4.0",
@@ -38,7 +39,8 @@
     "price_range": "$239-$399",
     "best_for": "Recovery-focused athletes and fitness enthusiasts prioritizing sleep optimization, HRV tracking, and minimal wearable design.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "fitness-trackers",
   "comparison_summary": "Garmin Forerunner 265 and WHOOP 4.0 couldn't be more different. Garmin is a full-featured GPS sports watch with a screen, navigation, multi-sport tracking, and no subscription, while WHOOP strips everything down to a screenless band that focuses exclusively on recovery, HRV, and strain management through an ongoing membership. Pick based on whether you need active workout tracking or passive recovery monitoring.",

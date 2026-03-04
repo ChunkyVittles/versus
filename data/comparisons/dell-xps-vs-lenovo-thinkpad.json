@@ -18,7 +18,8 @@
     "price_range": "$999-$2,499",
     "best_for": "Creative professionals and students who prioritize portability, design aesthetics, and display quality over extensive connectivity.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Lenovo ThinkPad X1 Carbon",
@@ -38,7 +39,8 @@
     "price_range": "$1,299-$2,799",
     "best_for": "Business professionals and IT departments who need exceptional durability, security features, and the best typing experience available.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "laptops",
   "comparison_summary": "The Dell XPS 13 brings stunning design and a gorgeous display that creative professionals love, while the Lenovo ThinkPad X1 Carbon delivers the best keyboard in the business plus military-grade durability. Most business users will find the ThinkPad's functionality worth the premium, but design-focused buyers won't regret choosing the XPS.",

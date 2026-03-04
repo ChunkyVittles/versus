@@ -18,7 +18,8 @@
     "price_range": "$1,399-$3,299",
     "best_for": "Home theater enthusiasts seeking accurate colors, Dolby Vision support, and multiple HDMI 2.1 ports for gaming setups.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Samsung S95D QD-OLED TV",
@@ -38,7 +39,8 @@
     "price_range": "$2,099-$4,299",
     "best_for": "Viewers prioritizing brightness and color vibrancy in well-lit rooms who don't need multiple high-bandwidth gaming ports.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "tvs",
   "comparison_summary": "Samsung's S95D QD-OLED pushes brightness to 1,500 nits with quantum dot color vibrancy and a matte anti-glare screen. LG's C4 counters with a lower price tag, four full-bandwidth HDMI 2.1 ports for serious gamers, Dolby Vision support, and more accurate colors that match filmmaker intent.",

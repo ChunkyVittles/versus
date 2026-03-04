@@ -18,7 +18,8 @@
     "price_range": "$1,099-$1,999",
     "best_for": "Hot sleepers and couples who want pressure relief with excellent motion isolation and are willing to invest in premium sleep technology.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Tuft & Needle Original Mattress",
@@ -38,7 +39,8 @@
     "price_range": "$645-$1,245",
     "best_for": "Budget-conscious shoppers seeking a reliable all-foam mattress with good support for back and combination sleepers under 230 lbs.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "mattresses",
   "comparison_summary": "Purple brings serious innovation with its GelFlex Grid technology—best-in-class cooling and motion isolation at a premium price. Tuft & Needle keeps things simple with quality adaptive foam at nearly half the cost, making it the smarter pick for solo sleepers and anyone not willing to spend four figures on temperature regulation.",

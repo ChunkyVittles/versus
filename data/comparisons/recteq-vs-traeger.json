@@ -18,7 +18,8 @@
     "price_range": "$1299-$1599",
     "best_for": "Serious grill enthusiasts who prioritize build quality, temperature precision, and long-term durability over initial cost savings",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Traeger Pro 780 WiFi Pellet Grill",
@@ -38,7 +39,8 @@
     "price_range": "$1099-$1299",
     "best_for": "Home cooks who value brand recognition, app integration, and extensive cooking resources with solid mid-range performance",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "grills",
   "comparison_summary": "The recteq vs Traeger choice comes down to premium construction versus ecosystem convenience. recteq delivers stainless steel durability, tighter temperature control, and massive hopper capacity, while Traeger counters with superior app integration and retail accessibility at a lower entry price.",

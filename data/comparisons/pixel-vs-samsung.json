@@ -18,7 +18,8 @@
     "price_range": "$999-$1,099",
     "best_for": "Android purists and photography enthusiasts who prioritize AI capabilities and software experience over raw performance.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Samsung Galaxy S24 Ultra",
@@ -38,7 +39,8 @@
     "price_range": "$1,299-$1,619",
     "best_for": "Power users and business professionals who need maximum screen real estate, S Pen functionality, and top-tier hardware performance.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "smartphones",
   "comparison_summary": "These phones represent two different visions of what a flagship should be. Google built the Pixel around AI and computational photography with clean software. Samsung packed the S24 Ultra with maximum hardware capability, a bigger screen, and the S Pen. Pick based on whether you value software refinement or hardware versatility.",

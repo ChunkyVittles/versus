@@ -18,7 +18,8 @@
     "price_range": "$1,399-$1,899",
     "best_for": "Content creators and professionals who prioritize a traditional laptop experience with convertible flexibility and premium audio.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Microsoft Surface Pro 9",
@@ -38,7 +39,8 @@
     "price_range": "$999-$2,599",
     "best_for": "Mobile professionals and digital artists who need true tablet portability with laptop capabilities when docked.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "laptops",
   "comparison_summary": "The Yoga 9i gives you a complete premium laptop with fantastic battery life and everything in the box. The Surface Pro 9 trades convenience for genuine tablet portability. Think about whether you need a laptop that sometimes works as a tablet, or a tablet that sometimes works as a laptop.",

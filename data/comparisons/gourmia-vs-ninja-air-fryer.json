@@ -18,7 +18,8 @@
     "price_range": "$60-$80",
     "best_for": "Budget-conscious buyers seeking a straightforward air fryer with adequate capacity for family meals.",
     "rating": 4.1,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Ninja Air Fryer AF101",
@@ -38,7 +39,8 @@
     "price_range": "$90-$120",
     "best_for": "Home cooks prioritizing cooking performance and durability over price with smaller household sizes.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "air-fryers",
   "comparison_summary": "The Ninja AF101 outperforms the Gourmia GAF400 with its 1550W power and superior construction, while the Gourmia counters with a bigger 5-quart basket at a much friendlier price. Most people will be happier with the Ninja's speed and longevity, but families on a budget get more capacity for less money with the Gourmia.",

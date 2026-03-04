@@ -18,7 +18,8 @@
     "price_range": "$0-$50",
     "best_for": "Younger investors, those expecting higher tax rates in retirement, or individuals wanting tax-free income and no RMDs in their later years.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "item_b": {
     "name": "Traditional IRA",
@@ -38,7 +39,8 @@
     "price_range": "$0-$50",
     "best_for": "Higher-income earners seeking immediate tax deductions, those expecting to be in lower tax brackets during retirement, or mid-career professionals maximizing current-year tax savings.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "category": "financial",
   "comparison_summary": "The Roth versus Traditional IRA debate centers on when you pay taxes: now or later. Roth IRAs offer tax-free retirement withdrawals and no required distributions, making them ideal for younger investors. Traditional IRAs provide immediate tax deductions that work best for high earners who anticipate lower tax brackets in retirement.",

@@ -18,7 +18,8 @@
     "price_range": "$30,000-$120,000",
     "best_for": "Professionals seeking deep expertise in a specific technical field or academic discipline who want to advance within their current industry.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "item_b": {
     "name": "MBA (Master of Business Administration)",
@@ -38,7 +39,8 @@
     "price_range": "$60,000-$200,000",
     "best_for": "Mid-career professionals seeking leadership roles, career transitions, or entrepreneurial ventures who want comprehensive business knowledge and executive networks.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": false
   },
   "category": "education",
   "comparison_summary": "Specialized master's degrees give you deep technical knowledge in a specific field at lower cost, while MBAs provide broad business training and extensive networks that enable career pivots. MBAs deliver higher salary bumps and leadership opportunities, but master's programs offer faster ROI and are better suited for advancing within technical career tracks.",

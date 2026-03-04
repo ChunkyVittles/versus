@@ -18,7 +18,8 @@
     "price_range": "$800-$3500",
     "best_for": "Bright room viewing, sports enthusiasts, and budget-conscious buyers who want excellent HDR performance without burn-in concerns.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "OLED TV (LG C4 or Sony A95L)",
@@ -39,7 +40,8 @@
     "price_range": "$1200-$5000",
     "best_for": "Home theater enthusiasts, gamers prioritizing response time, and viewers who watch in controlled lighting with varied content.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "tvs",
   "comparison_summary": "Mini LED wins on brightness, price, and longevity. OLED wins on contrast, blacks, and viewing angles. Your room lighting and how you actually use the TV matter more than which technology sounds cooler on paper.",

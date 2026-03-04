@@ -18,7 +18,8 @@
     "price_range": "$139-$189",
     "best_for": "Busy individuals who value speed and variety over brewing full pots and don't mind the per-cup cost of pods.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Ninja Specialty Coffee Maker CM401",
@@ -38,7 +39,8 @@
     "price_range": "$169-$229",
     "best_for": "Coffee enthusiasts who want coffeehouse-style specialty drinks at home with the flexibility to brew multiple serving sizes.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "coffee-makers",
   "comparison_summary": "Keurig dominates on speed and simplicity with pod-based brewing that takes under two minutes. Ninja offers barista-level customization with its built-in frother and multiple brew settings, plus you'll save hundreds annually on coffee costs. Pick based on whether you value time or drink variety.",

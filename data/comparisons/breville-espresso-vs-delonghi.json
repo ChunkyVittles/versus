@@ -18,7 +18,8 @@
     "price_range": "$599-$749",
     "best_for": "Home baristas who want café-quality espresso with integrated grinding and precise control over every variable.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "DeLonghi Dedica EC685 Espresso Machine",
@@ -38,7 +39,8 @@
     "price_range": "$299-$399",
     "best_for": "Beginners or apartment dwellers who need a space-saving, affordable espresso machine with straightforward operation.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "coffee-makers",
   "comparison_summary": "Breville Barista Express packs everything into one machine with integrated grinding and professional features, while DeLonghi Dedica stays compact and budget-friendly but needs a separate grinder. Pick Breville if you want full control and plan to use it daily, or go DeLonghi if space is tight and you're just getting started.",

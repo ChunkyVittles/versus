@@ -18,7 +18,8 @@
     "price_range": "$799-$899",
     "best_for": "Tech enthusiasts who prioritize performance, fast charging, and value over extensive ecosystem features.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Samsung Galaxy S24 Ultra",
@@ -38,7 +39,8 @@
     "price_range": "$1,299-$1,419",
     "best_for": "Power users and professionals who need long-term support, S Pen functionality, and seamless ecosystem connectivity.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "smartphones",
   "comparison_summary": "OnePlus 12 delivers flagship specs at $799 with unbeatable charging speeds, while Samsung's S24 Ultra costs $500 more but backs it up with 7-year updates, S Pen integration, and superior camera zoom. Your decision hinges on whether you value immediate savings or long-term investment.",

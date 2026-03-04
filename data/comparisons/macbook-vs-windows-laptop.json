@@ -18,7 +18,8 @@
     "price_range": "$1099-$2499",
     "best_for": "Creative professionals and users who value design, battery life, and seamless ecosystem integration with iPhone and iPad.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Dell XPS 13 Plus",
@@ -38,7 +39,8 @@
     "price_range": "$799-$2199",
     "best_for": "Business users, gamers, and those who need maximum software flexibility and hardware customization options.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "laptops",
   "comparison_summary": "MacBooks deliver superior battery life, premium build, and tight Apple ecosystem integration. Windows laptops counter with better software compatibility, hardware flexibility, and more value per dollar. Pick based on what software you need to run and what other devices you already own.",

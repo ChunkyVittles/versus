@@ -18,7 +18,8 @@
     "price_range": "$79-$99",
     "best_for": "Individuals seeking quick, single-serve smoothies and nutrient-rich drinks with minimal cleanup.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Oster Pro 1200 Blender",
@@ -38,7 +39,8 @@
     "price_range": "$59-$89",
     "best_for": "Families and home cooks who need a versatile countertop blender for smoothies, soups, and food prep.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "blenders",
   "comparison_summary": "This comparison really comes down to blender style: NutriBullet excels as a grab-and-go personal blender for quick single servings, while the Oster Pro 1200 delivers traditional countertop versatility with bigger capacity and more power—all at a lower price. Pick based on whether you're blending solo or feeding multiple people.",

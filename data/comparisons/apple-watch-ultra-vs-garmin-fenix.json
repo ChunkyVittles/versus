@@ -18,7 +18,8 @@
     "price_range": "$799-$899",
     "best_for": "iPhone users seeking a premium smartwatch with excellent fitness tracking, cellular connectivity, and deep Apple ecosystem integration.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Garmin Fenix 7X Sapphire Solar",
@@ -38,7 +39,8 @@
     "price_range": "$899-$999",
     "best_for": "Serious athletes and outdoor enthusiasts who prioritize battery life, advanced training analytics, and multi-sport tracking capabilities.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "fitness-trackers",
   "comparison_summary": "The Apple Watch Ultra 2 is a brilliant smartwatch with strong fitness features, perfect for iPhone users who want the best of both worlds. The Garmin Fenix 7X is a specialist training computer for endurance athletes who need weeks of battery life and deep performance metrics. Pick based on whether you value smartphone features or athletic functionality more.",

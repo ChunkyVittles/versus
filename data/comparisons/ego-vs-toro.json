@@ -18,7 +18,8 @@
     "price_range": "$549-$799",
     "best_for": "Environmentally-conscious homeowners with medium-sized lawns who want cordless convenience without compromising power.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Toro Recycler 22-inch SmartStow Gas Mower",
@@ -38,7 +39,8 @@
     "price_range": "$449-$649",
     "best_for": "Homeowners with larger lawns who need consistent power and prefer the reliability of gas engines with minimal space requirements.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "lawn-mowers",
   "comparison_summary": "This comparison really comes down to battery-electric versus gas power in 2026. EGO brings quiet, zero-emission performance with battery tech that actually delivers, while Toro offers proven gas reliability with smart storage innovations. Your choice depends on whether you value convenience and environmental benefits or need unlimited runtime and maximum power.",

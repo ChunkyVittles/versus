@@ -19,7 +19,8 @@
     "price_range": "$799-$899",
     "best_for": "Apple ecosystem users who want a reliable, polished smartphone experience",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Samsung Galaxy S25",
@@ -40,7 +41,8 @@
     "price_range": "$799-$859",
     "best_for": "Android users who want cutting-edge AI features and display quality",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "smartphones",
   "comparison_summary": "Two excellent flagships at identical prices. The iPhone 16 wins on video, ecosystem integration, and resale value. The Galaxy S25 wins on display tech, customization, and AI features. Your existing tech probably makes this decision for you.",

@@ -196,6 +196,7 @@ Return ONLY valid JSON matching this exact structure (no markdown, no code fence
     "best_for": "One sentence describing who/what this is best for",
     "rating": 4.2,
     "affiliate_url": "",
+    "shop_on_ebay": true,
     "shop_keywords": ["related search term 1", "related search term 2"]
   },
   "item_b": {
@@ -208,6 +209,7 @@ Return ONLY valid JSON matching this exact structure (no markdown, no code fence
     "best_for": "One sentence describing who/what this is best for",
     "rating": 4.5,
     "affiliate_url": "",
+    "shop_on_ebay": true,
     "shop_keywords": ["related search term 1", "related search term 2"]
   },
   "category": "category-slug",
@@ -241,6 +243,7 @@ IMPORTANT GUIDELINES:
 - meta_title should include the year (2026)
 - shop_keywords: 2-3 search terms for related purchasable items. For products: "Brand Model name". For people: related merchandise like "Messi jersey", "Bob Hope DVD collection". For services/websites: related physical products. For concepts/languages: related books or courses. ALWAYS include at least 2 shop_keywords per item.
 - affiliate_url: For ANY service, app, SaaS product, financial product, streaming service, or website being compared, set affiliate_url to the item's official homepage or signup URL (e.g., "https://acorns.com", "https://robinhood.com", "https://netflix.com", "https://notion.so"). For physical products sold by retailers, leave affiliate_url as empty string. The rendering system uses these URLs for "Visit" / "Sign Up" buttons.
+- shop_on_ebay: Set to true if this item is a physical product, game, toy, book, or anything people commonly buy on eBay. Set to false for software, SaaS, online services, streaming platforms, concepts, people, or anything that isn't a purchasable physical item. Examples: Chess sets = true, Rubik's Cube = true, mattresses = true, headphones = true, NordVPN = false, Netflix = false, "The Beatles" = false, "Roth IRA" = false.
 - comparison_intro MUST contain these exact phrasings naturally: "[A] vs [B]", "[A] or [B]", "which is better", "difference between [A] and [B]", and "[A] compared to [B]". This is critical for SEO.
 - meta_description MUST include both "vs" and "or" phrasings of the comparison.
 - faq MUST always include these three questions (plus 2-3 more topic-specific ones):

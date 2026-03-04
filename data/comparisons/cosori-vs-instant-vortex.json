@@ -18,7 +18,8 @@
     "price_range": "$89-$139",
     "best_for": "Home cooks who prioritize quiet operation and efficient use of counter space with a square basket design.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Instant Vortex Plus Air Fryer",
@@ -38,7 +39,8 @@
     "price_range": "$79-$159",
     "best_for": "Families wanting versatile cooking functions and the ability to monitor food through a viewing window without opening the basket.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "air-fryers",
   "comparison_summary": "The Cosori Pro LE and Instant Vortex Plus are both solid mid-range picks, but they go different directions. Cosori runs quieter and uses space better with its square basket. Instant Vortex gives you more functions and that see-through window. Pick based on whether noise and efficiency or versatility matters more to you.",

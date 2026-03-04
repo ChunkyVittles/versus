@@ -18,7 +18,8 @@
     "price_range": "$200-$1500",
     "best_for": "Single adults who want extra space, young couples, or guest rooms where occasional double occupancy is expected.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Twin Mattress",
@@ -38,7 +39,8 @@
     "price_range": "$150-$800",
     "best_for": "Children, single teens, or adults with very limited bedroom space who sleep alone.",
     "rating": 4.1,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "mattresses",
   "comparison_summary": "Full mattresses give you 15 inches more width than Twins, making them workable for single adults or couples who don't mind closeness. Twins remain the budget pick for kids and tight spaces, but most adults will find the Full's extra room worth the small price increase.",

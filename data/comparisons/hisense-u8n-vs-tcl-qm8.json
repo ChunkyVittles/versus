@@ -18,7 +18,8 @@
     "price_range": "$1,099-$1,899",
     "best_for": "Gamers and movie enthusiasts who prioritize peak brightness and motion handling in bright to moderately lit rooms.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "TCL QM8 Mini-LED QLED TV",
@@ -39,7 +40,8 @@
     "price_range": "$899-$1,599",
     "best_for": "Budget-conscious buyers seeking premium mini-LED performance without paying flagship prices.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "tvs",
   "comparison_summary": "Both the Hisense U8N and TCL QM8 are mini-LED powerhouses that deliver flagship-level picture quality at mid-range prices. The U8N wins on specs with 3,000 nits brightness, 1,200+ dimming zones, and 144Hz refresh rate, while the QM8 counters with better native contrast and a lower price that makes it the value champion.",

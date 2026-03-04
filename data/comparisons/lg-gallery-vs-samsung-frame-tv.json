@@ -18,7 +18,8 @@
     "price_range": "$2,099-$3,299",
     "best_for": "Serious home theater enthusiasts who want gallery aesthetics without compromising on premium picture quality",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Samsung The Frame QLED TV (2024)",
@@ -39,7 +40,8 @@
     "price_range": "$999-$2,999",
     "best_for": "Design-conscious buyers who prioritize aesthetics and art display over absolute picture quality performance",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "tvs",
   "comparison_summary": "These TVs take opposite approaches to the art TV concept. LG builds a premium OLED that happens to look gallery-worthy, while Samsung builds a customizable art display that happens to show TV content well. Pick based on whether you watch more movies or display more art.",

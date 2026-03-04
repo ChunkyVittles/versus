@@ -18,7 +18,8 @@
     "price_range": "$1,300-$2,500",
     "best_for": "Home theater enthusiasts who prioritize accurate colors, perfect blacks, and wide viewing angles for mixed content consumption.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Samsung S90C QD-OLED TV",
@@ -38,7 +39,8 @@
     "price_range": "$1,400-$2,600",
     "best_for": "Gamers and HDR movie fans who watch in controlled lighting and want the brightest, most vibrant OLED picture quality available.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "tvs",
   "comparison_summary": "This matchup pits WOLED against QD-OLED technology. The Samsung S90C delivers almost double the brightness with more saturated colors thanks to quantum dots, while the LG C3 offers better viewing angles, more accurate colors, and twice as many HDMI 2.1 ports. Both have perfect contrast and near-instant response times, but they're built for different viewing situations.",

@@ -18,7 +18,8 @@
     "price_range": "$2,199-$3,499",
     "best_for": "Homeowners with 1-3 acres who prioritize comfort and durability for frequent mowing sessions",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Husqvarna YTH24V48 Riding Lawn Mower",
@@ -38,7 +39,8 @@
     "price_range": "$2,099-$3,199",
     "best_for": "Property owners with uneven terrain and up to 2.5 acres who need reliable power and cutting performance",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "lawn-mowers",
   "comparison_summary": "Cub Cadet prioritizes operator comfort with reinforced steel construction and ergonomic seating, while Husqvarna focuses on cutting performance through air induction technology and powerful engines. Most homeowners will find Husqvarna offers slightly better value and superior cut quality for typical lawn conditions.",

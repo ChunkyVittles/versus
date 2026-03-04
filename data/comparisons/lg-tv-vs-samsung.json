@@ -18,7 +18,8 @@
     "price_range": "$1,299-$3,499",
     "best_for": "Cinephiles and gamers who prioritize perfect black levels and wide viewing angles in controlled lighting environments.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Samsung QLED TV (QN90C Series)",
@@ -38,7 +39,8 @@
     "price_range": "$1,099-$2,799",
     "best_for": "Users with bright living rooms who want vivid colors, high brightness, and worry-free usage without burn-in concerns.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "tvs",
   "comparison_summary": "LG OLED TVs deliver perfect blacks and wide viewing angles that movie enthusiasts love, especially in darker rooms. Samsung QLED TVs counter with superior brightness for well-lit spaces and no burn-in worries. Your room's lighting conditions should drive this decision more than brand loyalty.",

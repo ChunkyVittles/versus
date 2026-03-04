@@ -18,7 +18,8 @@
     "price_range": "$199-$249",
     "best_for": "iPhone users seeking premium ANC earbuds with seamless Apple ecosystem integration and spatial audio.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Samsung Galaxy Buds Pro",
@@ -38,7 +39,8 @@
     "price_range": "$129-$199",
     "best_for": "Android users, especially Samsung Galaxy owners, wanting high-quality audio with customizable sound profiles.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "headphones",
   "comparison_summary": "These are two excellent premium earbuds built for different worlds. AirPods Pro win on noise cancellation and Apple integration, while Galaxy Buds Pro offer superior water resistance, dual-driver audio, and lower pricing. Your phone makes the decision for you.",

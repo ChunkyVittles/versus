@@ -18,7 +18,8 @@
     "price_range": "$329-$399",
     "best_for": "Professionals who prioritize crystal-clear call quality and premium build over maximum battery life.",
     "rating": 4.3,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Sony WH-1000XM5",
@@ -38,7 +39,8 @@
     "price_range": "$349-$429",
     "best_for": "Audiophiles and frequent travelers seeking the best noise cancellation and longest battery life available.",
     "rating": 4.6,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "headphones",
   "comparison_summary": "The Sony WH-1000XM5 and Bose 700 both cost about the same but serve different masters. Sony wins on noise cancellation, battery life (30 vs 20 hours), and audio quality. Bose answers back with better call quality and more controllable ANC levels.",

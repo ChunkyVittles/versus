@@ -18,7 +18,8 @@
     "price_range": "$400-$1,200",
     "best_for": "Budget-conscious grillers who want pellet grill versatility with direct flame grilling capability without premium pricing.",
     "rating": 4.1,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "Traeger Pro Series 780 Pellet Grill",
@@ -38,7 +39,8 @@
     "price_range": "$800-$2,000",
     "best_for": "Serious BBQ enthusiasts willing to invest in premium construction, smart technology, and precise temperature control for consistent results.",
     "rating": 4.5,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "grills",
   "comparison_summary": "Pit Boss brings exceptional value with its unique direct-flame capability and budget-friendly prices, while Traeger delivers premium construction, tighter temperature precision, and industry-leading WiFi technology. Traeger wins on consistency and smart features, but Pit Boss gives you more grill for your money plus that Flame Broiler system Traeger just can't match.",

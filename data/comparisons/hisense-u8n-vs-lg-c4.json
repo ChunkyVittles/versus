@@ -18,7 +18,8 @@
     "price_range": "$800-$2,200",
     "best_for": "Budget-conscious buyers who want premium picture quality, especially for bright room viewing and HDR content.",
     "rating": 4.4,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "item_b": {
     "name": "LG C4 OLED evo TV",
@@ -38,7 +39,8 @@
     "price_range": "$1,400-$3,500",
     "best_for": "Home theater enthusiasts and gamers who prioritize perfect blacks, viewing angles, and ultra-fast response times.",
     "rating": 4.7,
-    "affiliate_url": ""
+    "affiliate_url": "",
+    "shop_on_ebay": true
   },
   "category": "tvs",
   "comparison_summary": "These TVs represent fundamentally different technologies: the U8N delivers exceptional Mini-LED brightness with quantum dots at an aggressive price, while the C4 offers OLED's perfect blacks and gaming prowess at a premium. Your viewing environment and budget will determine which makes more sense.",
