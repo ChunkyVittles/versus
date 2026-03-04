@@ -204,9 +204,9 @@ function renderComparisonPage(comp) {
     @font-face{font-family:'Figtree';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/figtree-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
     @font-face{font-family:'Figtree';font-style:normal;font-weight:500 800;font-display:swap;src:url(/fonts/figtree-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
     @font-face{font-family:'Figtree';font-style:normal;font-weight:500 800;font-display:swap;src:url(/fonts/figtree-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:'Figtree',sans-serif;color:#1e293b;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}h1,h2,h3,h4{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;line-height:1.1}a{color:inherit;text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.site-header{position:sticky;top:0;z-index:100;background:#111;border-bottom:none}.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}.logo{font-family:'Bebas Neue',Impact,sans-serif;font-size:1.6rem;font-weight:400;letter-spacing:.04em;color:#fff;display:inline-flex;align-items:center}.logo-vs-mark{display:inline-block;background:#ffd60a;color:#111;padding:2px 8px;border-radius:4px;font-family:'Figtree',sans-serif;font-weight:800;font-size:.5em;vertical-align:middle;margin:0 2px;letter-spacing:0}.main-nav{display:flex;gap:2rem;align-items:center}.main-nav a{font-weight:600;color:rgba(255,255,255,.7);font-size:.95rem}.mobile-menu-btn{display:none;flex-direction:column;gap:5px;padding:4px;cursor:pointer;border:none;background:none}.mobile-menu-btn span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}.mobile-nav{display:none;background:#111;border-bottom:1px solid rgba(255,255,255,.1);padding:1rem 1.5rem}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:'Figtree',sans-serif;color:#1e293b;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}h1,h2,h3,h4{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;line-height:1.1}a{color:inherit;text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.site-header{position:sticky;top:0;z-index:100;background:#111;border-bottom:none}.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}.logo{font-family:'Bebas Neue',Impact,sans-serif;font-size:1.6rem;font-weight:400;letter-spacing:.04em;color:#fff;display:inline-flex;align-items:center}.logo-vs-mark{display:inline-block;background:#ffd60a;color:#111;padding:2px 8px;border-radius:4px;font-family:'Figtree',sans-serif;font-weight:800;font-size:.5em;vertical-align:middle;margin:0 2px;letter-spacing:0}.main-nav{display:flex;gap:2rem;align-items:center}.main-nav a{font-weight:600;color:rgba(255,255,255,.7);font-size:.95rem}.mobile-menu-btn{display:none;flex-direction:column;gap:5px;padding:4px;cursor:pointer;border:none;background:none}.mobile-menu-btn span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}.mobile-nav{display:none;background:#111;border-bottom:1px solid rgba(255,255,255,.1);padding:1rem 1.5rem}.header-actions{display:flex;align-items:center;gap:.5rem}.site-search-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:none;color:rgba(255,255,255,.7);cursor:pointer;border-radius:50%}.site-search-panel{position:fixed;top:64px;left:0;right:0;z-index:99;background:#111;padding:1rem 0;box-shadow:0 8px 32px rgba(0,0,0,.3);transform:translateY(-100%);opacity:0;visibility:hidden;transition:transform .25s,opacity .25s,visibility .25s}.site-search-panel.active{transform:translateY(0);opacity:1;visibility:visible}
     </style>
-    <link rel="preload" href="/css/style.css?v=4" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/style.css?v=5" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/css/style.css?v=4"></noscript>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"WebPage","name":${JSON.stringify(comp.meta_title)},"url":"https://versusthat.com/${comp.slug}/","datePublished":"${comp.date_published}","dateModified":"${comp.date_updated}","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://versusthat.com/"},{"@type":"ListItem","position":2,"name":"${esc(categoryName)}","item":"https://versusthat.com/categories/${comp.category}/"},{"@type":"ListItem","position":3,"name":"${esc(comp.item_a?.name)} vs ${esc(comp.item_b?.name)}"}]}}
@@ -227,13 +227,29 @@ function renderComparisonPage(comp) {
                 <a href="/categories/">Categories</a>
                 <a href="/about/">About</a>
             </nav>
-            <button class="mobile-menu-btn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            <div class="header-actions">
+                <button class="site-search-btn" id="site-search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            </div>
         </div>
     </header>
+    <div class="site-search-panel" id="site-search-panel">
+        <div class="container">
+            <div class="site-search-input-wrap">
+                <svg class="site-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                <input type="text" id="site-search-input" placeholder="Search for a product..." autocomplete="off">
+                <button class="site-search-close" id="site-search-close" aria-label="Close search">&times;</button>
+            </div>
+            <div class="site-search-results" id="site-search-results"></div>
+        </div>
+    </div>
     <nav class="mobile-nav">
         <a href="/">Home</a>
         <a href="/categories/">Categories</a>
         <a href="/about/">About</a>
+        <a href="#" id="mobile-search-link">Search</a>
     </nav>
     <main>
         <nav class="breadcrumb">
@@ -331,7 +347,7 @@ function renderComparisonPage(comp) {
             </div>
         </div>
     </footer>
-    <script src="/js/main.js?v=4" defer></script>
+    <script src="/js/main.js?v=5" defer></script>
     <script>
     (function(){
       const S='versusthat',C='https://bullbotics.com/api/analytics/collect';

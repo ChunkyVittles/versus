@@ -238,6 +238,14 @@ def build_site():
     )
     write_page(DIST_DIR / "404.html", html_404)
 
+    # --- Search index ---
+    print("  Building search-index.json...")
+    search_index = [
+        {"s": c["slug"], "a": c["item_a"]["name"], "b": c["item_b"]["name"], "c": c.get("category", "")}
+        for c in comparisons
+    ]
+    write_page(DIST_DIR / "search-index.json", json.dumps(search_index))
+
     # --- sitemap.xml ---
     print("  Building sitemap.xml...")
     build_sitemap(comparisons, categories)
