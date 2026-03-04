@@ -25,6 +25,54 @@ DOMAIN = "https://versusthat.com"
 EBAY_CAMPAIGN_ID = "5339144040"
 EBAY_SKIP_CATEGORIES = ["financial", "education", "services", "streaming", "cars"]
 
+PARTNER_AFFILIATES = {
+    "gocollect.com": {
+        "url": "https://gocollect.com/?via=versus",
+        "logo": "https://s3.amazonaws.com/gocollect.static/web/logos/GoCollect_Logo_White_Green.svg",
+        "name": "GoCollect",
+    },
+}
+
+WEBSITE_TLD_RE = re.compile(r"\.(com|org|net|io|co|app|dev)$", re.I)
+
+
+def is_website(name):
+    if not name:
+        return False
+    last = name.strip().split()[-1]
+    return bool(WEBSITE_TLD_RE.search(last))
+
+
+def get_item_link(name):
+    """Return dict with url, text, rel, logo, is_partner for a comparison item."""
+    if not is_website(name):
+        encoded = name.replace(" ", "+") if name else ""
+        return {
+            "url": f"https://www.ebay.com/sch/i.html?_nkw={encoded}&mkcid=1&mkrid=711-53200-19255-0&campid={EBAY_CAMPAIGN_ID}&toolid=10001",
+            "text": "&#x1F6D2; Shop on eBay",
+            "rel": "nofollow sponsored",
+            "logo": None,
+            "is_partner": False,
+        }
+    domain = name.strip().split()[-1].lower()
+    partner = PARTNER_AFFILIATES.get(domain)
+    if partner:
+        return {
+            "url": partner["url"],
+            "text": f"Visit {partner['name']}",
+            "rel": "nofollow sponsored",
+            "logo": partner["logo"],
+            "is_partner": True,
+        }
+    display = domain.rsplit(".", 1)[0].title()
+    return {
+        "url": f"https://{domain}",
+        "text": f"Visit {display}",
+        "rel": "nofollow",
+        "logo": None,
+        "is_partner": False,
+    }
+
 
 def load_categories():
     with open(DATA_DIR / "categories.json") as f:
@@ -128,6 +176,9 @@ def build_site():
         "domain": DOMAIN,
         "ebay_campaign_id": EBAY_CAMPAIGN_ID,
         "ebay_skip_categories": EBAY_SKIP_CATEGORIES,
+        "partner_affiliates": PARTNER_AFFILIATES,
+        "is_website": is_website,
+        "get_item_link": get_item_link,
     }
 
     # --- Homepage ---

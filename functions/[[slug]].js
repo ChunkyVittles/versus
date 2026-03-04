@@ -50,6 +50,38 @@ export async function onRequest(context) {
 const EBAY_CAMPAIGN_ID = '5339144040';
 const EBAY_SKIP_CATEGORIES = ['financial', 'education', 'services', 'streaming', 'cars'];
 
+const PARTNER_AFFILIATES = {
+    'gocollect.com': {
+        url: 'https://gocollect.com/?via=versus',
+        logo: 'https://s3.amazonaws.com/gocollect.static/web/logos/GoCollect_Logo_White_Green.svg',
+        name: 'GoCollect',
+    },
+};
+
+const WEBSITE_TLD_RE = /\.(com|org|net|io|co|app|dev)$/i;
+
+function isWebsite(name) {
+    if (!name) return false;
+    const last = name.trim().split(/\s+/).pop();
+    return WEBSITE_TLD_RE.test(last);
+}
+
+function getItemLink(item) {
+    const name = item?.name || '';
+    if (!isWebsite(name)) {
+        return { url: ebayUrl(name), text: '&#x1F6D2; Shop on eBay', rel: 'nofollow sponsored', logo: null, isPartner: false };
+    }
+    // Extract domain from item name
+    const domain = name.trim().split(/\s+/).pop().toLowerCase();
+    const partner = PARTNER_AFFILIATES[domain];
+    if (partner) {
+        return { url: partner.url, text: `Visit ${partner.name}`, rel: 'nofollow sponsored', logo: partner.logo, isPartner: true };
+    }
+    // Non-partner website — link directly
+    const displayName = domain.replace(/\.[^.]+$/, '').replace(/\b\w/g, c => c.toUpperCase());
+    return { url: `https://${domain}`, text: `Visit ${displayName}`, rel: 'nofollow', logo: null, isPartner: false };
+}
+
 function ebayUrl(keyword) {
     return `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(keyword)}&mkcid=1&mkrid=711-53200-19255-0&campid=${EBAY_CAMPAIGN_ID}&toolid=10001`;
 }
@@ -138,14 +170,18 @@ function renderComparisonPage(comp) {
         ? '<div class="vs-badge">VS</div>'
         : '<div class="vs-badge vs-badge-decided">&#x1F3C6;</div>';
 
-    // Shop buttons in hero (skip non-physical categories)
-    const showShop = !EBAY_SKIP_CATEGORIES.includes(comp.category);
-    const shopBtnA = showShop
-        ? `<a href="${ebayUrl(comp.item_a?.name)}" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on eBay</a>`
-        : '';
-    const shopBtnB = showShop
-        ? `<a href="${ebayUrl(comp.item_b?.name)}" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on eBay</a>`
-        : '';
+    // Shop/visit buttons in hero
+    const linkA = getItemLink(comp.item_a);
+    const linkB = getItemLink(comp.item_b);
+    const isWebsiteComparison = isWebsite(comp.item_a?.name) || isWebsite(comp.item_b?.name);
+    const showShop = isWebsiteComparison || !EBAY_SKIP_CATEGORIES.includes(comp.category);
+    const renderBtn = (link, side) => {
+        const logoHtml = link.logo ? `<img src="${link.logo}" alt="${esc(link.text)}" class="partner-logo"> ` : '';
+        const partnerClass = link.isPartner ? ' btn-partner' : '';
+        return `<a href="${link.url}" class="btn btn-${side} btn-shop${partnerClass}" rel="${link.rel}" target="_blank">${logoHtml}${link.text}</a>`;
+    };
+    const shopBtnA = showShop ? renderBtn(linkA, 'a') : '';
+    const shopBtnB = showShop ? renderBtn(linkB, 'b') : '';
 
     // Scoreboard section
     const scoreboardHtml = `<section class="scoreboard-section">
@@ -172,16 +208,20 @@ function renderComparisonPage(comp) {
     </section>`;
 
     // Shop CTA section
+    const shopCtaTitle = isWebsiteComparison ? 'Visit These Sites' : 'Ready to Buy?';
+    const shopCtaDisclosure = isWebsiteComparison
+        ? 'Some links on this page are affiliate links. If you sign up through these links, we may earn a commission at no extra cost to you.'
+        : 'As an affiliate, we earn from qualifying purchases made through links on this page. Prices shown are approximate.';
     const shopCtaHtml = showShop ? `<section class="section shop-cta">
         <div class="container">
-            <h2 class="section-title">Ready to Buy?</h2>
+            <h2 class="section-title">${shopCtaTitle}</h2>
             <div class="shop-grid">
                 <div class="shop-card shop-card-a ${comp.verdict === 'a' ? 'shop-card-winner' : ''}">
                     ${comp.verdict === 'a' ? '<span class="shop-winner-badge">&#x1F451; Our Pick</span>' : ''}
                     <h3>${esc(comp.item_a?.name)}</h3>
                     <p class="shop-price">${esc(comp.item_a?.price_range)}</p>
                     <div class="shop-links">
-                        <a href="${ebayUrl(comp.item_a?.name)}" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on eBay</a>
+                        ${renderBtn(linkA, 'a')}
                     </div>
                 </div>
                 <div class="shop-card shop-card-b ${comp.verdict === 'b' ? 'shop-card-winner' : ''}">
@@ -189,11 +229,11 @@ function renderComparisonPage(comp) {
                     <h3>${esc(comp.item_b?.name)}</h3>
                     <p class="shop-price">${esc(comp.item_b?.price_range)}</p>
                     <div class="shop-links">
-                        <a href="${ebayUrl(comp.item_b?.name)}" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on eBay</a>
+                        ${renderBtn(linkB, 'b')}
                     </div>
                 </div>
             </div>
-            <p class="shop-disclosure">As an affiliate, we earn from qualifying purchases made through links on this page. Prices shown are approximate.</p>
+            <p class="shop-disclosure">${shopCtaDisclosure}</p>
         </div>
     </section>` : '';
 
@@ -222,7 +262,7 @@ function renderComparisonPage(comp) {
     @font-face{font-family:'Figtree';font-style:normal;font-weight:500 800;font-display:swap;src:url(/fonts/figtree-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:'Figtree',sans-serif;color:#1e293b;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}h1,h2,h3,h4{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;line-height:1.1}a{color:inherit;text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.site-header{position:sticky;top:0;z-index:100;background:#111;border-bottom:none}.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}.logo{font-family:'Bebas Neue',Impact,sans-serif;font-size:1.6rem;font-weight:400;letter-spacing:.04em;color:#fff;display:inline-flex;align-items:center}.logo-vs-mark{display:inline-block;background:#ffd60a;color:#111;padding:2px 8px;border-radius:4px;font-family:'Figtree',sans-serif;font-weight:800;font-size:.5em;vertical-align:middle;margin:0 2px;letter-spacing:0}.main-nav{display:flex;gap:2rem;align-items:center}.main-nav a{font-weight:600;color:rgba(255,255,255,.7);font-size:.95rem}.mobile-menu-btn{display:none;flex-direction:column;gap:5px;padding:4px;cursor:pointer;border:none;background:none}.mobile-menu-btn span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}.mobile-nav{display:none;background:#111;border-bottom:1px solid rgba(255,255,255,.1);padding:1rem 1.5rem}.header-actions{display:flex;align-items:center;gap:.5rem}.site-search-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:none;color:rgba(255,255,255,.7);cursor:pointer;border-radius:50%}.site-search-panel{position:fixed;top:64px;left:0;right:0;z-index:99;background:#111;padding:1rem 0;box-shadow:0 8px 32px rgba(0,0,0,.3);transform:translateY(-100%);opacity:0;visibility:hidden;transition:transform .25s,opacity .25s,visibility .25s}.site-search-panel.active{transform:translateY(0);opacity:1;visibility:visible}
     .comparison-intro-section{background:#f8fafc;padding:2rem 0}.comparison-intro{font-size:1.15rem;line-height:1.75;color:#475569;max-width:800px;margin:0 auto;text-align:center}
-    .affiliate-disclosure-bar{background:#fefce8;border-bottom:1px solid #fde68a;padding:.5rem 0;font-size:.82rem;line-height:1.5;color:#92400e}.affiliate-disclosure-bar p{margin:0;text-align:center}.affiliate-disclosure-bar a{color:#92400e;text-decoration:underline;font-weight:600}.shop-disclosure{text-align:center;font-size:.82rem;color:#94a3b8;margin-top:1.5rem;padding-top:1rem;border-top:1px solid #e2e8f0}
+    .affiliate-disclosure-bar{background:#fefce8;border-bottom:1px solid #fde68a;padding:.5rem 0;font-size:.82rem;line-height:1.5;color:#92400e}.affiliate-disclosure-bar p{margin:0;text-align:center}.affiliate-disclosure-bar a{color:#92400e;text-decoration:underline;font-weight:600}.shop-disclosure{text-align:center;font-size:.82rem;color:#94a3b8;margin-top:1.5rem;padding-top:1rem;border-top:1px solid #e2e8f0}.btn-partner{display:inline-flex;align-items:center;gap:.5rem}.partner-logo{height:20px;width:auto;vertical-align:middle}
     </style>
     <link rel="preload" href="/css/style.css?v=5" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/css/style.css?v=4"></noscript>

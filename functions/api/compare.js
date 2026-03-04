@@ -227,6 +227,7 @@ IMPORTANT GUIDELINES:
 - Be objective and data-driven. Both products have merits.
 - meta_title should include the year (2026)
 - shop_keywords: 2-3 Amazon search terms that would help someone BUY this product. For products: "Brand Model name", "Brand Model accessories". For people/non-products: related purchasable items like "Bob Hope DVD collection", "Fred Astaire movies Blu-ray". For services: related physical products. ALWAYS include at least 2 shop_keywords per item.
+- When comparing websites or online services (items whose names end in .com, .org, .net, .io, etc.), set each item's "affiliate_url" to the website's URL (e.g., "https://gocollect.com", "https://gpanalysis.com"). The rendering system will automatically apply partner affiliate tracking where applicable. For website comparisons, price_range can be the subscription/pricing tier (e.g., "Free / $9.99/mo").
 - comparison_intro MUST contain these exact phrasings naturally: "[A] vs [B]", "[A] or [B]", "which is better", "difference between [A] and [B]", and "[A] compared to [B]". This is critical for SEO — the page needs to match how people actually search.
 - meta_description MUST include both "vs" and "or" phrasings of the comparison. Example: "AirPods Pro vs Sony WF-1000XM5 compared. Wondering which is better — AirPods Pro or Sony XM5? We break down sound, ANC, battery, and price."
 - faq MUST always include these three questions (plus 2-3 more topic-specific ones):
@@ -252,7 +253,7 @@ WRITING STYLE — CRITICAL:
             'anthropic-version': '2023-06-01',
         },
         body: JSON.stringify({
-            model: 'claude-sonnet-4-5-20250514',
+            model: 'claude-sonnet-4-6',
             max_tokens: 4096,
             messages: [{ role: 'user', content: prompt }],
             tools: [{ type: 'web_search_20250305', name: 'web_search' }],
@@ -272,9 +273,10 @@ WRITING STYLE — CRITICAL:
         .trim();
     if (!text) return null;
 
-    // Strip markdown fences if present
-    if (text.startsWith('```')) {
-        text = text.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '');
+    // Strip markdown fences if present — handle text before/after fences too
+    const fenceMatch = text.match(/```(?:json)?\s*\n?([\s\S]*?)\n?\s*```/);
+    if (fenceMatch) {
+        text = fenceMatch[1].trim();
     }
 
     try {

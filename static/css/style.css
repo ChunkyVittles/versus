@@ -1770,6 +1770,18 @@ td:nth-child(3) .winner-check {
     font-family: var(--font-body);
 }
 
+.btn-partner {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.partner-logo {
+    height: 20px;
+    width: auto;
+    vertical-align: middle;
+}
+
 .shop-cta {
     background: linear-gradient(135deg, var(--a-50) 0%, var(--bg) 50%, var(--b-50) 100%);
 }

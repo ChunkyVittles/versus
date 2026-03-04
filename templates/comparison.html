@@ -65,7 +65,10 @@
 {% endblock %}
 
 {% block content %}
-{% set show_shop = comp.category not in ebay_skip_categories %}
+{% set link_a = get_item_link(comp.item_a.name) %}
+{% set link_b = get_item_link(comp.item_b.name) %}
+{% set is_website_comp = is_website(comp.item_a.name) or is_website(comp.item_b.name) %}
+{% set show_shop = is_website_comp or comp.category not in ebay_skip_categories %}
 <!-- Breadcrumb -->
 <nav class="breadcrumb">
     <div class="container">
@@ -102,7 +105,7 @@
                     <div class="vs-hero-price">{{ comp.item_a.price_range }}</div>
                     <p class="vs-hero-best-for">{{ comp.item_a.best_for }}</p>
                     {% if show_shop %}
-                    <a href="https://www.ebay.com/sch/i.html?_nkw={{ comp.item_a.name | urlencode }}&mkcid=1&mkrid=711-53200-19255-0&campid={{ ebay_campaign_id }}&toolid=10001" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on eBay</a>
+                    <a href="{{ link_a.url }}" class="btn btn-a btn-shop{% if link_a.is_partner %} btn-partner{% endif %}" rel="{{ link_a.rel }}" target="_blank">{% if link_a.logo %}<img src="{{ link_a.logo }}" alt="{{ link_a.text }}" class="partner-logo"> {% endif %}{{ link_a.text }}</a>
                     {% endif %}
                 </div>
             </div>
@@ -128,7 +131,7 @@
                     <div class="vs-hero-price">{{ comp.item_b.price_range }}</div>
                     <p class="vs-hero-best-for">{{ comp.item_b.best_for }}</p>
                     {% if show_shop %}
-                    <a href="https://www.ebay.com/sch/i.html?_nkw={{ comp.item_b.name | urlencode }}&mkcid=1&mkrid=711-53200-19255-0&campid={{ ebay_campaign_id }}&toolid=10001" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on eBay</a>
+                    <a href="{{ link_b.url }}" class="btn btn-b btn-shop{% if link_b.is_partner %} btn-partner{% endif %}" rel="{{ link_b.rel }}" target="_blank">{% if link_b.logo %}<img src="{{ link_b.logo }}" alt="{{ link_b.text }}" class="partner-logo"> {% endif %}{{ link_b.text }}</a>
                     {% endif %}
                 </div>
             </div>
@@ -303,14 +306,14 @@
 {% if show_shop %}
 <section class="section shop-cta">
     <div class="container">
-        <h2 class="section-title">Ready to Buy?</h2>
+        <h2 class="section-title">{% if is_website_comp %}Visit These Sites{% else %}Ready to Buy?{% endif %}</h2>
         <div class="shop-grid">
             <div class="shop-card shop-card-a {% if comp.verdict == 'a' %}shop-card-winner{% endif %}">
                 {% if comp.verdict == 'a' %}<span class="shop-winner-badge">&#x1F451; Our Pick</span>{% endif %}
                 <h3>{{ comp.item_a.name }}</h3>
                 <p class="shop-price">{{ comp.item_a.price_range }}</p>
                 <div class="shop-links">
-                    <a href="https://www.ebay.com/sch/i.html?_nkw={{ comp.item_a.name | urlencode }}&mkcid=1&mkrid=711-53200-19255-0&campid={{ ebay_campaign_id }}&toolid=10001" class="btn btn-a btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on eBay</a>
+                    <a href="{{ link_a.url }}" class="btn btn-a btn-shop{% if link_a.is_partner %} btn-partner{% endif %}" rel="{{ link_a.rel }}" target="_blank">{% if link_a.logo %}<img src="{{ link_a.logo }}" alt="{{ link_a.text }}" class="partner-logo"> {% endif %}{{ link_a.text }}</a>
                 </div>
             </div>
             <div class="shop-card shop-card-b {% if comp.verdict == 'b' %}shop-card-winner{% endif %}">
@@ -318,11 +321,11 @@
                 <h3>{{ comp.item_b.name }}</h3>
                 <p class="shop-price">{{ comp.item_b.price_range }}</p>
                 <div class="shop-links">
-                    <a href="https://www.ebay.com/sch/i.html?_nkw={{ comp.item_b.name | urlencode }}&mkcid=1&mkrid=711-53200-19255-0&campid={{ ebay_campaign_id }}&toolid=10001" class="btn btn-b btn-shop" rel="nofollow sponsored" target="_blank">&#x1F6D2; Shop on eBay</a>
+                    <a href="{{ link_b.url }}" class="btn btn-b btn-shop{% if link_b.is_partner %} btn-partner{% endif %}" rel="{{ link_b.rel }}" target="_blank">{% if link_b.logo %}<img src="{{ link_b.logo }}" alt="{{ link_b.text }}" class="partner-logo"> {% endif %}{{ link_b.text }}</a>
                 </div>
             </div>
         </div>
-        <p class="shop-disclosure">As an affiliate, we earn from qualifying purchases made through links on this page. Prices shown are approximate.</p>
+        <p class="shop-disclosure">{% if is_website_comp %}Some links on this page are affiliate links. If you sign up through these links, we may earn a commission at no extra cost to you.{% else %}As an affiliate, we earn from qualifying purchases made through links on this page. Prices shown are approximate.{% endif %}</p>
     </div>
 </section>
 {% endif %}
