@@ -202,7 +202,7 @@ async function generateComparison(query, slug, apiKey) {
         'help-desk', 'video-conferencing', 'team-communication', 'budgeting',
         'robo-advisors', 'investing-apps', 'banking', 'personal-finance',
         'tax-software', 'marketing-funnels', 'wordpress-builders', 'podcasting',
-        'writing-software', 'devops', 'web-security', 'video-messaging',
+        'writing-software', 'devops', 'web-security', 'video-messaging', 'animals',
     ];
 
     const prompt = `You are a comparison expert writing for VersusThat.com — a site that compares ANYTHING, not just products. People compare products, websites, services, celebrities, sports teams, programming languages, cities, foods, concepts, and more. Generate a detailed, engaging comparison for: "${query}".
@@ -277,7 +277,8 @@ IMPORTANT GUIDELINES:
 - meta_title should include the year (2026)
 - shop_keywords: 2-3 search terms for related purchasable items. For products: "Brand Model name". For people: related merchandise like "Messi jersey", "Bob Hope DVD collection". For services/websites: related physical products. For concepts/languages: related books or courses. ALWAYS include at least 2 shop_keywords per item.
 - affiliate_url: For ANY service, app, SaaS product, financial product, streaming service, or website being compared, set affiliate_url to the item's official homepage or signup URL (e.g., "https://acorns.com", "https://robinhood.com", "https://netflix.com", "https://notion.so"). For physical products sold by retailers, leave affiliate_url as empty string. The rendering system uses these URLs for "Visit" / "Sign Up" buttons.
-- shop_on_ebay: Set to true if this item is a physical product, game, toy, book, or anything people commonly buy on eBay. Set to false for software, SaaS, online services, streaming platforms, concepts, people, or anything that isn't a purchasable physical item. Examples: Chess sets = true, Rubik's Cube = true, mattresses = true, headphones = true, NordVPN = false, Netflix = false, "The Beatles" = false, "Roth IRA" = false.
+- shop_on_ebay: Set to true if this item is a physical product, game, toy, book, or anything people commonly buy on eBay. Set to false for software, SaaS, online services, streaming platforms, concepts, people, animals/pets, or anything that isn't a purchasable physical item. Examples: Chess sets = true, Rubik's Cube = true, mattresses = true, headphones = true, NordVPN = false, Netflix = false, "The Beatles" = false, "Roth IRA" = false, Cat = false, Dog = false, Goldfish = false.
+- ANIMALS/PETS: If the comparison is between animals or pet breeds (e.g., "Cat vs Dog", "Golden Retriever vs Labrador"), use category "animals" and set shop_on_ebay to false for both items. The system will automatically show shelter links instead of shop links.
 - comparison_intro MUST contain these exact phrasings naturally: "[A] vs [B]", "[A] or [B]", "which is better", "difference between [A] and [B]", and "[A] compared to [B]". This is critical for SEO.
 - meta_description MUST include both "vs" and "or" phrasings of the comparison.
 - faq MUST always include these three questions (plus 2-3 more topic-specific ones):

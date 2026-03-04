@@ -65,12 +65,13 @@
 {% endblock %}
 
 {% block content %}
-{% set link_a = get_item_link(comp.item_a.name, comp.item_a.get('affiliate_url', ''), comp.item_a.get('shop_on_ebay', false)) %}
-{% set link_b = get_item_link(comp.item_b.name, comp.item_b.get('affiliate_url', ''), comp.item_b.get('shop_on_ebay', false)) %}
+{% set link_a = get_item_link(comp.item_a.name, comp.item_a.get('affiliate_url', ''), comp.item_a.get('shop_on_ebay', false), comp.get('category', '')) %}
+{% set link_b = get_item_link(comp.item_b.name, comp.item_b.get('affiliate_url', ''), comp.item_b.get('shop_on_ebay', false), comp.get('category', '')) %}
 {% set is_website_comp = is_website(comp.item_a.name) or is_website(comp.item_b.name) %}
 {% set has_affiliate_links = comp.item_a.get('affiliate_url', '') or comp.item_b.get('affiliate_url', '') %}
 {% set has_ebay_items = comp.item_a.get('shop_on_ebay', false) or comp.item_b.get('shop_on_ebay', false) %}
-{% set show_shop = has_affiliate_links or has_ebay_items or is_website_comp or comp.category not in ebay_skip_categories %}
+{% set is_shelter = comp.category in ['animals'] %}
+{% set show_shop = has_affiliate_links or has_ebay_items or is_website_comp or is_shelter or comp.category not in ebay_skip_categories %}
 <!-- Breadcrumb -->
 <nav class="breadcrumb">
     <div class="container">
@@ -308,7 +309,7 @@
 {% if show_shop %}
 <section class="section shop-cta">
     <div class="container">
-        <h2 class="section-title">{% if is_website_comp %}Visit These Sites{% elif has_affiliate_links %}Get Started{% else %}Ready to Buy?{% endif %}</h2>
+        <h2 class="section-title">{% if is_shelter %}Ready to Adopt?{% elif is_website_comp %}Visit These Sites{% elif has_affiliate_links %}Get Started{% else %}Ready to Buy?{% endif %}</h2>
         <div class="shop-grid">
             <div class="shop-card shop-card-a {% if comp.verdict == 'a' %}shop-card-winner{% endif %}">
                 {% if comp.verdict == 'a' %}<span class="shop-winner-badge">&#x1F451; Our Pick</span>{% endif %}

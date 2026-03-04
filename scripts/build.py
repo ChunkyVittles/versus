@@ -38,7 +38,7 @@ EBAY_SKIP_CATEGORIES = [
     "help-desk", "video-conferencing", "team-communication", "budgeting",
     "robo-advisors", "investing-apps", "banking", "personal-finance",
     "tax-software", "marketing-funnels", "wordpress-builders", "podcasting",
-    "writing-software", "devops", "web-security", "video-messaging",
+    "writing-software", "devops", "web-security", "video-messaging", "animals",
 ]
 
 # Load partner affiliates from data/affiliates.json
@@ -59,8 +59,20 @@ def is_website(name):
     return bool(WEBSITE_TLD_RE.search(last))
 
 
-def get_item_link(name, affiliate_url=None, shop_on_ebay=False):
+SHELTER_CATEGORIES = ["animals"]
+
+def get_item_link(name, affiliate_url=None, shop_on_ebay=False, category=None):
     """Return dict with url, text, rel, logo, is_partner for a comparison item."""
+    # Animals — link to shelter search instead of eBay
+    if category in SHELTER_CATEGORIES:
+        return {
+            "url": "https://www.google.com/search?q=animal+shelters+near+me",
+            "text": "&#x1F43E; Find a Shelter",
+            "rel": "nofollow",
+            "logo": None,
+            "is_partner": False,
+        }
+
     # If affiliate_url is provided and non-empty, check for partner override first
     if affiliate_url:
         try:

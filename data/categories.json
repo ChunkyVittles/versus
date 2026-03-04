@@ -91,5 +91,6 @@
   {"slug": "devops", "name": "DevOps", "icon": "🔄"},
   {"slug": "web-security", "name": "Web Security", "icon": "🔒"},
   {"slug": "video-messaging", "name": "Video Messaging", "icon": "📨"},
+  {"slug": "animals", "name": "Animals & Pets", "icon": "🐾"},
   {"slug": "general", "name": "General", "icon": "⚖️"}
 ]
