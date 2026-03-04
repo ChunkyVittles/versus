@@ -24,15 +24,30 @@ STATIC_DIR = ROOT / "static"
 DIST_DIR = ROOT / "dist"
 DOMAIN = "https://versusthat.com"
 EBAY_CAMPAIGN_ID = "5339144040"
-EBAY_SKIP_CATEGORIES = ["financial", "education", "services", "streaming", "cars", "people", "sports", "entertainment", "software", "websites", "apps", "programming", "travel", "food", "music", "movies", "books", "fashion", "games", "insurance", "credit-cards", "vpn", "web-hosting", "email-marketing", "project-management", "crm", "cloud-storage", "password-managers", "general"]
+EBAY_SKIP_CATEGORIES = [
+    "financial", "education", "services", "streaming", "cars", "people",
+    "sports", "entertainment", "software", "websites", "apps", "programming",
+    "travel", "food", "music", "movies", "books", "fashion", "games",
+    "insurance", "credit-cards", "vpn", "web-hosting", "email-marketing",
+    "project-management", "crm", "cloud-storage", "password-managers", "general",
+    "seo-software", "website-builders", "online-courses", "ecommerce",
+    "accounting", "ai-writing", "design-software", "video-editing",
+    "productivity", "antivirus", "online-education", "payment-processing",
+    "freelance-platforms", "payroll", "social-media-tools", "cloud-computing",
+    "cloud-vps", "domains", "newsletter-platforms", "automation", "scheduling",
+    "help-desk", "video-conferencing", "team-communication", "budgeting",
+    "robo-advisors", "investing-apps", "banking", "personal-finance",
+    "tax-software", "marketing-funnels", "wordpress-builders", "podcasting",
+    "writing-software", "devops", "web-security", "video-messaging",
+]
 
-PARTNER_AFFILIATES = {
-    "gocollect.com": {
-        "url": "https://gocollect.com/?via=versus",
-        "logo": "https://s3.amazonaws.com/gocollect.static/web/logos/GoCollect_Logo_White_Green.svg",
-        "name": "GoCollect",
-    },
-}
+# Load partner affiliates from data/affiliates.json
+_affiliates_path = DATA_DIR / "affiliates.json"
+if _affiliates_path.exists():
+    with open(_affiliates_path) as _f:
+        PARTNER_AFFILIATES = json.load(_f)
+else:
+    PARTNER_AFFILIATES = {}
 
 WEBSITE_TLD_RE = re.compile(r"\.(com|org|net|io|co|app|dev)$", re.I)
 
@@ -46,14 +61,24 @@ def is_website(name):
 
 def get_item_link(name, affiliate_url=None, shop_on_ebay=False):
     """Return dict with url, text, rel, logo, is_partner for a comparison item."""
-    # If affiliate_url is provided and non-empty, use it directly
+    # If affiliate_url is provided and non-empty, check for partner override first
     if affiliate_url:
         try:
             parsed = urlparse(affiliate_url)
             domain = parsed.netloc.replace("www.", "")
-            display = domain.rsplit(".", 1)[0].title()
         except Exception:
-            display = name
+            domain = ""
+        # Check if this domain has a partner tracking URL
+        partner = PARTNER_AFFILIATES.get(domain)
+        if partner:
+            return {
+                "url": partner["url"],
+                "text": f"Visit {partner['name']}",
+                "rel": "nofollow sponsored",
+                "logo": partner.get("logo"),
+                "is_partner": True,
+            }
+        display = domain.rsplit(".", 1)[0].title() if domain else name
         return {
             "url": affiliate_url,
             "text": f"Visit {display}",

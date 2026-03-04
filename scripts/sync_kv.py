@@ -45,6 +45,15 @@ except ImportError:
             except urllib.error.HTTPError as e:
                 return type("Resp", (), {"ok": False, "status_code": e.code, "text": e.read().decode()})()
 
+        @staticmethod
+        def put(url, headers=None, data=None):
+            req = urllib.request.Request(url, data=data.encode() if isinstance(data, str) else data, headers=headers or {}, method="PUT")
+            try:
+                resp = urllib.request.urlopen(req)
+                return type("Resp", (), {"ok": True})()
+            except urllib.error.HTTPError as e:
+                return type("Resp", (), {"ok": False, "status_code": e.code, "text": e.read().decode()})()
+
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data" / "comparisons"
@@ -144,6 +153,34 @@ def get_kv_value(token, key):
         return None
 
 
+def put_kv_value(token, key, value):
+    """Write a value to KV."""
+    data = json.dumps(value) if not isinstance(value, str) else value
+    resp = requests.put(
+        f"{KV_BASE}/values/{key}",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+        },
+        data=data,
+    )
+    return resp.ok
+
+
+def upload_affiliates(token):
+    """Upload data/affiliates.json to KV key 'affiliates'."""
+    affiliates_path = ROOT / "data" / "affiliates.json"
+    if not affiliates_path.exists():
+        print("  No data/affiliates.json found, skipping.")
+        return
+    with open(affiliates_path) as f:
+        affiliates = json.load(f)
+    if put_kv_value(token, "affiliates", affiliates):
+        print(f"  Uploaded affiliates.json to KV ({len(affiliates)} partners)")
+    else:
+        print("  Warning: Failed to upload affiliates.json to KV")
+
+
 def sync():
     print("Syncing KV comparisons to static files...")
 
@@ -154,6 +191,9 @@ def sync():
     print(f"  {len(existing)} existing static comparisons")
 
     token = get_token()
+
+    # Upload affiliates.json to KV
+    upload_affiliates(token)
 
     # List all comparison keys in KV
     keys = list_kv_keys(token)

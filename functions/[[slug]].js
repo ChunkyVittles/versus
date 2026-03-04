@@ -19,6 +19,12 @@ export async function onRequest(context) {
         return next();
     }
 
+    // Load partner affiliates from KV
+    try {
+        const affiliatesData = await env.COMPARISONS_KV.get('affiliates', 'json');
+        if (affiliatesData) PARTNER_AFFILIATES = affiliatesData;
+    } catch (e) { /* use empty default */ }
+
     if (!data) {
         // Check if this is a generation request with product names
         const itemA = url.searchParams.get('a');
@@ -48,15 +54,25 @@ export async function onRequest(context) {
 }
 
 const EBAY_CAMPAIGN_ID = '5339144040';
-const EBAY_SKIP_CATEGORIES = ['financial', 'education', 'services', 'streaming', 'cars', 'people', 'sports', 'entertainment', 'software', 'websites', 'apps', 'programming', 'travel', 'food', 'music', 'movies', 'books', 'fashion', 'games', 'insurance', 'credit-cards', 'vpn', 'web-hosting', 'email-marketing', 'project-management', 'crm', 'cloud-storage', 'password-managers', 'general'];
+const EBAY_SKIP_CATEGORIES = [
+    'financial', 'education', 'services', 'streaming', 'cars', 'people',
+    'sports', 'entertainment', 'software', 'websites', 'apps', 'programming',
+    'travel', 'food', 'music', 'movies', 'books', 'fashion', 'games',
+    'insurance', 'credit-cards', 'vpn', 'web-hosting', 'email-marketing',
+    'project-management', 'crm', 'cloud-storage', 'password-managers', 'general',
+    'seo-software', 'website-builders', 'online-courses', 'ecommerce',
+    'accounting', 'ai-writing', 'design-software', 'video-editing',
+    'productivity', 'antivirus', 'online-education', 'payment-processing',
+    'freelance-platforms', 'payroll', 'social-media-tools', 'cloud-computing',
+    'cloud-vps', 'domains', 'newsletter-platforms', 'automation', 'scheduling',
+    'help-desk', 'video-conferencing', 'team-communication', 'budgeting',
+    'robo-advisors', 'investing-apps', 'banking', 'personal-finance',
+    'tax-software', 'marketing-funnels', 'wordpress-builders', 'podcasting',
+    'writing-software', 'devops', 'web-security', 'video-messaging',
+];
 
-const PARTNER_AFFILIATES = {
-    'gocollect.com': {
-        url: 'https://gocollect.com/?via=versus',
-        logo: 'https://s3.amazonaws.com/gocollect.static/web/logos/GoCollect_Logo_White_Green.svg',
-        name: 'GoCollect',
-    },
-};
+// Loaded from KV at request time
+let PARTNER_AFFILIATES = {};
 
 const WEBSITE_TLD_RE = /\.(com|org|net|io|co|app|dev)$/i;
 
@@ -71,13 +87,17 @@ function getItemLink(item) {
     const affiliateUrl = item?.affiliate_url || '';
     const shopOnEbay = item?.shop_on_ebay || false;
 
-    // If affiliate_url is provided and non-empty, use it directly
+    // If affiliate_url is provided, check for partner override first
     if (affiliateUrl) {
-        let display = name;
+        let domain = '';
         try {
-            const domain = new URL(affiliateUrl).hostname.replace('www.', '');
-            display = domain.replace(/\.[^.]+$/, '').replace(/\b\w/g, c => c.toUpperCase());
-        } catch (e) { /* use name */ }
+            domain = new URL(affiliateUrl).hostname.replace('www.', '');
+        } catch (e) { /* */ }
+        const partner = PARTNER_AFFILIATES[domain];
+        if (partner) {
+            return { url: partner.url, text: `Visit ${partner.name}`, rel: 'nofollow sponsored', logo: partner.logo || null, isPartner: true };
+        }
+        const display = domain ? domain.replace(/\.[^.]+$/, '').replace(/\b\w/g, c => c.toUpperCase()) : name;
         return { url: affiliateUrl, text: `Visit ${display}`, rel: 'nofollow sponsored', logo: null, isPartner: false };
     }
 

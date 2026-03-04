@@ -67,6 +67,24 @@ export async function onRequestPost(context) {
         );
     }
 
+    // Swap affiliate_url domains with partner tracking URLs if matched
+    try {
+        const affiliates = await env.COMPARISONS_KV.get('affiliates', 'json');
+        if (affiliates) {
+            for (const item of [comparisonData.item_a, comparisonData.item_b]) {
+                if (item?.affiliate_url) {
+                    try {
+                        const domain = new URL(item.affiliate_url).hostname.replace('www.', '');
+                        const partner = affiliates[domain];
+                        if (partner) {
+                            item.affiliate_url = partner.url;
+                        }
+                    } catch (e) { /* skip invalid URLs */ }
+                }
+            }
+        }
+    } catch (e) { /* affiliates KV read failed, proceed without swap */ }
+
     // Store in KV
     await env.COMPARISONS_KV.put(`comp:${slug}`, JSON.stringify(comparisonData));
 
@@ -168,7 +186,16 @@ async function generateComparison(query, slug, apiKey) {
         'kitchen-appliances', 'home-security', 'baby-products', 'insurance',
         'credit-cards', 'vpn', 'web-hosting', 'email-marketing',
         'project-management', 'crm', 'cloud-storage', 'password-managers',
-        'home-appliances', 'outdoor-gear', 'speakers'
+        'home-appliances', 'outdoor-gear', 'speakers',
+        'seo-software', 'website-builders', 'online-courses', 'ecommerce',
+        'accounting', 'ai-writing', 'design-software', 'video-editing',
+        'productivity', 'antivirus', 'online-education', 'payment-processing',
+        'freelance-platforms', 'payroll', 'social-media-tools', 'cloud-computing',
+        'cloud-vps', 'domains', 'newsletter-platforms', 'automation', 'scheduling',
+        'help-desk', 'video-conferencing', 'team-communication', 'budgeting',
+        'robo-advisors', 'investing-apps', 'banking', 'personal-finance',
+        'tax-software', 'marketing-funnels', 'wordpress-builders', 'podcasting',
+        'writing-software', 'devops', 'web-security', 'video-messaging',
     ];
 
     const prompt = `You are a comparison expert writing for VersusThat.com — a site that compares ANYTHING, not just products. People compare products, websites, services, celebrities, sports teams, programming languages, cities, foods, concepts, and more. Generate a detailed, engaging comparison for: "${query}".
