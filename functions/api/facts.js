@@ -23,7 +23,7 @@ export async function onRequestPost(context) {
             );
         }
 
-        const prompt = `Generate 6 short, interesting facts or bits of history about these two subjects: "${itemA}" and "${itemB}".
+        const prompt = `Generate 20 short, interesting facts or bits of history about these two subjects: "${itemA}" and "${itemB}".
 
 Rules:
 - Alternate between the two subjects (fact about A, fact about B, fact about A, etc.)
@@ -33,7 +33,7 @@ Rules:
 - If these are websites/services, mention when they launched, who founded them, interesting stats
 - If these are concepts or generic things, find the most interesting angles
 - No filler phrases like "Did you know" or "Interestingly" — just state the fact directly
-- Return ONLY a JSON array of 12 strings, nothing else
+- Return ONLY a JSON array of 20 strings, nothing else
 
 Example: ["The Vitamix company was founded in 1921.", "Ninja's parent company SharkNinja started as a vacuum company.", ...]`;
 
@@ -46,7 +46,7 @@ Example: ["The Vitamix company was founded in 1921.", "Ninja's parent company Sh
             },
             body: JSON.stringify({
                 model: 'claude-haiku-4-5-20251001',
-                max_tokens: 1024,
+                max_tokens: 2048,
                 messages: [{ role: 'user', content: prompt }],
             }),
         });
@@ -72,7 +72,7 @@ Example: ["The Vitamix company was founded in 1921.", "Ninja's parent company Sh
         }
 
         return Response.json(
-            { facts: facts.slice(0, 12) },
+            { facts: facts.slice(0, 20) },
             { headers: corsHeaders }
         );
     } catch (e) {
