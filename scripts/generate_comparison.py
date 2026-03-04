@@ -86,6 +86,7 @@ Return ONLY valid JSON matching this exact structure (no markdown, no code fence
   }},
   "category": "{category}",
   "comparison_summary": "2-3 sentence summary of the comparison and our recommendation.",
+  "comparison_intro": "A 2-3 sentence opening paragraph for the page. MUST naturally include ALL of these phrasings woven into real sentences (not a keyword-stuffed list): '[A] vs [B]', '[A] or [B]', 'should you buy [A] or [B]', 'which is better [A] or [B]', 'difference between [A] and [B]', '[A] compared to [B]'. Write it as a helpful, natural-sounding intro that a real person would want to read.",
   "verdict": "a" or "b" or "tie",
   "verdict_text": "One-sentence verdict that includes both product names",
   "key_differences": [
@@ -116,7 +117,22 @@ IMPORTANT GUIDELINES:
 - Be objective and data-driven. Both products have merits — explain the tradeoffs clearly.
 - The verdict should have a clear winner with a nuanced explanation (not just "X is better")
 - meta_title should include the current year (2026)
-- key_differences should include real specs (wattage, weight, dimensions, battery life, etc.) not vague descriptions"""
+- key_differences should include real specs (wattage, weight, dimensions, battery life, etc.) not vague descriptions
+- comparison_intro MUST contain these exact phrasings naturally: "[A] vs [B]", "[A] or [B]", "which is better", "difference between [A] and [B]", and "[A] compared to [B]". This is critical for SEO — the page needs to match how people actually search.
+- meta_description MUST include both "vs" and "or" phrasings of the comparison. Example: "AirPods Pro vs Sony WF-1000XM5 compared. Wondering which is better — AirPods Pro or Sony XM5? We break down sound, ANC, battery, and price."
+- faq MUST always include these three questions (plus 2-3 more topic-specific ones):
+  1. "Is [A] better than [B]?" — answer should directly state which is better and why in 2-3 sentences.
+  2. "Should I buy [A] or [B]?" — answer should give a clear recommendation based on use case.
+  3. "What is the difference between [A] and [B]?" — answer should summarize the 3-4 biggest differences.
+- seo_content must naturally include both orderings: "[A] vs [B]" AND "[B] vs [A]", plus "[A] or [B]", plus "compared to". Don't force them — weave them into the analysis naturally.
+
+WRITING STYLE — CRITICAL:
+- BANNED WORDS — never use any of these: ultimately, comprehensive, robust, seamless, intuitive, significant, substantial, crucial, essential, notably, remarkably, conversely, furthermore, moreover, game-changer, stands out, remains one of, dive into, let's explore, delve, navigate the, elevate, testament to, it's worth noting, whether you're looking, in today's, in the world of, at the end of the day, boils down to, when it comes to, the bottom line
+- Do NOT end meta_title with "Which Should You Buy?" — vary the endings. Use specific angles like "Head-to-Head Specs Breakdown", "The Key Differences Explained", "Worth the Upgrade?", "Compared for [specific use case]", "What $X Gets You", or ask a specific question relevant to the comparison.
+- seo_content length MUST vary naturally: 250-350 words for simple product comparisons, 400-550 for technical topics, 550-700 for complex financial/educational topics. Do NOT always write exactly 400 words.
+- Write with a confident editorial voice. Use occasional first person ("I'd pick", "in my testing", "from what I've seen"). Have strong opinions. Sound like one knowledgeable person, not a committee.
+- Vary paragraph structure. Not every paragraph should be the same length. Use some short punchy sentences. Mix in longer explanatory ones.
+- Start the seo_content differently every time. Do NOT open with "The [X] vs [Y] comparison..." or "The decision between..." — jump straight into a specific insight, opinion, or surprising fact."""
 
     print(f"  Calling Claude API for '{keyword}'...")
 

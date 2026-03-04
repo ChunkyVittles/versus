@@ -227,6 +227,14 @@ def build_site():
         page_dir.mkdir(parents=True, exist_ok=True)
         write_page(page_dir / "index.html", html)
 
+    # --- Contact page ---
+    print("  Building contact page...")
+    tpl = env.get_template("contact.html")
+    html = tpl.render(**common)
+    page_dir = DIST_DIR / "contact"
+    page_dir.mkdir(parents=True, exist_ok=True)
+    write_page(page_dir / "index.html", html)
+
     # --- 404 page ---
     print("  Building 404...")
     html_404 = tpl.render(
@@ -308,8 +316,8 @@ def build_sitemap(comparisons, categories):
         urls.append({"loc": f"/categories/{cat['slug']}/", "priority": "0.6", "changefreq": "weekly"})
 
     # Static pages
-    for slug in ["about", "privacy", "terms"]:
-        urls.append({"loc": f"/{slug}/", "priority": "0.3", "changefreq": "monthly"})
+    for slug in ["about", "privacy", "terms", "contact"]:
+        urls.append({"loc": f"/{slug}/", "priority": "0.3" if slug != "contact" else "0.4", "changefreq": "monthly"})
 
     xml_urls = ""
     for u in urls:
@@ -337,24 +345,16 @@ def write_page(path, content):
 def generate_about_content():
     return """
 <h2>What is VersusThat?</h2>
-<p>VersusThat is a product comparison site built for people who are stuck between two choices. Whether you're deciding between blenders, smartphones, headphones, or mattresses, we break down the differences so you can pick with confidence.</p>
+<p>VersusThat is a product comparison site for people stuck between two choices. Whether you're deciding between blenders, smartphones, headphones, or mattresses, we break down the specs and tradeoffs so you don't have to wade through marketing fluff.</p>
 
-<h2>Our Approach</h2>
-<p>Every comparison on VersusThat follows the same rigorous process:</p>
-<ul>
-    <li><strong>Research:</strong> We analyze specs, reviews, and real-world performance data for every product we cover.</li>
-    <li><strong>Compare:</strong> We put products side by side across the dimensions that actually matter — not just marketing bullet points.</li>
-    <li><strong>Verdict:</strong> We give you a clear recommendation with reasoning, not wishy-washy "it depends" non-answers.</li>
-</ul>
-
-<h2>Why Trust Us?</h2>
-<p>We're not paid by brands. Our comparisons are based on publicly available specifications, expert reviews, and real user feedback. When we recommend a product, it's because we genuinely believe it's the better choice for the stated use case.</p>
+<h2>How We Compare</h2>
+<p>Every comparison starts with the details that matter: real specifications, current street prices, and the practical differences that affect your daily use. We look at what each option does well, where it falls short, and who it's actually best for. Then we make a call.</p>
 
 <h2>Affiliate Disclosure</h2>
-<p>VersusThat may earn a commission when you click our affiliate links and make a purchase. This helps us keep the site running and free to use. Our affiliate relationships never influence our comparisons or recommendations.</p>
+<p>VersusThat earns a commission when you click our affiliate links and make a purchase. This keeps the site free. Our affiliate relationships do not influence which product wins a comparison.</p>
 
 <h2>Contact</h2>
-<p>Have a comparison you'd like us to cover? Found an error? We'd love to hear from you. Reach out at hello@versusthat.com.</p>
+<p>Have a comparison you'd like to see? Found something wrong? <a href="/contact/">Send us a message.</a></p>
 """
 
 
@@ -390,7 +390,7 @@ def generate_privacy_content():
 <p>We may update this policy from time to time. Changes will be reflected on this page with an updated date.</p>
 
 <h2>Contact</h2>
-<p>Questions about this policy? Contact us at hello@versusthat.com.</p>
+<p>Questions about this policy? <a href="/contact/">Contact us.</a></p>
 """
 
 
@@ -425,7 +425,7 @@ def generate_terms_content():
 <p>We reserve the right to modify these terms at any time. Continued use of the site constitutes acceptance of updated terms.</p>
 
 <h2>Contact</h2>
-<p>Questions about these terms? Contact us at hello@versusthat.com.</p>
+<p>Questions about these terms? <a href="/contact/">Contact us.</a></p>
 """
 
 

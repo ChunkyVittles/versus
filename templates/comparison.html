@@ -31,30 +31,14 @@
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "{{ comp.item_a.name }}",
-    "brand": {"@type": "Brand", "name": "{{ comp.item_a.brand }}"},
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "{{ comp.item_a.rating }}",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "1"
-    }
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "{{ comp.item_b.name }}",
-    "brand": {"@type": "Brand", "name": "{{ comp.item_b.brand }}"},
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "{{ comp.item_b.rating }}",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "1"
+    "@type": "Article",
+    "headline": "{{ comp.meta_title }}",
+    "description": "{{ comp.meta_description }}",
+    "datePublished": "{{ comp.date_published }}",
+    "dateModified": "{{ comp.date_updated }}",
+    "publisher": {
+        "@type": "Organization",
+        "name": "VersusThat"
     }
 }
 </script>
@@ -155,6 +139,15 @@
         </div>
     </div>
 </section>
+
+<!-- Comparison Intro -->
+{% if comp.comparison_intro %}
+<section class="section comparison-intro-section">
+    <div class="container">
+        <p class="comparison-intro">{{ comp.comparison_intro }}</p>
+    </div>
+</section>
+{% endif %}
 
 <!-- Scoreboard -->
 <section class="scoreboard-section">
@@ -268,7 +261,7 @@
 <section class="section">
     <div class="container">
         <div class="analysis-content">
-            <h2 class="section-title">Detailed Analysis</h2>
+            <h2 class="section-title">{{ comp.item_a.name }} vs {{ comp.item_b.name }}: Full Comparison</h2>
             <div class="seo-content">
                 {{ comp.seo_content | replace('\n\n', '</p><p>') | safe }}
             </div>

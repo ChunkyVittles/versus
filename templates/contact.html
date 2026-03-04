@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}Contact Us — VersusThat{% endblock %}
+{% block description %}Get in touch with the VersusThat team.{% endblock %}
+{% block canonical_path %}/contact/{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container" style="max-width: 640px;">
+        <h1 class="section-title" style="margin-top: 2rem;">Contact Us</h1>
+        <p style="margin-bottom: 2rem; color: #64748b;">Have a comparison you'd like to see? Found something wrong? Let us know.</p>
+
+        <div id="contact-form-wrap">
+            <div style="margin-bottom: 1.5rem;">
+                <label for="contact-name" style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Name</label>
+                <input type="text" id="contact-name" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #e2e8f0; border-radius: 8px; font-family: var(--font-body); font-size: 1rem;">
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+                <label for="contact-email" style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Email</label>
+                <input type="email" id="contact-email" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #e2e8f0; border-radius: 8px; font-family: var(--font-body); font-size: 1rem;">
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+                <label for="contact-message" style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Message</label>
+                <textarea id="contact-message" rows="5" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #e2e8f0; border-radius: 8px; font-family: var(--font-body); font-size: 1rem; resize: vertical;"></textarea>
+            </div>
+            <div id="contact-error" style="color: #ef4444; margin-bottom: 1rem; display: none;"></div>
+            <button id="contact-submit" class="btn btn-a" style="width: 100%; padding: 1rem; font-size: 1.05rem;">Send Message</button>
+        </div>
+        <div id="contact-success" style="display: none; text-align: center; padding: 3rem 0;">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Message Sent</h2>
+            <p style="color: #64748b;">Thanks for reaching out. We'll get back to you soon.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function() {
+    var form = document.getElementById('contact-form-wrap');
+    var btn = document.getElementById('contact-submit');
+    var errorEl = document.getElementById('contact-error');
+    var successEl = document.getElementById('contact-success');
+
+    btn.addEventListener('click', function() {
+        var name = document.getElementById('contact-name').value.trim();
+        var email = document.getElementById('contact-email').value.trim();
+        var message = document.getElementById('contact-message').value.trim();
+
+        errorEl.style.display = 'none';
+
+        if (!name || !email || !message) {
+            errorEl.textContent = 'Please fill in all fields.';
+            errorEl.style.display = 'block';
+            return;
+        }
+        if (message.length < 10) {
+            errorEl.textContent = 'Please write a longer message.';
+            errorEl.style.display = 'block';
+            return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+
+        fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: name, email: email, message: message })
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            if (data.error) {
+                errorEl.textContent = data.error;
+                errorEl.style.display = 'block';
+                btn.disabled = false;
+                btn.textContent = 'Send Message';
+                return;
+            }
+            form.style.display = 'none';
+            successEl.style.display = 'block';
+        })
+        .catch(function() {
+            errorEl.textContent = 'Something went wrong. Please try again.';
+            errorEl.style.display = 'block';
+            btn.disabled = false;
+            btn.textContent = 'Send Message';
+        });
+    });
+})();
+</script>
+{% endblock %}

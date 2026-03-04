@@ -20,6 +20,21 @@ export async function onRequest(context) {
     }
 
     if (!data) {
+        // Check if this is a generation request with product names
+        const itemA = url.searchParams.get('a');
+        const itemB = url.searchParams.get('b');
+
+        if (itemA && itemB) {
+            // Return skeleton/generating page
+            const html = renderGeneratingPage(path, itemA, itemB);
+            return new Response(html, {
+                headers: {
+                    'Content-Type': 'text/html; charset=utf-8',
+                    'Cache-Control': 'no-store',
+                },
+            });
+        }
+
         return next();
     }
 
@@ -205,6 +220,7 @@ function renderComparisonPage(comp) {
     @font-face{font-family:'Figtree';font-style:normal;font-weight:500 800;font-display:swap;src:url(/fonts/figtree-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
     @font-face{font-family:'Figtree';font-style:normal;font-weight:500 800;font-display:swap;src:url(/fonts/figtree-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:'Figtree',sans-serif;color:#1e293b;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}h1,h2,h3,h4{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;line-height:1.1}a{color:inherit;text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.site-header{position:sticky;top:0;z-index:100;background:#111;border-bottom:none}.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}.logo{font-family:'Bebas Neue',Impact,sans-serif;font-size:1.6rem;font-weight:400;letter-spacing:.04em;color:#fff;display:inline-flex;align-items:center}.logo-vs-mark{display:inline-block;background:#ffd60a;color:#111;padding:2px 8px;border-radius:4px;font-family:'Figtree',sans-serif;font-weight:800;font-size:.5em;vertical-align:middle;margin:0 2px;letter-spacing:0}.main-nav{display:flex;gap:2rem;align-items:center}.main-nav a{font-weight:600;color:rgba(255,255,255,.7);font-size:.95rem}.mobile-menu-btn{display:none;flex-direction:column;gap:5px;padding:4px;cursor:pointer;border:none;background:none}.mobile-menu-btn span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}.mobile-nav{display:none;background:#111;border-bottom:1px solid rgba(255,255,255,.1);padding:1rem 1.5rem}.header-actions{display:flex;align-items:center;gap:.5rem}.site-search-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:none;color:rgba(255,255,255,.7);cursor:pointer;border-radius:50%}.site-search-panel{position:fixed;top:64px;left:0;right:0;z-index:99;background:#111;padding:1rem 0;box-shadow:0 8px 32px rgba(0,0,0,.3);transform:translateY(-100%);opacity:0;visibility:hidden;transition:transform .25s,opacity .25s,visibility .25s}.site-search-panel.active{transform:translateY(0);opacity:1;visibility:visible}
+    .comparison-intro-section{background:#f8fafc;padding:2rem 0}.comparison-intro{font-size:1.15rem;line-height:1.75;color:#475569;max-width:800px;margin:0 auto;text-align:center}
     </style>
     <link rel="preload" href="/css/style.css?v=5" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/css/style.css?v=4"></noscript>
@@ -212,10 +228,7 @@ function renderComparisonPage(comp) {
     {"@context":"https://schema.org","@type":"WebPage","name":${JSON.stringify(comp.meta_title)},"url":"https://versusthat.com/${comp.slug}/","datePublished":"${comp.date_published}","dateModified":"${comp.date_updated}","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://versusthat.com/"},{"@type":"ListItem","position":2,"name":"${esc(categoryName)}","item":"https://versusthat.com/categories/${comp.category}/"},{"@type":"ListItem","position":3,"name":"${esc(comp.item_a?.name)} vs ${esc(comp.item_b?.name)}"}]}}
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Product","name":${JSON.stringify(comp.item_a?.name)},"brand":{"@type":"Brand","name":${JSON.stringify(comp.item_a?.brand)}},"aggregateRating":{"@type":"AggregateRating","ratingValue":"${comp.item_a?.rating}","bestRating":"5","worstRating":"1","ratingCount":"1"}}
-    </script>
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Product","name":${JSON.stringify(comp.item_b?.name)},"brand":{"@type":"Brand","name":${JSON.stringify(comp.item_b?.brand)}},"aggregateRating":{"@type":"AggregateRating","ratingValue":"${comp.item_b?.rating}","bestRating":"5","worstRating":"1","ratingCount":"1"}}
+    {"@context":"https://schema.org","@type":"Article","headline":${JSON.stringify(comp.meta_title)},"description":${JSON.stringify(comp.meta_description)},"datePublished":"${comp.date_published}","dateModified":"${comp.date_updated}","publisher":{"@type":"Organization","name":"VersusThat"}}
     </script>
     ${faqSchema}
 </head>
@@ -298,6 +311,11 @@ function renderComparisonPage(comp) {
                 </div>
             </div>
         </section>
+        ${comp.comparison_intro ? `<section class="section comparison-intro-section">
+            <div class="container">
+                <p class="comparison-intro">${esc(comp.comparison_intro)}</p>
+            </div>
+        </section>` : ''}
         ${scoreboardHtml}
         <section class="section">
             <div class="container">
@@ -326,7 +344,7 @@ function renderComparisonPage(comp) {
         <section class="section">
             <div class="container">
                 <div class="analysis-content">
-                    <h2 class="section-title">Detailed Analysis</h2>
+                    <h2 class="section-title">${esc(comp.item_a?.name)} vs ${esc(comp.item_b?.name)}: Full Comparison</h2>
                     <div class="seo-content">${seoContentHtml}</div>
                 </div>
             </div>
@@ -342,7 +360,7 @@ function renderComparisonPage(comp) {
     <footer class="site-footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; ${new Date().getFullYear()} VersusThat. All rights reserved.</p>
+                <p>&copy; ${new Date().getFullYear()} VersusThat. All rights reserved. <a href="/contact/" style="color:rgba(255,255,255,0.5);font-size:0.85rem;">Contact</a></p>
                 <p class="footer-disclaimer">We may earn a commission from affiliate links. This does not influence our comparisons.</p>
             </div>
         </div>
@@ -361,6 +379,181 @@ function renderComparisonPage(comp) {
       function cl(){document.addEventListener('click',function(ev){const a=ev.target.closest('a[href]');if(!a)return;const h=a.href,r=a.getAttribute('rel')||'';if(r.indexOf('sponsored')>=0){e('affiliate_click',{url:h,text:(a.textContent||'').slice(0,50),product:a.getAttribute('aria-label')||''})}else if(h.indexOf('http')===0&&h.indexOf(location.hostname)<0){e('outbound_click',{url:h,text:(a.textContent||'').slice(0,50)})}})}
       function init(){pl();window.addEventListener('scroll',sd,{passive:true});sv();cl();setInterval(function(){e('time_on_page',{elapsed:ts()-T})},30000);setInterval(send,5000);window.addEventListener('beforeunload',function(){Object.keys(V).forEach(function(id){if(V[id].start){V[id].total+=(ts()-V[id].start);e('section_visible',{section:id,duration:V[id].total,final:true})}});send()});setTimeout(send,1000)}
       if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}
+    })();
+    </script>
+</body>
+</html>`;
+}
+
+function renderGeneratingPage(slug, itemA, itemB) {
+    const escA = esc(itemA);
+    const escB = esc(itemB);
+    const jsA = JSON.stringify(itemA);
+    const jsB = JSON.stringify(itemB);
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escA} vs ${escB} — VersusThat</title>
+    <meta name="robots" content="noindex">
+    <link rel="preload" href="/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+    @font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/bebas-neue-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    @font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/bebas-neue-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    @font-face{font-family:'Figtree';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/figtree-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    @font-face{font-family:'Figtree';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/figtree-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    @font-face{font-family:'Figtree';font-style:normal;font-weight:500 800;font-display:swap;src:url(/fonts/figtree-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    @font-face{font-family:'Figtree';font-style:normal;font-weight:500 800;font-display:swap;src:url(/fonts/figtree-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:'Figtree',sans-serif;color:#1e293b;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}h1,h2,h3,h4{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;line-height:1.1}a{color:inherit;text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.site-header{position:sticky;top:0;z-index:100;background:#111;border-bottom:none}.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}.logo{font-family:'Bebas Neue',Impact,sans-serif;font-size:1.6rem;font-weight:400;letter-spacing:.04em;color:#fff;display:inline-flex;align-items:center}.logo-vs-mark{display:inline-block;background:#ffd60a;color:#111;padding:2px 8px;border-radius:4px;font-family:'Figtree',sans-serif;font-weight:800;font-size:.5em;vertical-align:middle;margin:0 2px;letter-spacing:0}.main-nav{display:flex;gap:2rem;align-items:center}.main-nav a{font-weight:600;color:rgba(255,255,255,.7);font-size:.95rem}.mobile-menu-btn{display:none;flex-direction:column;gap:5px;padding:4px;cursor:pointer;border:none;background:none}.mobile-menu-btn span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}.mobile-nav{display:none;background:#111;border-bottom:1px solid rgba(255,255,255,.1);padding:1rem 1.5rem}.header-actions{display:flex;align-items:center;gap:.5rem}.site-search-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:none;color:rgba(255,255,255,.7);cursor:pointer;border-radius:50%}.site-search-panel{position:fixed;top:64px;left:0;right:0;z-index:99;background:#111;padding:1rem 0;box-shadow:0 8px 32px rgba(0,0,0,.3);transform:translateY(-100%);opacity:0;visibility:hidden;transition:transform .25s,opacity .25s,visibility .25s}.site-search-panel.active{transform:translateY(0);opacity:1;visibility:visible}
+    .gen-container{max-width:600px;margin:3rem auto;padding:0 1.5rem;text-align:center}
+    .gen-progress-track{background:rgba(255,255,255,0.1);border-radius:999px;height:6px;overflow:hidden;margin:2rem 0}
+    .gen-progress-bar{height:100%;background:linear-gradient(90deg,#3b82f6,#ffd60a);border-radius:999px;width:0%;transition:width 0.3s ease}
+    .gen-status{color:rgba(255,255,255,0.7);font-size:1.1rem;min-height:2rem}
+    .gen-error{display:none;margin-top:2rem}
+    .gen-error-msg{color:#ef4444;font-size:1.1rem;margin-bottom:1.5rem}
+    .btn{display:inline-block;padding:.75rem 1.5rem;border-radius:8px;font-weight:600;font-size:1rem;cursor:pointer;border:none;background:#ffd60a;color:#111;text-decoration:none}
+    </style>
+    <link rel="preload" href="/css/style.css?v=5" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/style.css?v=5"></noscript>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="logo">VERSUS<span class="logo-vs-mark">THAT</span></a>
+            <nav class="main-nav">
+                <a href="/categories/">Categories</a>
+                <a href="/about/">About</a>
+            </nav>
+            <div class="header-actions">
+                <button class="site-search-btn" id="site-search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+    <div class="site-search-panel" id="site-search-panel">
+        <div class="container">
+            <div class="site-search-input-wrap">
+                <svg class="site-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                <input type="text" id="site-search-input" placeholder="Search for a product..." autocomplete="off">
+                <button class="site-search-close" id="site-search-close" aria-label="Close search">&times;</button>
+            </div>
+            <div class="site-search-results" id="site-search-results"></div>
+        </div>
+    </div>
+    <nav class="mobile-nav">
+        <a href="/">Home</a>
+        <a href="/categories/">Categories</a>
+        <a href="/about/">About</a>
+        <a href="#" id="mobile-search-link">Search</a>
+    </nav>
+    <main>
+        <section class="vs-hero">
+            <div class="vs-hero-split">
+                <div class="vs-hero-side vs-hero-a">
+                    <div class="vs-hero-content">
+                        <span class="vs-hero-label">Option A</span>
+                        <h2 class="vs-hero-name">${escA}</h2>
+                    </div>
+                </div>
+                <div class="vs-badge-wrapper">
+                    <div class="vs-badge">VS</div>
+                </div>
+                <div class="vs-hero-side vs-hero-b">
+                    <div class="vs-hero-content">
+                        <span class="vs-hero-label">Option B</span>
+                        <h2 class="vs-hero-name">${escB}</h2>
+                    </div>
+                </div>
+            </div>
+            <h1 class="vs-hero-title container">${escA} vs ${escB}</h1>
+        </section>
+        <section style="background:#111;padding-bottom:4rem;">
+            <div class="gen-container">
+                <div class="gen-progress-track">
+                    <div class="gen-progress-bar" id="gen-progress-bar"></div>
+                </div>
+                <div class="gen-status" id="gen-status">Researching products...</div>
+                <div class="gen-error" id="gen-error"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; ${new Date().getFullYear()} VersusThat. All rights reserved. <a href="/contact/" style="color:rgba(255,255,255,0.5);font-size:0.85rem;">Contact</a></p>
+                <p class="footer-disclaimer">We may earn a commission from affiliate links. This does not influence our comparisons.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/main.js?v=5" defer></script>
+    <script>
+    (function() {
+        var slug = ${JSON.stringify(slug)};
+        var itemA = ${jsA};
+        var itemB = ${jsB};
+        var query = itemA + ' vs ' + itemB;
+        var progressBar = document.getElementById('gen-progress-bar');
+        var statusText = document.getElementById('gen-status');
+        var errorArea = document.getElementById('gen-error');
+
+        var phases = [
+            'Researching products...',
+            'Comparing specifications...',
+            'Analyzing pros & cons...',
+            'Writing detailed analysis...',
+            'Reviewing for accuracy...'
+        ];
+        var phaseIdx = 0;
+
+        var phaseInterval = setInterval(function() {
+            phaseIdx = Math.min(phaseIdx + 1, phases.length - 1);
+            statusText.textContent = phases[phaseIdx];
+        }, 3500);
+
+        var progress = 0;
+        var progressInterval = setInterval(function() {
+            progress += (90 - progress) * 0.03;
+            progressBar.style.width = progress + '%';
+        }, 100);
+
+        fetch('/api/compare', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ query: query })
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            clearInterval(phaseInterval);
+            clearInterval(progressInterval);
+
+            if (data.error) {
+                statusText.textContent = '';
+                errorArea.innerHTML = '<p class="gen-error-msg">' + data.error + '</p>' +
+                    '<a href="/" class="btn">Back to Home</a>';
+                errorArea.style.display = 'block';
+                return;
+            }
+
+            progressBar.style.width = '100%';
+            statusText.textContent = 'Done! Loading results...';
+            setTimeout(function() {
+                window.location.replace('/' + data.slug + '/');
+            }, 500);
+        })
+        .catch(function() {
+            clearInterval(phaseInterval);
+            clearInterval(progressInterval);
+            statusText.textContent = '';
+            errorArea.innerHTML = '<p class="gen-error-msg">Something went wrong.</p>' +
+                '<button onclick="location.reload()" class="btn" style="margin-right:1rem">Try Again</button>' +
+                '<a href="/" class="btn">Back to Home</a>';
+            errorArea.style.display = 'block';
+        });
     })();
     </script>
 </body>

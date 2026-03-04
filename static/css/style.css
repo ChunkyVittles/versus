@@ -1010,6 +1010,24 @@ h1, h2, h3, h4 {
 }
 
 /* =====================
+   COMPARISON INTRO
+   ===================== */
+
+.comparison-intro-section {
+    background: var(--section-bg, #f8fafc);
+    padding: 2rem 0;
+}
+
+.comparison-intro {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: #475569;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* =====================
    KEY DIFFERENCES TABLE
    ===================== */
 

@@ -58,6 +58,25 @@
             return a + '-vs-' + b;
         }
 
+        function parseComparisonQuery(text) {
+            text = text.trim();
+            var patterns = [
+                /^(.+?)\s+(?:vs\.?|versus)\s+(.+)$/i,
+                /^(.+?)\s+(?:or)\s+(.+)$/i,
+                /^(?:should\s+i\s+(?:buy|get|choose))\s+(.+?)\s+(?:or|vs\.?|versus)\s+(.+?)[\?]?$/i,
+                /^(?:which\s+is\s+better)\s*[,:]?\s*(.+?)\s+(?:or|vs\.?|versus)\s+(.+?)[\?]?$/i,
+                /^(?:is)\s+(.+?)\s+(?:better\s+than)\s+(.+?)[\?]?$/i,
+                /^(.+?)\s+(?:compared\s+to|vs\.?|versus)\s+(.+)$/i,
+                /^(?:difference\s+between)\s+(.+?)\s+(?:and|vs\.?)\s+(.+?)[\?]?$/i,
+                /^(?:what\s+(?:should\s+i|to)\s+(?:buy|get|choose))\s*[,:]?\s*(.+?)\s+(?:or|vs\.?)\s+(.+?)[\?]?$/i,
+            ];
+            for (var i = 0; i < patterns.length; i++) {
+                var m = text.match(patterns[i]);
+                if (m) return { a: m[1].trim(), b: m[2].trim() };
+            }
+            return null;
+        }
+
         function updateBtn() {
             compareBtn.disabled = !(inputA.value.trim().length >= 2 && inputB.value.trim().length >= 2);
         }
@@ -97,6 +116,18 @@
         function doCompare() {
             var a = inputA.value.trim();
             var b = inputB.value.trim();
+
+            // Try parsing a full query from input A if B is empty
+            if (a && !b) {
+                var parsed = parseComparisonQuery(a);
+                if (parsed) {
+                    a = parsed.a;
+                    b = parsed.b;
+                    inputA.value = a;
+                    inputB.value = b;
+                }
+            }
+
             if (a.length < 2 || b.length < 2) return;
 
             compareError.textContent = '';
@@ -111,35 +142,9 @@
                 return;
             }
 
-            // Dynamic generation
+            // Navigate to skeleton page — it handles the API call
             compareBtn.disabled = true;
-            compareBtn.classList.add('loading');
-            compareBtn.textContent = 'Generating...';
-
-            fetch('/api/compare', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ query: a + ' vs ' + b })
-            })
-            .then(function(r) { return r.json(); })
-            .then(function(data) {
-                if (data.error) {
-                    compareError.textContent = data.error;
-                    compareError.classList.add('active');
-                    compareBtn.disabled = false;
-                    compareBtn.classList.remove('loading');
-                    compareBtn.textContent = 'Compare';
-                    return;
-                }
-                window.location.href = '/' + data.slug + '/';
-            })
-            .catch(function() {
-                compareError.textContent = 'Something went wrong. Please try again.';
-                compareError.classList.add('active');
-                compareBtn.disabled = false;
-                compareBtn.classList.remove('loading');
-                compareBtn.textContent = 'Compare';
-            });
+            window.location.href = '/' + slug + '/?a=' + encodeURIComponent(a) + '&b=' + encodeURIComponent(b);
         }
 
         compareBtn.addEventListener('click', doCompare);
