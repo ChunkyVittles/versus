@@ -162,77 +162,87 @@ async function generateComparison(query, slug, apiKey) {
         'blenders', 'smartphones', 'laptops', 'headphones', 'tvs', 'vacuums',
         'mattresses', 'grills', 'coffee-makers', 'air-fryers', 'streaming',
         'fitness-trackers', 'power-tools', 'lawn-mowers', 'cameras', 'tablets',
-        'gaming-consoles', 'routers', 'car-seats', 'strollers'
+        'gaming-consoles', 'routers', 'car-seats', 'strollers',
+        'software', 'websites', 'apps', 'people', 'sports', 'entertainment',
+        'cars', 'food', 'travel', 'education', 'financial', 'services',
+        'programming', 'games', 'music', 'movies', 'books', 'fashion'
     ];
 
-    const prompt = `You are a product comparison expert writing for VersusThat.com. Generate a detailed, objective comparison for: "${query}".
+    const prompt = `You are a comparison expert writing for VersusThat.com — a site that compares ANYTHING, not just products. People compare products, websites, services, celebrities, sports teams, programming languages, cities, foods, concepts, and more. Generate a detailed, engaging comparison for: "${query}".
 
 Determine the most appropriate category from this list: ${categories.join(', ')}. If none fit well, use "general".
+
+CRITICAL: Adapt your response to what's being compared:
+- PRODUCTS: Use price ranges, specs, shop keywords for purchasing
+- WEBSITES/SERVICES (names ending in .com, .org, .net, .io, etc.): Use subscription pricing for price_range (e.g., "Free / $9.99/mo"), set affiliate_url to the site's URL (e.g., "https://example.com"), use the domain name as the item name (e.g., "GoCollect.com")
+- PEOPLE (athletes, celebrities, historical figures): Use "N/A" for price_range, focus on achievements/stats/legacy in key_differences
+- CONCEPTS/LANGUAGES/FRAMEWORKS: Use "N/A" or "Free / Open Source" for price_range, compare features/ecosystems/community
+- ANYTHING ELSE: Adapt fields sensibly. Every comparison should feel natural and well-written for its topic.
 
 Return ONLY valid JSON matching this exact structure (no markdown, no code fences, just raw JSON):
 
 {
   "slug": "${slug}",
   "item_a": {
-    "name": "Full product name for the alphabetically-first item in the slug",
-    "brand": "Brand name",
-    "image_alt": "Descriptive alt text for product image",
+    "name": "Full name for the alphabetically-first item in the slug",
+    "brand": "Brand, creator, organization, or relevant entity",
+    "image_alt": "Descriptive alt text",
     "pros": ["Pro 1", "Pro 2", "Pro 3", "Pro 4"],
     "cons": ["Con 1", "Con 2", "Con 3"],
-    "price_range": "$XX-$XX",
-    "best_for": "One sentence describing who this product is best for",
+    "price_range": "$XX-$XX or N/A or Free",
+    "best_for": "One sentence describing who/what this is best for",
     "rating": 4.2,
     "affiliate_url": "",
-    "shop_keywords": ["search term 1 for buying this product", "search term 2"]
+    "shop_keywords": ["related search term 1", "related search term 2"]
   },
   "item_b": {
-    "name": "Full product name for the second item in the slug",
-    "brand": "Brand name",
-    "image_alt": "Descriptive alt text for product image",
+    "name": "Full name for the second item in the slug",
+    "brand": "Brand, creator, organization, or relevant entity",
+    "image_alt": "Descriptive alt text",
     "pros": ["Pro 1", "Pro 2", "Pro 3", "Pro 4"],
     "cons": ["Con 1", "Con 2", "Con 3"],
-    "price_range": "$XX-$XX",
-    "best_for": "One sentence describing who this product is best for",
+    "price_range": "$XX-$XX or N/A or Free",
+    "best_for": "One sentence describing who/what this is best for",
     "rating": 4.5,
     "affiliate_url": "",
-    "shop_keywords": ["search term 1 for buying this product", "search term 2"]
+    "shop_keywords": ["related search term 1", "related search term 2"]
   },
   "category": "category-slug",
   "comparison_summary": "2-3 sentence summary of the comparison and recommendation.",
-  "comparison_intro": "A 2-3 sentence opening paragraph for the page. MUST naturally include ALL of these phrasings woven into real sentences (not a keyword-stuffed list): '[A] vs [B]', '[A] or [B]', 'should you buy [A] or [B]', 'which is better [A] or [B]', 'difference between [A] and [B]', '[A] compared to [B]'. Write it as a helpful, natural-sounding intro that a real person would want to read. Example: 'Trying to decide between the AirPods Pro and Sony WF-1000XM5? Whether you're wondering which is better for your commute or just trying to figure out the difference between Apple's and Sony's flagship earbuds, this comparison breaks down everything you need to know. We've compared the AirPods Pro to the Sony XM5 across sound quality, noise cancellation, battery life, and price so you can decide which to buy.'",
+  "comparison_intro": "A 2-3 sentence opening paragraph for the page. MUST naturally include ALL of these phrasings woven into real sentences (not a keyword-stuffed list): '[A] vs [B]', '[A] or [B]', 'should you choose [A] or [B]', 'which is better [A] or [B]', 'difference between [A] and [B]', '[A] compared to [B]'. Write it as a helpful, natural-sounding intro that a real person would want to read.",
   "verdict": "a" or "b" or "tie",
-  "verdict_text": "One-sentence verdict that includes both product names",
+  "verdict_text": "One-sentence verdict that includes both names",
   "key_differences": [
-    {"aspect": "Feature Name", "item_a": "Value for A", "item_b": "Value for B", "winner": "a" or "b" or "tie"}
+    {"aspect": "Feature/Attribute Name", "item_a": "Value for A", "item_b": "Value for B", "winner": "a" or "b" or "tie"}
   ],
   "seo_content": "300-500 words of editorial content about this comparison. Written in an authoritative but accessible tone. Naturally include both orderings of the comparison phrase.",
   "faq": [
     {"q": "Question?", "a": "Answer."}
   ],
   "related_comparisons": ["slug-1-vs-slug-2", "slug-3-vs-slug-4"],
-  "meta_title": "Item A vs Item B (2026): Which Should You Buy?",
+  "meta_title": "Item A vs Item B (2026): Engaging Subtitle Here",
   "meta_description": "Detailed comparison of Item A vs Item B.",
   "date_published": "${today}",
   "date_updated": "${today}"
 }
 
 IMPORTANT GUIDELINES:
-- Use REAL product specifications, prices, and data. Be accurate.
+- Use REAL data, facts, and specifications. Be accurate.
 - The slug is "${slug}" — item_a is the first part, item_b is the second part.
-- Include 6-8 key_differences with real specs (wattage, weight, battery life, etc.)
+- Include 6-8 key_differences with real, specific data points appropriate to the topic
 - Include 3-5 FAQs that people actually search for
 - Ratings should be realistic (3.5-4.9 range)
 - seo_content should be 300-500 words, substantial and unique
 - related_comparisons should use alphabetically-ordered slugs
-- Be objective and data-driven. Both products have merits.
+- Be objective and data-driven. Both items have merits.
 - meta_title should include the year (2026)
-- shop_keywords: 2-3 Amazon search terms that would help someone BUY this product. For products: "Brand Model name", "Brand Model accessories". For people/non-products: related purchasable items like "Bob Hope DVD collection", "Fred Astaire movies Blu-ray". For services: related physical products. ALWAYS include at least 2 shop_keywords per item.
-- When comparing websites or online services (items whose names end in .com, .org, .net, .io, etc.), set each item's "affiliate_url" to the website's URL (e.g., "https://gocollect.com", "https://gpanalysis.com"). The rendering system will automatically apply partner affiliate tracking where applicable. For website comparisons, price_range can be the subscription/pricing tier (e.g., "Free / $9.99/mo").
-- comparison_intro MUST contain these exact phrasings naturally: "[A] vs [B]", "[A] or [B]", "which is better", "difference between [A] and [B]", and "[A] compared to [B]". This is critical for SEO — the page needs to match how people actually search.
-- meta_description MUST include both "vs" and "or" phrasings of the comparison. Example: "AirPods Pro vs Sony WF-1000XM5 compared. Wondering which is better — AirPods Pro or Sony XM5? We break down sound, ANC, battery, and price."
+- shop_keywords: 2-3 search terms for related purchasable items. For products: "Brand Model name". For people: related merchandise like "Messi jersey", "Bob Hope DVD collection". For services/websites: related physical products. For concepts/languages: related books or courses. ALWAYS include at least 2 shop_keywords per item.
+- When comparing websites or online services (items whose names end in .com, .org, .net, .io, etc.), set each item's "affiliate_url" to the website's URL (e.g., "https://gocollect.com", "https://gpanalysis.com"). The rendering system will automatically apply partner affiliate tracking where applicable.
+- comparison_intro MUST contain these exact phrasings naturally: "[A] vs [B]", "[A] or [B]", "which is better", "difference between [A] and [B]", and "[A] compared to [B]". This is critical for SEO.
+- meta_description MUST include both "vs" and "or" phrasings of the comparison.
 - faq MUST always include these three questions (plus 2-3 more topic-specific ones):
   1. "Is [A] better than [B]?" — answer should directly state which is better and why in 2-3 sentences.
-  2. "Should I buy [A] or [B]?" — answer should give a clear recommendation based on use case.
+  2. "Should I choose [A] or [B]?" — answer should give a clear recommendation based on use case. Use "choose" instead of "buy" for non-products.
   3. "What is the difference between [A] and [B]?" — answer should summarize the 3-4 biggest differences.
 - seo_content must naturally include both orderings: "[A] vs [B]" AND "[B] vs [A]", plus "[A] or [B]", plus "compared to". Don't force them — weave them into the analysis naturally.
 - If the comparison involves adult/sexual products, recreational drugs, weapons/firearms, or illegal activities, return ONLY this JSON: {"blocked": true}

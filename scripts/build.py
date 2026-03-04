@@ -23,7 +23,7 @@ STATIC_DIR = ROOT / "static"
 DIST_DIR = ROOT / "dist"
 DOMAIN = "https://versusthat.com"
 EBAY_CAMPAIGN_ID = "5339144040"
-EBAY_SKIP_CATEGORIES = ["financial", "education", "services", "streaming", "cars"]
+EBAY_SKIP_CATEGORIES = ["financial", "education", "services", "streaming", "cars", "people", "sports", "entertainment", "software", "websites", "apps", "programming", "travel", "food", "music", "movies", "books", "fashion", "games"]
 
 PARTNER_AFFILIATES = {
     "gocollect.com": {

@@ -48,7 +48,7 @@ export async function onRequest(context) {
 }
 
 const EBAY_CAMPAIGN_ID = '5339144040';
-const EBAY_SKIP_CATEGORIES = ['financial', 'education', 'services', 'streaming', 'cars'];
+const EBAY_SKIP_CATEGORIES = ['financial', 'education', 'services', 'streaming', 'cars', 'people', 'sports', 'entertainment', 'software', 'websites', 'apps', 'programming', 'travel', 'food', 'music', 'movies', 'books', 'fashion', 'games'];
 
 const PARTNER_AFFILIATES = {
     'gocollect.com': {
@@ -462,6 +462,9 @@ function renderGeneratingPage(slug, itemA, itemB) {
     .gen-error{display:none;margin-top:2rem}
     .gen-error-msg{color:#ef4444;font-size:1.1rem;margin-bottom:1.5rem}
     .btn{display:inline-block;padding:.75rem 1.5rem;border-radius:8px;font-weight:600;font-size:1rem;cursor:pointer;border:none;background:#ffd60a;color:#111;text-decoration:none}
+    .gen-facts{margin-top:2.5rem;min-height:5rem;text-align:center;transition:opacity 0.3s ease}
+    .gen-facts-label{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.4);margin-bottom:.5rem}
+    .gen-facts-text{font-size:1.1rem;color:rgba(255,255,255,0.85);line-height:1.6;max-width:500px;margin:0 auto}
     </style>
     <link rel="preload" href="/css/style.css?v=5" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/css/style.css?v=5"></noscript>
@@ -524,8 +527,9 @@ function renderGeneratingPage(slug, itemA, itemB) {
                 <div class="gen-progress-track">
                     <div class="gen-progress-bar" id="gen-progress-bar"></div>
                 </div>
-                <div class="gen-status" id="gen-status">Researching products...</div>
+                <div class="gen-status" id="gen-status">Researching...</div>
                 <div class="gen-error" id="gen-error"></div>
+                <div id="gen-facts" class="gen-facts"></div>
             </div>
         </section>
     </main>
@@ -549,8 +553,8 @@ function renderGeneratingPage(slug, itemA, itemB) {
         var errorArea = document.getElementById('gen-error');
 
         var phases = [
-            'Researching products...',
-            'Comparing specifications...',
+            'Researching...',
+            'Comparing key differences...',
             'Analyzing pros & cons...',
             'Writing detailed analysis...',
             'Reviewing for accuracy...'
@@ -568,6 +572,38 @@ function renderGeneratingPage(slug, itemA, itemB) {
             progressBar.style.width = progress + '%';
         }, 100);
 
+        // Fetch fun facts in parallel (fast Haiku call)
+        var factsEl = document.getElementById('gen-facts');
+        var currentFact = 0;
+        var factsData = [];
+        var factsInterval = null;
+
+        fetch('/api/facts', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ item_a: itemA, item_b: itemB })
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            if (!data.facts || !data.facts.length) return;
+            factsData = data.facts;
+            showFact();
+            factsInterval = setInterval(showFact, 4000);
+        })
+        .catch(function() { /* silent fail — facts are optional */ });
+
+        function showFact() {
+            if (!factsData.length) return;
+            factsEl.style.opacity = '0';
+            setTimeout(function() {
+                factsEl.innerHTML = '<span class="gen-facts-label">Did you know?</span>' +
+                    '<p class="gen-facts-text">' + factsData[currentFact] + '</p>';
+                factsEl.style.opacity = '1';
+                currentFact = (currentFact + 1) % factsData.length;
+            }, 300);
+        }
+
+        // Main comparison generation
         fetch('/api/compare', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -577,6 +613,7 @@ function renderGeneratingPage(slug, itemA, itemB) {
         .then(function(data) {
             clearInterval(phaseInterval);
             clearInterval(progressInterval);
+            if (factsInterval) clearInterval(factsInterval);
 
             if (data.error) {
                 statusText.textContent = '';
@@ -595,6 +632,7 @@ function renderGeneratingPage(slug, itemA, itemB) {
         .catch(function() {
             clearInterval(phaseInterval);
             clearInterval(progressInterval);
+            if (factsInterval) clearInterval(factsInterval);
             statusText.textContent = '';
             errorArea.innerHTML = '<p class="gen-error-msg">Something went wrong.</p>' +
                 '<button onclick="location.reload()" class="btn" style="margin-right:1rem">Try Again</button>' +
