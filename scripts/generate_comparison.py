@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
 VersusThat — Comparison Content Generator
-Uses Claude API to generate comparison data from a keyword pair.
+Generates comparisons via the live API and saves results as static JSON files.
 
 Usage:
-    python scripts/generate_comparison.py "ninja vs vitamix" --category blenders
-    python scripts/generate_comparison.py --batch data/seed_comparisons.txt
-
-Requires ANTHROPIC_API_KEY environment variable.
+    python scripts/generate_comparison.py                          # Generate all from top100_affiliates.txt
+    python scripts/generate_comparison.py --query "X vs Y"         # Single comparison
+    python scripts/generate_comparison.py --file custom.txt        # Custom input file
+    python scripts/generate_comparison.py --dry-run                # Preview without generating
+    python scripts/generate_comparison.py --no-skip-existing       # Regenerate even if file exists
 """
 
 import argparse
@@ -16,261 +17,192 @@ import os
 import re
 import sys
 import time
-from datetime import date
 from pathlib import Path
 
-import anthropic
+# Try using requests, fall back to urllib
+try:
+    import requests
+    HAS_REQUESTS = True
+except ImportError:
+    import urllib.request
+    import urllib.error
+    import ssl
+    HAS_REQUESTS = False
 
 ROOT = Path(__file__).resolve().parent.parent
-COMPARISONS_DIR = ROOT / "data" / "comparisons"
+DATA_DIR = ROOT / "data"
+COMPARISONS_DIR = DATA_DIR / "comparisons"
 
-MODEL = "claude-sonnet-4-5-20250929"
+# Default API endpoint — use the live site
+API_URL = "https://versusthat.com/api/compare"
 
 
-def make_slug(keyword):
-    """Convert 'Ninja vs Vitamix' to 'ninja-vs-vitamix' with alphabetical ordering."""
-    keyword = keyword.lower().strip()
-    # Extract the two items
-    match = re.match(r"(.+?)\s+vs\.?\s+(.+)", keyword)
+def make_slug(query):
+    """Generate alphabetically-ordered slug from a comparison query."""
+    match = re.match(r'(.+?)\s+(?:vs\.?|versus)\s+(.+)', query, re.I)
     if not match:
-        print(f"Error: Could not parse '{keyword}'. Expected 'X vs Y' format.")
-        sys.exit(1)
-
-    item_a = match.group(1).strip()
-    item_b = match.group(2).strip()
-
-    # Slugify each part
-    slug_a = re.sub(r"[^a-z0-9]+", "-", item_a).strip("-")
-    slug_b = re.sub(r"[^a-z0-9]+", "-", item_b).strip("-")
-
-    # Alphabetical order
-    if slug_a > slug_b:
-        slug_a, slug_b = slug_b, slug_a
-
-    return f"{slug_a}-vs-{slug_b}"
-
-
-def generate_comparison(keyword, category):
-    """Call Claude API to generate comparison JSON data."""
-    client = anthropic.Anthropic()
-    today = date.today().isoformat()
-    slug = make_slug(keyword)
-
-    prompt = f"""You are a product comparison expert writing for VersusThat.com. Generate a detailed, objective comparison for: "{keyword}" in the "{category}" category.
-
-Return ONLY valid JSON matching this exact structure (no markdown, no code fences, just raw JSON):
-
-{{
-  "slug": "{slug}",
-  "item_a": {{
-    "name": "Full product name for item A",
-    "brand": "Brand name",
-    "image_alt": "Descriptive alt text for product image",
-    "pros": ["Pro 1", "Pro 2", "Pro 3", "Pro 4"],
-    "cons": ["Con 1", "Con 2", "Con 3"],
-    "price_range": "$XX-$XX",
-    "best_for": "One sentence describing who this product is best for",
-    "rating": 4.2,
-    "affiliate_url": ""
-  }},
-  "item_b": {{
-    "name": "Full product name for item B",
-    "brand": "Brand name",
-    "image_alt": "Descriptive alt text for product image",
-    "pros": ["Pro 1", "Pro 2", "Pro 3", "Pro 4"],
-    "cons": ["Con 1", "Con 2", "Con 3"],
-    "price_range": "$XX-$XX",
-    "best_for": "One sentence describing who this product is best for",
-    "rating": 4.5,
-    "affiliate_url": ""
-  }},
-  "category": "{category}",
-  "comparison_summary": "2-3 sentence summary of the comparison and our recommendation.",
-  "comparison_intro": "A 2-3 sentence opening paragraph for the page. MUST naturally include ALL of these phrasings woven into real sentences (not a keyword-stuffed list): '[A] vs [B]', '[A] or [B]', 'should you buy [A] or [B]', 'which is better [A] or [B]', 'difference between [A] and [B]', '[A] compared to [B]'. Write it as a helpful, natural-sounding intro that a real person would want to read.",
-  "verdict": "a" or "b" or "tie",
-  "verdict_text": "One-sentence verdict that includes both product names",
-  "key_differences": [
-    {{"aspect": "Feature Name", "item_a": "Value for A", "item_b": "Value for B", "winner": "a" or "b" or "tie"}},
-    ... (include 6-8 key differences with real specs and data)
-  ],
-  "seo_content": "300-500 words of editorial content...",
-  "faq": [
-    {{"q": "Question?", "a": "Answer."}},
-    ... (3-5 FAQs)
-  ],
-  "related_comparisons": ["slug-1-vs-slug-2", "slug-3-vs-slug-4", "slug-5-vs-slug-6"],
-  "meta_title": "Item A vs Item B (2026): Which Should You Buy?",
-  "meta_description": "Detailed comparison of Item A vs Item B. We break down [key aspects] to help you pick the right [category].",
-  "date_published": "{today}",
-  "date_updated": "{today}"
-}}
-
-IMPORTANT GUIDELINES:
-- Use REAL product specifications, prices, and data. Be accurate.
-- The slug must be alphabetically ordered (e.g., airpods-vs-galaxy-buds NOT galaxy-buds-vs-airpods). I've computed it for you: "{slug}"
-- item_a should be the alphabetically first product in the slug, item_b the second
-- Ratings should be realistic (3.5-4.9 range), based on typical consumer ratings
-- Price ranges should reflect current market prices
-- The seo_content should be substantial (300-500 words), written in an authoritative but accessible tone. Naturally include both "[A] vs [B]" and "[B] vs [A]" phrasings. Discuss use cases, value proposition, and buying advice.
-- FAQs should be genuine questions people search for about this comparison
-- Related comparisons should be real product matchups in the same category (use alphabetically-ordered slugs)
-- Be objective and data-driven. Both products have merits — explain the tradeoffs clearly.
-- The verdict should have a clear winner with a nuanced explanation (not just "X is better")
-- meta_title should include the current year (2026)
-- key_differences should include real specs (wattage, weight, dimensions, battery life, etc.) not vague descriptions
-- comparison_intro MUST contain these exact phrasings naturally: "[A] vs [B]", "[A] or [B]", "which is better", "difference between [A] and [B]", and "[A] compared to [B]". This is critical for SEO — the page needs to match how people actually search.
-- meta_description MUST include both "vs" and "or" phrasings of the comparison. Example: "AirPods Pro vs Sony WF-1000XM5 compared. Wondering which is better — AirPods Pro or Sony XM5? We break down sound, ANC, battery, and price."
-- faq MUST always include these three questions (plus 2-3 more topic-specific ones):
-  1. "Is [A] better than [B]?" — answer should directly state which is better and why in 2-3 sentences.
-  2. "Should I buy [A] or [B]?" — answer should give a clear recommendation based on use case.
-  3. "What is the difference between [A] and [B]?" — answer should summarize the 3-4 biggest differences.
-- seo_content must naturally include both orderings: "[A] vs [B]" AND "[B] vs [A]", plus "[A] or [B]", plus "compared to". Don't force them — weave them into the analysis naturally.
-
-WRITING STYLE — CRITICAL:
-- BANNED WORDS — never use any of these: ultimately, comprehensive, robust, seamless, intuitive, significant, substantial, crucial, essential, notably, remarkably, conversely, furthermore, moreover, game-changer, stands out, remains one of, dive into, let's explore, delve, navigate the, elevate, testament to, it's worth noting, whether you're looking, in today's, in the world of, at the end of the day, boils down to, when it comes to, the bottom line
-- Do NOT end meta_title with "Which Should You Buy?" — vary the endings. Use specific angles like "Head-to-Head Specs Breakdown", "The Key Differences Explained", "Worth the Upgrade?", "Compared for [specific use case]", "What $X Gets You", or ask a specific question relevant to the comparison.
-- seo_content length MUST vary naturally: 250-350 words for simple product comparisons, 400-550 for technical topics, 550-700 for complex financial/educational topics. Do NOT always write exactly 400 words.
-- Write with a confident editorial voice. Use occasional first person ("I'd pick", "in my testing", "from what I've seen"). Have strong opinions. Sound like one knowledgeable person, not a committee.
-- Vary paragraph structure. Not every paragraph should be the same length. Use some short punchy sentences. Mix in longer explanatory ones.
-- Start the seo_content differently every time. Do NOT open with "The [X] vs [Y] comparison..." or "The decision between..." — jump straight into a specific insight, opinion, or surprising fact."""
-
-    print(f"  Calling Claude API for '{keyword}'...")
-
-    message = client.messages.create(
-        model=MODEL,
-        max_tokens=4096,
-        messages=[{"role": "user", "content": prompt}],
-    )
-
-    response_text = message.content[0].text.strip()
-
-    # Clean up response — remove any markdown fences if present
-    if response_text.startswith("```"):
-        response_text = re.sub(r"^```(?:json)?\n?", "", response_text)
-        response_text = re.sub(r"\n?```$", "", response_text)
-
-    try:
-        data = json.loads(response_text)
-    except json.JSONDecodeError as e:
-        print(f"  Error: Failed to parse JSON response: {e}")
-        print(f"  Response preview: {response_text[:200]}...")
         return None
-
-    # Validate required fields
-    required = ["slug", "item_a", "item_b", "category", "verdict", "verdict_text", "key_differences"]
-    for field in required:
-        if field not in data:
-            print(f"  Error: Missing required field '{field}'")
-            return None
-
-    # Enforce slug
-    data["slug"] = slug
-
-    return data
+    a = re.sub(r'[^a-z0-9]+', '-', match.group(1).strip().lower()).strip('-')
+    b = re.sub(r'[^a-z0-9]+', '-', match.group(2).strip().lower()).strip('-')
+    if a > b:
+        a, b = b, a
+    return f"{a}-vs-{b}"
 
 
-def save_comparison(data):
-    """Save comparison JSON to data/comparisons/"""
-    COMPARISONS_DIR.mkdir(parents=True, exist_ok=True)
-    path = COMPARISONS_DIR / f"{data['slug']}.json"
-    with open(path, "w") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-    print(f"  Saved: {path}")
-    return path
+def load_queries(filepath):
+    """Load comparison queries from a text file (one per line, # comments ok)."""
+    queries = []
+    with open(filepath) as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith('#'):
+                continue
+            # Support both "X vs Y" and "X vs Y | category" formats
+            if '|' in line:
+                line = line.split('|')[0].strip()
+            if ' vs ' not in line.lower() and ' versus ' not in line.lower():
+                continue
+            queries.append(line)
+    return queries
 
 
-def run_single(keyword, category):
-    """Generate and save a single comparison."""
-    slug = make_slug(keyword)
-    output_path = COMPARISONS_DIR / f"{slug}.json"
+def generate_comparison(query, api_url=API_URL):
+    """Call the comparison API and return the result."""
+    payload = json.dumps({"query": query})
 
-    if output_path.exists():
-        print(f"  Skipping '{keyword}' — already exists at {output_path}")
-        return True
-
-    data = generate_comparison(keyword, category)
-    if data:
-        save_comparison(data)
-        return True
-    return False
-
-
-def run_batch(batch_file):
-    """Process a batch file of comparisons."""
-    path = Path(batch_file)
-    if not path.exists():
-        print(f"Error: Batch file not found: {batch_file}")
-        sys.exit(1)
-
-    lines = path.read_text().strip().split("\n")
-    total = len(lines)
-    success = 0
-    skipped = 0
-    failed = 0
-
-    print(f"Processing {total} comparisons from {batch_file}...\n")
-
-    for i, line in enumerate(lines, 1):
-        line = line.strip()
-        if not line or line.startswith("#"):
-            continue
-
-        parts = line.split("|")
-        if len(parts) != 2:
-            print(f"  [{i}/{total}] Skipping malformed line: {line}")
-            skipped += 1
-            continue
-
-        keyword, category = parts[0].strip(), parts[1].strip()
-        print(f"[{i}/{total}] {keyword} ({category})")
-
-        slug = make_slug(keyword)
-        output_path = COMPARISONS_DIR / f"{slug}.json"
-        if output_path.exists():
-            print(f"  Skipping — already exists")
-            skipped += 1
-            continue
-
+    if HAS_REQUESTS:
         try:
-            data = generate_comparison(keyword, category)
-            if data:
-                save_comparison(data)
-                success += 1
-            else:
-                failed += 1
+            resp = requests.post(api_url, json={"query": query}, timeout=120)
+            data = resp.json()
+            if resp.status_code != 200:
+                return None, data.get("error", f"HTTP {resp.status_code}")
+            return data, None
         except Exception as e:
-            print(f"  Error: {e}")
-            failed += 1
+            return None, str(e)
+    else:
+        try:
+            ctx = ssl.create_default_context()
+            req = urllib.request.Request(
+                api_url,
+                data=payload.encode(),
+                headers={"Content-Type": "application/json"},
+                method="POST",
+            )
+            with urllib.request.urlopen(req, timeout=120, context=ctx) as resp:
+                data = json.loads(resp.read().decode())
+            return data, None
+        except urllib.error.HTTPError as e:
+            body = e.read().decode()
+            try:
+                err = json.loads(body).get("error", f"HTTP {e.code}")
+            except Exception:
+                err = f"HTTP {e.code}: {body[:200]}"
+            return None, err
+        except Exception as e:
+            return None, str(e)
 
-        # Rate limiting — be polite to the API
-        if i < total:
-            time.sleep(1)
 
-    print(f"\nBatch complete: {success} generated, {skipped} skipped, {failed} failed")
+def save_comparison(slug, comp_data):
+    """Save comparison data to a JSON file."""
+    COMPARISONS_DIR.mkdir(parents=True, exist_ok=True)
+    filepath = COMPARISONS_DIR / f"{slug}.json"
+    with open(filepath, 'w') as f:
+        json.dump(comp_data, f, indent=2)
+    return filepath
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate comparison content using Claude API")
-    parser.add_argument("keyword", nargs="?", help='Comparison keyword, e.g. "ninja vs vitamix"')
-    parser.add_argument("--category", "-c", help="Category slug, e.g. blenders")
-    parser.add_argument("--batch", "-b", help="Path to batch file (one comparison per line: keyword|category)")
-
+    parser = argparse.ArgumentParser(description="Generate comparisons for VersusThat")
+    parser.add_argument('--file', default=str(DATA_DIR / 'top100_affiliates.txt'),
+                        help='Path to text file with comparison queries')
+    parser.add_argument('--query', help='Generate a single comparison')
+    parser.add_argument('--api-url', default=API_URL, help='API endpoint URL')
+    parser.add_argument('--dry-run', action='store_true', help='Preview queries without generating')
+    parser.add_argument('--skip-existing', action='store_true', default=True,
+                        help='Skip comparisons that already have JSON files (default: True)')
+    parser.add_argument('--no-skip-existing', dest='skip_existing', action='store_false',
+                        help='Regenerate even if JSON file exists')
+    parser.add_argument('--delay', type=int, default=5,
+                        help='Seconds to wait between API calls (default: 5)')
     args = parser.parse_args()
 
-    # Check API key
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        print("Error: ANTHROPIC_API_KEY environment variable not set.")
-        sys.exit(1)
-
-    if args.batch:
-        run_batch(args.batch)
-    elif args.keyword:
-        if not args.category:
-            print("Error: --category is required when generating a single comparison.")
-            sys.exit(1)
-        run_single(args.keyword, args.category)
+    if args.query:
+        queries = [args.query]
     else:
-        parser.print_help()
+        if not os.path.exists(args.file):
+            print(f"Error: File not found: {args.file}")
+            sys.exit(1)
+        queries = load_queries(args.file)
+
+    print(f"Loaded {len(queries)} comparison queries")
+
+    # Preview
+    skipped = 0
+    to_generate = []
+    for q in queries:
+        slug = make_slug(q)
+        if not slug:
+            print(f"  SKIP (bad format): {q}")
+            skipped += 1
+            continue
+        filepath = COMPARISONS_DIR / f"{slug}.json"
+        if args.skip_existing and filepath.exists():
+            print(f"  EXISTS: {slug}")
+            skipped += 1
+            continue
+        to_generate.append((q, slug))
+
+    print(f"\nTo generate: {len(to_generate)} | Skipped: {skipped}")
+
+    if args.dry_run:
+        print("\n--- DRY RUN ---")
+        for q, slug in to_generate:
+            print(f"  WOULD GENERATE: {q} -> {slug}")
+        return
+
+    if not to_generate:
+        print("Nothing to generate!")
+        return
+
+    print(f"\nStarting generation (delay: {args.delay}s between calls)...\n")
+
+    success = 0
+    failed = 0
+    for i, (query, slug) in enumerate(to_generate):
+        print(f"[{i+1}/{len(to_generate)}] Generating: {query} ({slug})...")
+
+        result, error = generate_comparison(query, args.api_url)
+
+        if error:
+            print(f"  FAILED: {error}")
+            failed += 1
+            time.sleep(args.delay)
+            continue
+
+        if not result or result.get("error"):
+            print(f"  FAILED: {result.get('error', 'Unknown error') if result else 'No response'}")
+            failed += 1
+            time.sleep(args.delay)
+            continue
+
+        comp_data = result.get("data")
+        actual_slug = result.get("slug", slug)
+
+        if not comp_data:
+            print(f"  FAILED: No data in response")
+            failed += 1
+            time.sleep(args.delay)
+            continue
+
+        filepath = save_comparison(actual_slug, comp_data)
+        cached = result.get("cached", False)
+        print(f"  OK: Saved to {filepath} {'(cached)' if cached else '(new)'}")
+        success += 1
+
+        if i < len(to_generate) - 1:
+            time.sleep(args.delay)
+
+    print(f"\nDone! Generated: {success} | Failed: {failed} | Skipped: {skipped}")
 
 
 if __name__ == "__main__":

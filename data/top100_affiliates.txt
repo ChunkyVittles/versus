@@ -1,0 +1,123 @@
+# Top 100 High-Value Affiliate Comparisons
+# Format: Item A vs Item B
+# One per line. Lines starting with # are comments.
+
+# --- Mattresses (high affiliate value) ---
+Casper vs Purple
+Saatva vs Tempur-Pedic
+Nectar vs Purple
+Casper vs Nectar
+DreamCloud vs Nectar
+Helix vs Saatva
+Brooklyn Bedding vs Casper
+Bear vs Purple
+Leesa vs Casper
+Tuft & Needle vs Casper
+
+# --- Kitchen Appliances ---
+Ninja Blender vs Vitamix
+KitchenAid vs Cuisinart
+Instant Pot vs Ninja Foodi
+Breville vs Cuisinart
+Keurig vs Nespresso
+Ninja Air Fryer vs Cosori Air Fryer
+Vitamix vs Blendtec
+KitchenAid Stand Mixer vs Cuisinart Stand Mixer
+
+# --- Home Security ---
+SimpliSafe vs Ring
+ADT vs SimpliSafe
+Ring vs Arlo
+Vivint vs ADT
+Nest Secure vs Ring Alarm
+Wyze Cam vs Ring Indoor Camera
+
+# --- Fitness Equipment ---
+Peloton vs NordicTrack
+Peloton vs Echelon
+Bowflex vs NordicTrack
+Mirror vs Tonal
+Hydrow vs Peloton Row
+Concept2 vs NordicTrack Rower
+
+# --- VPN Services ---
+NordVPN vs ExpressVPN
+Surfshark vs NordVPN
+ProtonVPN vs NordVPN
+CyberGhost vs NordVPN
+Private Internet Access vs NordVPN
+
+# --- Web Hosting ---
+Bluehost vs SiteGround
+HostGator vs Bluehost
+GoDaddy vs Bluehost
+Cloudways vs SiteGround
+DigitalOcean vs AWS
+
+# --- Email Marketing ---
+Mailchimp vs ConvertKit
+Mailchimp vs Constant Contact
+ActiveCampaign vs Mailchimp
+SendGrid vs Mailchimp
+Klaviyo vs Mailchimp
+
+# --- Project Management ---
+Asana vs Monday.com
+Trello vs Asana
+ClickUp vs Asana
+Notion vs Asana
+Jira vs Asana
+Basecamp vs Asana
+
+# --- CRM ---
+Salesforce vs HubSpot
+Pipedrive vs HubSpot
+Zoho CRM vs Salesforce
+Freshsales vs HubSpot
+
+# --- Cloud Storage ---
+Dropbox vs Google Drive
+OneDrive vs Google Drive
+iCloud vs Google Drive
+Box vs Dropbox
+
+# --- Password Managers ---
+1Password vs LastPass
+Bitwarden vs 1Password
+Dashlane vs 1Password
+NordPass vs 1Password
+
+# --- Credit Cards ---
+Chase Sapphire Preferred vs Amex Gold
+Capital One Venture vs Chase Sapphire Preferred
+Amex Platinum vs Chase Sapphire Reserve
+Discover it vs Capital One Quicksilver
+Citi Double Cash vs Chase Freedom Unlimited
+
+# --- Insurance ---
+Geico vs State Farm
+Progressive vs Geico
+Allstate vs State Farm
+USAA vs Geico
+Liberty Mutual vs State Farm
+Lemonade vs State Farm
+
+# --- Baby Products ---
+UPPAbaby Vista vs Nuna Mixx
+Graco 4Ever vs Chicco NextFit
+BabyBjorn vs Ergobaby
+Hatch Rest vs Dohm White Noise
+
+# --- Outdoor Gear ---
+YETI vs Stanley
+Hydro Flask vs YETI
+REI vs Patagonia
+The North Face vs Patagonia
+Coleman vs YETI
+
+# --- Speakers ---
+Sonos vs Bose
+HomePod vs Sonos
+JBL vs Bose
+Sonos Era 100 vs Bose Home Speaker
+Marshall vs JBL

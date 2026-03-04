@@ -48,7 +48,7 @@ export async function onRequest(context) {
 }
 
 const EBAY_CAMPAIGN_ID = '5339144040';
-const EBAY_SKIP_CATEGORIES = ['financial', 'education', 'services', 'streaming', 'cars', 'people', 'sports', 'entertainment', 'software', 'websites', 'apps', 'programming', 'travel', 'food', 'music', 'movies', 'books', 'fashion', 'games'];
+const EBAY_SKIP_CATEGORIES = ['financial', 'education', 'services', 'streaming', 'cars', 'people', 'sports', 'entertainment', 'software', 'websites', 'apps', 'programming', 'travel', 'food', 'music', 'movies', 'books', 'fashion', 'games', 'insurance', 'credit-cards', 'vpn', 'web-hosting', 'email-marketing', 'project-management', 'crm', 'cloud-storage', 'password-managers', 'general'];
 
 const PARTNER_AFFILIATES = {
     'gocollect.com': {
@@ -68,6 +68,12 @@ function isWebsite(name) {
 
 function getItemLink(item) {
     const name = item?.name || '';
+    const affiliateUrl = item?.affiliate_url || '';
+    // If the comparison data includes an explicit affiliate_url, use it
+    if (affiliateUrl) {
+        const display = name.trim().split(/\s+/)[0] || 'Site';
+        return { url: affiliateUrl, text: `Visit ${display}`, rel: 'nofollow sponsored', logo: null, isPartner: false };
+    }
     if (!isWebsite(name)) {
         return { url: ebayUrl(name), text: '&#x1F6D2; Shop on eBay', rel: 'nofollow sponsored', logo: null, isPartner: false };
     }
@@ -174,7 +180,8 @@ function renderComparisonPage(comp) {
     const linkA = getItemLink(comp.item_a);
     const linkB = getItemLink(comp.item_b);
     const isWebsiteComparison = isWebsite(comp.item_a?.name) || isWebsite(comp.item_b?.name);
-    const showShop = isWebsiteComparison || !EBAY_SKIP_CATEGORIES.includes(comp.category);
+    const hasAffiliateLinks = comp.item_a?.affiliate_url || comp.item_b?.affiliate_url;
+    const showShop = hasAffiliateLinks || isWebsiteComparison || !EBAY_SKIP_CATEGORIES.includes(comp.category);
     const renderBtn = (link, side) => {
         const logoHtml = link.logo ? `<img src="${link.logo}" alt="${esc(link.text)}" class="partner-logo"> ` : '';
         const partnerClass = link.isPartner ? ' btn-partner' : '';
@@ -208,8 +215,8 @@ function renderComparisonPage(comp) {
     </section>`;
 
     // Shop CTA section
-    const shopCtaTitle = isWebsiteComparison ? 'Visit These Sites' : 'Ready to Buy?';
-    const shopCtaDisclosure = isWebsiteComparison
+    const shopCtaTitle = isWebsiteComparison ? 'Visit These Sites' : (hasAffiliateLinks ? 'Get Started' : 'Ready to Buy?');
+    const shopCtaDisclosure = (isWebsiteComparison || hasAffiliateLinks)
         ? 'Some links on this page are affiliate links. If you sign up through these links, we may earn a commission at no extra cost to you.'
         : 'As an affiliate, we earn from qualifying purchases made through links on this page. Prices shown are approximate.';
     const shopCtaHtml = showShop ? `<section class="section shop-cta">

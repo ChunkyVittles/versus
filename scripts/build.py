@@ -23,7 +23,7 @@ STATIC_DIR = ROOT / "static"
 DIST_DIR = ROOT / "dist"
 DOMAIN = "https://versusthat.com"
 EBAY_CAMPAIGN_ID = "5339144040"
-EBAY_SKIP_CATEGORIES = ["financial", "education", "services", "streaming", "cars", "people", "sports", "entertainment", "software", "websites", "apps", "programming", "travel", "food", "music", "movies", "books", "fashion", "games"]
+EBAY_SKIP_CATEGORIES = ["financial", "education", "services", "streaming", "cars", "people", "sports", "entertainment", "software", "websites", "apps", "programming", "travel", "food", "music", "movies", "books", "fashion", "games", "insurance", "credit-cards", "vpn", "web-hosting", "email-marketing", "project-management", "crm", "cloud-storage", "password-managers", "general"]
 
 PARTNER_AFFILIATES = {
     "gocollect.com": {
@@ -43,8 +43,18 @@ def is_website(name):
     return bool(WEBSITE_TLD_RE.search(last))
 
 
-def get_item_link(name):
+def get_item_link(name, affiliate_url=None):
     """Return dict with url, text, rel, logo, is_partner for a comparison item."""
+    # If the comparison data includes an explicit affiliate_url, use it
+    if affiliate_url:
+        display = name.strip().split()[0] if name else "Site"
+        return {
+            "url": affiliate_url,
+            "text": f"Visit {display}",
+            "rel": "nofollow sponsored",
+            "logo": None,
+            "is_partner": False,
+        }
     if not is_website(name):
         encoded = name.replace(" ", "+") if name else ""
         return {

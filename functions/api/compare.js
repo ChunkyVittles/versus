@@ -164,7 +164,11 @@ async function generateComparison(query, slug, apiKey) {
         'gaming-consoles', 'routers', 'car-seats', 'strollers',
         'software', 'websites', 'apps', 'people', 'sports', 'entertainment',
         'cars', 'food', 'travel', 'education', 'financial', 'services',
-        'programming', 'games', 'music', 'movies', 'books', 'fashion'
+        'programming', 'games', 'music', 'movies', 'books', 'fashion',
+        'kitchen-appliances', 'home-security', 'baby-products', 'insurance',
+        'credit-cards', 'vpn', 'web-hosting', 'email-marketing',
+        'project-management', 'crm', 'cloud-storage', 'password-managers',
+        'home-appliances', 'outdoor-gear', 'speakers'
     ];
 
     const prompt = `You are a comparison expert writing for VersusThat.com — a site that compares ANYTHING, not just products. People compare products, websites, services, celebrities, sports teams, programming languages, cities, foods, concepts, and more. Generate a detailed, engaging comparison for: "${query}".
@@ -236,7 +240,7 @@ IMPORTANT GUIDELINES:
 - Be objective and data-driven. Both items have merits.
 - meta_title should include the year (2026)
 - shop_keywords: 2-3 search terms for related purchasable items. For products: "Brand Model name". For people: related merchandise like "Messi jersey", "Bob Hope DVD collection". For services/websites: related physical products. For concepts/languages: related books or courses. ALWAYS include at least 2 shop_keywords per item.
-- When comparing websites or online services (items whose names end in .com, .org, .net, .io, etc.), set each item's "affiliate_url" to the website's URL (e.g., "https://gocollect.com", "https://gpanalysis.com"). The rendering system will automatically apply partner affiliate tracking where applicable.
+- affiliate_url: For ANY service, app, SaaS product, financial product, streaming service, or website being compared, set affiliate_url to the item's official homepage or signup URL (e.g., "https://acorns.com", "https://robinhood.com", "https://netflix.com", "https://notion.so"). For physical products sold by retailers, leave affiliate_url as empty string. The rendering system uses these URLs for "Visit" / "Sign Up" buttons.
 - comparison_intro MUST contain these exact phrasings naturally: "[A] vs [B]", "[A] or [B]", "which is better", "difference between [A] and [B]", and "[A] compared to [B]". This is critical for SEO.
 - meta_description MUST include both "vs" and "or" phrasings of the comparison.
 - faq MUST always include these three questions (plus 2-3 more topic-specific ones):

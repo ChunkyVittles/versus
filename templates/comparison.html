@@ -65,10 +65,11 @@
 {% endblock %}
 
 {% block content %}
-{% set link_a = get_item_link(comp.item_a.name) %}
-{% set link_b = get_item_link(comp.item_b.name) %}
+{% set link_a = get_item_link(comp.item_a.name, comp.item_a.get('affiliate_url', '')) %}
+{% set link_b = get_item_link(comp.item_b.name, comp.item_b.get('affiliate_url', '')) %}
 {% set is_website_comp = is_website(comp.item_a.name) or is_website(comp.item_b.name) %}
-{% set show_shop = is_website_comp or comp.category not in ebay_skip_categories %}
+{% set has_affiliate_links = comp.item_a.get('affiliate_url', '') or comp.item_b.get('affiliate_url', '') %}
+{% set show_shop = has_affiliate_links or is_website_comp or comp.category not in ebay_skip_categories %}
 <!-- Breadcrumb -->
 <nav class="breadcrumb">
     <div class="container">
@@ -306,7 +307,7 @@
 {% if show_shop %}
 <section class="section shop-cta">
     <div class="container">
-        <h2 class="section-title">{% if is_website_comp %}Visit These Sites{% else %}Ready to Buy?{% endif %}</h2>
+        <h2 class="section-title">{% if is_website_comp %}Visit These Sites{% elif has_affiliate_links %}Get Started{% else %}Ready to Buy?{% endif %}</h2>
         <div class="shop-grid">
             <div class="shop-card shop-card-a {% if comp.verdict == 'a' %}shop-card-winner{% endif %}">
                 {% if comp.verdict == 'a' %}<span class="shop-winner-badge">&#x1F451; Our Pick</span>{% endif %}
@@ -325,7 +326,7 @@
                 </div>
             </div>
         </div>
-        <p class="shop-disclosure">{% if is_website_comp %}Some links on this page are affiliate links. If you sign up through these links, we may earn a commission at no extra cost to you.{% else %}As an affiliate, we earn from qualifying purchases made through links on this page. Prices shown are approximate.{% endif %}</p>
+        <p class="shop-disclosure">{% if is_website_comp or has_affiliate_links %}Some links on this page are affiliate links. If you sign up through these links, we may earn a commission at no extra cost to you.{% else %}As an affiliate, we earn from qualifying purchases made through links on this page. Prices shown are approximate.{% endif %}</p>
     </div>
 </section>
 {% endif %}
