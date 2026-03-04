@@ -30,8 +30,17 @@
 
     heading.textContent = 'Results for \u201c' + q + '\u201d';
 
-    fetch('/search-index.json')
-        .then(function(r) { return r.json(); })
+    Promise.all([
+        fetch('/search-index.json').then(function(r) { return r.json(); }).catch(function() { return []; }),
+        fetch('/api/search-index').then(function(r) { return r.json(); }).catch(function() { return []; })
+    ])
+        .then(function(results) {
+            var slugs = {};
+            results[0].forEach(function(e) { slugs[e.s] = e; });
+            results[1].forEach(function(e) { if (!slugs[e.s]) slugs[e.s] = e; });
+            var data = Object.values(slugs);
+            return data;
+        })
         .then(function(data) {
             var matches = data.filter(function(c) {
                 return c.a.toLowerCase().indexOf(q) !== -1 || c.b.toLowerCase().indexOf(q) !== -1;

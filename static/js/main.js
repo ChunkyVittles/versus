@@ -199,12 +199,19 @@
                 spans[2].style.transform = '';
             }
         }
-        // Lazy-load index on first open
+        // Lazy-load index on first open (merge static + KV indexes)
         if (!sIndex) {
-            fetch('/search-index.json')
-                .then(function(r) { return r.json(); })
-                .then(function(data) { sIndex = data; })
-                .catch(function() { sIndex = []; });
+            Promise.all([
+                fetch('/search-index.json').then(function(r) { return r.json(); }).catch(function() { return []; }),
+                fetch('/api/search-index').then(function(r) { return r.json(); }).catch(function() { return []; })
+            ]).then(function(results) {
+                var staticIdx = results[0];
+                var kvIdx = results[1];
+                var slugs = {};
+                staticIdx.forEach(function(e) { slugs[e.s] = e; });
+                kvIdx.forEach(function(e) { if (!slugs[e.s]) slugs[e.s] = e; });
+                sIndex = Object.values(slugs);
+            }).catch(function() { sIndex = []; });
         }
     }
 

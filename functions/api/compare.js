@@ -77,6 +77,18 @@ export async function onRequestPost(context) {
         await env.COMPARISONS_KV.put('all-slugs', JSON.stringify(allSlugs));
     }
 
+    // Update KV search index so new comparisons are immediately searchable
+    const kvSearchIndex = JSON.parse(await env.COMPARISONS_KV.get('kv-search-index') || '[]');
+    if (!kvSearchIndex.some(e => e.s === slug)) {
+        kvSearchIndex.push({
+            s: slug,
+            a: comparisonData.item_a?.name || '',
+            b: comparisonData.item_b?.name || '',
+            c: comparisonData.category || 'general',
+        });
+        await env.COMPARISONS_KV.put('kv-search-index', JSON.stringify(kvSearchIndex));
+    }
+
     return Response.json(
         { status: 'ok', slug, data: comparisonData, cached: false },
         { headers: corsHeaders }
