@@ -486,42 +486,72 @@ h1, h2, h3, h4 {
 
 .compare-btn {
     grid-column: 1 / -1;
-    width: 56px;
-    height: 56px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     padding: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: none;
-    background: var(--arena-yellow);
-    color: var(--arena-dark);
+    gap: 2px;
+    background: #e2e8f0;
+    color: #1e293b;
+    border: 3px solid #cbd5e1;
     cursor: pointer;
-    transition: transform 0.15s, box-shadow 0.15s;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    box-shadow: 0 4px 16px rgba(226, 232, 240, 0.3);
+    position: relative;
     margin: 0.5rem auto 0;
 }
 
-.compare-btn:hover:not(:disabled) {
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 8px 30px rgba(255,214,10,0.3);
+.compare-btn-label {
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    margin-top: -2px;
+}
+
+.compare-btn:disabled {
+    background: #4a4a4a;
+    border-color: #3a3a3a;
+    box-shadow: none;
+    color: #777;
+    cursor: not-allowed;
+    animation: none;
+}
+
+.compare-btn:not(:disabled) {
+    animation: bell-pulse 2s ease-in-out infinite;
+}
+
+.compare-btn:not(:disabled):hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 24px rgba(226, 232, 240, 0.5);
+    animation: none;
+}
+
+.compare-btn:not(:disabled):active {
+    transform: scale(0.95);
 }
 
 .compare-btn:not(:disabled):hover svg {
-    animation: bell-ring 0.4s ease;
+    animation: bell-ring 0.5s ease;
+}
+
+@keyframes bell-pulse {
+    0%, 100% { box-shadow: 0 4px 16px rgba(226, 232, 240, 0.3); }
+    50% { box-shadow: 0 4px 28px rgba(255, 255, 255, 0.5); }
 }
 
 @keyframes bell-ring {
     0% { transform: rotate(0); }
-    20% { transform: rotate(14deg); }
-    40% { transform: rotate(-14deg); }
-    60% { transform: rotate(8deg); }
-    80% { transform: rotate(-4deg); }
+    15% { transform: rotate(12deg); }
+    30% { transform: rotate(-12deg); }
+    45% { transform: rotate(8deg); }
+    60% { transform: rotate(-5deg); }
+    75% { transform: rotate(2deg); }
     100% { transform: rotate(0); }
-}
-
-.compare-btn:disabled {
-    opacity: 0.35;
-    cursor: not-allowed;
 }
 
 .compare-btn.loading {
