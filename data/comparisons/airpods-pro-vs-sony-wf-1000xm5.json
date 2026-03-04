@@ -20,7 +20,11 @@
     "best_for": "iPhone users who want effortless ANC earbuds that just work",
     "rating": 4.6,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Apple AirPods Pro 2",
+      "Apple Apple AirPods Pro 2"
+    ]
   },
   "item_b": {
     "name": "Sony WF-1000XM5",
@@ -42,7 +46,11 @@
     "best_for": "Audiophiles and Android users who prioritize sound quality above all",
     "rating": 4.5,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Sony WF-1000XM5",
+      "Sony Sony WF-1000XM5"
+    ]
   },
   "category": "headphones",
   "comparison_summary": "AirPods Pro 2 are the obvious pick for Apple users thanks to deep iOS integration and excellent ANC at a lower price. Sony WF-1000XM5 deliver better sound quality and work great across all platforms, making them the smart choice for Android users and anyone prioritizing audio performance.",

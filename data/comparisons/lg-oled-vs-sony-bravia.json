@@ -19,7 +19,11 @@
     "best_for": "Home theater enthusiasts and gamers who prioritize perfect blacks, infinite contrast, and premium picture quality in dimmer viewing environments.",
     "rating": 4.7,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "LG OLED evo C4 Series 65-Inch 4K Smart TV",
+      "LG LG OLED evo C4 Series 65-Inch 4K Smart TV"
+    ]
   },
   "item_b": {
     "name": "Sony Bravia XR A95L 65-Inch QD-OLED 4K Google TV",
@@ -40,7 +44,11 @@
     "best_for": "Videophiles and professionals who demand the absolute best picture quality and color accuracy, regardless of budget constraints.",
     "rating": 4.8,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Sony Bravia XR A95L 65-Inch QD-OLED 4K Google TV",
+      "Sony Sony Bravia XR A95L 65-Inch QD-OLED 4K Google TV"
+    ]
   },
   "category": "tvs",
   "comparison_summary": "LG and Sony both make outstanding OLED TVs, but they're aimed at different buyers. LG's C4 offers incredible gaming features and better value, while Sony's A95L delivers reference-grade picture quality that justifies its premium price for those who can afford it.",
@@ -132,12 +140,7 @@
     }
   ],
   "related_comparisons": [
-    "lg-oled-vs-samsung-qled",
-    "lg-c4-vs-sony-a95l",
-    "samsung-s90c-vs-sony-a95l",
-    "lg-g4-vs-sony-a95l",
-    "sony-a80l-vs-sony-a95l",
-    "lg-c4-vs-samsung-s95c"
+    "lg-oled-vs-samsung-qled"
   ],
   "meta_title": "LG OLED vs Sony Bravia (2026): The Gaming vs Picture Quality Battle",
   "meta_description": "Detailed comparison of LG OLED vs Sony Bravia. We break down picture quality, gaming features, brightness, and value to help you pick the right premium TV.",

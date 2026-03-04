@@ -19,7 +19,11 @@
     "best_for": "Business professionals and IT departments who prioritize Windows compatibility, upgradeability, and enterprise security features.",
     "rating": 4.4,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Lenovo ThinkPad X1 Carbon Gen 11",
+      "Lenovo Lenovo ThinkPad X1 Carbon Gen 11"
+    ]
   },
   "item_b": {
     "name": "MacBook Pro 14-inch (M3)",
@@ -40,7 +44,11 @@
     "best_for": "Creative professionals, developers, and users invested in the Apple ecosystem who need powerful performance and exceptional display quality.",
     "rating": 4.7,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "MacBook Pro 14-inch (M3)",
+      "Apple MacBook Pro 14-inch (M3)"
+    ]
   },
   "category": "laptops",
   "comparison_summary": "This matchup pits Apple's locked-down performance powerhouse against Lenovo's practical business workhorse. The MacBook Pro delivers superior battery life, a stunning display, and blistering M3 performance. The ThinkPad counters with the best keyboard in the industry, actual ports, and the freedom to upgrade components later.",
@@ -132,15 +140,10 @@
     }
   ],
   "related_comparisons": [
-    "dell-xps-vs-macbook-pro",
-    "lenovo-thinkpad-vs-microsoft-surface-laptop",
-    "hp-elitebook-vs-lenovo-thinkpad",
-    "macbook-air-vs-macbook-pro",
-    "asus-zenbook-vs-macbook-pro",
-    "lenovo-thinkpad-vs-dell-latitude"
+    "macbook-air-vs-macbook-pro"
   ],
   "meta_title": "Lenovo ThinkPad vs MacBook Pro (2026): The Ultimate Buyer's Guide",
-  "meta_description": "Detailed comparison of Lenovo ThinkPad vs MacBook Pro. We break down performance, battery life, upgradeability, and display quality to help you pick the right laptop.",
+  "meta_description": "Detailed comparison of Lenovo ThinkPad vs MacBook Pro. We break down performance, battery life, upgradeability, and display quality to help you pick...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "When choosing between the Lenovo ThinkPad X1 Carbon Gen 11 vs MacBook Pro 14-inch (M3), understanding the key differences between these two powerhouses is essential to finding your perfect match. The question of which is better depends entirely on your priorities: while the MacBook Pro dominates for creative professionals who demand exceptional battery life and performance, the Lenovo ThinkPad X1 Carbon Gen 11 compared to MacBook Pro 14-inch (M3) reveals a machine built for business users who refuse to compromise on ports, keyboard quality, and repair flexibility. Whether you're deciding between Lenovo ThinkPad X1 Carbon Gen 11 or MacBook Pro 14-inch (M3), this comparison will walk you through the critical differences to help you make an informed decision."

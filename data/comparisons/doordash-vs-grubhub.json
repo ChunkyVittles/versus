@@ -19,7 +19,10 @@
     "best_for": "Users seeking the widest restaurant selection and fastest delivery times, especially outside major metropolitan areas.",
     "rating": 4.3,
     "affiliate_url": "https://www.doordash.com",
-    "shop_on_ebay": false
+    "shop_on_ebay": false,
+    "shop_keywords": [
+      "DoorDash"
+    ]
   },
   "item_b": {
     "name": "Grubhub",
@@ -40,7 +43,10 @@
     "best_for": "Budget-conscious urban users who prioritize transparent pricing and loyalty rewards over selection variety.",
     "rating": 4.1,
     "affiliate_url": "https://www.grubhub.com",
-    "shop_on_ebay": false
+    "shop_on_ebay": false,
+    "shop_keywords": [
+      "Grubhub"
+    ]
   },
   "category": "services",
   "comparison_summary": "DoorDash dominates with 450,000+ restaurants and 35-40 minute deliveries, while Grubhub counters with clearer pricing and actually useful rewards. Unless you live in a major city and order constantly, DoorDash's speed and selection make it the better pick.",
@@ -132,14 +138,10 @@
     }
   ],
   "related_comparisons": [
-    "doordash-vs-uber-eats",
-    "grubhub-vs-uber-eats",
-    "doordash-vs-postmates",
-    "grubhub-vs-seamless",
-    "instacart-vs-uber-eats"
+    "doordash-vs-uber-eats"
   ],
   "meta_title": "DoorDash vs Grubhub (2026): Speed vs Savings Showdown",
-  "meta_description": "Detailed comparison of DoorDash vs Grubhub. We break down restaurant selection, delivery speed, pricing, and geographic coverage to help you pick the right food delivery service.",
+  "meta_description": "Detailed comparison of DoorDash vs Grubhub. We break down restaurant selection, delivery speed, pricing, and geographic coverage to help you pick the...",
   "date_published": "2026-03-03",
   "date_updated": "2026-03-03",
   "comparison_intro": "When deciding between DoorDash or Grubhub, it's easy to get caught up wondering which is better for your food delivery needs. The difference between DoorDash and Grubhub comes down to speed, selection, and price—factors that matter when you're hungry and want your meal fast. In our DoorDash vs Grubhub breakdown, we'll show you how DoorDash compared to Grubhub stacks up across restaurants, delivery times, and costs so you can pick the right service for your next order."

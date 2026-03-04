@@ -19,7 +19,11 @@
     "best_for": "Bright room viewing, sports enthusiasts, and budget-conscious buyers who want excellent HDR performance without burn-in concerns.",
     "rating": 4.4,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Mini LED TV (TCL 6-Series or Samsung QN90D)",
+      "TCL / Samsung Mini LED TV (TCL 6-Series or Samsung QN90D)"
+    ]
   },
   "item_b": {
     "name": "OLED TV (LG C4 or Sony A95L)",
@@ -41,7 +45,11 @@
     "best_for": "Home theater enthusiasts, gamers prioritizing response time, and viewers who watch in controlled lighting with varied content.",
     "rating": 4.7,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "OLED TV (LG C4 or Sony A95L)",
+      "LG / Sony OLED TV (LG C4 or Sony A95L)"
+    ]
   },
   "category": "tvs",
   "comparison_summary": "Mini LED wins on brightness, price, and longevity. OLED wins on contrast, blacks, and viewing angles. Your room lighting and how you actually use the TV matter more than which technology sounds cooler on paper.",
@@ -133,15 +141,10 @@
     }
   ],
   "related_comparisons": [
-    "oled-vs-qled-tv",
-    "lg-oled-vs-samsung-qled",
-    "mini-led-vs-qled-tv",
-    "oled-vs-led-tv",
-    "sony-oled-vs-lg-oled",
-    "tcl-vs-samsung-tv"
+    "lg-oled-vs-samsung-qled"
   ],
   "meta_title": "Mini LED vs OLED TV (2026): The Brightness vs Black Level Battle",
-  "meta_description": "Detailed comparison of Mini LED vs OLED TV technology. We break down brightness, contrast, burn-in risk, and pricing to help you pick the right television for your home.",
+  "meta_description": "Detailed comparison of Mini LED vs OLED TV technology. We break down brightness, contrast, burn-in risk, and pricing to help you pick the right...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "When deciding between a Mini LED TV (TCL 6-Series or Samsung QN90D) vs OLED TV (LG C4 or Sony A95L), it helps to understand the key difference between Mini LED TV (TCL 6-Series or Samsung QN90D) and OLED TV (LG C4 or Sony A95L) before making your purchase. Whether you're choosing a Mini LED TV (TCL 6-Series or Samsung QN90D) or OLED TV (LG C4 or Sony A95L) depends largely on your room conditions and budget, so we've created this Mini LED TV (TCL 6-Series or Samsung QN90D) compared to OLED TV (LG C4 or Sony A95L) guide to help you figure out which is better for your specific needs. Read on to discover how picture quality, pricing, and practical concerns stack up between these two competing TV technologies."

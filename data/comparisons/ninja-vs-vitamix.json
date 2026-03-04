@@ -20,7 +20,11 @@
     "best_for": "Budget-conscious buyers who want solid everyday blending performance",
     "rating": 4.2,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Ninja Professional Plus",
+      "Ninja Ninja Professional Plus"
+    ]
   },
   "item_b": {
     "name": "Vitamix Explorian E310",
@@ -42,7 +46,11 @@
     "best_for": "Serious home cooks who want a buy-it-for-life blender",
     "rating": 4.7,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Vitamix Explorian E310",
+      "Vitamix Vitamix Explorian E310"
+    ]
   },
   "category": "blenders",
   "comparison_summary": "The Ninja gives you excellent everyday performance at a fraction of the cost. The Vitamix is an heirloom-quality machine that will outlast your kitchen cabinets. Your usage frequency is the deciding factor, not the spec sheet.",

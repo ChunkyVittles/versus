@@ -19,7 +19,11 @@
     "best_for": "Amazon Prime members who want streaming included with their subscription and access to a massive content library with rental options.",
     "rating": 4.3,
     "affiliate_url": "https://www.amazon.com/gp/video/offers",
-    "shop_on_ebay": false
+    "shop_on_ebay": false,
+    "shop_keywords": [
+      "Amazon Prime Video",
+      "Amazon Amazon Prime Video"
+    ]
   },
   "item_b": {
     "name": "Disney Plus",
@@ -40,7 +44,11 @@
     "best_for": "Families with children and fans of Disney, Marvel, Star Wars, and Pixar franchises seeking high-quality branded entertainment.",
     "rating": 4.6,
     "affiliate_url": "https://www.disneyplus.com",
-    "shop_on_ebay": false
+    "shop_on_ebay": false,
+    "shop_keywords": [
+      "Disney Plus",
+      "Disney Disney Plus"
+    ]
   },
   "category": "streaming",
   "comparison_summary": "Amazon Prime Video brings you 20,000+ titles with rental options and channel add-ons, creating a sprawling entertainment marketplace. Disney Plus takes the opposite approach—premium family entertainment from Disney's iconic brands, all included, with superior streaming quality and a cleaner interface. Prime Video offers better value for existing Prime members, while Disney Plus excels at content quality.",
@@ -128,15 +136,11 @@
     }
   ],
   "related_comparisons": [
-    "disney-plus-vs-hulu",
     "disney-plus-vs-netflix",
-    "amazon-prime-video-vs-netflix",
-    "apple-tv-plus-vs-disney-plus",
-    "hbo-max-vs-amazon-prime-video",
-    "disney-plus-vs-paramount-plus"
+    "amazon-prime-video-vs-netflix"
   ],
   "meta_title": "Amazon Prime Video vs Disney Plus (2026): Which Fits Your Family?",
-  "meta_description": "Detailed comparison of Amazon Prime Video vs Disney Plus. We break down content libraries, pricing, streaming quality, and original programming to help you pick the right streaming service.",
+  "meta_description": "Detailed comparison of Amazon Prime Video vs Disney Plus. We break down content libraries, pricing, streaming quality, and original programming to help...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "When deciding between Amazon Prime Video or Disney Plus, it helps to understand the key difference between Amazon Prime Video and Disney Plus before committing to either service. While Amazon Prime Video vs Disney Plus is a common question among cord-cutters, the answer really depends on your viewing habits and budget. In this guide, we'll break down Amazon Prime Video compared to Disney Plus across content libraries, pricing, and features to help you determine which is better for your household—and we might surprise you with the answer that one service could actually be perfect for your needs while the other serves a completely different purpose."

@@ -19,7 +19,11 @@
     "best_for": "Photography enthusiasts and users who prioritize clean software, AI features, and long-term software support.",
     "rating": 4.6,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Google Pixel 9 Pro",
+      "Google Google Pixel 9 Pro"
+    ]
   },
   "item_b": {
     "name": "Samsung Galaxy S25",
@@ -40,7 +44,11 @@
     "best_for": "Power users who want the brightest display, fastest charging, versatile camera zoom, and Samsung ecosystem integration.",
     "rating": 4.5,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Samsung Galaxy S25",
+      "Samsung Samsung Galaxy S25"
+    ]
   },
   "category": "smartphones",
   "comparison_summary": "The Pixel 9 Pro delivers superior computational photography and seven years of updates, while the Galaxy S25 counters with a blindingly bright 2600-nit display, faster 45W charging, and more versatile zoom lenses. This comparison really comes down to whether you value Google's AI-driven camera smarts or Samsung's hardware advantages.",
@@ -131,16 +139,9 @@
       "a": "The Pixel 9 Pro leverages Google's computational photography and AI for superior camera results, plus guarantees seven years of updates. The Galaxy S25 counters with a significantly brighter display (2600 nits), speedier 45W charging, and more versatile telephoto zoom lenses for hybrid photography."
     }
   ],
-  "related_comparisons": [
-    "pixel-9-pro-vs-iphone-16-pro",
-    "galaxy-s24-ultra-vs-galaxy-s25",
-    "oneplus-12-vs-pixel-9-pro",
-    "galaxy-s25-vs-iphone-16-pro-max",
-    "pixel-9-pro-xl-vs-galaxy-s25-ultra",
-    "galaxy-s25-vs-xiaomi-14-ultra"
-  ],
+  "related_comparisons": [],
   "meta_title": "Pixel 9 Pro vs Samsung Galaxy S25 (2026): The Camera vs Hardware Battle",
-  "meta_description": "Detailed comparison of Pixel 9 Pro vs Samsung Galaxy S25. We break down cameras, battery life, display brightness, AI features, and software support to help you pick the right flagship smartphone.",
+  "meta_description": "Detailed comparison of Pixel 9 Pro vs Samsung Galaxy S25. We break down cameras, battery life, display brightness, AI features, and software support to...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "Choosing between the Google Pixel 9 Pro vs Samsung Galaxy S25 comes down to your priorities, which is why understanding the key difference between Google Pixel 9 Pro and Samsung Galaxy S25 matters so much. When comparing the Google Pixel 9 Pro compared to Samsung Galaxy S25, you'll find that each phone excels in different areas—the Pixel dominates with camera quality and software longevity, while Samsung's Galaxy takes the crown for display brightness and charging speed. So if you're asking which is better or debating Google Pixel 9 Pro or Samsung Galaxy S25, the real answer depends on what you actually use your phone for every single day."

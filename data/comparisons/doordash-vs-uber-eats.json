@@ -19,7 +19,11 @@
     "best_for": "Users in suburban or rural areas seeking the widest restaurant selection and predictable subscription pricing.",
     "rating": 4.3,
     "affiliate_url": "https://www.doordash.com",
-    "shop_on_ebay": false
+    "shop_on_ebay": false,
+    "shop_keywords": [
+      "DoorDash",
+      "DoorDash, Inc. DoorDash"
+    ]
   },
   "item_b": {
     "name": "Uber Eats",
@@ -40,7 +44,11 @@
     "best_for": "Urban dwellers who already use Uber for rides and want faster delivery times with bundled subscription benefits.",
     "rating": 4.1,
     "affiliate_url": "https://www.ubereats.com",
-    "shop_on_ebay": false
+    "shop_on_ebay": false,
+    "shop_keywords": [
+      "Uber Eats",
+      "Uber Technologies, Inc. Uber Eats"
+    ]
   },
   "category": "services",
   "comparison_summary": "DoorDash and Uber Eats represent the top two food delivery platforms in North America, but they excel in different areas. DoorDash leads with restaurant selection and suburban coverage, while Uber Eats delivers faster in urban markets and integrates with your existing Uber account. Your location matters more than anything else in this decision.",
@@ -132,15 +140,10 @@
     }
   ],
   "related_comparisons": [
-    "doordash-vs-grubhub",
-    "instacart-vs-uber-eats",
-    "grubhub-vs-uber-eats",
-    "doordash-vs-postmates",
-    "amazon-fresh-vs-instacart",
-    "shipt-vs-instacart"
+    "doordash-vs-grubhub"
   ],
   "meta_title": "DoorDash vs Uber Eats (2026): Where You Live Changes Everything",
-  "meta_description": "Detailed comparison of DoorDash vs Uber Eats. We break down delivery fees, restaurant selection, delivery times, and subscription value to help you pick the right food delivery service.",
+  "meta_description": "Detailed comparison of DoorDash vs Uber Eats. We break down delivery fees, restaurant selection, delivery times, and subscription value to help you...",
   "date_published": "2026-03-03",
   "date_updated": "2026-03-03",
   "comparison_intro": "If you're torn between DoorDash vs Uber Eats, you're not alone—both services dominate the delivery market but excel in different situations. The key difference between DoorDash and Uber Eats comes down to your location and priorities: DoorDash dominates suburbs with unmatched restaurant selection, while Uber Eats wins in cities with speed and ride-sharing integration. To figure out which is better for your needs, this comparison breaks down how DoorDash compared to Uber Eats stacks up across delivery speed, restaurant variety, pricing, and user experience—helping you decide whether DoorDash or Uber Eats deserves a spot on your phone."

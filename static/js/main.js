@@ -54,7 +54,6 @@
         function makeSlug(a, b) {
             a = a.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
             b = b.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-            if (a > b) { var t = a; a = b; b = t; }
             return a + '-vs-' + b;
         }
 

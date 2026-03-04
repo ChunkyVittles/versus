@@ -19,7 +19,11 @@
     "best_for": "iPhone users seeking premium ANC earbuds with seamless Apple ecosystem integration and spatial audio.",
     "rating": 4.7,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Apple AirPods Pro (2nd Generation)",
+      "Apple Apple AirPods Pro (2nd Generation)"
+    ]
   },
   "item_b": {
     "name": "Samsung Galaxy Buds Pro",
@@ -40,7 +44,11 @@
     "best_for": "Android users, especially Samsung Galaxy owners, wanting high-quality audio with customizable sound profiles.",
     "rating": 4.4,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Samsung Galaxy Buds Pro",
+      "Samsung Samsung Galaxy Buds Pro"
+    ]
   },
   "category": "headphones",
   "comparison_summary": "These are two excellent premium earbuds built for different worlds. AirPods Pro win on noise cancellation and Apple integration, while Galaxy Buds Pro offer superior water resistance, dual-driver audio, and lower pricing. Your phone makes the decision for you.",
@@ -132,15 +140,10 @@
     }
   ],
   "related_comparisons": [
-    "airpods-pro-vs-sony-wf-1000xm5",
-    "bose-quietcomfort-earbuds-vs-samsung-galaxy-buds-pro",
-    "airpods-3-vs-samsung-galaxy-buds-2",
-    "jabra-elite-85t-vs-samsung-galaxy-buds-pro",
-    "airpods-pro-vs-beats-fit-pro",
-    "google-pixel-buds-pro-vs-samsung-galaxy-buds-pro"
+    "airpods-pro-vs-sony-wf-1000xm5"
   ],
   "meta_title": "AirPods Pro vs Samsung Galaxy Buds Pro (2026): The Ecosystem Choice",
-  "meta_description": "Detailed comparison of AirPods Pro vs Samsung Galaxy Buds Pro. We break down noise cancellation, sound quality, battery life, and ecosystem integration to help you pick the right wireless earbuds.",
+  "meta_description": "Detailed comparison of AirPods Pro vs Samsung Galaxy Buds Pro. We break down noise cancellation, sound quality, battery life, and ecosystem integration...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "When deciding between Apple AirPods Pro (2nd Generation) or Samsung Galaxy Buds Pro, understanding which is better for your specific needs requires looking at more than just specs. The difference between Apple AirPods Pro (2nd Generation) and Samsung Galaxy Buds Pro comes down to your smartphone choice and priorities—Apple AirPods Pro (2nd Generation) vs Samsung Galaxy Buds Pro isn't a matter of one being universally superior, but rather which features matter most to you. To help you make an informed choice, we've compared Apple AirPods Pro (2nd Generation) compared to Samsung Galaxy Buds Pro across performance, sound quality, noise cancellation, battery life, and price, so you can see exactly how these two leading earbuds stack up against each other."

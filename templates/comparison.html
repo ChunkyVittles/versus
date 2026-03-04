@@ -36,6 +36,11 @@
     "description": "{{ comp.meta_description }}",
     "datePublished": "{{ comp.date_published }}",
     "dateModified": "{{ comp.date_updated }}",
+    "author": {
+        "@type": "Organization",
+        "name": "VersusThat",
+        "url": "https://versusthat.com"
+    },
     "publisher": {
         "@type": "Organization",
         "name": "VersusThat"
@@ -277,7 +282,7 @@
         <div class="analysis-content">
             <h2 class="section-title">{{ comp.item_a.name }} vs {{ comp.item_b.name }}: Full Comparison</h2>
             <div class="seo-content">
-                {{ comp.seo_content | e | replace('\n\n', '</p><p>') | safe }}
+                <p>{{ comp.seo_content | e | replace('\n\n', '</p><p>') | safe }}</p>
             </div>
         </div>
     </div>
@@ -357,12 +362,4 @@
 </section>
 {% endif %}
 
-<!-- Search data for autocomplete -->
-<script>
-window.VS_SEARCH_DATA = [
-    {% for c in all_comparisons %}
-    {"slug": "{{ c.slug }}", "a": "{{ c.item_a.name }}", "b": "{{ c.item_b.name }}", "cat": "{{ c.category }}"}{% if not loop.last %},{% endif %}
-    {% endfor %}
-];
-</script>
 {% endblock %}

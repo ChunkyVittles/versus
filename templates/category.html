@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}{{ category.name }} Comparisons — VersusThat{% endblock %}
-{% block description %}Compare the best {{ category.name|lower }} side by side. Specs, pros, cons, and expert verdicts to help you pick the right {{ category.name|lower|replace('s','') }}.{% endblock %}
+{% block description %}Compare the best {{ category.name|lower }} side by side. Specs, pros, cons, and expert verdicts to help you pick the right one.{% endblock %}
 {% block canonical_path %}/categories/{{ category.slug }}/{% endblock %}
 {% block og_title %}{{ category.name }} Comparisons — VersusThat{% endblock %}
 
@@ -39,7 +39,7 @@
     <div class="container">
         <span class="category-hero-icon">{{ category.icon }}</span>
         <h1>{{ category.name }} Comparisons</h1>
-        <p>{{ comparisons|length }} comparison{{ 's' if comparisons|length != 1 }} to help you pick the right {{ category.name|lower|replace('s','') }}.</p>
+        <p>{{ comparisons|length }} comparison{{ 's' if comparisons|length != 1 }} to help you pick the right one.</p>
     </div>
 </section>
 

@@ -19,7 +19,11 @@
     "best_for": "Creative professionals and developers who prioritize performance, battery life, and macOS ecosystem integration.",
     "rating": 4.8,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "MacBook Pro 14-inch (M3)",
+      "Apple MacBook Pro 14-inch (M3)"
+    ]
   },
   "item_b": {
     "name": "Microsoft Surface Pro 9",
@@ -40,7 +44,11 @@
     "best_for": "Students, business users, and digital artists who need a versatile touchscreen device that functions as both laptop and tablet.",
     "rating": 4.4,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Microsoft Surface Pro 9",
+      "Microsoft Microsoft Surface Pro 9"
+    ]
   },
   "category": "laptops",
   "comparison_summary": "The MacBook Pro 14-inch is built for sustained performance with exceptional battery life and premium build quality. The Surface Pro 9 prioritizes versatility with its 2-in-1 design, pen input, and touchscreen. Your workflow determines which matters more.",
@@ -132,15 +140,10 @@
     }
   ],
   "related_comparisons": [
-    "macbook-air-vs-surface-laptop",
-    "dell-xps-13-vs-macbook-pro",
-    "ipad-pro-vs-surface-pro",
-    "lenovo-thinkpad-vs-macbook-pro",
-    "macbook-pro-vs-thinkpad-x1-carbon",
-    "surface-laptop-vs-surface-pro"
+    "lenovo-thinkpad-vs-macbook-pro"
   ],
   "meta_title": "MacBook Pro vs Surface Pro (2026): Performance or Versatility?",
-  "meta_description": "Detailed comparison of MacBook Pro vs Surface Pro 9. We break down performance, battery life, versatility, and value to help you pick the right laptop for your needs.",
+  "meta_description": "Detailed comparison of MacBook Pro vs Surface Pro 9. We break down performance, battery life, versatility, and value to help you pick the right laptop...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "When deciding between the MacBook Pro 14-inch (M3) vs Microsoft Surface Pro 9, the answer to which is better depends entirely on your priorities. The key difference between MacBook Pro 14-inch (M3) and Microsoft Surface Pro 9 lies in their core design philosophy: one is a pure powerhouse, while the other is a shape-shifter. Whether you're weighing the MacBook Pro 14-inch (M3) or Microsoft Surface Pro 9 for your workflow, our detailed breakdown shows how MacBook Pro 14-inch (M3) compared to Microsoft Surface Pro 9 delivers distinct advantages in different areas, helping you choose the right machine for how you actually work."

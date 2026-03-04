@@ -20,7 +20,11 @@
     "best_for": "Windows users who want a premium ultrabook with an excellent display",
     "rating": 4.3,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Dell XPS 13",
+      "Dell Dell XPS 13"
+    ]
   },
   "item_b": {
     "name": "Apple MacBook Air M3",
@@ -42,7 +46,11 @@
     "best_for": "Anyone who values battery life, silence, and creative performance in an ultrabook",
     "rating": 4.7,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Apple MacBook Air M3",
+      "Apple Apple MacBook Air M3"
+    ]
   },
   "category": "laptops",
   "comparison_summary": "The MacBook Air M3 crushes the Dell XPS 13 on battery life, runs completely silent, and handles creative work better. The Dell fights back with Windows compatibility, a slightly better display, and a lower price. Most people should buy the MacBook Air.",

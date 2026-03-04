@@ -19,7 +19,11 @@
     "best_for": "Home theater enthusiasts who prioritize accurate colors, perfect blacks, and wide viewing angles for mixed content consumption.",
     "rating": 4.6,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "LG C3 OLED TV",
+      "LG LG C3 OLED TV"
+    ]
   },
   "item_b": {
     "name": "Samsung S90C QD-OLED TV",
@@ -40,7 +44,11 @@
     "best_for": "Gamers and HDR movie fans who watch in controlled lighting and want the brightest, most vibrant OLED picture quality available.",
     "rating": 4.7,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Samsung S90C QD-OLED TV",
+      "Samsung Samsung S90C QD-OLED TV"
+    ]
   },
   "category": "tvs",
   "comparison_summary": "This matchup pits WOLED against QD-OLED technology. The Samsung S90C delivers almost double the brightness with more saturated colors thanks to quantum dots, while the LG C3 offers better viewing angles, more accurate colors, and twice as many HDMI 2.1 ports. Both have perfect contrast and near-instant response times, but they're built for different viewing situations.",
@@ -131,16 +139,9 @@
       "a": "The Samsung uses QD-OLED technology to deliver nearly double the brightness and more saturated colors, while the LG uses WOLED with better viewing angles and color accuracy. The C3 also has twice as many HDMI 2.1 ports, making it more versatile for multiple high-bandwidth devices."
     }
   ],
-  "related_comparisons": [
-    "lg-c3-vs-lg-g3",
-    "lg-c3-vs-sony-a80l",
-    "samsung-s90c-vs-samsung-s95c",
-    "lg-c2-vs-lg-c3",
-    "samsung-qn90c-vs-samsung-s90c",
-    "sony-a80l-vs-sony-a95l"
-  ],
+  "related_comparisons": [],
   "meta_title": "LG C3 vs Samsung S90C (2026): QD-OLED vs WOLED Technology Compared",
-  "meta_description": "Detailed comparison of LG C3 vs Samsung S90C OLED TVs. We break down brightness, viewing angles, gaming features, and color technology to help you pick the right premium television.",
+  "meta_description": "Detailed comparison of LG C3 vs Samsung S90C OLED TVs. We break down brightness, viewing angles, gaming features, and color technology to help you pick...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "When deciding between the LG C3 OLED TV or Samsung S90C QD-OLED TV, it helps to understand which is better for your specific setup and priorities. The key difference between LG C3 OLED TV and Samsung S90C QD-OLED TV comes down to brightness and connectivity: Samsung's QD-OLED panel delivers dramatically brighter HDR performance that pops off the screen, while LG's C3 offers superior picture quality from wider viewing angles and more HDMI 2.1 ports for those who need them. Our LG C3 OLED TV compared to Samsung S90C QD-OLED TV breakdown will help you weigh these trade-offs and determine which premium TV deserves a spot in your living room."

@@ -13,7 +13,7 @@
     "description": "Honest product comparisons to help you decide",
     "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://versusthat.com/?q={search_term_string}",
+        "target": "https://versusthat.com/search/?q={search_term_string}",
         "query-input": "required name=search_term_string"
     }
 }
@@ -24,11 +24,12 @@
 <!-- Hero -->
 <section class="home-hero">
     <div class="container">
-        <h1 class="home-hero-title">
+        <h1 class="sr-only">Compare Products Side by Side — Honest Comparisons and Verdicts</h1>
+        <div class="home-hero-title" aria-hidden="true">
             <span class="hero-this">THIS</span>
             <span class="hero-vs-giant">VERSUS</span>
             <span class="hero-that">THAT</span>
-        </h1>
+        </div>
         <p class="home-hero-subtitle">Type two things. Get a verdict. It's that simple.</p>
         <div class="versus-input-card">
             <div class="versus-input-side versus-input-side-a">

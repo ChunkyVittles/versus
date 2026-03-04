@@ -295,12 +295,16 @@ function renderComparisonPage(comp, affiliates) {
     <meta name="robots" content="noindex, nofollow">
     <title>${esc(comp.meta_title || `${comp.item_a?.name} vs ${comp.item_b?.name}`)}</title>
     <meta name="description" content="${esc(comp.meta_description || '')}">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://versusthat.com/${comp.slug}/">
     <meta property="og:site_name" content="VersusThat">
     <meta property="og:type" content="article">
     <meta property="og:title" content="${esc(comp.meta_title || '')}">
     <meta property="og:description" content="${esc(comp.meta_description || '')}">
     <meta property="og:url" content="https://versusthat.com/${comp.slug}/">
+    <meta property="og:image" content="https://versusthat.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preload" href="/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -315,13 +319,13 @@ function renderComparisonPage(comp, affiliates) {
     .comparison-intro-section{background:#f8fafc;padding:2rem 0}.comparison-intro{font-size:1.15rem;line-height:1.75;color:#475569;max-width:800px;margin:0 auto;text-align:center}
     .affiliate-disclosure-bar{background:#fefce8;border-bottom:1px solid #fde68a;padding:.5rem 0;font-size:.82rem;line-height:1.5;color:#92400e}.affiliate-disclosure-bar p{margin:0;text-align:center}.affiliate-disclosure-bar a{color:#92400e;text-decoration:underline;font-weight:600}.shop-disclosure{text-align:center;font-size:.82rem;color:#94a3b8;margin-top:1.5rem;padding-top:1rem;border-top:1px solid #e2e8f0}.btn-partner{display:inline-flex;align-items:center;gap:.5rem}.partner-logo{height:20px;width:auto;vertical-align:middle}
     </style>
-    <link rel="preload" href="/css/style.css?v=7" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/style.css?v=7"></noscript>
+    <link rel="preload" href="/css/style.css?v=8" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/style.css?v=8"></noscript>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"WebPage","name":${JSON.stringify(comp.meta_title)},"url":"https://versusthat.com/${comp.slug}/","datePublished":"${comp.date_published}","dateModified":"${comp.date_updated}","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://versusthat.com/"},{"@type":"ListItem","position":2,"name":"${esc(categoryName)}","item":"https://versusthat.com/categories/${comp.category}/"},{"@type":"ListItem","position":3,"name":"${esc(comp.item_a?.name)} vs ${esc(comp.item_b?.name)}"}]}}
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Article","headline":${JSON.stringify(comp.meta_title)},"description":${JSON.stringify(comp.meta_description)},"datePublished":"${comp.date_published}","dateModified":"${comp.date_updated}","publisher":{"@type":"Organization","name":"VersusThat"}}
+    {"@context":"https://schema.org","@type":"Article","headline":${JSON.stringify(comp.meta_title)},"description":${JSON.stringify(comp.meta_description)},"datePublished":"${comp.date_published}","dateModified":"${comp.date_updated}","author":{"@type":"Organization","name":"VersusThat","url":"https://versusthat.com"},"publisher":{"@type":"Organization","name":"VersusThat"}}
     </script>
     ${faqSchema}
 </head>
@@ -330,6 +334,8 @@ function renderComparisonPage(comp, affiliates) {
         <div class="container">
             <a href="/" class="logo">VERSUS<span class="logo-vs-mark">THAT</span></a>
             <nav class="main-nav">
+                <a href="/categories/">Categories</a>
+                <a href="/about/">About</a>
             </nav>
             <div class="header-actions">
                 <button class="site-search-btn" id="site-search-btn" aria-label="Search">
@@ -461,7 +467,7 @@ function renderComparisonPage(comp, affiliates) {
             </div>
         </div>
     </footer>
-    <script src="/js/main.js?v=7" defer></script>
+    <script src="/js/main.js?v=8" defer></script>
     <script>
     (function(){
       const S='versusthat',C='https://bullbotics.com/api/analytics/collect';
@@ -494,6 +500,7 @@ function renderGeneratingPage(slug, itemA, itemB) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${escA} vs ${escB} — VersusThat</title>
     <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="preload" href="/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
     <style>
@@ -515,14 +522,16 @@ function renderGeneratingPage(slug, itemA, itemB) {
     .gen-facts-label{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.4);margin-bottom:.5rem}
     .gen-facts-text{font-size:1.1rem;color:rgba(255,255,255,0.85);line-height:1.6;max-width:500px;margin:0 auto}
     </style>
-    <link rel="preload" href="/css/style.css?v=7" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/style.css?v=7"></noscript>
+    <link rel="preload" href="/css/style.css?v=8" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/style.css?v=8"></noscript>
 </head>
 <body>
     <header class="site-header">
         <div class="container">
             <a href="/" class="logo">VERSUS<span class="logo-vs-mark">THAT</span></a>
             <nav class="main-nav">
+                <a href="/categories/">Categories</a>
+                <a href="/about/">About</a>
             </nav>
             <div class="header-actions">
                 <button class="site-search-btn" id="site-search-btn" aria-label="Search">
@@ -588,7 +597,7 @@ function renderGeneratingPage(slug, itemA, itemB) {
             </div>
         </div>
     </footer>
-    <script src="/js/main.js?v=7" defer></script>
+    <script src="/js/main.js?v=8" defer></script>
     <script>
     (function() {
         var slug = ${JSON.stringify(slug)};

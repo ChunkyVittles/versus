@@ -19,7 +19,11 @@
     "best_for": "Professional tradespeople and serious DIYers who prioritize ergonomics, build quality, and long-term reliability over upfront cost.",
     "rating": 4.6,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Bosch Power Tools",
+      "Bosch Bosch Power Tools"
+    ]
   },
   "item_b": {
     "name": "Makita Power Tools",
@@ -40,7 +44,11 @@
     "best_for": "Users building a comprehensive cordless tool ecosystem who need extensive tool variety and excellent battery performance at competitive prices.",
     "rating": 4.5,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Makita Power Tools",
+      "Makita Makita Power Tools"
+    ]
   },
   "category": "power-tools",
   "comparison_summary": "Bosch and Makita represent premium but different philosophies: Bosch delivers refined German engineering with superior ergonomics and electronic protection, while Makita counters with an unmatched 325+ tool ecosystem on their 18V platform and faster battery charging. Your choice depends on whether you prioritize comfort during extended use or need maximum tool variety within one battery system.",
@@ -135,12 +143,10 @@
     "dewalt-vs-makita",
     "bosch-vs-dewalt",
     "makita-vs-milwaukee",
-    "bosch-vs-milwaukee",
-    "dewalt-vs-milwaukee",
-    "makita-vs-ryobi"
+    "dewalt-vs-milwaukee"
   ],
   "meta_title": "Bosch vs Makita Power Tools (2026): Ergonomics vs Ecosystem",
-  "meta_description": "Detailed comparison of Bosch vs Makita power tools. We break down ergonomics, battery technology, ecosystem size, and pricing to help you pick the right professional power tool brand.",
+  "meta_description": "Detailed comparison of Bosch vs Makita power tools. We break down ergonomics, battery technology, ecosystem size, and pricing to help you pick the...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "When deciding between Bosch Power Tools or Makita Power Tools, understanding which is better for your needs requires looking beyond brand names. The difference between Bosch Power Tools and Makita Power Tools comes down to what you prioritize: Bosch excels in ergonomic design and durability, while Makita offers a wider range of tools and better value across its lineup. In this Bosch Power Tools compared to Makita Power Tools guide, we'll break down the key distinctions so you can confidently choose the brand that matches your work style and budget."

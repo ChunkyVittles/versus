@@ -19,7 +19,11 @@
     "best_for": "Power users who prioritize battery life, fast charging, and value without compromising on flagship performance.",
     "rating": 4.4,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "OnePlus 13",
+      "OnePlus OnePlus 13"
+    ]
   },
   "item_b": {
     "name": "Samsung Galaxy S25",
@@ -40,7 +44,11 @@
     "best_for": "Users seeking long-term software support, premium camera quality, and seamless integration within the Samsung ecosystem.",
     "rating": 4.6,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Samsung Galaxy S25",
+      "Samsung Samsung Galaxy S25"
+    ]
   },
   "category": "smartphones",
   "comparison_summary": "The OnePlus 13 crushes the Galaxy S25 on battery life with its 6,000mAh cell and 100W charging, plus it costs $100 less at $799. Samsung counters with seven years of software updates, noticeably better cameras, and deeper ecosystem integration. Pick based on whether you value daily charging convenience or long-term software support.",
@@ -127,14 +135,9 @@
       "a": "The OnePlus 13 dominates on battery (6,000mAh with 100W charging) and costs $100 less at $799, while the Galaxy S25 offers noticeably better cameras, seven years of updates, and superior ecosystem integration. Your choice depends on whether you prioritize all-day battery life or long-term software support and camera quality."
     }
   ],
-  "related_comparisons": [
-    "google-pixel-9-pro-vs-samsung-galaxy-s25",
-    "oneplus-13-vs-samsung-galaxy-s24-ultra",
-    "iphone-16-pro-vs-samsung-galaxy-s25",
-    "oneplus-13-vs-xiaomi-15-ultra"
-  ],
-  "meta_title": "OnePlus 13 vs Samsung Galaxy S25: Battery Beast or Update Champion?",
-  "meta_description": "Detailed comparison of OnePlus 13 vs Samsung Galaxy S25. We break down battery life, charging speed, cameras, software support, and value to help you pick the right flagship smartphone.",
+  "related_comparisons": [],
+  "meta_title": "OnePlus 13 vs Samsung Galaxy S25 (2026): Battery Beast or Update Champion?",
+  "meta_description": "Detailed comparison of OnePlus 13 vs Samsung Galaxy S25. We break down battery life, charging speed, cameras, software support, and value to help you...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "Choosing between the OnePlus 13 or Samsung Galaxy S25 doesn't have to be complicated, even though both flagship phones offer plenty to love. In our OnePlus 13 vs Samsung Galaxy S25 breakdown, we'll explore the key differences between OnePlus 13 and Samsung Galaxy S25 to help you figure out which is better for your needs, whether you're drawn to OnePlus 13 compared to Samsung Galaxy S25 for battery life or prefer Samsung's camera prowess and long software support. By the end of this guide, you'll have a clear picture of how these two powerhouses stack up against each other."

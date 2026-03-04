@@ -19,7 +19,11 @@
     "best_for": "Coffee drinkers who want consistent, hands-off brewing with minimal effort and prefer multiple cups throughout the day.",
     "rating": 4.3,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Automatic Drip Coffee Maker",
+      "Various (Cuisinart, Mr. Coffee, Bonavita) Automatic Drip Coffee Maker"
+    ]
   },
   "item_b": {
     "name": "French Press Coffee Maker",
@@ -40,7 +44,11 @@
     "best_for": "Coffee enthusiasts who value rich, full-bodied flavor and prefer a hands-on brewing ritual without electricity dependence.",
     "rating": 4.5,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "French Press Coffee Maker",
+      "Various (Bodum, Frieling, Espro) French Press Coffee Maker"
+    ]
   },
   "category": "coffee-makers",
   "comparison_summary": "Drip coffee makers automate everything and produce clean, consistent coffee that's perfect for busy routines. French presses give you richer, oil-heavy coffee with zero electricity needed but demand more attention and effort. It really depends on whether you value convenience or depth of flavor more.",
@@ -131,16 +139,9 @@
       "a": "Drip makers are electric, fully automated, and produce clean coffee quickly with consistent results—ideal for busy schedules. French presses are manual, require no electricity, steep your grounds for deeper flavor and heavier body, but demand more attention and effort to operate."
     }
   ],
-  "related_comparisons": [
-    "aeropress-vs-french-press",
-    "chemex-vs-drip-coffee",
-    "espresso-machine-vs-drip-coffee",
-    "french-press-vs-pour-over",
-    "keurig-vs-drip-coffee",
-    "moka-pot-vs-french-press"
-  ],
+  "related_comparisons": [],
   "meta_title": "Drip Coffee vs French Press (2026): Flavor or Convenience?",
-  "meta_description": "Detailed comparison of Drip Coffee vs French Press. We break down brewing time, flavor profiles, cost, and convenience to help you pick the right coffee maker.",
+  "meta_description": "Detailed comparison of Drip Coffee vs French Press. We break down brewing time, flavor profiles, cost, and convenience to help you pick the right...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "When deciding between an Automatic Drip Coffee Maker vs French Press Coffee Maker, the answer to which is better depends entirely on what matters most to you in your morning routine. Understanding the difference between Automatic Drip Coffee Maker and French Press Coffee Maker goes beyond just brewing method—it's about choosing between speed and flavor, consistency and craft. Whether you're asking yourself \"should I get an Automatic Drip Coffee Maker or French Press Coffee Maker,\" this Automatic Drip Coffee Maker compared to French Press Coffee Maker guide will help you find the perfect match for your lifestyle and taste preferences."

@@ -133,9 +133,8 @@ export async function onRequestOptions() {
 function makeSlug(query) {
     const match = query.toLowerCase().match(/(.+?)\s+(?:vs\.?|versus|v\.?\s*s\.?)\s+(.+)/);
     if (!match) return null;
-    let a = match[1].trim().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-    let b = match[2].trim().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-    if (a > b) [a, b] = [b, a];
+    const a = match[1].trim().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    const b = match[2].trim().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     return `${a}-vs-${b}`;
 }
 
@@ -260,7 +259,7 @@ Return ONLY valid JSON matching this exact structure (no markdown, no code fence
   ],
   "related_comparisons": ["slug-1-vs-slug-2", "slug-3-vs-slug-4"],
   "meta_title": "Item A vs Item B (2026): Engaging Subtitle Here",
-  "meta_description": "Detailed comparison of Item A vs Item B.",
+  "meta_description": "Detailed comparison of Item A vs Item B. MUST be 120-155 characters max.",
   "date_published": "${today}",
   "date_updated": "${today}"
 }
@@ -272,7 +271,7 @@ IMPORTANT GUIDELINES:
 - Include 3-5 FAQs that people actually search for
 - Ratings should be realistic (3.5-4.9 range)
 - seo_content should be 300-500 words, substantial and unique
-- related_comparisons should use alphabetically-ordered slugs
+- related_comparisons should use the same slug order as the comparison (first item mentioned comes first in the slug)
 - Be objective and data-driven. Both items have merits.
 - meta_title should include the year (2026)
 - shop_keywords: 2-3 search terms for related purchasable items. For products: "Brand Model name". For people: related merchandise like "Messi jersey", "Bob Hope DVD collection". For services/websites: related physical products. For concepts/languages: related books or courses. ALWAYS include at least 2 shop_keywords per item.
@@ -280,7 +279,7 @@ IMPORTANT GUIDELINES:
 - shop_on_ebay: Set to true if this item is a physical product, game, toy, book, or anything people commonly buy on eBay. Set to false for software, SaaS, online services, streaming platforms, concepts, people, animals/pets, or anything that isn't a purchasable physical item. Examples: Chess sets = true, Rubik's Cube = true, mattresses = true, headphones = true, NordVPN = false, Netflix = false, "The Beatles" = false, "Roth IRA" = false, Cat = false, Dog = false, Goldfish = false.
 - ANIMALS/PETS: If the comparison is between animals or pet breeds (e.g., "Cat vs Dog", "Golden Retriever vs Labrador"), use category "animals" and set shop_on_ebay to false for both items. The system will automatically show shelter links instead of shop links.
 - comparison_intro MUST contain these exact phrasings naturally: "[A] vs [B]", "[A] or [B]", "which is better", "difference between [A] and [B]", and "[A] compared to [B]". This is critical for SEO.
-- meta_description MUST include both "vs" and "or" phrasings of the comparison.
+- meta_description MUST be 120-155 characters (Google truncates longer ones). MUST include both "vs" and "or" phrasings of the comparison.
 - faq MUST always include these three questions (plus 2-3 more topic-specific ones):
   1. "Is [A] better than [B]?" — answer should directly state which is better and why in 2-3 sentences.
   2. "Should I choose [A] or [B]?" — answer should give a clear recommendation based on use case. Use "choose" instead of "buy" for non-products.

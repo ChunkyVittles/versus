@@ -19,7 +19,11 @@
     "best_for": "Enthusiasts seeking premium picture quality with Mini-LED technology at competitive prices.",
     "rating": 4.4,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Hisense U8K Mini-LED ULED TV",
+      "Hisense Hisense U8K Mini-LED ULED TV"
+    ]
   },
   "item_b": {
     "name": "TCL QM8 Mini-LED QLED TV",
@@ -40,7 +44,11 @@
     "best_for": "Budget-conscious buyers wanting flagship-level brightness and features without premium pricing.",
     "rating": 4.5,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "TCL QM8 Mini-LED QLED TV",
+      "TCL TCL QM8 Mini-LED QLED TV"
+    ]
   },
   "category": "tvs",
   "comparison_summary": "TCL and Hisense both deliver Mini-LED performance that embarrasses their price tags. TCL edges ahead on brightness and value, while Hisense counters with better contrast and motion handling. Most people should grab the TCL, but dark room viewers and serious gamers have good reason to consider Hisense.",
@@ -131,14 +139,7 @@
       "a": "The TCL QM8 excels with superior brightness and lower pricing, making it ideal for bright rooms and budget-conscious buyers. The Hisense U8K counters with better contrast, native 144Hz gaming support, and superior motion handling for dark room cinephiles and competitive gamers."
     }
   ],
-  "related_comparisons": [
-    "hisense-tv-vs-samsung-tv",
-    "lg-tv-vs-tcl",
-    "samsung-tv-vs-tcl",
-    "hisense-tv-vs-vizio-tv",
-    "sony-tv-vs-tcl",
-    "lg-tv-vs-samsung-tv"
-  ],
+  "related_comparisons": [],
   "meta_title": "Hisense vs TCL TV (2026): Brightness vs Contrast Showdown",
   "meta_description": "Detailed comparison of Hisense vs TCL TV. We break down picture quality, brightness, gaming performance, and value to help you pick the right television.",
   "date_published": "2026-03-02",

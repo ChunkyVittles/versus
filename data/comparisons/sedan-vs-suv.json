@@ -19,7 +19,11 @@
     "best_for": "Urban commuters and drivers prioritizing fuel economy, handling, and lower operating costs.",
     "rating": 4.3,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Mid-Size Sedan",
+      "Various Manufacturers Mid-Size Sedan"
+    ]
   },
   "item_b": {
     "name": "Mid-Size SUV",
@@ -40,7 +44,11 @@
     "best_for": "Families needing cargo space, drivers in harsh weather climates, and those wanting elevated seating position.",
     "rating": 4.5,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Mid-Size SUV",
+      "Various Manufacturers Mid-Size SUV"
+    ]
   },
   "category": "cars",
   "comparison_summary": "The sedan versus SUV debate comes down to efficiency versus utility. Sedans deliver 15-20% better fuel economy and cost $5,000-$10,000 less upfront, while SUVs provide families with dramatically more cargo space, better ground clearance, and superior weather capability.",
@@ -131,14 +139,7 @@
       "a": "Sedans offer 15-20% better fuel economy, cost $5,000-$10,000 less upfront, and are easier to park and drive. SUVs deliver significantly more cargo space, higher ground clearance, better weather handling, and superior utility—but at the expense of efficiency and cost."
     }
   ],
-  "related_comparisons": [
-    "compact-suv-vs-midsize-suv",
-    "coupe-vs-sedan",
-    "crossover-vs-suv",
-    "hybrid-sedan-vs-gas-sedan",
-    "minivan-vs-suv",
-    "sedan-vs-wagon"
-  ],
+  "related_comparisons": [],
   "meta_title": "Sedan vs SUV (2026): The Real Cost Difference",
   "meta_description": "Detailed comparison of Sedan vs SUV. We break down fuel economy, cargo space, pricing, and handling to help you pick the right vehicle for your needs.",
   "date_published": "2026-03-03",

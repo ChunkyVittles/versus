@@ -19,7 +19,11 @@
     "best_for": "Budget-conscious buyers who want premium Dyson performance without paying for the latest technology innovations.",
     "rating": 4.5,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Dyson V11 Torque Drive",
+      "Dyson Dyson V11 Torque Drive"
+    ]
   },
   "item_b": {
     "name": "Dyson V15 Detect",
@@ -40,7 +44,11 @@
     "best_for": "Allergy sufferers and tech enthusiasts who want scientific proof of cleaning performance and the most advanced dust detection available.",
     "rating": 4.6,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Dyson V15 Detect",
+      "Dyson Dyson V15 Detect"
+    ]
   },
   "category": "vacuums",
   "comparison_summary": "The V15 Detect brings laser dust detection and particle counting with 230 AW of suction, while the V11 delivers about 85% of that performance for 25-30% less money. The V11 is the value champion for most people, but the V15 makes perfect sense for allergy sufferers and anyone who loves having cleaning data at their fingertips.",
@@ -132,15 +140,10 @@
     }
   ],
   "related_comparisons": [
-    "dyson-v11-vs-v12",
-    "dyson-v12-vs-v15",
-    "dyson-v15-vs-shark-stratos",
-    "dyson-v11-vs-shark-vertex",
-    "dyson-v15-vs-tineco-pure-one-s12",
-    "dyson-outsize-vs-v15"
+    "dyson-v15-vs-shark-stratos"
   ],
   "meta_title": "Dyson V11 vs V15 Detect (2026): Is the Laser Worth $200?",
-  "meta_description": "Detailed comparison of Dyson V11 vs V15 Detect. We break down suction power, laser detection, filtration, battery life, and value to help you pick the right cordless vacuum.",
+  "meta_description": "Detailed comparison of Dyson V11 vs V15 Detect. We break down suction power, laser detection, filtration, battery life, and value to help you pick the...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "When deciding between the Dyson V11 Torque Drive vs Dyson V15 Detect, it helps to understand the key differences that separate these two flagship cordless vacuums. If you're wondering which is better or trying to figure out the difference between Dyson V11 Torque Drive and Dyson V15 Detect, the answer depends on your priorities and budget—but our detailed breakdown of the Dyson V11 Torque Drive compared to Dyson V15 Detect reveals that the V15 pulls ahead with stronger suction power, smarter cleaning detection, and advanced filtration that make it the superior choice for allergy sufferers and anyone who wants to see exactly what they're cleaning. Read on to explore how they stack up across performance, features, and value, and whether the premium price of the V15 is worth it for your home."

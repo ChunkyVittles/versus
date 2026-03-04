@@ -19,7 +19,11 @@
     "best_for": "Customers who maintain higher balances and want comprehensive rewards through the Preferred Rewards program.",
     "rating": 4.1,
     "affiliate_url": "https://www.bankofamerica.com",
-    "shop_on_ebay": false
+    "shop_on_ebay": false,
+    "shop_keywords": [
+      "Bank of America Core Banking",
+      "Bank of America Bank of America Core Banking"
+    ]
   },
   "item_b": {
     "name": "Chase Total Checking & Savings",
@@ -40,7 +44,11 @@
     "best_for": "Customers seeking a full-service bank with extensive branch access and integrated banking and credit card rewards.",
     "rating": 4.3,
     "affiliate_url": "https://www.chase.com",
-    "shop_on_ebay": false
+    "shop_on_ebay": false,
+    "shop_keywords": [
+      "Chase Total Checking & Savings",
+      "Chase Chase Total Checking & Savings"
+    ]
   },
   "category": "financial",
   "comparison_summary": "Chase and Bank of America are America's two largest retail banks, and they're more similar than different. Chase pulls ahead with slightly better accessibility and stronger credit card rewards, while Bank of America's Preferred Rewards program delivers exceptional value for high-balance customers. Both offer mediocre savings rates but excellent mobile banking.",
@@ -132,15 +140,11 @@
     }
   ],
   "related_comparisons": [
-    "bank-of-america-vs-wells-fargo",
-    "chase-vs-citibank",
     "chase-vs-wells-fargo",
-    "ally-bank-vs-chase",
-    "bank-of-america-vs-pnc-bank",
     "capital-one-vs-chase"
   ],
   "meta_title": "Bank of America vs Chase (2026): Fees, Rewards & Branch Access Compared",
-  "meta_description": "Detailed comparison of Bank of America vs Chase. We break down fees, branch networks, rewards programs, and digital banking features to help you pick the right bank.",
+  "meta_description": "Detailed comparison of Bank of America vs Chase. We break down fees, branch networks, rewards programs, and digital banking features to help you pick...",
   "date_published": "2026-03-03",
   "date_updated": "2026-03-03",
   "comparison_intro": "When deciding between Bank of America Core Banking or Chase Total Checking & Savings, understanding the difference between Bank of America Core Banking and Chase Total Checking & Savings is key to finding the right fit for your financial needs. Whether you're asking which is better for your specific situation, our comparison of Bank of America Core Banking compared to Chase Total Checking & Savings will help you see how these two major banking options stack up against each other. If you're torn between Bank of America Core Banking vs Chase Total Checking & Savings, you'll discover that Chase typically edges out with better sign-up bonuses, wider branch access, and stronger credit card rewards integration, while Bank of America remains the smart choice if you're willing to maintain higher account balances."

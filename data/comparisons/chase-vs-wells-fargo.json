@@ -19,7 +19,11 @@
     "best_for": "Urban professionals seeking extensive branch access, premium credit cards, and a highly-rated mobile banking experience.",
     "rating": 4.3,
     "affiliate_url": "https://www.chase.com",
-    "shop_on_ebay": false
+    "shop_on_ebay": false,
+    "shop_keywords": [
+      "Chase Bank",
+      "JPMorgan Chase & Co. Chase Bank"
+    ]
   },
   "item_b": {
     "name": "Wells Fargo Bank",
@@ -41,7 +45,11 @@
     "best_for": "Customers who value widespread branch availability including rural areas and prefer relationship-based banking with fee waivers.",
     "rating": 3.8,
     "affiliate_url": "https://www.wellsfargo.com",
-    "shop_on_ebay": false
+    "shop_on_ebay": false,
+    "shop_keywords": [
+      "Wells Fargo Bank",
+      "Wells Fargo & Company Wells Fargo Bank"
+    ]
   },
   "category": "financial",
   "comparison_summary": "Chase and Wells Fargo are both massive banks with over 4,600 branches each, but Chase has pulled ahead with better mobile technology, higher customer satisfaction scores, and premium credit card offerings. Wells Fargo maintains stronger rural presence and relationship banking incentives, making it viable for specific geographic needs but generally less appealing than Chase for most consumers.",
@@ -133,12 +141,7 @@
     }
   ],
   "related_comparisons": [
-    "bank-of-america-vs-chase",
-    "ally-bank-vs-chase",
-    "capital-one-vs-wells-fargo",
-    "chase-vs-citi",
-    "pnc-vs-wells-fargo",
-    "chase-vs-us-bank"
+    "bank-of-america-vs-chase"
   ],
   "meta_title": "Chase vs Wells Fargo (2026): Which Bank Has Better Technology?",
   "meta_description": "Detailed comparison of Chase vs Wells Fargo. We break down fees, branch networks, mobile apps, and customer satisfaction to help you pick the right bank.",

@@ -19,7 +19,11 @@
     "best_for": "Audiences seeking classic American comedy and entertainer who excelled in verbal wit and comedic performance.",
     "rating": 4.6,
     "affiliate_url": "",
-    "shop_on_ebay": false
+    "shop_on_ebay": false,
+    "shop_keywords": [
+      "Bob Hope",
+      "Classic Hollywood Entertainment Bob Hope"
+    ]
   },
   "item_b": {
     "name": "Fred Astaire",
@@ -40,7 +44,11 @@
     "best_for": "Audiences appreciating sophisticated dance artistry, musical entertainment, and timeless elegance in performance.",
     "rating": 4.8,
     "affiliate_url": "",
-    "shop_on_ebay": false
+    "shop_on_ebay": false,
+    "shop_keywords": [
+      "Fred Astaire",
+      "Classic Hollywood Entertainment Fred Astaire"
+    ]
   },
   "category": "general",
   "comparison_summary": "Bob Hope and Fred Astaire represent two distinct pillars of Golden Age Hollywood entertainment. While Hope dominated through comedy, wit, and audience connection as America's premier entertainer and USO legend, Astaire redefined cinematic dance with unmatched elegance and technical mastery. The choice depends on whether you value comedic brilliance and versatility or revolutionary dance artistry and sophisticated musical performance.",
@@ -119,15 +127,11 @@
       "a": "Both received numerous honors including multiple honorary Academy Awards. Hope received five honorary Oscars along with Emmy and Peabody Awards, while Astaire earned an honorary Oscar, an Emmy, and recognition from the American Film Institute, reflecting their different but equally significant contributions to entertainment."
     }
   ],
-  "related_comparisons": [
-    "bob-hope-vs-jack-benny",
-    "bing-crosby-vs-frank-sinatra",
-    "fred-astaire-vs-gene-kelly",
-    "ginger-rogers-vs-judy-garland"
-  ],
+  "related_comparisons": [],
   "meta_title": "Bob Hope vs Fred Astaire (2026): Classic Hollywood Legends Compared",
-  "meta_description": "Detailed comparison of Bob Hope vs Fred Astaire, examining their entertainment legacies, talents, film careers, and cultural impact during Hollywood's Golden Age.",
+  "meta_description": "Detailed comparison of Bob Hope vs Fred Astaire, examining their entertainment legacies, talents, film careers, and cultural impact during Hollywood's...",
   "date_published": "2026-03-03",
   "date_updated": "2026-03-03",
-  "_generated": "dynamic"
+  "_generated": "dynamic",
+  "comparison_intro": "Wondering about Bob Hope vs Fred Astaire? Whether you should choose Bob Hope or Fred Astaire depends on what matters most to you. The difference between Bob Hope and Fred Astaire comes down to a few key factors. Bob Hope compared to Fred Astaire reveals distinct strengths on each side — here's which is better, Bob Hope or Fred Astaire."
 }

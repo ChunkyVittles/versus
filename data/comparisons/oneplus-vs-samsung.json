@@ -19,7 +19,11 @@
     "best_for": "Tech enthusiasts who prioritize performance, fast charging, and value over extensive ecosystem features.",
     "rating": 4.5,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "OnePlus 12",
+      "OnePlus OnePlus 12"
+    ]
   },
   "item_b": {
     "name": "Samsung Galaxy S24 Ultra",
@@ -40,7 +44,11 @@
     "best_for": "Power users and professionals who need long-term support, S Pen functionality, and seamless ecosystem connectivity.",
     "rating": 4.6,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Samsung Galaxy S24 Ultra",
+      "Samsung Samsung Galaxy S24 Ultra"
+    ]
   },
   "category": "smartphones",
   "comparison_summary": "OnePlus 12 delivers flagship specs at $799 with unbeatable charging speeds, while Samsung's S24 Ultra costs $500 more but backs it up with 7-year updates, S Pen integration, and superior camera zoom. Your decision hinges on whether you value immediate savings or long-term investment.",
@@ -127,16 +135,9 @@
       "a": "The OnePlus 12 ($799) focuses on speed and value with industry-leading charging, while the S24 Ultra ($1,299) prioritizes longevity with 7 years of updates, S Pen support, and superior camera zoom. Pick OnePlus for immediate savings or Samsung if you want a long-term investment with more built-in productivity features."
     }
   ],
-  "related_comparisons": [
-    "google-pixel-vs-samsung",
-    "iphone-vs-samsung",
-    "oneplus-vs-xiaomi",
-    "google-pixel-vs-oneplus",
-    "nothing-phone-vs-oneplus",
-    "motorola-vs-samsung"
-  ],
+  "related_comparisons": [],
   "meta_title": "OnePlus 12 vs Samsung Galaxy S24 Ultra (2026): The Value vs Premium Battle",
-  "meta_description": "Detailed comparison of OnePlus 12 vs Samsung Galaxy S24 Ultra. We break down charging speed, cameras, software support, and value to help you pick the right flagship smartphone.",
+  "meta_description": "Detailed comparison of OnePlus 12 vs Samsung Galaxy S24 Ultra. We break down charging speed, cameras, software support, and value to help you pick the...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "The **OnePlus 12 vs Samsung Galaxy S24 Ultra** debate comes down to what matters most to you: raw value or long-term investment. To help you decide whether the **OnePlus 12 or Samsung Galaxy S24 Ultra** is the right choice, we've broken down every **difference between OnePlus 12 and Samsung Galaxy S24 Ultra**, from speed and pricing to durability and software support. When comparing the **OnePlus 12 compared to Samsung Galaxy S24 Ultra** across real-world use, the answer to \"which is better\" depends entirely on your upgrade habits and whether that S Pen productivity factor justifies the premium."

@@ -153,25 +153,12 @@ def load_comparisons():
     for path in sorted(COMPARISONS_DIR.glob("*.json")):
         with open(path) as f:
             data = json.load(f)
-        # Enforce alphabetical slug ordering
-        data["slug"] = enforce_slug_order(data["slug"])
+        # Use slug as-is from the JSON file
         comparisons.append(data)
     # Sort by date_updated descending
     comparisons.sort(key=lambda c: c.get("date_updated", ""), reverse=True)
     return comparisons
 
-
-def enforce_slug_order(slug):
-    """Ensure slug is alphabetically ordered: airpods-vs-galaxy-buds not galaxy-buds-vs-airpods"""
-    if "-vs-" not in slug:
-        return slug
-    parts = slug.split("-vs-")
-    if len(parts) != 2:
-        return slug
-    a, b = parts
-    if a > b:
-        return f"{b}-vs-{a}"
-    return slug
 
 
 def get_category_name(categories, slug):
@@ -204,6 +191,11 @@ def build_site():
         shutil.copytree(STATIC_DIR / "js", DIST_DIR / "js")
         if (STATIC_DIR / "fonts").exists():
             shutil.copytree(STATIC_DIR / "fonts", DIST_DIR / "fonts")
+        # Copy individual static files (favicon, og-image, etc.)
+        for fname in ["favicon.svg", "og-image.png"]:
+            src = STATIC_DIR / fname
+            if src.exists():
+                shutil.copy2(src, DIST_DIR / fname)
 
     # Minify CSS
     css_path = DIST_DIR / "css" / "style.css"
@@ -267,7 +259,6 @@ def build_site():
         # Resolve related comparisons
         related = []
         for rel_slug in comp.get("related_comparisons", []):
-            rel_slug = enforce_slug_order(rel_slug)
             if rel_slug in comp_by_slug:
                 related.append(comp_by_slug[rel_slug])
 
@@ -275,7 +266,6 @@ def build_site():
             comp=comp,
             category_name=comp["category_name"],
             related=related,
-            all_comparisons=comparisons,
             **common,
         )
         page_dir = DIST_DIR / comp["slug"]
@@ -297,8 +287,12 @@ def build_site():
     # --- Individual category pages ---
     print("  Building category pages...")
     tpl = env.get_template("category.html")
+    built_categories = []
     for cat in categories:
         cat_comparisons = [c for c in comparisons if c.get("category") == cat["slug"]]
+        if not cat_comparisons:
+            continue  # Skip empty categories
+        built_categories.append(cat)
         html = tpl.render(
             category=cat,
             comparisons=cat_comparisons,
@@ -382,11 +376,11 @@ def build_site():
 
     # --- sitemap.xml ---
     print("  Building sitemap.xml...")
-    build_sitemap(comparisons, categories)
+    build_sitemap(comparisons, built_categories)
 
     # --- robots.txt ---
     print("  Building robots.txt...")
-    write_page(DIST_DIR / "robots.txt", "User-agent: *\nDisallow: /\n")
+    write_page(DIST_DIR / "robots.txt", "User-agent: *\nDisallow: /\n\nSitemap: https://versusthat.com/sitemap.xml\n")
 
     # --- Cloudflare _headers ---
     print("  Building _headers...")

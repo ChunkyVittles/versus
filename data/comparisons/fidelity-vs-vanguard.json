@@ -19,7 +19,11 @@
     "best_for": "Active traders and investors who want comprehensive research tools, excellent customer service, and no account minimums.",
     "rating": 4.7,
     "affiliate_url": "https://www.fidelity.com",
-    "shop_on_ebay": false
+    "shop_on_ebay": false,
+    "shop_keywords": [
+      "Fidelity Investments",
+      "Fidelity Fidelity Investments"
+    ]
   },
   "item_b": {
     "name": "Vanguard",
@@ -41,7 +45,10 @@
     "best_for": "Long-term buy-and-hold investors focused on low-cost index investing and retirement planning.",
     "rating": 4.6,
     "affiliate_url": "https://investor.vanguard.com",
-    "shop_on_ebay": false
+    "shop_on_ebay": false,
+    "shop_keywords": [
+      "Vanguard"
+    ]
   },
   "category": "financial",
   "comparison_summary": "Fidelity and Vanguard both belong at the top of any serious investor's shortlist, but they excel in different areas. Fidelity brings superior technology, 24/7 support, and zero minimums that make it perfect for beginners and active traders. Vanguard offers the lowest average expense ratios in the industry and a unique ownership structure that eliminates conflicts of interest, though you'll pay for it with a dated platform and higher fund minimums.",
@@ -133,12 +140,7 @@
     }
   ],
   "related_comparisons": [
-    "charles-schwab-vs-fidelity",
-    "charles-schwab-vs-vanguard",
-    "etrade-vs-fidelity",
-    "fidelity-vs-robinhood",
-    "merrill-edge-vs-vanguard",
-    "td-ameritrade-vs-vanguard"
+    "charles-schwab-vs-fidelity"
   ],
   "meta_title": "Fidelity vs Vanguard (2026): Better Technology or Lower Costs?",
   "meta_description": "Detailed comparison of Fidelity vs Vanguard. We break down fees, account minimums, technology, and customer service to help you pick the right brokerage.",

@@ -19,7 +19,11 @@
     "best_for": "iPhone users who want a versatile smartwatch with strong health tracking and seamless ecosystem integration.",
     "rating": 4.6,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Apple Watch Series 9",
+      "Apple Apple Watch Series 9"
+    ]
   },
   "item_b": {
     "name": "Garmin Forerunner 965",
@@ -40,7 +44,11 @@
     "best_for": "Serious athletes and outdoor enthusiasts who prioritize advanced training metrics and exceptional battery life.",
     "rating": 4.7,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Garmin Forerunner 965",
+      "Garmin Garmin Forerunner 965"
+    ]
   },
   "category": "fitness-trackers",
   "comparison_summary": "Apple Watch excels as a lifestyle smartwatch with health tracking for everyday users, while Garmin dominates in sports-specific features and battery endurance for serious athletes. Your choice depends on whether you prioritize ecosystem integration and daily wearability or advanced training analytics and multi-day battery life.",
@@ -134,13 +142,10 @@
   "related_comparisons": [
     "apple-watch-vs-fitbit",
     "apple-watch-vs-samsung-galaxy-watch",
-    "garmin-fenix-vs-garmin-forerunner",
-    "coros-vs-garmin",
-    "garmin-vs-polar",
     "fitbit-vs-garmin"
   ],
   "meta_title": "Apple Watch vs Garmin (2026): Lifestyle Smartwatch or Training Computer?",
-  "meta_description": "Detailed comparison of Apple Watch vs Garmin fitness watches. We break down battery life, GPS accuracy, smart features, and training metrics to help you pick the right fitness tracker.",
+  "meta_description": "Detailed comparison of Apple Watch vs Garmin fitness watches. We break down battery life, GPS accuracy, smart features, and training metrics to help...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "Choosing between the Apple Watch Series 9 vs Garmin Forerunner 965 comes down to your priorities and lifestyle. If you're trying to decide which is better for your needs, understanding the key difference between Apple Watch Series 9 and Garmin Forerunner 965 is essential—one excels at blending fitness tracking with daily smartwatch features, while the other delivers advanced athletic metrics and exceptional battery life. Whether you're debating Apple Watch Series 9 or Garmin Forerunner 965, this comparison breaks down their strengths and weaknesses so you can make an informed choice based on what matters most to you."

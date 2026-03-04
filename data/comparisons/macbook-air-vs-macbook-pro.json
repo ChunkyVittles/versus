@@ -19,7 +19,11 @@
     "best_for": "Students, travelers, and everyday users who prioritize portability and battery life over maximum performance.",
     "rating": 4.7,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "MacBook Air (M3, 2024)",
+      "Apple MacBook Air (M3, 2024)"
+    ]
   },
   "item_b": {
     "name": "MacBook Pro (M3/M3 Pro/M3 Max, 2023-2024)",
@@ -40,7 +44,11 @@
     "best_for": "Creative professionals, developers, and power users who need maximum performance for video editing, 3D rendering, or intensive multitasking.",
     "rating": 4.8,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "MacBook Pro (M3/M3 Pro/M3 Max, 2023-2024)",
+      "Apple MacBook Pro (M3/M3 Pro/M3 Max, 2023-2024)"
+    ]
   },
   "category": "laptops",
   "comparison_summary": "The MacBook Air delivers incredible value at 2.7 pounds with 18-hour battery life, perfect for everyday work. The MacBook Pro brings sustained performance, better displays, and more ports—necessary for professional creative workflows but overkill for general use.",
@@ -131,16 +139,9 @@
       "a": "The Air prioritizes portability and value with exceptional everyday performance, while the Pro delivers sustained computational power, superior displays (ProMotion 120Hz), more ports, and better thermals for intensive workloads. The Pro is heavier and pricier, but these trade-offs are necessary only for professional creative workflows."
     }
   ],
-  "related_comparisons": [
-    "macbook-air-m2-vs-macbook-air-m3",
-    "macbook-pro-14-vs-macbook-pro-16",
-    "dell-xps-13-vs-macbook-air",
-    "macbook-air-vs-surface-laptop",
-    "ipad-pro-vs-macbook-air",
-    "lenovo-thinkpad-x1-carbon-vs-macbook-pro"
-  ],
+  "related_comparisons": [],
   "meta_title": "MacBook Air vs MacBook Pro (2026): Performance vs Portability Guide",
-  "meta_description": "Detailed comparison of MacBook Air vs MacBook Pro. We break down performance, display quality, portability, and value to help you pick the right Apple laptop.",
+  "meta_description": "Detailed comparison of MacBook Air vs MacBook Pro. We break down performance, display quality, portability, and value to help you pick the right Apple...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "If you're wondering which is better between the MacBook Air (M3, 2024) or MacBook Pro (M3/M3 Pro/M3 Max, 2023-2024), you're asking one of the most common questions in the laptop world right now. The difference between MacBook Air (M3, 2024) and MacBook Pro (M3/M3 Pro/M3 Max, 2023-2024) might seem subtle on paper, but it matters hugely in real-world performance—and your wallet. In this MacBook Air (M3, 2024) compared to MacBook Pro (M3/M3 Pro/M3 Max, 2023-2024) guide, we'll break down which machine actually deserves to be on your desk, whether you're a casual user or someone whose income depends on raw processing power."

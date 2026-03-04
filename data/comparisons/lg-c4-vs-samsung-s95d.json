@@ -19,7 +19,11 @@
     "best_for": "Home theater enthusiasts seeking accurate colors, Dolby Vision support, and multiple HDMI 2.1 ports for gaming setups.",
     "rating": 4.6,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "LG C4 OLED TV",
+      "LG LG C4 OLED TV"
+    ]
   },
   "item_b": {
     "name": "Samsung S95D QD-OLED TV",
@@ -40,7 +44,11 @@
     "best_for": "Viewers prioritizing brightness and color vibrancy in well-lit rooms who don't need multiple high-bandwidth gaming ports.",
     "rating": 4.7,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Samsung S95D QD-OLED TV",
+      "Samsung Samsung S95D QD-OLED TV"
+    ]
   },
   "category": "tvs",
   "comparison_summary": "Samsung's S95D QD-OLED pushes brightness to 1,500 nits with quantum dot color vibrancy and a matte anti-glare screen. LG's C4 counters with a lower price tag, four full-bandwidth HDMI 2.1 ports for serious gamers, Dolby Vision support, and more accurate colors that match filmmaker intent.",
@@ -131,16 +139,9 @@
       "a": "The S95D reaches 1,500 nits with quantum dot technology and a matte anti-glare screen for bright environments, while the C4 offers a lower price, superior gaming with four full-bandwidth HDMI 2.1 ports, Dolby Vision support, and more accurate colors. The choice hinges on your room brightness and whether gaming or HDR impact matters more."
     }
   ],
-  "related_comparisons": [
-    "lg-c4-vs-lg-g4",
-    "lg-c4-vs-sony-a95l",
-    "samsung-s90d-vs-samsung-s95d",
-    "lg-c3-vs-lg-c4",
-    "samsung-s95c-vs-samsung-s95d",
-    "sony-a80l-vs-lg-c4"
-  ],
+  "related_comparisons": [],
   "meta_title": "LG C4 vs Samsung S95D (2026): The Brightness vs Value Showdown",
-  "meta_description": "Detailed comparison of LG C4 vs Samsung S95D OLED TVs. We break down brightness, gaming ports, HDR support, and price to help you pick the right premium television.",
+  "meta_description": "Detailed comparison of LG C4 vs Samsung S95D OLED TVs. We break down brightness, gaming ports, HDR support, and price to help you pick the right...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "When deciding between the LG C4 OLED TV or Samsung S95D QD-OLED TV, it helps to understand which is better for your specific setup and viewing habits. The main difference between LG C4 OLED TV and Samsung S95D QD-OLED TV comes down to brightness, gaming features, and picture tuning philosophy—the S95D excels in bright rooms with stunning HDR punch, while the C4 offers better value and gaming connectivity. Whether you're comparing LG C4 OLED TV to Samsung S95D QD-OLED TV for a dedicated theater space or a bright living room, our detailed breakdown will help you pick the right TV for your room and priorities."

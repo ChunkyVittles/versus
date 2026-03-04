@@ -19,7 +19,11 @@
     "best_for": "Espresso enthusiasts who prioritize authentic Italian-style coffee and want access to third-party capsule options.",
     "rating": 4.4,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Nespresso OriginalLine",
+      "Nespresso Nespresso OriginalLine"
+    ]
   },
   "item_b": {
     "name": "Nespresso VertuoLine",
@@ -40,7 +44,11 @@
     "best_for": "Coffee drinkers who want versatility in cup sizes and prefer full-size coffee drinks over exclusively espresso shots.",
     "rating": 4.3,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Nespresso VertuoLine",
+      "Nespresso Nespresso VertuoLine"
+    ]
   },
   "category": "coffee-makers",
   "comparison_summary": "OriginalLine uses traditional 19-bar pressure for authentic espresso shots and works with third-party capsules at lower cost. VertuoLine spins capsules using centrifusion technology to brew five cup sizes including full coffee mugs, but locks you into pricier Nespresso-only pods with barcode technology.",
@@ -131,13 +139,9 @@
       "a": "The OriginalLine uses 19-bar pressure to create traditional espresso shots and accepts third-party capsules, while the VertuoLine uses centrifusion spinning technology to brew five different cup sizes with barcode-locked Nespresso pods only. The OriginalLine excels at espresso quality and affordability, while the VertuoLine offers broader beverage options at a higher per-capsule cost."
     }
   ],
-  "related_comparisons": [
-    "keurig-k-cafe-vs-nespresso-vertuo",
-    "breville-bambino-vs-nespresso-original",
-    "nespresso-citiz-vs-essenza-mini"
-  ],
+  "related_comparisons": [],
   "meta_title": "Nespresso Vertuo vs Original (2026): Espresso or Full Cups?",
-  "meta_description": "Detailed comparison of Nespresso VertuoLine vs OriginalLine. We break down brewing technology, cup sizes, capsule costs, and compatibility to help you pick the right coffee system.",
+  "meta_description": "Detailed comparison of Nespresso VertuoLine vs OriginalLine. We break down brewing technology, cup sizes, capsule costs, and compatibility to help you...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "If you're trying to figure out which is better between Nespresso OriginalLine or Nespresso VertuoLine, you're not alone—many coffee lovers find themselves weighing these two popular machines. The difference between Nespresso OriginalLine and Nespresso VertuoLine comes down to your brewing preferences: the OriginalLine excels at crafting authentic espresso with access to affordable third-party capsules, while the VertuoLine offers the flexibility of both espresso and full-size coffee in a single machine. In our Nespresso OriginalLine compared to Nespresso VertuoLine breakdown, you'll discover which model matches your needs and budget, so you can start enjoying your next cup with confidence."

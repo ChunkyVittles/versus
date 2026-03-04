@@ -19,7 +19,11 @@
     "best_for": "TV enthusiasts who want next-day access to current broadcast shows and premium originals with optional live TV.",
     "rating": 4.3,
     "affiliate_url": "https://www.hulu.com",
-    "shop_on_ebay": false
+    "shop_on_ebay": false,
+    "shop_keywords": [
+      "Hulu",
+      "Disney Hulu"
+    ]
   },
   "item_b": {
     "name": "Peacock",
@@ -41,7 +45,11 @@
     "best_for": "Budget-conscious streamers who want NBC content, live sports, and don't mind ads, or those seeking a free streaming option.",
     "rating": 3.8,
     "affiliate_url": "https://www.peacocktv.com",
-    "shop_on_ebay": false
+    "shop_on_ebay": false,
+    "shop_keywords": [
+      "Peacock",
+      "NBCUniversal Peacock"
+    ]
   },
   "category": "streaming",
   "comparison_summary": "Hulu vs Peacock splits along clear lines: mature streaming depth versus budget accessibility. Hulu brings superior originals, next-day TV episodes, and better live TV options, while Peacock counters with lower pricing, a free tier, and exclusive NBC/Universal content. For most users seeking quality and breadth, Hulu justifies its cost, though Peacock serves budget-conscious viewers and NBC fans exceptionally well.",
@@ -129,15 +137,11 @@
     }
   ],
   "related_comparisons": [
-    "hulu-vs-max",
     "hulu-vs-netflix",
-    "netflix-vs-peacock",
-    "disney-plus-vs-hulu",
-    "paramount-plus-vs-peacock",
-    "apple-tv-plus-vs-peacock"
+    "paramount-plus-vs-peacock"
   ],
   "meta_title": "Hulu vs Peacock (2026): Finding the Right Streaming Service for Your Budget",
-  "meta_description": "Detailed comparison of Hulu vs Peacock. We break down pricing, content libraries, original programming, and live TV options to help you pick the right streaming service.",
+  "meta_description": "Detailed comparison of Hulu vs Peacock. We break down pricing, content libraries, original programming, and live TV options to help you pick the right...",
   "date_published": "2026-03-02",
   "date_updated": "2026-03-03",
   "comparison_intro": "When deciding between Hulu vs Peacock, it helps to understand which is better for your specific viewing habits and budget. The key difference between Hulu and Peacock comes down to content depth and cost: Hulu offers next-day access to current TV shows and a larger original library, while Peacock's free tier provides surprising value for casual viewers. In this Hulu compared to Peacock guide, we'll break down what each service excels at so you can decide whether Hulu or Peacock deserves a spot in your streaming rotation."

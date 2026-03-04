@@ -19,7 +19,11 @@
     "best_for": "Gamers and movie enthusiasts who prioritize peak brightness and motion handling in bright to moderately lit rooms.",
     "rating": 4.5,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "Hisense U8N Mini-LED QLED TV",
+      "Hisense Hisense U8N Mini-LED QLED TV"
+    ]
   },
   "item_b": {
     "name": "TCL QM8 Mini-LED QLED TV",
@@ -41,7 +45,11 @@
     "best_for": "Budget-conscious buyers seeking premium mini-LED performance without paying flagship prices.",
     "rating": 4.3,
     "affiliate_url": "",
-    "shop_on_ebay": true
+    "shop_on_ebay": true,
+    "shop_keywords": [
+      "TCL QM8 Mini-LED QLED TV",
+      "TCL TCL QM8 Mini-LED QLED TV"
+    ]
   },
   "category": "tvs",
   "comparison_summary": "Both the Hisense U8N and TCL QM8 are mini-LED powerhouses that deliver flagship-level picture quality at mid-range prices. The U8N wins on specs with 3,000 nits brightness, 1,200+ dimming zones, and 144Hz refresh rate, while the QM8 counters with better native contrast and a lower price that makes it the value champion.",
@@ -132,14 +140,7 @@
       "a": "The U8N leads in brightness (3,000 nits vs. lower), dimming zones (1,200+), and gaming features (144Hz refresh rate), while the QM8 counters with superior native contrast and a lower price. Both deliver mini-LED flagship performance, but the U8N is engineered for demanding use cases while the QM8 optimizes value."
     }
   ],
-  "related_comparisons": [
-    "hisense-u7n-vs-tcl-qm7",
-    "samsung-qn90d-vs-tcl-qm8",
-    "hisense-u8n-vs-sony-x93l",
-    "lg-qned85-vs-tcl-qm8",
-    "hisense-u8n-vs-samsung-qn90d",
-    "sony-x90l-vs-tcl-qm8"
-  ],
+  "related_comparisons": [],
   "meta_title": "Hisense U8N vs TCL QM8 (2026): Gaming and Brightness Compared",
   "meta_description": "Detailed comparison of Hisense U8N vs TCL QM8. We break down brightness, local dimming, gaming features, and value to help you pick the right mini-LED TV.",
   "date_published": "2026-03-02",
