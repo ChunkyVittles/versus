@@ -225,7 +225,7 @@ def build_site():
     comp_by_slug = {c["slug"]: c for c in comparisons}
 
     # Setup Jinja2
-    env = Environment(loader=FileSystemLoader(str(TEMPLATES_DIR)), autoescape=False)
+    env = Environment(loader=FileSystemLoader(str(TEMPLATES_DIR)), autoescape=True)
     current_year = datetime.now().year
 
     # Common template context

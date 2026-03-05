@@ -34,9 +34,9 @@
 <section class="section">
     <div class="container">
         <h1 class="page-title">All Categories</h1>
-        <p class="page-subtitle">Browse {{ categories|length }} product categories with {{ total_comparisons }} comparisons and counting.</p>
+        <p class="page-subtitle">Browse {{ category_counts|length }} product categories with {{ total_comparisons }} comparisons and counting.</p>
         <div class="category-grid category-grid-large">
-            {% for cat in categories %}
+            {% for cat in categories if category_counts.get(cat.slug, 0) > 0 %}
             {% set count = category_counts.get(cat.slug, 0) %}
             <a href="/categories/{{ cat.slug }}/" class="category-card{% if count == 0 %} category-card-empty{% endif %}">
                 <span class="category-icon">{{ cat.icon }}</span>

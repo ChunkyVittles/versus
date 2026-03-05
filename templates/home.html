@@ -90,7 +90,7 @@
     <div class="container">
         <h2 class="section-title arena-title">CATEGORIES</h2>
         <div class="category-chips">
-            {% for cat in categories %}
+            {% for cat in categories if category_counts.get(cat.slug, 0) > 0 %}
             {% set count = category_counts.get(cat.slug, 0) %}
             <a href="/categories/{{ cat.slug }}/" class="category-chip{% if count == 0 %} category-chip-empty{% endif %}">
                 <span class="category-chip-icon">{{ cat.icon }}</span>

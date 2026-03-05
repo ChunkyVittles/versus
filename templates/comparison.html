@@ -113,7 +113,7 @@
                     <div class="vs-hero-price">{{ comp.item_a.price_range }}</div>
                     <p class="vs-hero-best-for">{{ comp.item_a.best_for }}</p>
                     {% if show_shop %}
-                    <a href="{{ link_a.url }}" class="btn btn-a btn-shop{% if link_a.is_partner %} btn-partner{% endif %}" rel="{{ link_a.rel }}" target="_blank">{% if link_a.logo %}<img src="{{ link_a.logo }}" alt="{{ link_a.text }}" class="partner-logo"> {% endif %}{{ link_a.text }}</a>
+                    <a href="{{ link_a.url }}" class="btn btn-a btn-shop{% if link_a.is_partner %} btn-partner{% endif %}" rel="{{ link_a.rel }}" target="_blank">{% if link_a.logo %}<img src="{{ link_a.logo }}" alt="{{ link_a.text | safe }}" class="partner-logo"> {% endif %}{{ link_a.text | safe }}</a>
                     {% endif %}
                 </div>
             </div>
@@ -139,7 +139,7 @@
                     <div class="vs-hero-price">{{ comp.item_b.price_range }}</div>
                     <p class="vs-hero-best-for">{{ comp.item_b.best_for }}</p>
                     {% if show_shop %}
-                    <a href="{{ link_b.url }}" class="btn btn-b btn-shop{% if link_b.is_partner %} btn-partner{% endif %}" rel="{{ link_b.rel }}" target="_blank">{% if link_b.logo %}<img src="{{ link_b.logo }}" alt="{{ link_b.text }}" class="partner-logo"> {% endif %}{{ link_b.text }}</a>
+                    <a href="{{ link_b.url }}" class="btn btn-b btn-shop{% if link_b.is_partner %} btn-partner{% endif %}" rel="{{ link_b.rel }}" target="_blank">{% if link_b.logo %}<img src="{{ link_b.logo }}" alt="{{ link_b.text | safe }}" class="partner-logo"> {% endif %}{{ link_b.text | safe }}</a>
                     {% endif %}
                 </div>
             </div>
@@ -282,7 +282,7 @@
         <div class="analysis-content">
             <h2 class="section-title">{{ comp.item_a.name }} vs {{ comp.item_b.name }}: Full Comparison</h2>
             <div class="seo-content">
-                <p>{{ comp.seo_content | e | replace('\n\n', '</p><p>') | safe }}</p>
+                <p>{{ comp.seo_content | replace('\n\n', '</p><p>') | safe }}</p>
             </div>
         </div>
     </div>
@@ -321,7 +321,7 @@
                 <h3>{{ comp.item_a.name }}</h3>
                 <p class="shop-price">{{ comp.item_a.price_range }}</p>
                 <div class="shop-links">
-                    <a href="{{ link_a.url }}" class="btn btn-a btn-shop{% if link_a.is_partner %} btn-partner{% endif %}" rel="{{ link_a.rel }}" target="_blank">{% if link_a.logo %}<img src="{{ link_a.logo }}" alt="{{ link_a.text }}" class="partner-logo"> {% endif %}{{ link_a.text }}</a>
+                    <a href="{{ link_a.url }}" class="btn btn-a btn-shop{% if link_a.is_partner %} btn-partner{% endif %}" rel="{{ link_a.rel }}" target="_blank">{% if link_a.logo %}<img src="{{ link_a.logo }}" alt="{{ link_a.text | safe }}" class="partner-logo"> {% endif %}{{ link_a.text | safe }}</a>
                 </div>
             </div>
             <div class="shop-card shop-card-b {% if comp.verdict == 'b' %}shop-card-winner{% endif %}">
@@ -329,7 +329,7 @@
                 <h3>{{ comp.item_b.name }}</h3>
                 <p class="shop-price">{{ comp.item_b.price_range }}</p>
                 <div class="shop-links">
-                    <a href="{{ link_b.url }}" class="btn btn-b btn-shop{% if link_b.is_partner %} btn-partner{% endif %}" rel="{{ link_b.rel }}" target="_blank">{% if link_b.logo %}<img src="{{ link_b.logo }}" alt="{{ link_b.text }}" class="partner-logo"> {% endif %}{{ link_b.text }}</a>
+                    <a href="{{ link_b.url }}" class="btn btn-b btn-shop{% if link_b.is_partner %} btn-partner{% endif %}" rel="{{ link_b.rel }}" target="_blank">{% if link_b.logo %}<img src="{{ link_b.logo }}" alt="{{ link_b.text | safe }}" class="partner-logo"> {% endif %}{{ link_b.text | safe }}</a>
                 </div>
             </div>
         </div>
