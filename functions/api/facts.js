@@ -42,7 +42,7 @@ Example: ["The Vitamix company was founded in 1921.", "Ninja's parent company Sh
             headers: {
                 'Content-Type': 'application/json',
                 'x-api-key': env.ANTHROPIC_API_KEY,
-                'anthropic-version': '2025-03-01',
+                'anthropic-version': '2023-06-01',
             },
             body: JSON.stringify({
                 model: 'claude-haiku-4-5-20251001',
