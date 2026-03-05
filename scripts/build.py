@@ -191,6 +191,8 @@ def build_site():
         shutil.copytree(STATIC_DIR / "js", DIST_DIR / "js")
         if (STATIC_DIR / "fonts").exists():
             shutil.copytree(STATIC_DIR / "fonts", DIST_DIR / "fonts")
+        if (STATIC_DIR / "images").exists():
+            shutil.copytree(STATIC_DIR / "images", DIST_DIR / "images")
         # Copy individual static files (favicon, og-image, etc.)
         for fname in ["favicon.svg", "og-image.png"]:
             src = STATIC_DIR / fname

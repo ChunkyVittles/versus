@@ -319,8 +319,8 @@ function renderComparisonPage(comp, affiliates) {
     .comparison-intro-section{background:#f8fafc;padding:2rem 0}.comparison-intro{font-size:1.15rem;line-height:1.75;color:#475569;max-width:800px;margin:0 auto;text-align:center}
     .affiliate-disclosure-bar{background:#fefce8;border-bottom:1px solid #fde68a;padding:.5rem 0;font-size:.82rem;line-height:1.5;color:#92400e}.affiliate-disclosure-bar p{margin:0;text-align:center}.affiliate-disclosure-bar a{color:#92400e;text-decoration:underline;font-weight:600}.shop-disclosure{text-align:center;font-size:.82rem;color:#94a3b8;margin-top:1.5rem;padding-top:1rem;border-top:1px solid #e2e8f0}.btn-partner{display:inline-flex;align-items:center;gap:.5rem}.partner-logo{height:20px;width:auto;vertical-align:middle}
     </style>
-    <link rel="preload" href="/css/style.css?v=8" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/style.css?v=8"></noscript>
+    <link rel="preload" href="/css/style.css?v=9" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/style.css?v=9"></noscript>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"WebPage","name":${JSON.stringify(comp.meta_title)},"url":"https://versusthat.com/${comp.slug}/","datePublished":"${comp.date_published}","dateModified":"${comp.date_updated}","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://versusthat.com/"},{"@type":"ListItem","position":2,"name":"${esc(categoryName)}","item":"https://versusthat.com/categories/${comp.category}/"},{"@type":"ListItem","position":3,"name":"${esc(comp.item_a?.name)} vs ${esc(comp.item_b?.name)}"}]}}
     </script>
@@ -379,7 +379,8 @@ function renderComparisonPage(comp, affiliates) {
                 <div class="vs-hero-side vs-hero-a ${heroAClass}">
                     <div class="vs-hero-content">
                         ${heroALabel}
-                        <h2 class="vs-hero-name">${esc(comp.item_a?.name)}</h2>
+                        <img src="/images/comparisons/${comp.slug}_item_a.jpg" alt="${esc(comp.item_a?.image_alt || comp.item_a?.name)}" class="vs-hero-img" loading="lazy" onerror="this.style.display='none'">
+                        <div class="vs-hero-name">${esc(comp.item_a?.name)}</div>
                         <div class="vs-hero-rating">
                             <div class="stars">${starsHtml(comp.item_a?.rating || 0)}</div>
                             <div class="vs-hero-price">${esc(comp.item_a?.price_range)}</div>
@@ -392,7 +393,8 @@ function renderComparisonPage(comp, affiliates) {
                 <div class="vs-hero-side vs-hero-b ${heroBClass}">
                     <div class="vs-hero-content">
                         ${heroBLabel}
-                        <h2 class="vs-hero-name">${esc(comp.item_b?.name)}</h2>
+                        <img src="/images/comparisons/${comp.slug}_item_b.jpg" alt="${esc(comp.item_b?.image_alt || comp.item_b?.name)}" class="vs-hero-img" loading="lazy" onerror="this.style.display='none'">
+                        <div class="vs-hero-name">${esc(comp.item_b?.name)}</div>
                         <div class="vs-hero-rating">
                             <div class="stars">${starsHtml(comp.item_b?.rating || 0)}</div>
                             <div class="vs-hero-price">${esc(comp.item_b?.price_range)}</div>
@@ -408,7 +410,7 @@ function renderComparisonPage(comp, affiliates) {
             <div class="container">
                 <div class="verdict-content">
                     <span class="verdict-label">Our Verdict</span>
-                    <h2 class="verdict-text">${esc(comp.verdict_text)}</h2>
+                    <p class="verdict-text">${esc(comp.verdict_text)}</p>
                     <p class="verdict-summary">${esc(comp.comparison_summary)}</p>
                 </div>
             </div>
@@ -424,10 +426,11 @@ function renderComparisonPage(comp, affiliates) {
                 <h2 class="section-title">Key Differences</h2>
                 <div class="diff-table-wrapper">
                     <table class="diff-table">
+                        <caption class="sr-only">Key differences between ${esc(comp.item_a?.name)} and ${esc(comp.item_b?.name)}</caption>
                         <thead><tr>
-                            <th>Aspect</th>
-                            <th class="col-a">${esc(comp.item_a?.name)}</th>
-                            <th class="col-b">${esc(comp.item_b?.name)}</th>
+                            <th scope="col">Aspect</th>
+                            <th scope="col" class="col-a">${esc(comp.item_a?.name)}</th>
+                            <th scope="col" class="col-b">${esc(comp.item_b?.name)}</th>
                         </tr></thead>
                         <tbody>${diffRows}</tbody>
                     </table>
@@ -467,7 +470,7 @@ function renderComparisonPage(comp, affiliates) {
             </div>
         </div>
     </footer>
-    <script src="/js/main.js?v=8" defer></script>
+    <script src="/js/main.js?v=9" defer></script>
     <script>
     (function(){
       const S='versusthat',C='https://bullbotics.com/api/analytics/collect';
@@ -522,8 +525,8 @@ function renderGeneratingPage(slug, itemA, itemB) {
     .gen-facts-label{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.4);margin-bottom:.5rem}
     .gen-facts-text{font-size:1.1rem;color:rgba(255,255,255,0.85);line-height:1.6;max-width:500px;margin:0 auto}
     </style>
-    <link rel="preload" href="/css/style.css?v=8" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/style.css?v=8"></noscript>
+    <link rel="preload" href="/css/style.css?v=9" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/style.css?v=9"></noscript>
 </head>
 <body>
     <header class="site-header">
@@ -563,7 +566,7 @@ function renderGeneratingPage(slug, itemA, itemB) {
                 <div class="vs-hero-side vs-hero-a">
                     <div class="vs-hero-content">
                         <span class="vs-hero-label">Option A</span>
-                        <h2 class="vs-hero-name">${escA}</h2>
+                        <div class="vs-hero-name">${escA}</div>
                     </div>
                 </div>
                 <div class="vs-badge-wrapper">
@@ -572,7 +575,7 @@ function renderGeneratingPage(slug, itemA, itemB) {
                 <div class="vs-hero-side vs-hero-b">
                     <div class="vs-hero-content">
                         <span class="vs-hero-label">Option B</span>
-                        <h2 class="vs-hero-name">${escB}</h2>
+                        <div class="vs-hero-name">${escB}</div>
                     </div>
                 </div>
             </div>
@@ -597,7 +600,7 @@ function renderGeneratingPage(slug, itemA, itemB) {
             </div>
         </div>
     </footer>
-    <script src="/js/main.js?v=8" defer></script>
+    <script src="/js/main.js?v=9" defer></script>
     <script>
     (function() {
         var slug = ${JSON.stringify(slug)};

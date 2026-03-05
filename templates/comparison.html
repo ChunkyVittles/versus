@@ -97,12 +97,15 @@
 {% endif %}
 
 <!-- Hero Split -->
+{% set img_a = "/images/comparisons/" ~ comp.slug ~ "_item_a.jpg" %}
+{% set img_b = "/images/comparisons/" ~ comp.slug ~ "_item_b.jpg" %}
 <section class="vs-hero">
     <div class="vs-hero-split">
         <div class="vs-hero-side vs-hero-a {% if comp.verdict == 'a' %}vs-hero-winner{% elif comp.verdict == 'b' %}vs-hero-loser{% endif %}">
             <div class="vs-hero-content">
                 {% if comp.verdict == 'a' %}<span class="winner-sash">&#x1F451; WINNER</span>{% elif comp.verdict == 'b' %}<span class="vs-hero-label">Runner-Up</span>{% else %}<span class="vs-hero-label">Option A</span>{% endif %}
-                <h2 class="vs-hero-name">{{ comp.item_a.name }}</h2>
+                <img src="{{ img_a }}" alt="{{ comp.item_a.image_alt }}" class="vs-hero-img" loading="lazy" onerror="this.style.display='none'">
+                <div class="vs-hero-name">{{ comp.item_a.name }}</div>
                 <div class="vs-hero-rating">
                     <div class="stars" data-rating="{{ comp.item_a.rating }}">
                         {% for i in range(5) %}
@@ -128,7 +131,8 @@
         <div class="vs-hero-side vs-hero-b {% if comp.verdict == 'b' %}vs-hero-winner{% elif comp.verdict == 'a' %}vs-hero-loser{% endif %}">
             <div class="vs-hero-content">
                 {% if comp.verdict == 'b' %}<span class="winner-sash">&#x1F451; WINNER</span>{% elif comp.verdict == 'a' %}<span class="vs-hero-label">Runner-Up</span>{% else %}<span class="vs-hero-label">Option B</span>{% endif %}
-                <h2 class="vs-hero-name">{{ comp.item_b.name }}</h2>
+                <img src="{{ img_b }}" alt="{{ comp.item_b.image_alt }}" class="vs-hero-img" loading="lazy" onerror="this.style.display='none'">
+                <div class="vs-hero-name">{{ comp.item_b.name }}</div>
                 <div class="vs-hero-rating">
                     <div class="stars" data-rating="{{ comp.item_b.rating }}">
                         {% for i in range(5) %}
@@ -153,7 +157,7 @@
     <div class="container">
         <div class="verdict-content">
             <span class="verdict-label">Our Verdict</span>
-            <h2 class="verdict-text">{{ comp.verdict_text }}</h2>
+            <p class="verdict-text">{{ comp.verdict_text }}</p>
             <p class="verdict-summary">{{ comp.comparison_summary }}</p>
         </div>
     </div>
@@ -202,11 +206,12 @@
         <h2 class="section-title">Key Differences</h2>
         <div class="diff-table-wrapper">
             <table class="diff-table">
+                <caption class="sr-only">Key differences between {{ comp.item_a.name }} and {{ comp.item_b.name }}</caption>
                 <thead>
                     <tr>
-                        <th>Aspect</th>
-                        <th class="col-a">{{ comp.item_a.name }}</th>
-                        <th class="col-b">{{ comp.item_b.name }}</th>
+                        <th scope="col">Aspect</th>
+                        <th scope="col" class="col-a">{{ comp.item_a.name }}</th>
+                        <th scope="col" class="col-b">{{ comp.item_b.name }}</th>
                     </tr>
                 </thead>
                 <tbody>

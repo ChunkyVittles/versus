@@ -41,8 +41,8 @@
     </style>
 
     <!-- Full stylesheet loaded async (non-render-blocking) -->
-    <link rel="preload" href="/css/style.css?v=8" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/style.css?v=8"></noscript>
+    <link rel="preload" href="/css/style.css?v=9" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/style.css?v=9"></noscript>
 
     {% block head_extra %}{% endblock %}
 
@@ -96,7 +96,7 @@
                     <p>This versus that &mdash; we help you decide.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Compare</h4>
+                    <div class="footer-heading">Compare</div>
                     <ul>
                         {% for cat in categories[:6] %}
                         <li><a href="/categories/{{ cat.slug }}/">{{ cat.name }}</a></li>
@@ -104,7 +104,7 @@
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>More Categories</h4>
+                    <div class="footer-heading">More Categories</div>
                     <ul>
                         {% for cat in categories[6:12] %}
                         <li><a href="/categories/{{ cat.slug }}/">{{ cat.name }}</a></li>
@@ -112,7 +112,7 @@
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Site</h4>
+                    <div class="footer-heading">Site</div>
                     <ul>
                         <li><a href="/about/">About</a></li>
                         <li><a href="/privacy/">Privacy Policy</a></li>
@@ -129,7 +129,7 @@
         </div>
     </footer>
 
-    <script src="/js/main.js?v=8" defer></script>
+    <script src="/js/main.js?v=9" defer></script>
     {% block scripts %}{% endblock %}
 
     <!-- BullBotics Analytics -->
