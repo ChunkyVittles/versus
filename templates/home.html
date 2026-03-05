@@ -49,7 +49,7 @@
                     <div class="versus-suggest" id="suggest-b"></div>
                 </div>
             </div>
-            <button class="compare-btn" id="compare-btn" disabled aria-label="Compare">GO</button>
+            <button class="compare-btn" id="compare-btn" disabled aria-label="Go">GO</button>
             <div class="compare-error" id="compare-error"></div>
             <p class="versus-input-hint">Type any two products to compare them &mdash; we'll <strong style="color: var(--arena-yellow)">compare them for you</strong>.</p>
         </div>
@@ -109,16 +109,7 @@
 
 <!-- Search data for autocomplete -->
 <script>
-window.VS_SEARCH_DATA = [
-    {% for comp in comparisons %}
-    {
-        "slug": "{{ comp.slug }}",
-        "a": "{{ comp.item_a.name }}",
-        "b": "{{ comp.item_b.name }}",
-        "cat": "{{ comp.category }}"
-    }{% if not loop.last %},{% endif %}
-    {% endfor %}
-];
+window.VS_SEARCH_DATA=[{% for comp in comparisons %}{"slug":"{{ comp.slug }}","a":"{{ comp.item_a.name }}","b":"{{ comp.item_b.name }}","cat":"{{ comp.category }}"}{% if not loop.last %},{% endif %}{% endfor %}];
 window.VS_ITEMS = (function() {
     var s = new Set();
     (window.VS_SEARCH_DATA || []).forEach(function(c) { s.add(c.a); s.add(c.b); });

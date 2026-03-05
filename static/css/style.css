@@ -400,7 +400,7 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
     letter-spacing: 0.08em;
     margin-bottom: 0.5rem;
-    color: rgba(255,255,255,0.7);
+    color: #fff;
 }
 
 .versus-input-wrap {
@@ -416,18 +416,30 @@ h1, h2, h3, h4 {
     font-family: var(--font-body);
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
-    background: rgba(255,255,255,0.15);
-    color: white;
+    background: #3d6fff;
+    color: #fff;
 }
 
 .versus-input:focus {
     border-color: rgba(255,255,255,0.6);
     box-shadow: none;
-    background: rgba(255,255,255,0.2);
+    background: #4d7aff;
 }
 
 .versus-input::placeholder {
-    color: rgba(255,255,255,0.4);
+    color: #d4e0ff;
+}
+
+.versus-input-side-b .versus-input::placeholder {
+    color: #ffd6cc;
+}
+
+.versus-input-side-b .versus-input {
+    background: #ff6347;
+}
+
+.versus-input-side-b .versus-input:focus {
+    background: #ff7259;
 }
 
 .versus-input-badge {
@@ -568,8 +580,7 @@ h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-size: 1.1rem;
     letter-spacing: 0.08em;
-    color: var(--arena-dark);
-    opacity: 0.6;
+    color: #555;
     flex-shrink: 0;
 }
 
@@ -586,7 +597,7 @@ h1, h2, h3, h4 {
 }
 
 .pi-vs {
-    opacity: 0.4;
+    color: #5c5000;
     margin: 0 0.3em;
 }
 
@@ -673,7 +684,7 @@ h1, h2, h3, h4 {
     font-family: var(--font-body);
     font-weight: 800;
     font-size: 0.5em;
-    color: var(--gray-400);
+    color: #767676;
     vertical-align: middle;
     margin: 0 0.2em;
 }
@@ -704,12 +715,12 @@ h1, h2, h3, h4 {
 
 /* Alternate category badge colors */
 .comparison-card:nth-child(odd) .card-category {
-    color: var(--arena-blue);
+    color: #1248cc;
     background: var(--arena-blue-light);
 }
 
 .comparison-card:nth-child(even) .card-category {
-    color: var(--arena-red);
+    color: #c42400;
     background: var(--arena-red-light);
 }
 
@@ -1457,16 +1468,16 @@ td:nth-child(3) .winner-check {
     padding-top: 1.5rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
+    align-items: center;
     gap: 1rem;
     font-size: 0.85rem;
-    color: var(--gray-500);
+    color: var(--gray-300);
 }
 
 .footer-disclaimer {
     font-size: 0.8rem;
-    color: var(--gray-600);
+    color: var(--gray-300);
 }
 
 /* =====================
