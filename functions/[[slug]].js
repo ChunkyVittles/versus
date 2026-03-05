@@ -448,6 +448,7 @@ function renderComparisonPage(comp, affiliates) {
                 <div class="analysis-content">
                     <h2 class="section-title">${esc(comp.item_a?.name)} vs ${esc(comp.item_b?.name)}: Full Comparison</h2>
                     <div class="seo-content">${seoContentHtml}</div>
+                    <p class="content-disclaimer">This comparison is researched and written with AI assistance. Specs, prices, and availability may change — verify details with the manufacturer or retailer before making a decision.</p>
                 </div>
             </div>
         </section>
@@ -463,7 +464,7 @@ function renderComparisonPage(comp, affiliates) {
         <div class="container">
             <div class="footer-bottom">
                 <p>&copy; ${new Date().getFullYear()} VersusThat. All rights reserved. <a href="/contact/" style="color:rgba(255,255,255,0.5);font-size:0.85rem;">Contact</a></p>
-                <p class="footer-disclaimer">This site contains affiliate links. If you make a purchase through these links, we may earn a commission. This does not influence our ratings or recommendations.</p>
+                <p class="footer-disclaimer">This site contains affiliate links. If you make a purchase through these links, we may earn a commission. This does not influence our ratings or recommendations. Use of this site constitutes acceptance of our <a href="/terms/" style="color: rgba(255,255,255,0.5);">Terms of Use</a>.</p>
             </div>
         </div>
     </footer>
@@ -592,7 +593,7 @@ function renderGeneratingPage(slug, itemA, itemB) {
         <div class="container">
             <div class="footer-bottom">
                 <p>&copy; ${new Date().getFullYear()} VersusThat. All rights reserved. <a href="/contact/" style="color:rgba(255,255,255,0.5);font-size:0.85rem;">Contact</a></p>
-                <p class="footer-disclaimer">This site contains affiliate links. If you make a purchase through these links, we may earn a commission. This does not influence our ratings or recommendations.</p>
+                <p class="footer-disclaimer">This site contains affiliate links. If you make a purchase through these links, we may earn a commission. This does not influence our ratings or recommendations. Use of this site constitutes acceptance of our <a href="/terms/" style="color: rgba(255,255,255,0.5);">Terms of Use</a>.</p>
             </div>
         </div>
     </footer>

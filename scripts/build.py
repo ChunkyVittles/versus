@@ -519,30 +519,46 @@ def generate_privacy_content():
 
 def generate_terms_content():
     return """
-<p><em>Last updated: March 2, 2026</em></p>
+<p><em>Last updated: March 4, 2026</em></p>
 
 <h2>Acceptance of Terms</h2>
 <p>By accessing and using VersusThat (versusthat.com), you agree to these Terms of Use. If you do not agree, please do not use the site.</p>
 
-<h2>Content Disclaimer</h2>
-<p>VersusThat provides product comparisons for informational purposes only. While we strive for accuracy, we cannot guarantee that all specifications, prices, or availability information is current or complete. Product details change frequently, and we recommend verifying critical information with the manufacturer or retailer before making a purchase.</p>
+<h2>AI-Generated Content</h2>
+<p>VersusThat uses artificial intelligence to research and generate comparison content. While we strive for accuracy, AI-generated content may contain errors, outdated information, or inaccuracies. All comparisons, ratings, verdicts, specifications, pricing, and editorial content on this site should be treated as informational starting points, not definitive guidance.</p>
+<p>You should independently verify all product specifications, pricing, availability, and claims before making any purchasing or financial decision. VersusThat is not responsible for decisions made based on AI-generated content.</p>
+
+<h2>User-Generated Comparisons</h2>
+<p>VersusThat allows users to generate new comparisons by entering topics into our comparison tool. By using this feature, you agree not to generate comparisons that are defamatory, harassing, illegal, or intended to harm any person or business. We reserve the right to remove any comparison content at our sole discretion and without notice.</p>
+<p>We are not responsible for the accuracy or completeness of dynamically generated comparisons. Content generated through user queries is produced automatically and has not been manually reviewed or fact-checked.</p>
+
+<h2>Content Removal Requests</h2>
+<p>If you believe any content on VersusThat contains factual errors about your product, service, or organization, or if you believe content is defamatory or infringes your rights, please <a href="/contact/">contact us</a> with the specific URL and a description of the issue. We will review and address removal requests promptly.</p>
 
 <h2>Affiliate Relationships</h2>
-<p>VersusThat participates in affiliate programs. We may earn commissions from qualifying purchases made through links on our site. These relationships do not influence our editorial content or recommendations.</p>
+<p>VersusThat participates in affiliate programs including the eBay Partner Network. We may earn commissions from qualifying purchases made through links on our site. These relationships do not influence our AI-generated editorial content, ratings, or recommendations.</p>
+
+<h2>No Professional Advice</h2>
+<p>Content on VersusThat does not constitute professional, financial, medical, legal, or investment advice. Comparisons involving financial products, insurance, education, or health-related items are for general informational purposes only. Consult a qualified professional before making important financial, medical, or legal decisions.</p>
 
 <h2>Intellectual Property</h2>
-<p>All content on VersusThat, including text, graphics, and design, is the property of VersusThat and is protected by copyright. You may not reproduce, distribute, or create derivative works from our content without permission.</p>
+<p>All original content on VersusThat, including site design, graphics, and editorial text, is the property of VersusThat and is protected by copyright. Product names, brand names, and trademarks mentioned in comparisons belong to their respective owners and are used for identification purposes only. You may not reproduce, distribute, or create derivative works from our content without permission.</p>
 
 <h2>User Conduct</h2>
 <p>You agree not to:</p>
 <ul>
     <li>Scrape or systematically download content from the site</li>
-    <li>Use the site for any unlawful purpose</li>
+    <li>Use the comparison generator to create defamatory, harmful, or illegal content</li>
     <li>Attempt to interfere with the site's operation</li>
+    <li>Use the site for any unlawful purpose</li>
+    <li>Circumvent any rate limiting or content filtering measures</li>
 </ul>
 
 <h2>Limitation of Liability</h2>
-<p>VersusThat is provided "as is" without warranties of any kind. We are not liable for any damages arising from your use of the site or reliance on its content, including purchasing decisions made based on our comparisons.</p>
+<p>VersusThat is provided "as is" without warranties of any kind, express or implied. We are not liable for any damages arising from your use of the site or reliance on its content, including but not limited to purchasing decisions, financial decisions, or any other actions taken based on AI-generated comparisons. This limitation applies to the fullest extent permitted by applicable law.</p>
+
+<h2>Indemnification</h2>
+<p>You agree to indemnify and hold harmless VersusThat, its owners, and affiliates from any claims, damages, or expenses arising from your use of the site, including any comparisons you generate through the comparison tool.</p>
 
 <h2>Changes</h2>
 <p>We reserve the right to modify these terms at any time. Continued use of the site constitutes acceptance of updated terms.</p>
