@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}VersusThat — Honest Product Comparisons to Help You Decide{% endblock %}
-{% block description %}Compare products side by side with honest, detailed breakdowns. Specs, pros, cons, and verdicts for {{ total_comparisons }}+ comparisons across {{ categories|length }} categories.{% endblock %}
+{% block title %}VersusThat — Compare Anything, Get a Verdict{% endblock %}
+{% block description %}Compare any two things side by side — products, services, places, ideas, and more. Honest breakdowns with pros, cons, and clear verdicts across {{ total_comparisons }}+ comparisons.{% endblock %}
+{% block og_title %}VersusThat — Compare Anything, Get a Verdict{% endblock %}
+{% block og_description %}Compare any two things side by side — products, services, places, ideas, and more. Honest breakdowns with pros, cons, and clear verdicts.{% endblock %}
 
 {% block schema %}
 <script type="application/ld+json">
@@ -24,7 +26,7 @@
 <!-- Hero -->
 <section class="home-hero">
     <div class="container">
-        <h1 class="sr-only">Compare Products Side by Side — Honest Comparisons and Verdicts</h1>
+        <h1 class="sr-only">Compare Anything Side by Side — Honest Comparisons and Verdicts</h1>
         <div class="home-hero-title" aria-hidden="true">
             <span class="hero-this">THIS</span>
             <span class="hero-vs-giant">VERSUS</span>
@@ -56,6 +58,7 @@
 
 <!-- Trending Strip -->
 <div class="popular-strip">
+    <h2 class="sr-only">Trending Comparisons</h2>
     <span class="popular-label">TRENDING:</span>
     {% for comp in comparisons[:8] %}
     <a href="/{{ comp.slug }}/" class="popular-item">
@@ -68,7 +71,7 @@
 {% if comparisons %}
 <section class="section">
     <div class="container">
-        <h2 class="section-title arena-title">LATEST BATTLES</h2>
+        <h2 class="section-title arena-title">LATEST COMPARISONS</h2>
         <p class="section-subtitle">Fresh comparisons, real data, honest verdicts.</p>
         <div class="comparison-grid">
             {% for comp in comparisons[:12] %}
@@ -88,7 +91,7 @@
 <!-- Categories -->
 <section class="section section-alt">
     <div class="container">
-        <h2 class="section-title arena-title">CATEGORIES</h2>
+        <h2 class="section-title arena-title">BROWSE BY CATEGORY</h2>
         <div class="category-chips">
             {% for cat in categories if category_counts.get(cat.slug, 0) > 0 %}
             {% set count = category_counts.get(cat.slug, 0) %}
