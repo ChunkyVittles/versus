@@ -65,6 +65,13 @@ export async function onRequestPost(context) {
         );
     }
 
+    if (isGarbage(query)) {
+        return Response.json(
+            { error: 'Please enter real things to compare.' },
+            { status: 400, headers: corsHeaders }
+        );
+    }
+
     // Generate via Claude API
     const comparisonData = await generateComparison(query, slug, env.ANTHROPIC_API_KEY);
     if (!comparisonData) {
@@ -174,6 +181,48 @@ function isBlocked(query) {
             if (words.includes(blocked)) return true;
         }
     }
+
+    return false;
+}
+
+function isGarbage(query) {
+    const lower = query.toLowerCase();
+
+    // Split into the two sides
+    const match = lower.match(/(.+?)\s+(?:vs\.?|versus)\s+(.+)/);
+    if (!match) return true;
+
+    const sides = [match[1].trim(), match[2].trim()];
+
+    for (const side of sides) {
+        // Reject if too short (under 2 chars)
+        if (side.length < 2) return true;
+
+        // Reject if too long (over 80 chars)
+        if (side.length > 80) return true;
+
+        // Reject if more than 50% non-letter characters (allows numbers, hyphens, dots, spaces)
+        const letters = side.replace(/[^a-zA-Z\s]/g, '').length;
+        if (letters < side.length * 0.5) return true;
+
+        // Reject if any single "word" is over 20 chars with no vowels (keyboard mashing)
+        const words = side.split(/\s+/);
+        for (const word of words) {
+            if (word.length > 20 && !/[aeiou]/i.test(word)) return true;
+        }
+
+        // Reject if it's just repeated characters
+        if (/^(.)\1{4,}$/.test(side.replace(/\s/g, ''))) return true;
+
+        // Reject if consonant-to-vowel ratio is absurd (random key mashing)
+        const vowels = (side.match(/[aeiou]/gi) || []).length;
+        const consonants = (side.match(/[bcdfghjklmnpqrstvwxyz]/gi) || []).length;
+        if (consonants > 0 && vowels > 0 && consonants / vowels > 8) return true;
+        if (side.length > 5 && vowels === 0) return true;
+    }
+
+    // Reject if both sides are identical
+    if (sides[0] === sides[1]) return true;
 
     return false;
 }

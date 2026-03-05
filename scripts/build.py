@@ -380,7 +380,7 @@ def build_site():
 
     # --- robots.txt ---
     print("  Building robots.txt...")
-    write_page(DIST_DIR / "robots.txt", "User-agent: *\nDisallow: /\n\nSitemap: https://versusthat.com/sitemap.xml\n")
+    write_page(DIST_DIR / "robots.txt", "User-agent: *\nAllow: /\n\nSitemap: https://versusthat.com/sitemap.xml\n")
 
     # --- Cloudflare _headers ---
     print("  Building _headers...")

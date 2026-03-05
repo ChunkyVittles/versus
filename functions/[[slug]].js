@@ -292,7 +292,6 @@ function renderComparisonPage(comp, affiliates) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
     <title>${esc(comp.meta_title || `${comp.item_a?.name} vs ${comp.item_b?.name}`)}</title>
     <meta name="description" content="${esc(comp.meta_description || '')}">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -500,7 +499,6 @@ function renderGeneratingPage(slug, itemA, itemB) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${escA} vs ${escB} — VersusThat</title>
-    <meta name="robots" content="noindex, nofollow">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="preload" href="/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
