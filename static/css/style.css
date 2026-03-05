@@ -416,30 +416,30 @@ h1, h2, h3, h4 {
     font-family: var(--font-body);
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
-    background: #3d6fff;
+    background: #2952cc;
     color: #fff;
 }
 
 .versus-input:focus {
     border-color: rgba(255,255,255,0.6);
     box-shadow: none;
-    background: #4d7aff;
+    background: #3660d9;
 }
 
 .versus-input::placeholder {
-    color: #d4e0ff;
+    color: #e8eeff;
 }
 
 .versus-input-side-b .versus-input::placeholder {
-    color: #ffd6cc;
+    color: #ffe8e0;
 }
 
 .versus-input-side-b .versus-input {
-    background: #ff6347;
+    background: #cc3015;
 }
 
 .versus-input-side-b .versus-input:focus {
-    background: #ff7259;
+    background: #d93d20;
 }
 
 .versus-input-badge {
