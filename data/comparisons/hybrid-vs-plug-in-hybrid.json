@@ -19,7 +19,7 @@
     "best_for": "Drivers who want improved fuel economy without charging requirements or infrastructure concerns.",
     "rating": 4.3,
     "affiliate_url": "",
-    "shop_on_ebay": true,
+    "shop_on_ebay": false,
     "shop_keywords": [
       "Hybrid Electric Vehicle (HEV)",
       "Various Manufacturers Hybrid Electric Vehicle (HEV)"
@@ -44,7 +44,7 @@
     "best_for": "Drivers with regular access to charging who want electric driving for daily commutes with gas backup for longer trips.",
     "rating": 4.4,
     "affiliate_url": "",
-    "shop_on_ebay": true,
+    "shop_on_ebay": false,
     "shop_keywords": [
       "Plug-In Hybrid Electric Vehicle (PHEV)",
       "Various Manufacturers Plug-In Hybrid Electric Vehicle (PHEV)"

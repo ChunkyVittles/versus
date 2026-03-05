@@ -19,7 +19,7 @@
     "best_for": "Drivers who want long-term ownership, drive more than 15,000 miles annually, or prefer keeping vehicles beyond 5 years.",
     "rating": 4.3,
     "affiliate_url": "",
-    "shop_on_ebay": true,
+    "shop_on_ebay": false,
     "shop_keywords": [
       "Buying a Car",
       "Ownership Model Buying a Car"
@@ -44,7 +44,7 @@
     "best_for": "Drivers who prefer new vehicles frequently, drive fewer miles, and want lower monthly payments without long-term commitment.",
     "rating": 4.1,
     "affiliate_url": "",
-    "shop_on_ebay": true,
+    "shop_on_ebay": false,
     "shop_keywords": [
       "Leasing a Car",
       "Leasing Model Leasing a Car"
