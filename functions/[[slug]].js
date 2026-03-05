@@ -379,7 +379,6 @@ function renderComparisonPage(comp, affiliates) {
                 <div class="vs-hero-side vs-hero-a ${heroAClass}">
                     <div class="vs-hero-content">
                         ${heroALabel}
-                        <img src="/images/comparisons/${comp.slug}_item_a.jpg" alt="${esc(comp.item_a?.image_alt || comp.item_a?.name)}" class="vs-hero-img" loading="lazy" onerror="this.style.display='none'">
                         <div class="vs-hero-name">${esc(comp.item_a?.name)}</div>
                         <div class="vs-hero-rating">
                             <div class="stars">${starsHtml(comp.item_a?.rating || 0)}</div>
@@ -393,7 +392,6 @@ function renderComparisonPage(comp, affiliates) {
                 <div class="vs-hero-side vs-hero-b ${heroBClass}">
                     <div class="vs-hero-content">
                         ${heroBLabel}
-                        <img src="/images/comparisons/${comp.slug}_item_b.jpg" alt="${esc(comp.item_b?.image_alt || comp.item_b?.name)}" class="vs-hero-img" loading="lazy" onerror="this.style.display='none'">
                         <div class="vs-hero-name">${esc(comp.item_b?.name)}</div>
                         <div class="vs-hero-rating">
                             <div class="stars">${starsHtml(comp.item_b?.rating || 0)}</div>

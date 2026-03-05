@@ -869,14 +869,6 @@ h1, h2, h3, h4 {
     display: block;
 }
 
-.vs-hero-img {
-    max-width: 180px;
-    max-height: 140px;
-    object-fit: contain;
-    margin: 1rem auto;
-    display: block;
-    border-radius: 8px;
-}
 
 .vs-hero-name {
     font-size: clamp(1.25rem, 3vw, 1.75rem);
