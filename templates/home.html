@@ -108,6 +108,9 @@
     </div>
 </section>
 
+<!-- Skimlinks install verification (TEMP — remove after success) -->
+<p style="text-align:center;padding:1rem;"><a href="http://test.skimlinks.com">Skimlinks Test</a></p>
+
 <!-- Search data for autocomplete -->
 <script>
 window.VS_SEARCH_DATA=[{% for comp in comparisons %}{"slug":"{{ comp.slug }}","a":"{{ comp.item_a.name }}","b":"{{ comp.item_b.name }}","cat":"{{ comp.category }}"}{% if not loop.last %},{% endif %}{% endfor %}];

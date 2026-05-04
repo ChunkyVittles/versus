@@ -484,6 +484,7 @@ function renderComparisonPage(comp, affiliates) {
       if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}
     })();
     </script>
+    <script type="text/javascript" src="https://s.skimresources.com/js/302555X1790555.skimlinks.js"></script>
 </body>
 </html>`;
 }
@@ -698,6 +699,7 @@ function renderGeneratingPage(slug, itemA, itemB) {
         });
     })();
     </script>
+    <script type="text/javascript" src="https://s.skimresources.com/js/302555X1790555.skimlinks.js"></script>
 </body>
 </html>`;
 }
